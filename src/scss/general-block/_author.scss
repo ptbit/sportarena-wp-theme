@@ -1,5 +1,6 @@
 .author{
-  padding: 25px 0;
+  padding: 35px 0;
+  background: $white-bg;
   &__row{
     padding: 30px;
     border-radius: 8px;
@@ -22,7 +23,7 @@
     &-licensed{
       font-size: 20px;
       line-height: 22px;
-      color: $burgundyBtn;
+      color: $green;
       margin: 0 0 15px 0;
     }
     &-text{
@@ -35,14 +36,13 @@
       font-size: 18px;
       line-height: 20px;
       display: inline-block;
-      padding: 14px 25px 12px;
-      border: 1px solid $burgundy;
+      padding: 12px 25px 12px;
+      border: 1px solid $green;
       border-radius: 4px;
-      color: $burgundy;
+      color: $green;
       transition: color $transition, background-color $transition;
       &:hover{
-        color: $white;
-        background: $burgundy;
+        color: $green-hover;
       }
     }
   }

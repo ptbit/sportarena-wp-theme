@@ -1,5 +1,5 @@
 .news {
-  background: $pink;
+  background: $white-bg;
   padding: 70px 0;
 
   &__row {
@@ -29,16 +29,16 @@
 
 
   &__wrap {
-    padding: 30px 40px;
-    border-radius: 8px;
-    background: $burgundy-gradient;
+    padding: 30px 35px;
+    border-radius: 20px;
+    background: $green-grad-2;
     margin: 0 0 20px 0;
   }
 
   &__all-link {
     align-self: center;
     display: inline-block;
-    padding: 18px 40px 16px;
+    padding: 11px 40px 10px;
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
@@ -53,43 +53,80 @@
     color: $white;
     margin: 0 0 10px 0;
     text-align: center;
+    text-shadow: $shadow-text-2;
   }
 
   &__tabs {
     width: 100%;
     display: flex;
     align-items: center;
-    background: $pink;
-    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 5px;
+    background: $gray-tabs;
+    border-radius: 100px;
+    padding: 0 28px;
     margin: 0 0 20px 0;
 
     &-btn {
       width: calc(50% - 2.5px);
+      font-family: $font-popins-semb;
+      position: relative;
       display: inline-block;
-      padding: 7px 15px 5px;
-      color: $black-font-orangeBtn;
+      padding: 9px 0;
       font-size: 13px;
-      border-radius: 8px;
       line-height: 22px;
+      color: $gray-text-on-green;
+      border-radius: 8px;
       background: transparent;
-      transition: background-color $transition;
+      transition: background-color $transition, color $transition, box-shadow $transition;
 
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $green;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $salad;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
       &:first-child {
         margin: 0 5px 0 0;
       }
 
       &:hover {
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+        color: $salad;
+      }
+
+      &:hover::after,
+      &:hover::before{
+        opacity: 1;
+      }
+
+      &-one,
+      &-two {
+        &._active::after,
+        &._active::before {
+          opacity: 1;
+        }
       }
 
       &-one,
       &-two {
         &._active {
-          background: $orangeBtn;
-          box-shadow: $boxShadowBtn;
+          color: $salad;
         }
       }
 
@@ -153,6 +190,7 @@
       line-height: 21px;
       letter-spacing: -0.004em;
       color: $white;
+      text-shadow: $shadow-text-2;
     }
 
     &-reviews {
@@ -168,14 +206,14 @@
         font-family: $font-popins-reg;
         font-size: 12px;
         line-height: 18px;
-        color: $grey;
+        color: $white-hover;
+        text-shadow: $shadow-text-2;
       }
     }
 
     &-link {
       display: inline-block;
       padding: 7px 26px 5px;
-      font-family: $font-popins-reg;
       font-size: 13px;
       line-height: 20px;
 
@@ -228,7 +266,7 @@
 
 .news__blog {
   a{
-    color: $black-one;
+    color: $black;
     text-decoration: underline;
     &:hover{
       text-decoration: none;
@@ -238,14 +276,14 @@
     font-family: $font-popins-semb;
     font-size: 28px;
     line-height: 48px;
-    color: $black-one;
+    color: $black;
     margin: 0 0 10px 0;
   }
 
   h3, h4, h5, h6 {
     font-family: $font-popins-semb;
     letter-spacing: -0.01em;
-    color: $black-one;
+    color: $black;
   }
 
   h3 {
@@ -273,7 +311,7 @@
     font-size: 15px;
     line-height: 30px;
     margin: 0 0 20px 0;
-    color: $black-one;
+    color: $black;
   }
 
   ol {
@@ -301,7 +339,7 @@
         font-size: 15px;
         line-height: 25px;
         border-radius: 50%;
-        background: $burgunde-circle-gradient;
+        background: $green-grad-2;
       }
 
       &:not(:last-child) {
@@ -310,7 +348,7 @@
 
       p {
         margin: 0;
-        color: $black-one;
+        color: $black;
       }
     }
   }
@@ -337,7 +375,7 @@
         color: $white;
         font-family: sans-serif;
         border-radius: 8px;
-        background: $burgundy-gradient;
+        background: $green-grad-2;
       }
 
       &:not(:last-child) {
@@ -346,7 +384,7 @@
 
       p {
         margin: 0;
-        color: $black-one;
+        color: $black;
       }
     }
   }
@@ -355,7 +393,7 @@
     position: relative;
     padding: 85px 30px 20px;
     border-radius: 8px;
-    background: $burgundy-gradient;
+    background: $green-grad-2;
     color: $white;
     font-size: 15px;
     line-height: 30px;
@@ -369,7 +407,7 @@
       line-height: 65px;
       transform: scale(1, -1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 30px;
@@ -383,7 +421,7 @@
       line-height: 65px;
       transform: scale(-1, 1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 40px;
@@ -406,7 +444,7 @@
     tr, td {
       border: 1px solid #ddd;
       padding: 15px;
-      color: $black-one;
+      color: $black;
       font-size: 15px;
       line-height: 20px;
     }
@@ -415,7 +453,7 @@
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background: $burgundy-gradient;
+      background: $green-grad-2;
 
       td {
         color: $white;
@@ -442,7 +480,7 @@
 
 @media screen and (max-width: 600px) {
   .news {
-    padding: 50px 0;
+    padding: 40px 0;
 
     &__container {
       padding: 0;

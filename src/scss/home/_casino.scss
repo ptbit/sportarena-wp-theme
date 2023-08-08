@@ -1,6 +1,6 @@
 .casino{
-  padding: 140px 0 140px 0;
-  background: $burgundy url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 70%/cover;
+  padding: 80px 0 80px 0;
+  background: $green url("../img/home/casino/bg-desc-test.webp") no-repeat 50% 70%/cover;
 
   &__row{
     display: flex;
@@ -16,13 +16,15 @@
     font-family: $font-popins-semb;
     font-size: 38px;
     line-height: 54px;
-    color: $white-grey;
+    color: $white-title;
     margin: 0 0 30px 0;
     max-width: 420px;
+    text-shadow: $shadow-text;
   }
   &__link{
+    text-transform: uppercase;
     display: inline-block;
-    padding: 18px 32px 16px;
+    padding: 16px 39px;
     cursor: pointer;
   }
   &__item{
@@ -36,8 +38,10 @@
       max-width: 105px;
       margin: 0 15px 0 0;
       min-width: 105px;
+
       img{
         border-radius: 8px;
+        box-shadow: $shadow-text-2;
       }
     }
     &-info{
@@ -52,6 +56,7 @@
       line-height: 21px;
       letter-spacing: -0.004em;
       color: $white;
+      text-shadow: $shadow-text-2;
     }
     &-reviews{
       display: flex;
@@ -64,14 +69,16 @@
         font-family: $font-popins-reg;
         font-size: 12px;
         line-height: 18px;
-        color: $grey;
+        color: $white-hover;
+        text-shadow: $shadow-text-2;
       }
     }
     &-link{
+      text-transform: uppercase;
       display: inline-block;
-      padding: 7px 17px 5px;
-      font-family: $font-popins-reg;
-      font-size: 13px;
+      padding: 12px 17px;
+      font-family: $font-popins-semb;
+      font-size: 14px;
       line-height: 20px;
       white-space: nowrap;
 
@@ -81,8 +88,8 @@
 
 @media screen and (max-width: 830px){
   .casino{
-    padding: 85% 0 50px 0;
-    background: #2C0715 url("../img/home/casino/bg-tab-test.webp") no-repeat;
+    padding: 45% 0 50px 0;
+    background: $green url("../img/home/casino/bg-tab-test.webp") no-repeat;
     background-size: cover;
     background-position: 50% 0;
     &__row{
@@ -105,9 +112,9 @@
 
 @media screen and (max-width: 600px){
   .casino{
-    background: #2C0715  url("../img/home/casino/bg-mob-test.webp") no-repeat ;
+    background: $green  url("../img/home/casino/bg-mob-test.webp") no-repeat ;
     background-size: 100%;
-    padding: 100% 0 40px 0;
+    padding: 60% 0 40px 0;
 
     &__title{
       font-size: 28px;

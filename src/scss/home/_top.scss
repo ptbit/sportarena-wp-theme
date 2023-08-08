@@ -1,9 +1,10 @@
 .top {
-  background: $burgundy-gradient;
-  padding: 50px 0 105px 0;
+  background: $green url("../img/home/slot/bg-desc.webp") no-repeat 50% 0/cover;
+  padding: 50px 0 ;
 
   &__title {
     color: $white;
+    text-shadow: $shadow-text-2;
     text-align: center;
     margin: 0 0 10px 0;
   }
@@ -11,9 +12,10 @@
   &__text {
     font-size: 15px;
     line-height: 22px;
-    color: $grey;
+    color: $gray-text-on-green;
+    text-shadow: $shadow-text-2;
     max-width: 940px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 40px auto;
     text-align: center;
   }
 
@@ -26,7 +28,6 @@
   &__item {
     width: 280px;
     padding: 30px 10px 0;
-    background: url("../img/home/top/bg-item.svg") no-repeat 50% 0/contain;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +38,7 @@
 
     &-image {
       max-width: 175px;
+      margin: 0 0 30px 0;
     }
 
     &-title {
@@ -45,13 +47,15 @@
       font-size: 20px;
       line-height: 30px;
       color: $white;
+      text-shadow: $shadow-text-2;
       margin: 0 0 20px 0;
     }
 
     &-text {
       font-size: 15px;
       line-height: 22px;
-      color: $grey;
+      color: $gray-text-on-green;
+      text-shadow: $shadow-text-2;
       text-align: center;
       margin: 0 0 30px 0;
       flex: 1 1 auto;

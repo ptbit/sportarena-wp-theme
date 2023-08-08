@@ -1,10 +1,10 @@
 .faq{
   padding: 55px 0;
-  background: $white url("../img/general-block-image/bg-faq-desc.webp") no-repeat 50% 0;
+  background: $white;
   background-size: 100%;
   &__title{
     text-align: center;
-    color: $black-one;
+    color: $black;
     margin: 0 0 25px 0;
   }
 }
@@ -16,32 +16,42 @@
 }
 .accordion__header {
   display: flex;
-  justify-content: space-between;
+  position: relative;
   align-items: center;
   font-family: $font-popins-semb;
-  padding: 12px 25px 10px 25px;
+  padding: 22px 55px 21px 20px;
+  background: $white-bg;
   border-radius: 8px;
-  background: $pink;
-  font-size: 20px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: $black-one;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
   cursor: pointer;
   transition: background-color $transition;
   &::after {
     display: inline-block;
-    margin: 0 0 0 25px;
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    border-radius: 8px;
-    background: $burgundyBtn url("../img/general-block-image/polygon-faq.svg") no-repeat center;
-    background-size: 11px 7px;
-    box-shadow: $boxShadowBtn;
-    content: "";
-
+    position: absolute;
+    content: '';
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 7px 9px;
+    border-color: transparent transparent $gray transparent;
+    transform: rotate(180deg);
+    margin: 0 0 0 6px;
+    transition: transform $transition, border-color $transition;
   }
+  &::before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    margin: 0 10px 0 0;
+    background: url("../img/general-block-image/faq-image.svg") no-repeat center/contain;
+    display: inline-block;
+  }
+
 }
 
 .accordion__item_slidedown .accordion__header,
@@ -50,18 +60,18 @@
 }
 
 .accordion__header:hover {
-    background-color: $pink-hover;
-  }
+  background-color: $gray-border-menu-hover;
+}
 
 .accordion__content {
   display: flex;
   flex-direction: column;
-  padding: 25px 25px 15px 25px;
+  padding: 25px 35px 15px;
   background: transparent;
   p{
-    font-size: 15px;
-    line-height: 30px;
-    color: $black-one;
+    font-size: 14px;
+    line-height: 26px;
+    color: $gray;
     &:not(:last-child){
       margin: 0 0 20px 0;
     }
@@ -72,32 +82,60 @@
   display: none;
 }
 
-@media screen and (max-width: 600px){
-  .faq{
-    padding: 50px 0 30px 0;
-    background: $white;
-    &__container{
+.accordion__item_show .accordion__header::after, .accordion__item_slidedown .accordion__header::after {
+  transform:  rotate(0deg);
+  border-color: transparent transparent $green transparent;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .faq {
+    padding: 0 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .faq {
+
+    &__container {
       padding: 0;
     }
-    &__title{
+
+    &__title {
       margin: 0 0 20px 0;
       padding: 0 15px;
     }
   }
 
-  .accordion__header{
+
+  .accordion__header {
     border-radius: 0;
-    padding: 19px 14px 17px;
+    padding: 15px 35px 14px 15px;
     font-size: 14px;
     line-height: 21px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      margin: 0 10px 0 0;
+    }
+
+    &::after {
+      border-width: 0 5px 7px;
+      right: 15px;
+    }
   }
 
   .accordion__content {
     padding: 15px 15px 10px 15px;
-    p{
+
+    p {
       font-size: 12px;
       line-height: 26px;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 15px 0;
       }
     }

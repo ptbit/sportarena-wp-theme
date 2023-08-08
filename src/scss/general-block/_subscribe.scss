@@ -1,18 +1,20 @@
 .subscribe{
   padding: 70px 0 90px 0;
-  background: $burgundy url("../img/general-block-image/subscribe/bg-sub-desc.webp") no-repeat 50% 0/cover;
+  background: $green url("../img/general-block-image/subscribe/bg-sub-desc.webp") no-repeat 50% 0/cover;
 
   &__row{
     max-width: 580px;
   }
   &__title{
     color: $white;
+    text-shadow: $shadow-text-2;
     margin: 0 0 10px 0;
   }
   &__text{
     font-size: 15px;
     line-height: 22px;
-    color: $grey;
+    color: $gray-text-on-green;
+    text-shadow: $shadow-text-2;
     margin: 0 0 30px 0;
   }
 
@@ -25,16 +27,17 @@
   }
   &__email{
     width: 100%;
-    border-radius: 8px;
+    border-radius: 100px;
     background: $white;
     padding: 10px 19px 8px;
     font-family: $font-popins-reg;
+    box-shadow: $shadow-text-2;
     font-size: 15px;
     line-height: 30px;
     &::placeholder{
       font-size: 15px;
       line-height: 30px;
-      color: $black-one;
+      color: $black;
     }
   }
   &__submit{
@@ -46,23 +49,26 @@
   }
   &__info{
     max-width: 490px;
-    color: $white;
+    color: $gray-text-on-green;
+    text-shadow: $shadow-text-2;
     font-size: 13px;
     line-height: 17px;
     &-link{
       font-family: $font-popins-semb;
-      color: $white;
+      color: $salad;
       white-space: nowrap;
       text-decoration: underline;
-
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
 }
 
 @media screen and (max-width: 600px){
   .subscribe{
-    padding: 50px 0 200px 0;
-    background: $burgundy-sub-bg url("../img/general-block-image/subscribe/bg-sub-mob.webp") no-repeat 50% 100%/100%;
+    padding: 50px 0 300px 0;
+    background: $green url("../img/general-block-image/subscribe/bg-sub-mob.webp") no-repeat 50% 50%/cover;
     &__title{
       text-align: center;
       margin: 0 0 10px 0;
@@ -86,10 +92,7 @@
       display: inline-block;
     }
     &__submit{
-      display: inline-block;
-      position: static;
-      align-self: center;
-      transform: translateY(0);
+      top: 38%;
     }
     &__info{
       text-align: center;

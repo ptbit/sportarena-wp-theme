@@ -1,45 +1,91 @@
 .burgundy-btn{
-  color: $white;
-  border-radius: 8px;
-  background: $burgundyBtn;
-  box-shadow: $boxShadowBtn;
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  color: $salad;
+  border-radius: 100px;
+  background: $green;
+  text-shadow: $shadow-text-2;
   transition: background-color $transition;
   &:hover{
-    background: $burgundyBtn-hover;
+    background: $green-hover;
+  }
+}
+
+.white-btn{
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  color: $black;
+  border-radius: 100px;
+  background: $white;
+  box-shadow: $shadow-text-3;
+  transition: background-color $transition;
+  &:hover{
+    background: $white-hover;
+  }
+}
+
+
+.transparent-btn{
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  color: $black;
+  border-radius: 100px;
+  border: 1px solid $gray-border-btn;
+  transition: background-color $transition;
+  &:hover{
+    background: $white-hover;
+  }
+}
+
+
+.transparent-salad-btn{
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  color: $salad;
+  border-radius: 100px;
+  border: 1px solid $salad;
+  transition: color $transition;
+  &:hover{
+    color: $salad-hover;
   }
 }
 
 
 .orange-btn{
-  border-radius: 8px;
-  background: $orangeBtn;
-  box-shadow: $boxShadowBtn;
-  color: $black-font-orangeBtn;
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background: $salad;
+  color: $green-dark;
   transition: background-color $transition;
   &:hover{
-    background: $orangeBtn-hover;
+    background: $salad-hover;
   }
 }
 
 .grey-btn{
-  border-radius: 8px;
-  color: $white;
-  background: $greyBtn;
-  box-shadow: $boxShadowBtn;
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  border-radius: 100px;
+  color: $black;
+  background: $white-bg;
+  box-shadow: $shadow-text-3;
   transition: background-color $transition;
   &:hover{
-    background: $greyBtn-hover;
+    background: $white-hover;
   }
 }
 
 .grey-btn-two{
-  border-radius: 8px;
-  color: $black-font-orangeBtn;
-  background: $greyBtn-2;
-  box-shadow: $boxShadowBtn;
+  font-family: $font-popins-semb;
+  text-transform: uppercase;
+  border-radius: 200px;
+  color: $salad;
+  text-shadow: $shadow-text-2;
+  background: $green-transparent;
   transition: background-color $transition;
   &:hover{
-    background: $orangeBtn-hover;
+    background: $green-transparent-hover;
   }
 }
 

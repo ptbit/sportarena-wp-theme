@@ -2,6 +2,7 @@ const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".header__menu");
 const body = document.querySelector("body");
 
+
 iconMenu.addEventListener("click", function (e) {
   iconMenu.classList.toggle("_active");
   menuBody.classList.toggle("_active");
@@ -9,45 +10,44 @@ iconMenu.addEventListener("click", function (e) {
 });
 
 //openMenu on mob
-const itemMenuSub = document.querySelectorAll('.menu__item-sub_list');
-const itemMenuSub2 = document.querySelectorAll('.menu__item-sub_list-2');
-const itemMenuSub3 = document.querySelectorAll('.menu__item-sub_list-3');
-const itemHoverDesc = document.querySelectorAll('.menu__item-hover-desc');
-const itemHoverDesc2 = document.querySelectorAll('.menu__item-hover-desc-2');
-const itemHoverDesc3 = document.querySelectorAll('.menu__item-hover-desc-3');
+const menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function (menuItem) {
+  const submenu = menuItem.querySelector('.sub-menu');
+  const submenu2 = menuItem.querySelector('.sub-menu-2');
+  const submenu3 = menuItem.querySelector('.sub-menu-3');
+  const link = menuItem.querySelector('a');
 
-if(window.innerWidth <= 1024){
-  itemHoverDesc.forEach(item => {
-    item.classList.remove('menu__item-hover-desc')
-  })
-  itemHoverDesc2.forEach(item => {
-    item.classList.remove('menu__item-hover-desc-2')
-  })
-  itemHoverDesc3.forEach(item => {
-    item.classList.remove('menu__item-hover-desc-3')
-  })
+  menuItem.addEventListener('mouseenter', function () {
+    if (window.innerWidth > 1024) {
+      if(submenu) submenu.style.display = 'block';
 
-  itemMenuSub.forEach(item => {
-    let menuSub = item.querySelector('.menu__item-list');
-    let menuSubLink = item.querySelector('.menu__link')
-    menuSubLink.addEventListener('click', ()=>{
-      menuSub.classList.toggle('_open');
-    })
-  })
+    }
+  });
 
-  itemMenuSub2.forEach(item => {
-    let menuSub2 = item.querySelector('.menu__item-list-2');
-    let menuSub2Link = item.querySelector('.menu__item-link');
-    menuSub2Link.addEventListener('click', ()=>{
-      menuSub2.classList.toggle('_open')
-    })
-  })
+  menuItem.addEventListener('mouseleave', function () {
+    if (window.innerWidth > 1024) {
+      if(submenu) submenu.style.display = 'none';
+    }
+  });
 
-  itemMenuSub3.forEach(item => {
-    let menuSub3 = item.querySelector('.menu__item-list-3');
-    let menuSub3Link = item.querySelector('.menu__item-link');
-    menuSub3Link.addEventListener('click', ()=>{
-      menuSub3.classList.toggle('_open')
-    })
-  })
-}
+  link.addEventListener('click', function (event) {
+
+    if (window.innerWidth <= 1024) {
+      menuItem.classList.toggle('mobile-active');
+      let nextElement = link.nextElementSibling
+      if(nextElement !== null){
+        event.preventDefault();
+      }
+
+      if(nextElement !== null && nextElement.classList.contains('sub-menu-2')){
+        submenu2.classList.toggle('_open')
+
+      }
+      if(nextElement !== null && nextElement.classList.contains('sub-menu-3') ){
+        submenu3.classList.toggle('_open')
+
+      }
+
+    }
+  });
+});
