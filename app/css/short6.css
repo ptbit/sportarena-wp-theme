@@ -1,0 +1,166 @@
+/* stylelint-disable */
+.casino-providers {
+  background: #FCEDF0;
+  margin: 0 0 20px 0;
+}
+.casino-providers._onWhite {
+  padding: 15px;
+  border-radius: 8px;
+}
+@media screen and (max-width: 350px) {
+  .casino-providers._onWhite {
+    padding: 5px;
+  }
+}
+.casino-providers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+}
+.casino-providers__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+  grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+  gap: 15px;
+  margin: 0 0 30px 0;
+}
+.casino-providers__item {
+  width: 100%;
+  padding: 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+.casino-providers__item-image {
+  margin: 0 0 10px 0;
+  max-width: 162px;
+}
+.casino-providers__item-image img {
+  border-radius: 8px;
+}
+.casino-providers__item-title {
+  font-size: 17px;
+  line-height: 26px;
+  color: #111111;
+  margin: 0 0 2px 0;
+}
+.casino-providers__item-info {
+  font-size: 13px;
+  line-height: 16px;
+  color: #111111;
+  margin: 0 0 20px 0;
+}
+.casino-providers__item-info span {
+  font-family: "Popins-semb", sans-serif;
+}
+.casino-providers__item-link {
+  display: inline-block;
+  padding: 12px 50px 10px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.casino-providers__all-link {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  font-family: "Popins-semb", sans-serif;
+  display: inline-block;
+  padding: 18px 70px 16px;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-providers__container {
+    padding: 0;
+  }
+  .casino-providers__list {
+    -ms-grid-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .casino-providers__list {
+    -ms-grid-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    width: 100%;
+  }
+}
+@media screen and (max-width: 830px) {
+  .casino-providers__list {
+    -ms-grid-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .casino-providers__list {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    padding: 0;
+    gap: 10px;
+    margin: 0 0 20px 0;
+  }
+  .casino-providers__item {
+    padding: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto;
+    grid-template-rows: auto auto auto;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+  .casino-providers__item-image {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    margin: 0 0 12px 0;
+  }
+  .casino-providers__item-title {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .casino-providers__item-info {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin: 0;
+  }
+  .casino-providers__item-link {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2/4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    -ms-grid-row-align: start;
+    align-self: start;
+  }
+  .casino-providers__all-link {
+    padding: 17px 15px 15px;
+    width: 96%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=short6.css.map */

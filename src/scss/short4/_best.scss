@@ -1,0 +1,165 @@
+//casino-payments block    SHORT-4
+
+.casino-payments {
+  background: $pink;
+  margin: 0 0 20px 0;
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+    @media screen and (max-width: 350px){
+      padding: 5px;
+    }
+  }
+
+  &__all-link {
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    gap: 15px;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 20px;
+    background: $white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      background: $pink;
+      border-radius: 8px;
+      margin: 0 0 10px 0;
+    }
+
+    &-title {
+      font-size: 17px;
+      line-height: 26px;
+      color: $black-one;
+      margin: 0 0 2px 0;
+    }
+
+    &-info {
+      font-size: 13px;
+      line-height: 16px;
+      color: $black-one;
+      margin: 0 0 20px 0;
+
+      span {
+        font-family: $font-popins-semb;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 12px 50px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-payments {
+    &__container {
+      padding: 0;
+    }
+
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px)
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino-payments {
+
+    &__list {
+      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .casino-payments {
+    &__list {
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-payments {
+    &__all-link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__list {
+      grid-template-columns: 100%;
+      padding: 0;
+      gap: 10px;
+      margin: 0 0 20px 0;
+    }
+
+    &__item {
+      padding: 15px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      column-gap: 10px;
+
+      &-image {
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin: 0 0 12px 0;
+      }
+
+      &-title {
+        grid-row: 2/3;
+        grid-column: 1/2;
+      }
+
+      &-info {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        margin: 0;
+      }
+
+      &-link {
+        grid-row: 2/4;
+        grid-column: 2/3;
+        justify-self: end;
+        align-self: start;
+      }
+    }
+
+  }
+}

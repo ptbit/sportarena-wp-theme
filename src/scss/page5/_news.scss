@@ -1,0 +1,255 @@
+.news{
+  background: $white;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  &__title{
+    margin: 0 0 10px 0;
+  }
+}
+
+.news__blog{
+  a{
+    color: $black-one;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  h2{
+    font-family: $font-popins-semb;
+    font-size: 28px;
+    line-height: 48px;
+    color: $black-one;
+    margin: 0 0 10px 0;
+  }
+
+  h3,h4,h5,h6{
+    font-family: $font-popins-semb;
+    letter-spacing: -0.01em;
+    color: $black-one;
+  }
+
+  h3{
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  h4{
+    font-size: 18px;
+    line-height: 48px;
+  }
+
+  h5{
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  h6{
+    font-size: 14px;
+    line-height: 48px;
+  }
+
+  p, li{
+    font-family: $font-popins-reg;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    color: $black-one;
+  }
+
+  ol{
+    list-style-type: none;
+    margin: 0 0 30px 0;
+    counter-reset: counter-ol;
+    li{
+      position: relative;
+      padding-left: 35px;
+      &::before{
+        position: absolute;
+        top: 2px;
+        left: 0;
+        counter-increment: counter-ol;
+        content: counter(counter-ol) " " ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-popins-semb;
+        color: $white;
+        min-width: 24px;
+        min-height: 24px;
+        font-size: 15px;
+        line-height: 25px;
+        border-radius: 50%;
+        background: $burgunde-circle-gradient;
+      }
+      &:not(:last-child){
+        margin: 0 0 20px 0;
+      }
+      p{
+        margin: 0;
+        color: $black-one;
+      }
+    }
+  }
+
+  ul{
+    margin: 0 0 30px 0;
+    li{
+      position: relative;
+      padding: 0 0 0 47px;
+      &::before{
+        content: 'i';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 5px;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        font-size: 25px;
+        line-height: 30px;
+        color: $white;
+        font-family: sans-serif;
+        border-radius: 8px;
+        background: $burgundy-gradient;
+      }
+      &:not(:last-child){
+        margin: 0 0 15px 0;
+      }
+      p{
+        margin: 0;
+        color: $black-one;
+      }
+    }
+  }
+
+  blockquote{
+    position: relative;
+    padding: 85px 30px 20px;
+    border-radius: 8px;
+    background: $burgundy-gradient;
+    color: $white;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+    &::before{
+      pointer-events: none;
+      content: '‟';
+      font-size: 65px;
+      line-height: 65px;
+      transform: scale(1, -1);
+      height: 18px;
+      color: $orange;
+      position: absolute;
+      display: inline-block;
+      top: 30px;
+      left: 30px;
+    }
+    &::after{
+      pointer-events: none;
+      content: '‟';
+      font-size: 65px;
+      line-height: 65px;
+      transform: scale(-1, 1);
+      height: 18px;
+      color: $orange;
+      position: absolute;
+      display: inline-block;
+      top: 40px;
+      left: 52px;
+    }
+  }
+}
+
+.content-table{
+  border-radius: 20px;
+  overflow-x: hidden;
+  table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 20px 0;
+    background: $white;
+    tr,td{
+      border: 1px solid #ddd;
+      padding: 15px;
+      color: $black-one;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    tr:first-child {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background: $burgundy-gradient;
+      td{
+        color: $white;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news{
+    padding: 30px 15px 20px;
+    margin: 0 0 10px 0;
+    border-radius: 0;
+
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .news__blog{
+    h2{
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+    }
+
+    h3,h4,h5,h6{
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    p, li{
+      font-size: 13px;
+      line-height: 22px;
+      margin: 0 0 15px 0;
+
+    }
+
+    ol{
+      margin: 0 0 20px 0;
+      li{
+        &:not(:last-child){
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+
+    ul{
+      margin: 0 0 20px 0;
+    }
+
+    blockquote{
+      padding: 85px 20px 20px 20px;
+      font-size: 13px;
+      line-height: 28px;
+    }
+  }
+
+  .content-table{
+    table{
+      tr,td{
+        padding: 10px;
+        font-size: 13px;
+        line-height: 19px;
+      }
+    }
+  }
+}

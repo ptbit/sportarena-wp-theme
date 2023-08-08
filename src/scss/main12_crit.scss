@@ -1,0 +1,79 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "_colorStyles";
+@import "base/nullstyle";
+@import "base/wrapper-aside2";
+
+
+.title {
+  font-family: $font-popins-semb;
+  color: $black-one;
+  font-size: 24px;
+  line-height: 36px;
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+[class*="__container"] {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+
+  font-family: $font-popins-reg;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: $black-one;
+  background: $pink;
+}
+
+// подключения компонентов страницы
+@import "general-block/header";
+
+
+.main{
+  margin: 0 40px 0 0;
+  @media screen and (max-width: 1285px){
+    margin: 0 20px 0 0;
+  }
+}
+
+.container {
+  padding: 0 30px;
+}
+
+.aside{
+  min-width: 400px;
+  max-width: 400px;
+  @media screen and (max-width: 1285px){
+    min-width: 380px;
+    max-width: 380px;
+  }
+
+  @media screen and (max-width: 1024px){
+    max-width: 100%;
+  }
+
+
+  @media screen and (max-width: 600px){
+    min-width: auto;
+  }
+}
+
+//aside
+@import "page12/_blog";
+
+//main
+@import "page2/_casino";
+@import "page12/_public";

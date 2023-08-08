@@ -1,0 +1,335 @@
+.casino{
+  padding: 8px 0 25px 0;
+  background: $white;
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+
+    &-link {
+      display: inline-block;
+      position: relative;
+      font-size: 12px;
+      line-height: 20px;
+      color: $black-one;
+      transition: color $transition;
+
+      &:hover {
+        color: $grey;
+      }
+
+      &:last-child{
+        &:hover{
+          color: $black-one;
+        }
+      }
+
+      &:not(:last-child) {
+        margin: 0 18px 0 0;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          font-size: 12px;
+          line-height: 20px;
+          color: $grey;
+          right: -11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info{
+    display: grid;
+    grid-template-columns: 325px auto;
+    grid-template-rows: auto auto auto;
+    justify-items: start;
+    column-gap: 30px;
+    &-image{
+      max-width: 325px;
+      grid-column: 1/2;
+      grid-row: 1/4;
+      img{
+        border-radius: 8px;
+      }
+    }
+    &-wrap{
+      display: flex;
+      align-items: center;
+      margin: 0 0 4px 0;
+    }
+    &-title{
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 33px;
+      margin: 0 20px 0 0;
+      color: $grey-tabs;
+    }
+    &-licensed{
+      display: flex;
+      align-items: center;
+      color: $blue;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      &-one{
+        margin: 0 8px 0 0;
+      }
+    }
+    &-reviews{
+      align-self: start;
+      padding: 8px 17px;
+      background: $pink;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 0 15px 0;
+
+
+      &-star,
+      &-comment{
+        display: flex;
+        align-items: center;
+        img{
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
+      }
+      &-comment{
+        display: none;
+        margin: 0 0 0 12px;
+      }
+      &-text{
+        font-size: 12px;
+        line-height: 12px;
+        color: $black-one;
+      }
+    }
+    &-buttons{
+      display: flex;
+      align-items: flex-start;
+    }
+    &-btn_play{
+      display: inline-block;
+      padding: 12px 70px 10px;
+      font-size: 15px;
+      line-height: 20px;
+      margin: 0 10px 0 0;
+    }
+    &-btn_like{
+      display: none;
+      //display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  &__create{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &-date{
+      font-size: 13px;
+      line-height: 22px;
+      text-align: end;
+      color: $grey-tabs;
+      margin: 0 0 13px 0;
+      &-created{
+        margin: 0 0 8px 0;
+      }
+    }
+    &-from{
+      display: flex;
+      align-items: center;
+      &-text{
+        max-width: 95px;
+        margin: 0 17px 0 0;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: end;
+        letter-spacing: -0.01em;
+        color: $grey-tabs;
+      }
+      &-image{
+        max-width: 142px;
+        img{
+          border-radius: 8px ;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino{
+    &__row{
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__info{
+      margin: 0 0 15px 0;
+    }
+    &__create{
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 0 0 20px 0;
+      &-date{
+        font-size: 11px;
+        line-height: 14px;
+        display: flex;
+        margin: 0;
+        &-created{
+          margin: 0 15px 0 0;
+        }
+      }
+      &-from{
+        flex-direction: row-reverse;
+        &-text{
+          margin: 0 0 0 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .casino{
+    &__info{
+      display: grid;
+      grid-template-columns: 280px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino {
+    padding: 8px 0 20px 0;
+    &__info{
+      grid-template-columns: 145px auto;
+      grid-template-rows: auto auto auto auto;
+      column-gap: 15px;
+      margin: 0 0 13px 0;
+      &-btn_play{
+        padding: 12px 40px 10px;
+      }
+      &-wrap{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-title{
+        font-size: 17px;
+        line-height: 24px;
+        margin: 0 0 2px 0;
+      }
+      &-licensed{
+        font-size: 11px;
+        line-height: 15px;
+      }
+      &-reviews{
+        border-radius: 0;
+        padding: 0;
+        background: transparent;
+        margin: 0;
+      }
+      &-image{
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      &-buttons{
+        margin-top: 2px;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        align-items: stretch;
+      }
+      &-btn_play{
+        font-size: 13px;
+        line-height: 20px;
+      }
+      &-btn_like{
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &__create{
+      margin: 0 0 17px 0;
+      &-from{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        &-image{
+          max-width: 70px;
+        }
+        &-text{
+          max-width: 100px;
+          margin: 5px 0 0 0;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      &-date{
+        font-size: 11px;
+        line-height: 14px;
+        display: flex;
+        &-created{
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+
+    &__breadcrumbs {
+      margin: 0 0 10px 0;
+
+      &-link {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .casino {
+    &__info{
+      display: grid;
+      grid-template-columns: 100px auto;
+      grid-template-rows: auto auto;
+      row-gap: 7px;
+      &-btn_play{
+        padding: 12px 40px 10px;
+      }
+      &-image{
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      &-reviews{
+        grid-column: 1/3;
+        margin: 0;
+      }
+    }
+
+    &__create{
+      &-date{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &-created{
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}

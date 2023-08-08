@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+
+
+
+
+//main
+@import "page5/_rtp";
+@import "page5/_news";
+@import "page5/_slots";
+
+@import "page3/_faq";
+@import "general-block/_author-aside.scss";
+
+@import "general-block/_subscribe.scss";
+@import "general-block/_footer.scss";
+
+

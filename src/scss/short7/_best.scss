@@ -1,0 +1,552 @@
+.casino-bonus {
+  background: $pink;
+  margin: 0 0 20px 0;
+  &._onWhite{
+    border-right: 8px;
+    padding: 15px;
+    @media screen and (max-width: 350px){
+      padding: 5px;
+    }
+  }
+
+  &__all-link{
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    color: $black-one;
+    max-width: 940px;
+    margin: 0 0 20px 0;
+  }
+
+  &__tabs {
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    &-item {
+      &:not(:last-child) {
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 8px 18px 6px;
+      font-size: 13px;
+      line-height: 22px;
+      color: $grey-tabs;
+      border-radius: 8px;
+      background: transparent;
+      transition: background-color $transition, color $transition, box-shadow $transition;
+
+      &:hover {
+        color: $white;
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+      }
+
+      &._active {
+        color: $white;
+        background: $burgundyBtn;
+        box-shadow: $boxShadowBtn;
+      }
+
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    gap: 15px;
+    margin: 0 0 35px 0;
+    counter-reset: my-counter;
+    &._openItem{
+      align-items: start;
+    }
+
+    &-wrapper{
+      flex: 1 1 auto;
+      margin: 0 40px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    display: flex;
+    //min-width: 310px;
+    max-width: 100%;
+    flex-direction: column;
+    background: $white;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+
+
+    &-link_wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link{
+      margin: 0 0 5px 0;
+    }
+
+    &-sublink{
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+      &:hover{
+        color: $black-one;
+      }
+    }
+
+    &-wrapper{
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px 20px 10px;
+      border-bottom: 3px dotted $pink;
+      position: relative;
+      &::before,
+      &::after{
+        position: absolute;
+        pointer-events: none;
+        width: 19px;
+        height: 19px;
+        background: $pink;
+        border-radius: 50%;
+        right: -11px;
+      }
+
+    }
+    &-image {
+      min-width: 100%;
+      max-width: 100%;
+      margin: 0 0 15px 0;
+      border-radius: 8px;
+      position: relative;
+      img{
+        border-radius: 8px;
+      }
+      &::before{
+        counter-increment: my-counter;
+        content: counter(my-counter) " " ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: $font-popins-semb;
+        background: $burgundy;
+        border-radius: 8px 0 8px 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 15px 0;
+      min-width: 164px;
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      color: $grey-tabs;
+      margin: 0 0 8px 0;
+    }
+
+    &-licensed {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      color: $blue;
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
+
+      &-star {
+        margin: 0 10px 0 0;
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 5px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 20px;
+      color: $white;
+      padding: 12px 47px 10px;
+    }
+
+    &-reviews {
+      display: none;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      &._show{
+        display: flex;
+      }
+      &-btn{
+        display: inline-block;
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        padding: 7px 25px 5px;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+        color: $black-one;
+        background: $pink;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &-textInfo{
+      font-size: 12px;
+      line-height: 28px;
+      padding: 0 20px;
+    }
+
+    &-plus,
+    &-minus {
+      display: flex;
+      flex-direction: column;
+
+      &-txt {
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 28px;
+        color: $grey;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          margin: 6px 8px 0 0;
+          min-width: 16px;
+          min-height: 16px;
+        }
+      }
+    }
+
+    &-plus {
+      margin: 0 30px 0 0;
+
+      &-txt {
+        &::before {
+          background: url("../img/home/best/arrow.svg") no-repeat 0% 0%/contain;
+        }
+      }
+    }
+
+
+    &-coupon {
+      width: 100%;
+      //height: 100%;
+      padding: 25px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: url(../img/home/best/coupon-bg-tab.svg) no-repeat 0 50%/cover;
+      &-title {
+        font-family: $font-popins-semb;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-subtitle {
+        font-family: $font-popins-semb;
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-text {
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 10px 0;
+      }
+
+      &-link {
+        width: 60%;
+        text-align: center;
+        display: inline-block;
+        padding: 12px 28px 10px;
+        color: $black-font-orangeBtn;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-bonus{
+    &__container{
+      padding: 0;
+    }
+    &__title,
+    &__text,
+    &__row{
+      padding: 0 15px;
+    }
+    &__tabs{
+      margin: 0;
+
+      &-wrap{
+        justify-content: flex-start;
+        overflow-x: scroll;
+        padding: 0 15px;
+        margin: 0 0 25px 0;
+      }
+
+    }
+
+    &__list{
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 15px;
+    }
+    &__item{
+      min-width: 310px;
+      max-width: 100%;
+      flex-direction: column;
+      background: $white;
+
+      &:not(:last-child){
+        margin: 0;
+      }
+      &-wrapper{
+        flex: 0 1 auto;
+        flex-direction: column;
+        padding: 10px 10px 20px 10px;
+        border-right: none;
+        border-bottom: 3px dotted $pink;
+        &::before{
+          right: -20px;
+          bottom: -11px;
+        }
+        &::after{
+          top: auto;
+          bottom: -11px;
+          left: -20px;
+        }
+      }
+      &-info{
+        align-items: center;
+      }
+      &-image{
+        margin: 0 0 15px 0;
+
+      }
+      &-info{
+        margin: 0 0 15px 0;
+      }
+      &-reviews{
+        flex-direction: column;
+        display: none;
+        &._show{
+          display: flex;
+        }
+        &-btn{
+          display: inline-block;
+        }
+        &-plus{
+          margin: 0 0 20px 0
+        }
+      }
+      &-coupon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 25px 10px;
+        background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
+        &-subtitle{
+          text-align: center;
+        }
+        &-text{
+          flex: 1 1 auto;
+        }
+        &-link{
+          width: 60%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .casino-bonus{
+    padding: 15px 0 0 0;
+    &__row{
+      flex-direction: column;
+      align-items: center;
+    }
+    &__list{
+      &-wrapper{
+        margin: 0 0 20px 0;
+      }
+    }
+    &__item{
+      min-width: 100%;
+      max-width: 100%;
+      &-image{
+        max-width: 100%;
+      }
+      &-wrapper{
+        padding: 10px 0 20px 0;
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .casino-bonus{
+
+    &__all-link{
+      width: calc(100% - 30px);
+
+    }
+
+    &__text{
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+    &__row{
+      padding: 0 15px;
+    }
+
+    &__list{
+      display: grid;
+      grid-template-columns: auto;
+      gap: 15px;
+    }
+
+    &__item{
+      border-radius: 8px;
+      &-wrapper{
+        &::before,
+        &::after{
+          content: none;
+        }
+      }
+    }
+
+  }
+
+  .casino-online{
+    width: 100%;
+    border-radius: 0;
+    padding: 0 15px;
+    &__title{
+      font-size: 20px;
+      line-height: 48px;
+    }
+  }
+}
+

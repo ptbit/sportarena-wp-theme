@@ -1,0 +1,18 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+
+
+//aside
+@import "page12/_casino-online";
+
+
+//main
+@import "page12/_top";
+@import "page12/_video";
+
+
+@import "general-block/_subscribe.scss";
+@import "general-block/_footer.scss";
+
+

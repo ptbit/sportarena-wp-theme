@@ -1,0 +1,146 @@
+.popup-message {
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: scroll;
+  height: 100%;
+  display: flex;
+  padding: 70px 0;
+  align-items: flex-end;
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(50px);
+
+  &._show{
+    transition: opacity .7s ease, visibility .7s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  &._hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__wrapper{
+    max-width: 630px;
+    width: 630px;
+    padding: 0 15px;
+    margin: auto;
+  }
+
+  &__info{
+    position: relative;
+    padding: 50px 40px 60px;
+    background: $pink;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-btn-close{
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 24px;
+      height: 24px;
+      background: url("../img/popup/btn-close.svg") no-repeat 0 0/contain;
+      transition: transform $transition;
+      &:hover{
+        transform: scale(1.06);
+      }
+    }
+    &-img{
+      margin: 0 0 20px 0;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $burgundy;
+      border-radius: 14px;
+
+    }
+    &-title{
+      font-family: $font-popins-semb;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: 0.01em;
+      color: $black-one;
+      text-align: center;
+      margin: 0 0 5px 0;
+    }
+    &-text{
+      font-family: $font-popins-reg;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 auto 30px;
+    }
+    &-link{
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      font-family: $font-popins-reg;
+      display: inline-block;
+      padding: 14px 90px 13px;
+      border-radius: 8px;
+      color: $white;
+      background: $burgundyBtn;
+      box-shadow: $boxShadowBtn;
+      transition: background-color $transition;
+      &:hover{
+        background: $burgundyBtn-hover;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .popup-message{
+    &__wrapper{
+      max-width: 100%;
+      padding: 0 15px ;
+    }
+    &__info{
+      padding: 40px 55px 40px;
+      border-radius: 20px ;
+      &-img{
+        width: 74px;
+        height: 74px;
+        margin: 0 0 20px 0;
+        img{
+          max-width: 52px;
+        }
+      }
+      &-title{
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup-message{
+    &__wrapper{
+      width: 100%;
+    }
+    &__info{
+      padding: 40px 15px 30px;
+      &-link{
+        font-size: 15px;
+        line-height: 20px;
+        padding: 15px 15px 14px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+

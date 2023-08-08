@@ -1,0 +1,105 @@
+.quote{
+  padding: 30px;
+  background: $burgundy-gradient;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 0 20px 0;
+  &::before{
+    pointer-events: none;
+    content: '‟';
+    font-size: 65px;
+    line-height: 65px;
+    transform: scale(1, -1);
+    height: 18px;
+    color: $orange;
+    position: absolute;
+    display: inline-block;
+    top: 45px;
+    left: 30px;
+  }
+  &::after{
+    pointer-events: none;
+    content: '‟';
+    font-size: 65px;
+    line-height: 65px;
+    transform: scale(-1, 1);
+    height: 18px;
+    color: $orange;
+    position: absolute;
+    display: inline-block;
+    top: 55px;
+    left: 52px;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    font-style: italic;
+    color: $white;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    &-wrap{
+      margin: 0 0 20px 0;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 60px;
+    }
+    &-image{
+      width: 60px;
+      height: 60px;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $orange;
+      border-radius: 4px;
+      margin: 0 12px 0 0;
+    }
+    &-user{
+      &-name{
+        font-size: 15px;
+        line-height: 20px;
+        color: $white;
+      }
+      &-date{
+        font-size: 11px;
+        line-height: 20px;
+        color: $grey;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .quote{
+    border-radius: 0;
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote{
+    padding: 30px 15px;
+    &::before{
+      right: 48px;
+      left: auto;
+    }
+    &::after{
+      right: 25px;
+      left: auto;
+    }
+    &__info{
+      &-wrap{
+        margin: 0 0 20px 0;
+        padding: 0 60px 0 0;
+      }
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 28px;
+    }
+
+  }
+}

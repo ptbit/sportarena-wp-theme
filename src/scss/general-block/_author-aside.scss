@@ -1,0 +1,152 @@
+.author{
+  padding: 25px 0 0 0;
+  &__row{
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    background: $white;
+  }
+  &__image{
+    max-width: 100px;
+    min-width: 100px;
+    img{
+      min-width: 100px;
+    }
+    margin: 0 30px 0 0;
+  }
+  &__info{
+    &-title{
+      margin: 0 0 5px 0;
+    }
+    &-licensed{
+      font-size: 20px;
+      line-height: 22px;
+      color: $orange;
+      margin: 0 0 15px 0;
+    }
+    &-text{
+      font-size: 15px;
+      line-height: 17px;
+      margin: 0 0 25px 0;
+    }
+    &-btn{
+      margin: 0 0 20px 0;
+      font-size: 18px;
+      line-height: 20px;
+      display: inline-block;
+      padding: 14px 25px 12px;
+      border: 1px solid $burgundy;
+      border-radius: 4px;
+      color: $burgundy;
+      transition: color $transition, background-color $transition;
+      &:hover{
+        color: $white;
+        background: $burgundy;
+      }
+    }
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 42px;
+      border-radius: 8px;
+      &:not(:last-child){
+        margin: 0 10px 0 0;
+      }
+      svg{
+        max-width: 100%;
+        max-height: 100%;
+        fill: $white;
+      }
+    }
+    &-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-text{
+      font-size: 13px;
+      line-height: 20px;
+      color: $grey-tabs;
+      margin: 0 0 10px 0;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .author{
+    padding-bottom: 0;
+    &__row{
+      border-radius: 0;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 600px){
+  .author{
+    &__row{
+      padding: 25px 15px;
+      border-radius: 8px;
+    }
+
+    &__image{
+      max-width: 70px;
+      min-width: 70px;
+      img{
+        min-width: 70px;
+      }
+      margin: 0 15px 0 0;
+    }
+    &__info{
+      &-licensed{
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 0 10px 0;
+      }
+      &-text{
+        font-size: 13px;
+        line-height: 15px;
+        margin: 0 0 15px 0;
+      }
+      &-btn{
+        margin: 0 0 10px 0;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 11px 20px 9px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .author{
+    &__social{
+      &-item{
+        width: 47px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px){
+  .author{
+    &__image{
+      max-width: 55px;
+      min-width: 55px;
+      img{
+        min-width: 55px;
+      }
+      margin: 0 15px 0 0;
+    }
+  }
+}

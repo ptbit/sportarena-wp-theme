@@ -1,0 +1,344 @@
+.casino {
+  background: $white url("../img/page3/casino/bg-desc.svg") no-repeat right center/ contain;
+
+  &__container {
+    padding: 5px 15px 40px 15px;
+    position: relative;
+
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+
+    &-link {
+      display: inline-block;
+      position: relative;
+      font-size: 12px;
+      line-height: 20px;
+      color: $black-one;
+      transition: color $transition;
+
+      &:hover {
+        color: $grey;
+      }
+
+      &:last-child{
+        &:hover{
+          color: $black-one;
+        }
+      }
+
+      &:not(:last-child) {
+        margin: 0 18px 0 0;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          font-size: 12px;
+          line-height: 20px;
+          color: $grey;
+          right: -11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__info {
+    &-wrap {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      justify-items: start;
+    }
+
+    &-image {
+      max-width: 325px;
+      margin: 0 25px 0 0;
+      grid-column: 1/2;
+      grid-row: 1/5;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 33px;
+      color: $grey-tabs;
+      margin: 0 0 4px 0;
+    }
+
+    &-reviews {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 9px 17px 7px;
+      background: $pink;
+      border-radius: 100px;
+      margin: 0 0 10px 0;
+
+      &-text {
+        font-size: 12px;
+        line-height: 12px;
+        color: $black-one;
+      }
+
+      &-star,
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin: 0 6px 0 0;
+        }
+      }
+
+      &-comment{
+        margin: 0 0 0 12px;
+      }
+    }
+
+
+    &-data {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      line-height: 22px;
+      color: $grey-tabs;
+
+      &-create {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black-one;
+
+      &:not(:last-child) {
+        margin: 0 0 15px 0;
+      }
+
+      &-title {
+        margin: 0 5px 0 0;
+      }
+
+      &-text {
+        font-family: $font-popins-semb;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino {
+
+    &__container {
+      padding: 5px 0 20px 0;
+    }
+
+    &__breadcrumbs {
+      padding: 0 15px;
+    }
+
+    &__row {
+      padding: 0 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: stretch;
+
+      &-list{
+        margin: 0 0 15px 0;
+        display: grid;
+        grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+        width: 100%;
+        gap: 20px;
+      }
+
+      &-item:not(:last-child){
+        margin: 0;
+      }
+
+
+      &-wrap {
+        margin: 0 0 10px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        justify-items: start;
+      }
+
+      &-image{
+        margin: 0 15px 0 0;
+      }
+
+      &-data{
+        grid-column: 1/3;
+        grid-row: 5/6;
+        flex-direction: row;
+        align-items: flex-start;
+        margin: 0 ;
+        &-create{
+          margin: 0 10px 0 0;
+        }
+      }
+      &-text{
+        grid-column: 2/3;
+        grid-row: 5/6;
+        justify-self: center;
+        align-self: center;
+        margin: 0;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino {
+    background: $white;
+
+    &__breadcrumbs {
+      margin: 0 0 10px 0;
+
+      &-link {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    &__bonus {
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-subtext {
+        text-align: end;
+      }
+
+      &-link {
+        margin: 0 0 10px 0;
+        padding: 10px 28px 8px;
+      }
+
+      &-title {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      &-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &-text {
+        font-size: 11px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      &-link {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    &__row{
+      align-items: stretch;
+    }
+
+    &__info {
+      &-wrap {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+
+      &-list{
+        display: grid;
+        grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+        gap: 10px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid $pink;
+      }
+
+      &-item{
+        font-size: 11px;
+        line-height: 20px;
+        &:not(:last-child){
+          margin: 0;
+        }
+      }
+
+      &-text {
+        font-size: 13px;
+        line-height: 16px;
+        justify-self: end;
+      }
+
+      &-image {
+        margin: 0 15px 0 0;
+        max-width: 100%;
+      }
+
+
+      &-title {
+        margin: 0 0 2px 0;
+        font-size: 17px;
+        line-height: 26px;
+      }
+
+      &-reviews {
+        padding: 0;
+        background: transparent;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .casino{
+
+    &__info{
+      &-reviews{
+        flex-direction: column;
+        align-items: flex-start;
+        &-star{
+          margin: 0 0 7px 0;
+        }
+      }
+      &-list{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,79 @@
+.anchors{
+  padding: 25px 0 25px 30px;
+  background: $white;
+  border-radius: 8px;
+  margin: 0 0 40px 0;
+  &__item{
+    border-bottom: 1px solid $grey-white;
+    &:last-child{
+      border: none;
+      .anchors__link{
+        padding-bottom: 0;
+      }
+    }
+    &:first-child{
+      .anchors__link{
+        padding-top: 0;
+      }
+    }
+  }
+  &__link{
+    position: relative;
+    padding: 14px 0;
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey-tabs;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color $transition;
+    &:hover{
+      color: $grey;
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: $burgundyBtn url("../img/page3/anchors/arrow.svg") no-repeat center center;
+      background-size: 7px 11px;
+      box-shadow: $boxShadowBtn;
+      border-radius: 8px;
+      margin: 0 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .anchors{
+    padding: 0;
+    background: transparent;
+    margin: 0 0 20px 0;
+    &__list{
+      display: flex;
+      overflow-x: scroll;
+      padding: 0 15px;
+    }
+    &__item{
+      border: none;
+      &:not(:last-child){
+        margin: 0 10px 0 0;
+      }
+    }
+    &__link{
+      padding: 12px 20px 10px !important ;
+      white-space: nowrap;
+      border: 2px solid $white;
+      color: $black-one;
+      border-radius: 8px;
+      background: $white;
+      &._active{
+        border: 2px solid $black-one;
+      }
+      &::after{
+        background: none;
+        content: none;
+      }
+    }
+  }
+}

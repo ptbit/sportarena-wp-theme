@@ -1,0 +1,22 @@
+@import "vars";
+@import "mixins";
+
+// подключения компонентов страницы
+
+@import "home/_slot.scss";
+@import "home/_bonus.scss";
+@import "home/_blog.scss";
+@import "home/_top.scss";
+@import "home/_news.scss"; 
+@import "home/_deposit.scss";
+@import "general-block/_faq.scss";
+@import "general-block/_author.scss";
+@import "general-block/_subscribe.scss";
+
+
+
+@import "general-block/_footer.scss";
+
+
+
+

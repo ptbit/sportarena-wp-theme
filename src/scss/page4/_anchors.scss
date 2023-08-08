@@ -1,0 +1,67 @@
+.anchors{
+  padding: 20px 0 25px 0;
+  background: $pink;
+  &__container{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 0 15px;
+  }
+  &__link{
+    display: inline-block;
+    position: relative;
+    padding: 15px 65px 13px 14px;
+    font-size: 15px;
+    line-height: 22px;
+    border-radius: 8px;
+    background: $white;
+    color: $grey-tabs;
+    white-space: nowrap;
+    transition: background-color $transition;
+    &:hover{
+      background: $white-hover;
+    }
+    &:not(:last-child){
+      margin: 0 10px 0 0;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: $burgundyBtn url("../img/page2/anchor/arrow.svg") no-repeat center/ 7px 11px;
+      box-shadow: $boxShadowBtn;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .anchors{
+    padding: 10px 0 25px 0;
+    &__link{
+      padding: 12px 20px 10px;
+      font-size: 15px;
+      line-height: 22px;
+      transition: none;
+      border: 2px solid $white;
+      &._active{
+        border: 2px solid $black-one;
+        color: $black-one;
+      }
+      &::before{
+        background: none;
+        content: none;
+      }
+    }
+  }
+}

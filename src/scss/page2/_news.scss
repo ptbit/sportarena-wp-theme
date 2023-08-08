@@ -1,0 +1,459 @@
+.news{
+  background: $pink;
+  padding: 70px 0;
+  &__row{
+    position: relative;
+    display: flex;
+    //align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__blog{
+    max-width: 800px;
+    margin: 0 30px 0 0;
+  }
+}
+
+//casino-online aside styles
+.casino-online{
+  align-self: stretch;
+
+  &__stick{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 15px;
+  }
+  &__wrap{
+    padding: 30px 40px;
+    border-radius: 8px;
+    background: $burgundy-gradient;
+    margin: 0 0 20px 0;
+  }
+
+  &__all-link{
+    align-self: center ;
+    display: inline-block;
+    padding: 18px 40px 16px;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    margin: 0 auto;
+  }
+  &__title{
+    font-family: $font-popins-semb;
+    font-size: 20px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    color: $white;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  &__tabs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: $pink;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 0 20px 0;
+    &-btn{
+      width: calc(50% - 2.5px);
+      display: inline-block;
+      padding: 7px 15px 5px;
+      color: $black-font-orangeBtn;
+      font-size: 13px;
+      border-radius: 8px;
+      line-height: 22px;
+      background: transparent;
+      transition: background-color $transition;
+      &:first-child{
+        margin: 0 5px 0 0;
+      }
+      &:hover{
+        background: $orangeBtn;
+        box-shadow: $boxShadowBtn;
+      }
+      &-one,
+      &-two{
+        &._active{
+          background: $orangeBtn;
+          box-shadow: $boxShadowBtn;
+        }
+      }
+
+    }
+  }
+
+  &__list{
+    &-one{
+      &._hidden{
+        display: none;
+      }
+    }
+    &-two{
+      &._hidden{
+        display: none;
+      }
+    }
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+    width: 315px;
+    &-btn{
+      margin-top: 25px !important;
+      display: flex;
+      justify-content: center;
+    }
+    &:not(:last-child){
+      margin: 0 0 15px 0;
+    }
+    &-image{
+      min-width: 100px;
+      max-width: 100px;
+      margin: 0 15px 0 0;
+      img{
+        width: 100px;
+        height: 46px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+    &-info{
+      flex: 1 1 auto;
+      margin: 0 15px 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-title{
+      font-family: $font-popins-reg;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.004em;
+      color: $white;
+    }
+    &-reviews{
+      display: flex;
+      align-items: center;
+      &-img{
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-grade{
+        font-family: $font-popins-reg;
+        font-size: 12px;
+        line-height: 18px;
+        color: $grey;
+      }
+    }
+    &-link{
+      display: inline-block;
+      padding: 7px 26px 5px;
+      font-family: $font-popins-reg;
+      font-size: 13px;
+      line-height: 20px;
+
+    }
+  }
+}
+
+.content-table{
+  border-radius: 20px;
+  overflow-x: hidden;
+  table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 20px 0;
+    background: $white;
+    tr,td{
+      border: 1px solid #ddd;
+      padding: 15px;
+      color: $black-one;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    tr:first-child {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background: $burgundy-gradient;
+      td{
+        color: $white;
+      }
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .casino-online{
+    width: 80%;
+    margin: 0 auto;
+
+    &__stick{
+      width: 100%;
+    }
+
+    &__wrap{
+      width: 100%;
+    }
+
+    &__item{
+      width: 100%;
+    }
+    &__all-link{
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .content-table{
+    table{
+      tr,td{
+        font-size: 13px;
+        line-height: 19px;
+        padding: 10px;
+      }
+    }
+  }
+
+  .casino-online{
+    width: 100%;
+    &__wrap{
+      width: 100%;
+      padding: 20px 15px;
+      border-radius: 0;
+    }
+    &__title{
+      font-size: 20px;
+      line-height: 48px;
+    }
+
+  }
+}
+
+
+
+.news__blog{
+  a{
+    color: $black-one;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  h2{
+    font-family: $font-popins-semb;
+    font-size: 28px;
+    line-height: 48px;
+    color: $black-one;
+    margin: 0 0 10px 0;
+  }
+
+  h3,h4,h5,h6{
+    font-family: $font-popins-semb;
+    letter-spacing: -0.01em;
+    color: $black-one;
+  }
+
+  h3{
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  h4{
+    font-size: 18px;
+    line-height: 48px;
+  }
+
+  h5{
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  h6{
+    font-size: 14px;
+    line-height: 48px;
+  }
+
+  p, li{
+    font-family: $font-popins-reg;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+  }
+
+  ol{
+    list-style-type: none;
+    margin: 0 0 30px 0;
+    counter-reset: counter-ol;
+    li{
+      position: relative;
+      padding-left: 35px;
+      &::before{
+        position: absolute;
+        top: 2px;
+        left: 0;
+        counter-increment: counter-ol;
+        content: counter(counter-ol) " " ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-popins-semb;
+        color: $white;
+        min-width: 24px;
+        min-height: 24px;
+        font-size: 15px;
+        line-height: 25px;
+        border-radius: 50%;
+        background: $burgunde-circle-gradient;
+      }
+      &:not(:last-child){
+        margin: 0 0 20px 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+  ul{
+    margin: 0 0 30px 0;
+    li{
+      position: relative;
+      padding: 0 0 0 47px;
+      &::before{
+        content: 'i';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 5px;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        font-size: 25px;
+        line-height: 30px;
+        color: $white;
+        font-family: sans-serif;
+        border-radius: 8px;
+        background: $burgundy-gradient;
+      }
+      &:not(:last-child){
+        margin: 0 0 15px 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+  blockquote{
+    position: relative;
+    padding: 85px 30px 20px;
+    border-radius: 8px;
+    background: $burgundy-gradient;
+    color: $white;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+    &::before{
+      pointer-events: none;
+      content: '‟';
+      font-size: 65px;
+      line-height: 65px;
+      transform: scale(1, -1);
+      height: 18px;
+      color: $orange;
+      position: absolute;
+      display: inline-block;
+      top: 30px;
+      left: 30px;
+    }
+    &::after{
+      pointer-events: none;
+      content: '‟';
+      font-size: 65px;
+      line-height: 65px;
+      transform: scale(-1, 1);
+      height: 18px;
+      color: $orange;
+      position: absolute;
+      display: inline-block;
+      top: 40px;
+      left: 52px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news{
+    &__row{
+      flex-direction: column;
+    }
+    &__blog{
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news{
+    padding: 50px 0;
+    &__container{
+      padding: 0;
+    }
+    &__blog{
+      padding: 0 15px;
+    }
+  }
+
+  .news__blog{
+    h2{
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+    }
+
+    h3,h4,h5,h6{
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    p, li{
+      font-size: 13px;
+      line-height: 22px;
+      margin: 0 0 15px 0;
+    }
+
+    ol{
+      margin: 0 0 20px 0;
+      li{
+        &:not(:last-child){
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+
+    ul{
+      margin: 0 0 20px 0;
+    }
+
+    blockquote{
+      padding: 85px 20px 20px 20px;
+      font-size: 13px;
+      line-height: 28px;
+    }
+  }
+}

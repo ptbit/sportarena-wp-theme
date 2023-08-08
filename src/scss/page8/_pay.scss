@@ -1,0 +1,193 @@
+.pay {
+  padding: 30px;
+  background: $white;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  &__title{
+
+    margin: 0 0 20px 0;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin: 0 0 20px 0 ;
+    }
+    &-wrap{
+      display: flex;
+      align-items: center;
+      margin: 0 15px 0 0;
+    }
+    &-image{
+      min-width: 100px;
+      max-width: 104px;
+      margin: 0 15px 0 0;
+      img{
+        width: 100px;
+        height: 46px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+    &-title{
+      font-family: $font-popins-semb;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+    }
+    &-review{
+      display: flex;
+      align-items: center;
+      img{
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+      &-text{
+        font-size: 12px;
+        line-height: 18px;
+        color: $black-one;
+      }
+    }
+    &-wrap2{
+      display: flex;
+      align-items: center;
+    }
+    &-text{
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 10px 0 0;
+    }
+    &-bonus{
+      font-family: $font-popins-semb;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -0.004em;
+      color: $black-one;
+      margin: 0 13px 0 0;
+    }
+    &-buttons{
+      display: flex;
+    }
+    &-btn{
+      display: inline-block;
+      padding: 12px 25px 10px;
+      font-size: 15px;
+      line-height: 20px;
+      &:not(:last-child){
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  &__all-link {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: $black-one;
+    transition: color $transition;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 7px;
+      top: 56%;
+      right: -15px;
+      transform: translateY(-50%);
+      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
+    }
+
+    &:hover {
+      color: $orangeBtn-hover;
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .pay{
+    &__list{
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 15px;
+    }
+    &__item{
+      padding: 15px;
+      background: $pink;
+      flex-direction: column;
+      &-wrap{
+        margin: 0 0 17px 0;
+      }
+      &-wrap2{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: auto auto auto;
+      }
+      &-title{
+        font-size: 17px;
+        line-height: 26px;
+      }
+      &-text{
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+      &-bonus{
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      &-buttons{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        justify-content: flex-end;
+      }
+      &-btn{
+        font-size: 13px;
+        line-height: 20px;
+      }
+      &:not(:last-child){
+        margin: 0;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pay{
+    padding: 30px 0 20px;
+    border-radius: 0;
+    margin: 0 0 10px 0;
+    &__title,
+    &__all-link{
+      padding: 0 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pay{
+    &__item{
+      &-text{
+        font-size: 11px;
+        line-height: 18px;
+        max-width: 150px;
+      }
+      &-bonus{
+        font-size: 15px;
+        line-height: 20px;
+        max-width: 150px;
+      }
+      &-btn{
+        padding: 10px 19px 9px;
+      }
+    }
+  }
+}

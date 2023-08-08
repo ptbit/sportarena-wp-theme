@@ -1,0 +1,382 @@
+.casino-best {
+  &._onWhite{
+    padding: 15px;
+    border-radius: 8px;
+    @media screen and (max-width: 350px){
+      padding: 5px;
+    }
+  }
+  background: $pink;
+  margin: 0 0 20px 0;
+
+  &__all-link {
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: $white;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    color: $black-one;
+    max-width: 940px;
+    margin: 0 0 20px 0;
+  }
+
+
+  &__list {
+    width: 100%;
+    margin: 0 0 35px 0;
+    counter-reset: my-counter;
+    display: grid;
+    //grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+    gap: 15px;
+
+    &._openItem {
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    flex-direction: column;
+    background: $white;
+
+
+    &-link_wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link {
+      margin: 0 0 5px 0;
+    }
+
+    &-sublink {
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+
+      &:hover {
+        color: $black-one;
+      }
+    }
+
+    &-wrapper {
+      flex: 0 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px 20px 10px;
+      border-bottom: 3px dotted $pink;
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        pointer-events: none;
+        width: 19px;
+        height: 19px;
+        background: $pink;
+        border-radius: 50%;
+        right: -11px;
+      }
+
+      &::before {
+        right: -20px;
+        bottom: -11px;
+      }
+
+      &::after {
+        top: auto;
+        bottom: -11px;
+        left: -20px;
+      }
+    }
+
+    &-image {
+
+      min-width: 100%;
+      border-radius: 8px;
+      position: relative;
+      margin: 0 0 15px 0;
+
+      img {
+        min-width: 100%;
+        border-radius: 8px;
+      }
+
+      &::before {
+        counter-increment: my-counter;
+        content: counter(my-counter) " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: $font-popins-semb;
+        background: $burgundy;
+        border-radius: 8px 0 8px 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 25px 0;
+      min-width: 164px;
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      color: $grey-tabs;
+      margin: 0 0 8px 0;
+    }
+
+    &-licensed {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      color: $blue;
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
+
+      &-star {
+        margin: 0 10px 0 0;
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 5px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 20px;
+      color: $white;
+      padding: 12px 47px 10px;
+    }
+
+    &-reviews {
+      align-items: flex-start;
+      flex-direction: column;
+      display: none;
+      flex: 1 1 auto;
+
+      &._show {
+        display: flex;
+      }
+
+      &-plus {
+        margin: 0 0 20px 0
+      }
+
+      &-btn {
+        display: inline-block;
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        padding: 7px 25px 5px;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+        color: $black-one;
+        background: $pink;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &-plus,
+    &-minus {
+      display: flex;
+      flex-direction: column;
+
+      &-txt {
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 28px;
+        color: $grey;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          margin: 6px 8px 0 0;
+          min-width: 16px;
+          min-height: 16px;
+        }
+      }
+    }
+
+    &-plus {
+      margin: 0 30px 0 0;
+
+      &-txt {
+        &::before {
+          background: url("../img/home/best/arrow.svg") no-repeat 0% 0%/contain;
+        }
+      }
+    }
+
+
+    &-coupon {
+      max-width: 240px;
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 25px 10px;
+      background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
+
+      &-title {
+        font-family: $font-popins-semb;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-subtitle {
+        text-align: center;
+        font-family: $font-popins-semb;
+        font-size: 21px;
+        line-height: 21px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-text {
+        flex: 1 1 auto;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 10px 0;
+      }
+
+      &-link {
+        width: 60%;
+        text-align: center;
+        display: inline-block;
+        padding: 12px 28px 10px;
+        color: $black-font-orangeBtn;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-best {
+    &__list {
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+      margin: 0 0 30px 0;
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino-best {
+
+    &__list {
+      margin: 0 0 25px 0;
+      grid-template-columns: 100%;
+    }
+
+    &__all-link {
+      width: calc(100% - 30px);
+
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 22px;
+    }
+
+  }
+}

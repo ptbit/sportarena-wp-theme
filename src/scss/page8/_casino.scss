@@ -1,0 +1,339 @@
+.casino {
+  background: $white url("../img/page3/casino/bg-desc.svg") no-repeat right center/ contain;
+
+  &__container {
+    padding: 5px 15px 40px 15px;
+    position: relative;
+
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+
+    &-link {
+      display: inline-block;
+      position: relative;
+      font-size: 12px;
+      line-height: 20px;
+      color: $black-one;
+      transition: color $transition;
+
+      &:hover {
+        color: $grey;
+      }
+
+      &:last-child{
+        &:hover{
+          color: $black-one;
+        }
+      }
+
+      &:not(:last-child) {
+        margin: 0 18px 0 0;
+
+        &::before {
+          content: '•';
+          position: absolute;
+          font-size: 12px;
+          line-height: 20px;
+          color: $grey;
+          right: -11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__info {
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &-image {
+      max-width: 325px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 25px 0 0;
+      img{
+        border-radius: 8px;
+      }
+    }
+
+    &-play {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 33px;
+      color: $grey-tabs;
+      margin: 0 0 4px 0;
+    }
+
+    &-reviews {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 9px 17px 7px;
+      background: $pink;
+      border-radius: 100px;
+      margin: 0 0 15px 0;
+
+      &-text {
+        font-size: 12px;
+        line-height: 12px;
+        color: $black-one;
+      }
+
+      &-star,
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin: 0 6px 0 0;
+        }
+      }
+
+      &-comment{
+        margin: 0 0 0 12px;
+      }
+    }
+
+    &-text {
+      font-size: 17px;
+      line-height: 16px;
+      color: $black-one;
+
+      span {
+        font-family: $font-popins-semb;
+      }
+    }
+
+
+    &-country {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-name {
+        display: flex;
+        align-items: center;
+        margin: 0 0 8px 0;
+
+        img {
+          max-width: 20px;
+          border-radius: 50%;
+          margin: 0 10px 0 0;
+        }
+
+        &-txt {
+          font-size: 13px;
+          line-height: 22px;
+          color: $grey-tabs;
+        }
+      }
+
+      &-create,
+      &-update {
+        font-size: 13px;
+        line-height: 22px;
+        color: $grey-tabs;
+      }
+
+      &-create {
+        margin: 0 0 8px 0;
+      }
+
+      &-update {
+        margin: 0 0 12px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .casino {
+    &__container {
+      padding: 5px 0 0 0;
+    }
+
+    &__breadcrumbs {
+      padding: 0 15px;
+    }
+
+    &__row {
+      padding: 0 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: stretch;
+
+      &-wrap {
+        margin: 0 0 20px 0;
+      }
+
+
+      &-country {
+        flex-direction: row;
+
+        &-wrap {
+          align-items: flex-start;
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino {
+    background: $white;
+
+    &__breadcrumbs {
+      margin: 0 0 10px 0;
+
+      &-link {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    &__bonus {
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      &-subtext {
+        text-align: end;
+      }
+
+      &-link {
+        margin: 0 0 10px 0;
+        padding: 10px 28px 8px;
+      }
+
+      &-title {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      &-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &-text {
+        font-size: 11px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      &-link {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+
+    &__info {
+      &-wrap {
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid $pink;
+      }
+
+      &-text{
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      &-image {
+        margin: 0 0 15px 0;
+        max-width: 100%;
+        min-width: 100%;
+      }
+
+      &-play {
+        align-items: center;
+
+        &-wrap {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+      }
+
+      &-title {
+        margin: 0 0 2px 0;
+        font-size: 17px;
+        line-height: 26px;
+      }
+
+      &-reviews {
+        padding: 0;
+        background: transparent;
+      }
+
+      &-country {
+        padding-bottom: 10px;
+        border-bottom: 2px solid $pink;
+        align-items: center;
+
+        &-wrap {
+          flex: 1 1 auto;
+        }
+
+        &-name {
+          &-txt {
+            font-size: 11px;
+            line-height: 14px;
+          }
+
+          img {
+            margin: 0 5px 0 0;
+          }
+        }
+
+        &-create {
+          font-size: 11px;
+          line-height: 14px;
+        }
+
+        &-update {
+          font-size: 11px;
+          line-height: 14px;
+        }
+      }
+
+    }
+  }
+}

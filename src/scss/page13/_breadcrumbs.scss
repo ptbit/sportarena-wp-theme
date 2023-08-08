@@ -1,0 +1,48 @@
+
+.casino__breadcrumbs {
+  padding: 10px 0 0 0;
+  &-container {
+    display: flex;
+    align-items: center;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &-link {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: $grey-tabs;
+    transition: color $transition;
+
+    &:hover {
+      color: $black-one;
+    }
+
+    &:not(:last-child) {
+      margin: 0 18px 0 0;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        font-size: 12px;
+        line-height: 20px;
+        color: $grey;
+        right: -11px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .casino__breadcrumbs {
+    &-link {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

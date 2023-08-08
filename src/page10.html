@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/page10/head.html')
+
+<body class="body">
+@include('partials/general-block/header.html')
+<div class="casino__wrap">
+    @include('partials/page10/casino.html')
+</div>
+<div class="wrapper">
+    <div class="wrapper__container">
+        <main class="main">
+            @include('partials/page8/review.html')
+            @include('partials/page8/pay.html')
+            @include('partials/page3/news.html')
+            @include('partials/general-block/faq.html')
+            @include('partials/general-block/author-aside.html')
+        </main>
+        <aside class="aside">
+            @include('partials/page3/anchors.html')
+            @include('partials/page3/top-casino.html')
+        </aside>
+    </div>
+</div>
+@include('partials/general-block/subscribe.html')
+@include('partials/general-block/footer.html')
+</body>
+
+</html>

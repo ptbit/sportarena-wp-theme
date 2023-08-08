@@ -1,0 +1,44 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "_colorStyles";
+@import "base/nullstyle";
+@import "base/wrapper";
+
+
+.title{
+  font-family: $font-popins-semb;
+  color: $black-one;
+  font-size: 24px;
+  line-height: 36px;
+  @media screen and (max-width: 600px){
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+[class*="__container"] {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: $font-popins-reg;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: $black-one;
+  background: $pink;
+}
+
+
+// подключения компонентов страницы
+@import "general-block/header";
+@import "page6/_casino";
+@import "page6/_best";

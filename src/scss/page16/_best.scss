@@ -1,0 +1,407 @@
+.best {
+  padding: 60px 0 50px 0;
+  background: $pink;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: $black-one;
+    max-width: 940px;
+    margin: 0 auto 20px auto;
+  }
+
+
+  &__link{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    align-self: center;
+    text-align: center;
+    font-family: $font-popins-semb;
+    padding: 19px 85px 17px;
+  }
+
+  &__list{
+    width: 100%;
+    margin: 0 0 35px 0;
+    counter-reset: my-counter ;
+  }
+
+  &__item {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    background: $white url('../img/home/best/coupon-bg.svg') no-repeat right center/contain;
+    &:not(:last-child){
+      margin: 0 0 10px 0;
+    }
+
+    &-link_wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-link{
+      margin: 0 0 5px 0;
+    }
+
+    &-sublink{
+      display: inline-block;
+      font-size: 10px;
+      line-height: 11px;
+      color: $grey;
+      transition: color $transition;
+      &:hover{
+        color: $black-one;
+      }
+    }
+
+    &-wrapper{
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      padding: 25px 0px 25px 25px;
+      border-right: 3px dotted $pink;
+      position: relative;
+      &::before,
+      &::after{
+        position: absolute;
+        pointer-events: none;
+        width: 19px;
+        height: 19px;
+        background: $pink;
+        border-radius: 50%;
+        right: -11px;
+      }
+      &::after{
+        content: '';
+        top: -10px;
+      }
+      &::before{
+        content: '';
+        bottom: -10px;
+      }
+    }
+    &-image {
+      min-width: 280px;
+      max-width: 280px;
+      margin: 0 23px 0 0;
+      border-radius: 8px;
+      position: relative;
+      img{
+        border-radius: 8px;
+      }
+      &::before{
+        counter-increment: my-counter;
+        content: counter(my-counter) " " ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: $font-popins-semb;
+        background: $burgundy;
+        border-radius: 8px 0 8px 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 25px 0 0;
+      min-width: 164px;
+    }
+
+    &-title {
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      color: $grey-tabs;
+      margin: 0 0 8px 0;
+    }
+
+    &-licensed {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: -0.004em;
+      color: $blue;
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+
+      &-one {
+        margin: 0 8px 0 0;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+      margin: 0 0 15px 0;
+
+      &-star {
+        margin: 0 10px 0 0;
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+
+      &-comment {
+        display: flex;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          margin: 0 5px 0 0;
+        }
+
+        &-text {
+          font-size: 12px;
+          line-height: 12px;
+          color: $black-one;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 20px;
+      color: $white;
+      padding: 12px 47px 10px;
+    }
+
+    &-reviews {
+      display: flex;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      &-btn{
+        display: none;
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        padding: 7px 25px 5px;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 8px;
+        color: $black-one;
+        background: $pink;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &-plus,
+    &-minus {
+      display: flex;
+      flex-direction: column;
+
+      &-txt {
+        display: flex;
+        align-items: flex-start;
+        font-size: 12px;
+        line-height: 28px;
+        color: $grey;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          margin: 6px 8px 0 0;
+          min-width: 16px;
+          min-height: 16px;
+        }
+      }
+    }
+
+    &-plus {
+      margin: 0 30px 0 0;
+
+      &-txt {
+        &::before {
+          background: url("../img/home/best/arrow.svg") no-repeat 0% 0%/contain;
+        }
+      }
+    }
+
+
+    &-coupon {
+      max-width: 240px;
+      min-width: 240px;
+      padding: 15px 15px 15px 25px;
+      &-title {
+        font-family: $font-popins-semb;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-subtitle {
+        font-family: $font-popins-semb;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 5px 0;
+      }
+
+      &-text {
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: -0.004em;
+        color: $black-one;
+        margin: 0 0 10px 0;
+      }
+
+      &-link {
+        display: inline-block;
+        padding: 12px 28px 10px;
+        color: $black-font-orangeBtn;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .best{
+    &__container{
+      padding: 0;
+    }
+    &__title,
+    &__text,
+    &__list{
+      padding: 0 15px;
+    }
+
+
+    &__list{
+      display: flex;
+      overflow-x: scroll;
+      align-items: stretch;
+      &._openItem{
+        align-items: flex-start;
+      }
+    }
+    &__item{
+      min-width: 310px;
+      max-width: 325px;
+      flex-direction: column;
+      background: $white;
+
+      &:not(:last-child){
+        margin: 0 15px 0 0;
+      }
+      &-wrapper{
+        flex: 0 1 auto;
+        flex-direction: column;
+        padding: 10px 10px 20px 10px;
+        border-right: none;
+        border-bottom: 3px dotted $pink;
+        &::before{
+          right: -20px;
+          bottom: -11px;
+        }
+        &::after{
+          top: auto;
+          bottom: -11px;
+          left: -20px;
+        }
+      }
+      &-info{
+        align-items: center;
+      }
+      &-image{
+        margin: 0 0 15px 0;
+
+      }
+      &-info{
+        margin: 0 0 15px 0;
+      }
+      &-reviews{
+        flex-direction: column;
+        display: none;
+        &._show{
+          display: flex;
+        }
+        &-btn{
+          display: inline-block;
+        }
+        &-plus{
+          margin: 0 0 20px 0
+        }
+      }
+      &-coupon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 25px 10px;
+        background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
+        &-subtitle{
+          text-align: center;
+        }
+        &-text{
+          flex: 1 1 auto;
+        }
+        &-link{
+          width: 60%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .best{
+    padding: 50px 0 40px 0;
+
+    &__text{
+      font-size: 13px;
+      line-height: 22px;
+    }
+    &__link{
+      width: calc(100% - 30px);
+
+    }
+  }
+}

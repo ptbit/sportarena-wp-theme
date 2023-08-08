@@ -1,0 +1,1 @@
+import { accorderon } from './components/shortComponents/short5-component.js';

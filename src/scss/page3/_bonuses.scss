@@ -1,0 +1,207 @@
+.bonuses {
+  background: $white;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 0 0 20px 0;
+
+  &__text{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: $black-one;
+    margin: 0 0 20px 0;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+  }
+
+  &__list{
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 320px 120px 100px 100px;
+    align-items: center;
+    &:not(:last-child){
+      margin: 0 0 20px 0;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 14px 0 0;
+      }
+
+      &-txt {
+        font-size: 15px;
+        line-height: 22px;
+        color: $grey-tabs;
+      }
+    }
+
+    &-offer {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+
+    &-deposit {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+
+    &-code {
+      font-size: 15px;
+      line-height: 22px;
+      color: $grey-tabs;
+    }
+    &-link{
+      display: inline-block;
+      padding: 12px 29px 10px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  &__item-th {
+    display: grid;
+    grid-template-columns: 1fr 320px 120px 100px 100px;
+    align-items: center;
+    font-size: 15px;
+    line-height: 22px;
+    color: $grey;
+    text-align: start;
+    margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid $grey-white;
+  }
+
+  &__all-link{
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: $black-one;
+    transition: color $transition;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 7px;
+      top: 56%;
+      right: -15px;
+      transform: translateY(-50%);
+      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
+    }
+    &:hover{
+      color: $orangeBtn-hover;
+    }
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .bonuses{
+    &__item-th{
+      display: none;
+    }
+    &__list{
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+    &__item{
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      border-radius: 4px;
+      background: $pink;
+      padding: 20px;
+      &:not(:last-child){
+        margin: 0;
+      }
+      &-title{
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin: 0 0 15px 0;
+      }
+      &-offer{
+        grid-row: 2/3;
+        grid-column: 1/3;
+        font-family: $font-popins-semb;
+        margin: 0 0 20px 0;
+      }
+      &-deposit{
+        grid-row: 3/4;
+        grid-column: 1/2;
+      }
+      &-code{
+        grid-row: 4/5;
+        grid-column: 1/2;
+      }
+      &-button{
+        grid-row: 3/5;
+        grid-column: 2/3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .bonuses{
+    padding: 30px 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+
+    &__title{
+      width: 80%;
+      margin: 0 auto 10px auto;
+    }
+
+    &__text{
+      width: 80%;
+      margin: 0 auto 20px auto;
+    }
+    &__list{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto 20px auto;
+      width: 80%;
+    }
+
+    &__all-link{
+      align-self: center;
+    }
+
+
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bonuses{
+    padding: 30px 15px 20px;
+    &__title{
+      width: 100%;
+    }
+    &__text{
+      width: 100%;
+      font-size: 13px;
+      line-height: 25px;
+    }
+    &__list{
+      width: 100%;
+    }
+    &__all-link{
+      align-self: flex-start;
+    }
+
+  }
+}
