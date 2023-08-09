@@ -1,9 +1,10 @@
 .quote{
   padding: 30px;
-  background: $burgundy-gradient;
+  background: $green-grad-2;
   border-radius: 8px;
   position: relative;
   margin: 0 0 20px 0;
+  box-shadow: $shadow-text-3;
   &::before{
     pointer-events: none;
     content: '‟';
@@ -11,7 +12,7 @@
     line-height: 65px;
     transform: scale(1, -1);
     height: 18px;
-    color: $orange;
+    color: $salad;
     position: absolute;
     display: inline-block;
     top: 45px;
@@ -24,7 +25,7 @@
     line-height: 65px;
     transform: scale(-1, 1);
     height: 18px;
-    color: $orange;
+    color: $salad;
     position: absolute;
     display: inline-block;
     top: 55px;
@@ -53,7 +54,7 @@
       overflow: hidden;
       align-items: center;
       justify-content: center;
-      border: 1px solid $orange;
+      border: 1px solid $salad;
       border-radius: 4px;
       margin: 0 12px 0 0;
     }
@@ -66,7 +67,7 @@
       &-date{
         font-size: 11px;
         line-height: 20px;
-        color: $grey;
+        color: $white;
       }
     }
   }
@@ -75,7 +76,7 @@
 @media screen and (max-width: 1024px) {
   .quote{
     border-radius: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
   }
 }
 

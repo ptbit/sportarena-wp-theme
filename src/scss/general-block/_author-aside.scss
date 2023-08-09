@@ -1,8 +1,9 @@
 .author{
-  padding: 25px 0 0 0;
+  margin: 0 0 20px 0;
   &__row{
     padding: 30px;
     border-radius: 8px;
+    box-shadow: $shadow-text-3;
     display: flex;
     align-items: flex-start;
     background: $white;
@@ -22,7 +23,7 @@
     &-licensed{
       font-size: 20px;
       line-height: 22px;
-      color: $orange;
+      color: $green;
       margin: 0 0 15px 0;
     }
     &-text{
@@ -36,13 +37,12 @@
       line-height: 20px;
       display: inline-block;
       padding: 14px 25px 12px;
-      border: 1px solid $burgundy;
+      border: 1px solid $green;
       border-radius: 4px;
-      color: $burgundy;
+      color: $green;
       transition: color $transition, background-color $transition;
       &:hover{
-        color: $white;
-        background: $burgundy;
+        color: $green-hover;
       }
     }
   }
@@ -73,7 +73,7 @@
     &-text{
       font-size: 13px;
       line-height: 20px;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 0 10px 0;
     }
 

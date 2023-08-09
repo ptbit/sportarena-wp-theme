@@ -2,6 +2,7 @@
   padding: 30px;
   background: $white;
   border-radius: 8px;
+  box-shadow: $shadow-text-3;
   margin: 0 0 20px 0;
   &__title{
     margin: 0 0 20px 0;
@@ -14,10 +15,10 @@
   }
 
   &__item{
-    border-top: 1px solid $grey-white;
+    border-top: 1px solid $white-bg;
     font-size: 14px;
     line-height: 20px;
-    color: $black-one;
+    color: $black;
     display: grid;
     padding: 20px 0;
     grid-template-columns: 40% 60%;
@@ -29,7 +30,6 @@
   .rtp{
     padding: 30px 15px 20px;
     border-radius: 0;
-    margin: 0 0 10px 0;
   }
 }
 

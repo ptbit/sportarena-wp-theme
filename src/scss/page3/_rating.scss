@@ -3,7 +3,9 @@
   background: $white;
   border-radius: 8px;
   margin: 0 0 20px 0;
-
+  box-shadow: $shadow-text-3;
+  display: flex;
+  flex-direction: column;
   &__title {
     margin: 0 0 20px 0;
   }
@@ -11,48 +13,32 @@
   &__subtitle{
     font-size: 17px;
     line-height: 22px;
-    color: $grey-tabs;
+    color: $black;
     margin: 0 0 15px 0;
   }
 
   &__text{
     font-size: 15px;
     line-height: 30px;
-    color: $black-one;
+    color: $black;
     margin: 0 0 20px 0;
   }
 
-  &__all-link {
+  &__all-link{
+    align-self: center;
     display: inline-block;
-    position: relative;
+    padding: 14px 30px 12px;
     font-size: 15px;
     line-height: 20px;
-    color: $black-one;
-    transition: color $transition;
 
-    &::before {
-      content: '';
-      position: absolute;
-      width: 11px;
-      height: 7px;
-      top: 56%;
-      right: -15px;
-      transform: translateY(-50%);
-      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
-    }
-
-    &:hover {
-      color: $orangeBtn-hover;
-    }
   }
-
   &__rating {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 0 30px 0;
-    margin: 0 auto 30px auto;
-    border-bottom: 1px solid $grey-white;
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid $white-bg;
   }
 
   &__item {
@@ -86,7 +72,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: $pink;
+      background: $white-bg;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       position: absolute;
@@ -143,7 +129,13 @@
 @media screen and (max-width: 1024px) {
   .ratings{
     border-radius: 0;
-    margin: 0 0 10px 0;
+    &__all-link{
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
+    }
     &__item{
       &-text{
         width: 45px;
@@ -185,6 +177,10 @@
     &__text{
       font-size: 13px;
       line-height: 22px;
+    }
+    &__all-link{
+      width: 100%;
+      text-align: center;
     }
   }
 }

@@ -6,14 +6,13 @@
 @import "base/nullstyle";
 @import "base/wrapper";
 
-
 .title{
   font-family: $font-popins-semb;
-  color: $black-one;
-  font-size: 24px;
-  line-height: 36px;
+  color: $black;
+  font-size: 32px;
+  line-height: 39px;
   @media screen and (max-width: 600px){
-    font-size: 20px;
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -33,11 +32,11 @@ body {
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: $black-one;
-  background: $pink;
+  color: $black;
+  background: $white;
 }
 
 // подключения компонентов страницы
 @import "general-block/header";
-@import "page7/_casino";
+@import "page2/_casino";
 @import "page9/_best";

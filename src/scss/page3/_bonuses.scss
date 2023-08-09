@@ -2,13 +2,16 @@
   background: $white;
   border-radius: 8px;
   padding: 30px;
+  box-shadow: $shadow-text-3;
   margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
 
   &__text{
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.01em;
-    color: $black-one;
+    color: $black;
     margin: 0 0 20px 0;
   }
 
@@ -39,26 +42,26 @@
       &-txt {
         font-size: 15px;
         line-height: 22px;
-        color: $grey-tabs;
+        color: $black;
       }
     }
 
     &-offer {
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $black;
     }
 
     &-deposit {
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $black;
     }
 
     &-code {
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $black;
     }
     &-link{
       display: inline-block;
@@ -74,33 +77,20 @@
     align-items: center;
     font-size: 15px;
     line-height: 22px;
-    color: $grey;
+    color: $gray;
     text-align: start;
     margin: 0 0 15px 0;
     padding: 0 0 15px 0;
-    border-bottom: 1px solid $grey-white;
+    border-bottom: 1px solid $white-bg;
   }
 
   &__all-link{
+    align-self: center;
     display: inline-block;
-    position: relative;
+    padding: 14px 30px 12px;
     font-size: 15px;
     line-height: 20px;
-    color: $black-one;
-    transition: color $transition;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 11px;
-      height: 7px;
-      top: 56%;
-      right: -15px;
-      transform: translateY(-50%);
-      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
-    }
-    &:hover{
-      color: $orangeBtn-hover;
-    }
+
   }
 }
 
@@ -118,7 +108,7 @@
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto auto;
       border-radius: 4px;
-      background: $pink;
+      background: $white-bg;
       padding: 20px;
       &:not(:last-child){
         margin: 0;
@@ -157,8 +147,17 @@
   .bonuses{
     padding: 30px 0 20px;
     display: flex;
+    border-radius: 0;
     flex-direction: column;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
+
+    &__all-link{
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
+    }
 
     &__title{
       width: 80%;
@@ -176,9 +175,7 @@
       width: 80%;
     }
 
-    &__all-link{
-      align-self: center;
-    }
+
 
 
 
@@ -200,7 +197,8 @@
       width: 100%;
     }
     &__all-link{
-      align-self: flex-start;
+      width: 100%;
+      text-align: center;
     }
 
   }

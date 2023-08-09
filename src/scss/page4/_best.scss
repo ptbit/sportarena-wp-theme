@@ -1,6 +1,6 @@
 .best {
-  background: $pink;
-  padding: 25px 0 0 0;
+  background: $white-bg;
+  padding: 50px 0;
 
   &__all-link{
     display: inline-block;
@@ -8,7 +8,6 @@
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: $white;
     align-self: center;
     text-align: center;
     padding: 19px 85px 17px;
@@ -26,23 +25,23 @@
   &__text {
     font-size: 15px;
     line-height: 22px;
-    color: $black-one;
+    color: $gray;
     max-width: 940px;
     margin: 0 0 20px 0;
   }
 
   &__tabs {
-    margin: 0 0 30px 0;
+    margin: 0 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    padding: 0 28px;
+    background: $white;
+    box-shadow: $shadow-text-3;
+    border-radius: 100px;
     &-item {
       &:not(:last-child) {
-        margin: 0 5px 0 0;
+        margin: 0 28px 0 0;
       }
     }
 
@@ -53,25 +52,56 @@
     }
 
     &-btn {
+      font-family: $font-popins-semb;
+      position: relative;
       display: inline-block;
-      padding: 8px 18px 6px;
+      padding: 9px 0;
       font-size: 13px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $gray;
       border-radius: 8px;
       background: transparent;
       transition: background-color $transition, color $transition, box-shadow $transition;
 
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $green;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $salad;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
       &:hover {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
+        color: $black;
+      }
+      &:hover::after,
+      &:hover::before{
+        opacity: 1;
+      }
+
+      &._active::after,
+      &._active::before{
+        opacity: 1;
       }
 
       &._active {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
+        color: $black;
       }
 
     }
@@ -90,7 +120,7 @@
     flex-direction: column;
     padding: 20px;
     background: $white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: $shadow-text-3;
     border-radius: 12px;
     max-width: 290px;
     &-info{
@@ -111,14 +141,14 @@
         font-size: 20px;
         line-height: 16px;
         letter-spacing: -0.004em;
-        color: $burgundy;
+        color: $green-white;
         margin: 0 0 5px 0;
       }
       &-text{
         max-width: 70px;
         font-size: 11px;
         line-height: 14px;
-        color: $black-one;
+        color: $black;
 
       }
     }
@@ -126,7 +156,7 @@
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 0 2px 0;
     }
     &-licensed{
@@ -135,7 +165,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
-      color: $blue;
+      color: $purple;
       margin: 0 0 10px 0;
       &-one{
         margin: 0 8px 0 0;
@@ -157,7 +187,7 @@
       &-text{
         font-size: 12px;
         line-height: 12px;
-        color: $black-one;
+        color: $black;
       }
       &-star{
         margin: 0 10px 0 0;
@@ -170,18 +200,18 @@
     }
     &-item{
       padding: 8px 0;
-      border-top: 1px solid $grey-white;
+      border-top: 1px solid $white-bg;
       display: flex;
       align-items: center;
       justify-content: space-between;
       &:last-child{
-        border-bottom: 1px solid $grey-white;
+        border-bottom: 1px solid $white-bg;
       }
       &-title{
         font-size: 13px;
         line-height: 20px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $black;
         margin: 0 10px 0 0;
       }
       &-info{
@@ -189,7 +219,7 @@
         font-size: 15px;
         line-height: 22px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $black;
       }
     }
     &-buttons{
@@ -259,6 +289,7 @@
 
 @media screen and (max-width: 600px){
   .best{
+    padding: 30px 0;
     &__all-link{
       width: calc(100% - 30px);
 

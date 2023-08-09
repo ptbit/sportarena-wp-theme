@@ -1,6 +1,6 @@
 .casino {
-  background: $white url("../img/page3/casino/bg-desc.svg") no-repeat right center/ contain;
-
+  background: $white ;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
   &__container {
     padding: 5px 15px 40px 15px;
     position: relative;
@@ -17,16 +17,16 @@
       position: relative;
       font-size: 12px;
       line-height: 20px;
-      color: $black-one;
+      color: $gray;
       transition: color $transition;
 
       &:hover {
-        color: $grey;
+        color: $black;
       }
 
       &:last-child{
         &:hover{
-          color: $black-one;
+          color: $gray;
         }
       }
 
@@ -38,7 +38,7 @@
           position: absolute;
           font-size: 12px;
           line-height: 20px;
-          color: $grey;
+          color: $gray;
           right: -11px;
           top: 50%;
           transform: translateY(-50%);
@@ -81,36 +81,30 @@
       font-family: $font-popins-semb;
       font-size: 22px;
       line-height: 33px;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 0 4px 0;
     }
 
-    &-reviews {
+    &-reviews{
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 9px 17px 7px;
-      background: $pink;
-      border-radius: 100px;
-      margin: 0 0 15px 0;
-
-      &-text {
+      margin: 0 0 10px 0;
+      &-text{
         font-size: 12px;
         line-height: 12px;
-        color: $black-one;
+        color: $gray;
       }
-
       &-star,
-      &-comment {
+      &-comment{
         display: flex;
         align-items: center;
-
-        img {
+        img{
           margin: 0 6px 0 0;
         }
       }
-
       &-comment{
+        display: none;
         margin: 0 0 0 12px;
       }
     }
@@ -118,7 +112,7 @@
     &-text {
       font-size: 17px;
       line-height: 16px;
-      color: $black-one;
+      color: $black;
 
       span {
         font-family: $font-popins-semb;
@@ -151,7 +145,7 @@
         &-txt {
           font-size: 13px;
           line-height: 22px;
-          color: $grey-tabs;
+          color: $gray;
         }
       }
 
@@ -159,7 +153,7 @@
       &-update {
         font-size: 13px;
         line-height: 22px;
-        color: $grey-tabs;
+        color: $gray;
       }
 
       &-create {
@@ -212,12 +206,12 @@
 
 @media screen and (max-width: 600px) {
   .casino {
-    background: $white;
 
     &__breadcrumbs {
       margin: 0 0 10px 0;
-
+      overflow-x: scroll;
       &-link {
+        white-space: nowrap;
         font-size: 12px;
         line-height: 20px;
       }
@@ -268,7 +262,7 @@
         flex-direction: column;
         padding-bottom: 15px;
         margin-bottom: 15px;
-        border-bottom: 2px solid $pink;
+        border-bottom: 2px solid $white-bg;
       }
 
       &-text{
@@ -305,7 +299,7 @@
 
       &-country {
         padding-bottom: 10px;
-        border-bottom: 2px solid $pink;
+        border-bottom: 2px solid $white-bg;
         align-items: center;
 
         &-wrap {

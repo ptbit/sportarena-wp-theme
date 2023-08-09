@@ -1,8 +1,8 @@
 //Реализация бургер-меню
 import { burger } from './functions/burger';
 
-//header input
-import { inputComponent } from './components/inputHeaderComponent';
+//Language
+import { languageComponent } from './components/languageComponent.js';
 
 //Footer cookie
 //import { footerCookie } from './components/footerCookieComponent';

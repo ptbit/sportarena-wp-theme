@@ -2,9 +2,11 @@
   padding: 30px;
   background: $white;
   border-radius: 8px;
+  box-shadow: $shadow-text-3;
+  margin: 0 0 20px 0;
   &__title{
     text-align: start;
-    color: $black-one;
+    color: $black;
     margin: 0 0 25px 0;
   }
 }
@@ -14,34 +16,45 @@
     margin: 0 0 10px 0;
   }
 }
+
 .accordion__header {
   display: flex;
-  justify-content: space-between;
+  position: relative;
   align-items: center;
   font-family: $font-popins-semb;
-  padding: 21px 25px 19px 25px;
+  padding: 22px 55px 21px 20px;
+  background: $white-bg;
   border-radius: 8px;
-  background: $pink;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: $black-one;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
   cursor: pointer;
   transition: background-color $transition;
   &::after {
     display: inline-block;
-    margin: 0 0 0 25px;
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    border-radius: 8px;
-    background: $burgundyBtn url("../img/general-block-image/polygon-faq.svg") no-repeat center;
-    background-size: 11px 7px;
-    box-shadow: $boxShadowBtn;
-    content: "";
-
+    position: absolute;
+    content: '';
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 7px 9px;
+    border-color: transparent transparent $gray transparent;
+    transform: rotate(180deg);
+    margin: 0 0 0 6px;
+    transition: transform $transition, border-color $transition;
   }
+  &::before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    margin: 0 10px 0 0;
+    background: url("../img/general-block-image/faq-image.svg") no-repeat center/contain;
+    display: inline-block;
+  }
+
 }
 
 .accordion__item_slidedown .accordion__header,
@@ -50,18 +63,18 @@
 }
 
 .accordion__header:hover {
-  background-color: $pink-hover;
+  background-color: $gray-border-menu-hover;
 }
 
 .accordion__content {
   display: flex;
   flex-direction: column;
-  padding: 25px 25px 15px 25px;
+  padding: 25px 35px 15px;
   background: transparent;
   p{
-    font-size: 15px;
-    line-height: 30px;
-    color: $black-one;
+    font-size: 14px;
+    line-height: 26px;
+    color: $gray;
     &:not(:last-child){
       margin: 0 0 20px 0;
     }
@@ -72,13 +85,19 @@
   display: none;
 }
 
+.accordion__item_show .accordion__header::after, .accordion__item_slidedown .accordion__header::after {
+  transform:  rotate(0deg);
+  border-color: transparent transparent $green transparent;
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .faq {
     &__container{
       padding: 0;
     }
     padding: 30px 15px 20px;
-    margin: 0 0 0 0;
     border-radius: 0;
   }
 }

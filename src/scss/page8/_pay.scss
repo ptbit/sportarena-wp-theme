@@ -1,10 +1,12 @@
 .pay {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   background: $white;
   border-radius: 8px;
+  box-shadow: $shadow-text-3;
   margin: 0 0 20px 0;
   &__title{
-
     margin: 0 0 20px 0;
   }
   &__list{
@@ -39,7 +41,7 @@
       font-size: 14px;
       line-height: 21px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
     }
     &-review{
       display: flex;
@@ -51,7 +53,7 @@
       &-text{
         font-size: 12px;
         line-height: 18px;
-        color: $black-one;
+        color: $gray;
       }
     }
     &-wrap2{
@@ -62,7 +64,7 @@
       font-size: 13px;
       line-height: 18px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 10px 0 0;
     }
     &-bonus{
@@ -70,7 +72,7 @@
       font-size: 20px;
       line-height: 24px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 13px 0 0;
     }
     &-buttons{
@@ -88,27 +90,11 @@
   }
 
   &__all-link {
+    align-self: center;
     display: inline-block;
-    position: relative;
+    padding: 14px 30px 12px;
     font-size: 15px;
     line-height: 20px;
-    color: $black-one;
-    transition: color $transition;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 11px;
-      height: 7px;
-      top: 56%;
-      right: -15px;
-      transform: translateY(-50%);
-      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
-    }
-
-    &:hover {
-      color: $orangeBtn-hover;
-    }
   }
 }
 
@@ -121,7 +107,7 @@
     }
     &__item{
       padding: 15px;
-      background: $pink;
+      background: $white-bg;
       flex-direction: column;
       &-wrap{
         margin: 0 0 17px 0;
@@ -164,16 +150,25 @@
   .pay{
     padding: 30px 0 20px;
     border-radius: 0;
-    margin: 0 0 10px 0;
-    &__title,
-    &__all-link{
+    &__title{
       padding: 0 15px;
+    }
+    &__all-link{
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .pay{
+    &__all-link{
+      width: calc(100% - 30px);
+      margin: 0 15px;
+    }
     &__item{
       &-text{
         font-size: 11px;

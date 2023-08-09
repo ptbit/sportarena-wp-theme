@@ -1,6 +1,6 @@
 .best {
-  background: $pink;
-  padding: 25px 0 0 0;
+  padding: 50px 0;
+  background: $white-bg;
 
   &__all-link{
     display: inline-block;
@@ -8,7 +8,6 @@
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: $white;
     align-self: center;
     text-align: center;
     padding: 19px 85px 17px;
@@ -26,23 +25,23 @@
   &__text {
     font-size: 15px;
     line-height: 22px;
-    color: $black-one;
+    color: $gray;
     max-width: 940px;
     margin: 0 0 20px 0;
   }
 
   &__tabs {
-    margin: 0 0 30px 0;
+    margin: 0 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.01);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    padding: 0 28px;
+    background: $white;
+    box-shadow: $shadow-text-3;
+    border-radius: 100px;
     &-item {
       &:not(:last-child) {
-        margin: 0 5px 0 0;
+        margin: 0 28px 0 0;
       }
     }
 
@@ -53,36 +52,67 @@
     }
 
     &-btn {
+      font-family: $font-popins-semb;
+      position: relative;
       display: inline-block;
-      padding: 8px 18px 6px;
+      padding: 9px 0;
       font-size: 13px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $gray;
       border-radius: 8px;
       background: transparent;
       transition: background-color $transition, color $transition, box-shadow $transition;
 
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $green;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $salad;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
       &:hover {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
+        color: $black;
+      }
+      &:hover::after,
+      &:hover::before{
+        opacity: 1;
+      }
+
+      &._active::after,
+      &._active::before{
+        opacity: 1;
       }
 
       &._active {
-        color: $white;
-        background: $burgundyBtn;
-        box-shadow: $boxShadowBtn;
+        color: $black;
       }
 
     }
   }
 
   &__list{
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 15px;
-    margin: 0 0 35px 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: start;
+    gap: 25px;
+    margin: 0 0 30px 0;
     counter-reset: my-counter;
     &._openItem{
       align-items: start;
@@ -90,14 +120,14 @@
 
     &-wrapper{
       flex: 1 1 auto;
-      margin: 0 40px 0 0;
       display: flex;
       flex-direction: column;
     }
   }
 
   &__item {
-    max-width: 285px;
+    box-shadow: $shadow-text-3;
+    max-width: 290px;
     overflow: hidden;
     display: flex;
     //min-width: 310px;
@@ -119,16 +149,6 @@
       margin: 0 0 5px 0;
     }
 
-    &-sublink{
-      display: inline-block;
-      font-size: 10px;
-      line-height: 11px;
-      color: $grey;
-      transition: color $transition;
-      &:hover{
-        color: $black-one;
-      }
-    }
 
     &-wrapper{
       flex: 1 1 auto;
@@ -136,7 +156,7 @@
       flex-direction: column;
       align-items: center;
       padding: 10px 10px 20px 10px;
-      border-bottom: 3px dotted $pink;
+      border-bottom: 3px dotted $white-bg;
       position: relative;
       &::before,
       &::after{
@@ -144,7 +164,7 @@
         pointer-events: none;
         width: 19px;
         height: 19px;
-        background: $pink;
+        background: $white-bg;
         border-radius: 50%;
         right: -11px;
       }
@@ -166,7 +186,7 @@
         top: 0;
         left: 0;
         font-family: $font-popins-semb;
-        background: $burgundy;
+        background: $green;
         border-radius: 8px 0 8px 0;
         width: 28px;
         height: 28px;
@@ -192,7 +212,7 @@
       font-size: 20px;
       line-height: 20px;
       letter-spacing: -0.004em;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 0 8px 0;
     }
 
@@ -200,7 +220,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
-      color: $blue;
+      color: $purple;
       display: flex;
       align-items: center;
       margin: 0 0 10px 0;
@@ -228,7 +248,7 @@
         &-text {
           font-size: 12px;
           line-height: 12px;
-          color: $black-one;
+          color: $black;
           white-space: nowrap;
         }
       }
@@ -245,7 +265,7 @@
         &-text {
           font-size: 12px;
           line-height: 12px;
-          color: $black-one;
+          color: $black;
           white-space: nowrap;
         }
       }
@@ -255,7 +275,6 @@
       display: inline-block;
       font-size: 15px;
       line-height: 20px;
-      color: $white;
       padding: 12px 47px 10px;
     }
 
@@ -273,13 +292,13 @@
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;
-        padding: 7px 25px 5px;
+        padding: 7px 25px;
         font-size: 13px;
-        line-height: 20px;
-        border-radius: 8px;
-        color: $black-one;
-        background: $pink;
-        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+        line-height: 16px;
+        border-radius: 100px;
+        color: $white;
+        background: $purple;
+
       }
     }
 
@@ -324,17 +343,15 @@
 
     &-coupon {
       width: 100%;
-      //height: 100%;
       padding: 25px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: url(../img/home/best/coupon-bg-tab.svg) no-repeat 0 50%/cover;
       &-title {
         font-family: $font-popins-semb;
         font-size: 15px;
         line-height: 18px;
-        color: $black-one;
+        color: $black;
         margin: 0 0 5px 0;
       }
 
@@ -343,7 +360,7 @@
         font-size: 22px;
         line-height: 22px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $green-white;
         margin: 0 0 5px 0;
       }
 
@@ -351,7 +368,7 @@
         font-size: 13px;
         line-height: 18px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $gray;
         margin: 0 0 10px 0;
       }
 
@@ -360,7 +377,6 @@
         text-align: center;
         display: inline-block;
         padding: 12px 28px 10px;
-        color: $black-font-orangeBtn;
         font-size: 15px;
         line-height: 20px;
       }
@@ -393,12 +409,12 @@
     }
 
     &__list{
-      gap: 15px;
+
       padding: 0 15px;
+      grid-template-columns: auto auto auto;
+      gap: 15px;
     }
     &__item{
-      min-width: 310px;
-      //max-width: 100%;
       flex-direction: column;
       background: $white;
 
@@ -410,7 +426,7 @@
         flex-direction: column;
         padding: 10px 10px 20px 10px;
         border-right: none;
-        border-bottom: 3px dotted $pink;
+        border-bottom: 3px dotted $white-bg;
         &::before{
           right: -20px;
           bottom: -11px;
@@ -451,7 +467,6 @@
         width: 100%;
         height: 100%;
         padding: 25px 10px;
-        background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
         &-subtitle{
           text-align: center;
         }
@@ -467,9 +482,11 @@
   }
 }
 
+
+
 @media screen and (max-width: 1024px){
   .best{
-    padding: 15px 0 0 0;
+
     &__row{
       flex-direction: column;
       align-items: center;
@@ -477,7 +494,7 @@
     &__list{
       &-wrapper{
         width: 100%;
-        margin: 0 0 20px 0;
+        margin: 0;
         align-items: flex-start;
       }
     }
@@ -498,9 +515,24 @@
   }
 }
 
-@media screen and (max-width: 665px){
+@media screen and (max-width: 815px){
   .best{
 
+    &__list{
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      width: 100%;
+    }
+    &__item{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .best{
+    padding: 30px 0;
     &__all-link{
       width: calc(100% - 30px);
 
@@ -516,9 +548,9 @@
     }
 
     &__list{
-      display: grid;
-      grid-template-columns: auto;
-      gap: 15px;
+      grid-template-columns: 100%;
+      gap: 10px;
+      margin: 0 0 20px 0;
       &-wrapper{
         align-items: stretch;
       }

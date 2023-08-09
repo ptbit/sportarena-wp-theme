@@ -1,6 +1,18 @@
 .best {
-  background: $pink;
-  padding: 25px 0 0 0;
+  background: $white-bg;
+  padding: 50px 0;
+
+  &__all-link{
+    display: inline-block;
+    font-family: $font-popins-semb;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    align-self: center;
+    text-align: center;
+    padding: 19px 85px 17px;
+  }
+
 
   &__container{
     display: flex;
@@ -14,11 +26,10 @@
   &__text {
     font-size: 15px;
     line-height: 22px;
-    color: $black-one;
+    color: $gray;
     max-width: 940px;
     margin: 0 0 20px 0;
   }
-
 
 
   &__list{
@@ -33,45 +44,38 @@
     width: 100%;
     padding: 20px;
     background: $white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: $shadow-text-3;
     border-radius: 12px;
     &-image{
       margin: 0 0 10px 0;
-      max-width: 162px;
       img{
+        min-width: 100%;
         border-radius: 8px;
       }
     }
     &-title{
       font-size: 17px;
       line-height: 26px;
-      color: $black-one;
+      color: $black;
       margin: 0 0 2px 0;
     }
     &-info{
       font-size: 13px;
       line-height: 16px;
-      color: $black-one;
+      color: $black;
       margin: 0 0 20px 0;
       span{
         font-family: $font-popins-semb;
       }
     }
     &-link{
+      width: 100%;
+      text-align: center;
       display: inline-block;
       padding: 12px 50px 10px;
       font-size: 15px;
       line-height: 20px;
     }
-  }
-
-  &__all-link{
-    align-self: center;
-    font-family: $font-popins-semb;
-    display: inline-block;
-    padding: 18px 70px 16px;
-    font-size: 17px;
-    line-height: 20px;
   }
 
 }
@@ -87,12 +91,13 @@
       padding: 0 15px;
     }
 
+
+
   }
 }
 
 @media screen and (max-width: 1024px){
   .best{
-    padding: 15px 0 0 0;
     &__list{
       grid-template-columns: calc(33.33% - 17px) calc(33.33% - 17px) calc(33.33% - 17px) ;
       width: 100%;
@@ -111,6 +116,11 @@
 
 @media screen and (max-width: 600px){
   .best{
+    padding: 30px 0;
+    &__all-link{
+      width: calc(100% - 30px);
+
+    }
     &__text{
       font-size: 13px;
       line-height: 22px;
@@ -152,10 +162,6 @@
       }
     }
 
-    &__all-link{
-      padding: 17px 15px 15px;
-      width: 96%;
-      text-align: center;
-    }
   }
 }
+

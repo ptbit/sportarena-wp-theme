@@ -3,73 +3,74 @@
   padding: 30px;
   border-radius: 8px;
   margin: 0 0 20px 0;
-  &__title{
-    margin: 0 0 10px 0;
-  }
-  &__image{
-    width: calc(100% + 60px);
-    position: relative;
-    left: -30px;
-    margin: 0 0 30px 0;
-  }
-}
+  box-shadow: $shadow-text-3;
 
-.news__blog{
-  h2{
+}
+.news__blog {
+  a{
+    color: $black;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  h2 {
     font-family: $font-popins-semb;
     font-size: 28px;
     line-height: 48px;
-    color: $black-one;
+    color: $black;
     margin: 0 0 10px 0;
   }
 
-  h3,h4,h5,h6{
+  h3, h4, h5, h6 {
     font-family: $font-popins-semb;
     letter-spacing: -0.01em;
-    color: $black-one;
+    color: $black;
   }
 
-  h3{
+  h3 {
     font-size: 20px;
     line-height: 40px;
   }
 
-  h4{
+  h4 {
     font-size: 18px;
     line-height: 48px;
   }
 
-  h5{
+  h5 {
     font-size: 16px;
     line-height: 48px;
   }
 
-  h6{
+  h6 {
     font-size: 14px;
     line-height: 48px;
   }
 
-  p, li{
+  p, li {
     font-family: $font-popins-reg;
     font-size: 15px;
     line-height: 30px;
     margin: 0 0 20px 0;
-    color: $black-one;
+    color: $black;
   }
 
-  ol{
+  ol {
     list-style-type: none;
     margin: 0 0 30px 0;
     counter-reset: counter-ol;
-    li{
+
+    li {
       position: relative;
       padding-left: 35px;
-      &::before{
+
+      &::before {
         position: absolute;
         top: 2px;
         left: 0;
         counter-increment: counter-ol;
-        content: counter(counter-ol) " " ;
+        content: counter(counter-ol) " ";
         display: flex;
         align-items: center;
         justify-content: center;
@@ -80,24 +81,28 @@
         font-size: 15px;
         line-height: 25px;
         border-radius: 50%;
-        background: $burgunde-circle-gradient;
+        background: $green-grad-2;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 20px 0;
       }
-      p{
+
+      p {
         margin: 0;
-        color: $black-one;
+        color: $black;
       }
     }
   }
 
-  ul{
+  ul {
     margin: 0 0 30px 0;
-    li{
+
+    li {
       position: relative;
       padding: 0 0 0 47px;
-      &::before{
+
+      &::before {
         content: 'i';
         position: absolute;
         display: flex;
@@ -112,49 +117,53 @@
         color: $white;
         font-family: sans-serif;
         border-radius: 8px;
-        background: $burgundy-gradient;
+        background: $green-grad-2;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 15px 0;
       }
-      p{
+
+      p {
         margin: 0;
-        color: $black-one;
+        color: $black;
       }
     }
   }
 
-  blockquote{
+  blockquote {
     position: relative;
     padding: 85px 30px 20px;
     border-radius: 8px;
-    background: $burgundy-gradient;
+    background: $green-grad-2;
     color: $white;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.01em;
     margin: 0 0 20px 0;
-    &::before{
+
+    &::before {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
       line-height: 65px;
       transform: scale(1, -1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 30px;
       left: 30px;
     }
-    &::after{
+
+    &::after {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
       line-height: 65px;
       transform: scale(-1, 1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 40px;
@@ -163,27 +172,32 @@
   }
 }
 
-.content-table{
+
+.content-table {
   border-radius: 20px;
   overflow-x: hidden;
-  table{
+
+  table {
     border-collapse: collapse;
     width: 100%;
     margin: 0 0 20px 0;
     background: $white;
-    tr,td{
+
+    tr, td {
       border: 1px solid #ddd;
       padding: 15px;
-      color: $black-one;
+      color: $black;
       font-size: 15px;
       line-height: 20px;
     }
+
     tr:first-child {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background: $burgundy-gradient;
-      td{
+      background: $green-grad-2;
+
+      td {
         color: $white;
       }
 
@@ -191,71 +205,66 @@
   }
 }
 
+
+
 @media screen and (max-width: 1024px) {
   .news{
     padding: 30px 15px 20px;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     border-radius: 0;
-    &__image{
-      display: flex;
-      justify-content: center;
-      width: calc(100% + 30px);
-      position: relative;
-      left: -15px;
-      margin: 0 0 20px 0;
-    }
   }
 
 }
 
 @media screen and (max-width: 600px) {
 
-  .news__blog{
-    h2{
+
+  .content-table {
+    table {
+      tr, td {
+        padding: 10px;
+        font-size: 13px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .news__blog {
+    h2 {
       font-size: 20px;
       line-height: 30px;
       margin: 0 0 15px 0;
     }
 
-    h3,h4,h5,h6{
+    h3, h4, h5, h6 {
       font-size: 17px;
       line-height: 26px;
     }
 
-    p, li{
+    p, li {
       font-size: 13px;
       line-height: 22px;
       margin: 0 0 15px 0;
-
     }
 
-    ol{
+    ol {
       margin: 0 0 20px 0;
-      li{
-        &:not(:last-child){
+
+      li {
+        &:not(:last-child) {
           margin: 0 0 10px 0;
         }
       }
     }
 
-    ul{
+    ul {
       margin: 0 0 20px 0;
     }
 
-    blockquote{
+    blockquote {
       padding: 85px 20px 20px 20px;
       font-size: 13px;
       line-height: 28px;
-    }
-  }
-
-  .content-table{
-    table{
-      tr,td{
-        padding: 10px;
-        font-size: 13px;
-        line-height: 19px;
-      }
     }
   }
 }

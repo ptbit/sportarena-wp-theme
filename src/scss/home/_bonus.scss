@@ -228,6 +228,7 @@
 
 @media screen and (max-width: 600px){
   .bonus{
+    padding: 30px 0;
     &__list{
       grid-template-columns: 100%;
     }

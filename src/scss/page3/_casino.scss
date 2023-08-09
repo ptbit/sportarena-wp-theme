@@ -1,5 +1,6 @@
 .casino {
-  background: $white url("../img/page3/casino/bg-desc.svg") no-repeat right center/ contain;
+  background: $white;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
   &__wrap{
     overflow: hidden;
   }
@@ -19,16 +20,16 @@
       position: relative;
       font-size: 12px;
       line-height: 20px;
-      color: $black-one;
+      color: $gray;
       transition: color $transition;
 
       &:hover {
-        color: $grey;
+        color: $black;
       }
 
       &:last-child{
         &:hover{
-          color: $black-one;
+          color: $gray;
         }
       }
 
@@ -40,7 +41,7 @@
           position: absolute;
           font-size: 12px;
           line-height: 20px;
-          color: $grey;
+          color: $gray;
           right: -11px;
           top: 50%;
           transform: translateY(-50%);
@@ -72,13 +73,16 @@
       white-space: nowrap;
       font-size: 17px;
       line-height: 22px;
-      color: $black-one;
+      color: $gray;
       transition: color $transition;
       &._active::before{
         opacity: 1;
       }
+      &._active::after{
+        opacity: 1;
+      }
       &._active{
-        color: $grey-tabs;
+        color: $black;
       }
       &::before{
         content: '';
@@ -86,17 +90,31 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 8px;
+        height: 2px;
         border-radius: 8px;
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+        background: $green;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 8px;
+        background: $salad;
         opacity: 0;
         transition: opacity $transition;
       }
       &:hover{
-        color: $grey-tabs;
+        color: $black;
       }
       &:hover::before{
+        opacity: 1;
+      }
+      &:hover::after{
         opacity: 1;
       }
     }
@@ -122,7 +140,7 @@
       right: 0;
       top: -50px;
       height: 204%;
-      border-right: 5px dashed $pink;
+      border-right: 5px dashed $white-bg;
       pointer-events: none;
     }
 
@@ -146,7 +164,7 @@
       &-wrap {
         display: flex;
         align-items: center;
-        margin: 0 0 5px 0;
+        margin: 0 0 10px 0;
       }
     }
 
@@ -154,7 +172,7 @@
       font-family: $font-popins-semb;
       font-size: 22px;
       line-height: 33px;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 20px 0 0;
     }
 
@@ -163,7 +181,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
-      color: $blue;
+      color: $purple;
       &-one{
         margin: 0 8px 0 0;
       }
@@ -173,14 +191,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 9px 17px 7px;
-      background: $pink;
-      border-radius: 100px;
-      margin: 0 0 15px 0;
+      margin: 0 0 10px 0;
       &-text{
         font-size: 12px;
         line-height: 12px;
-        color: $black-one;
+        color: $gray;
       }
       &-star,
       &-comment{
@@ -201,10 +216,10 @@
       display: inline-block;
       font-size: 10px;
       line-height: 11px;
-      color: $grey;
+      color: $gray;
       transition: color $transition;
       &:hover{
-        color: $black-one;
+        color: $black;
       }
     }
 
@@ -254,14 +269,14 @@
         &-txt{
           font-size: 13px;
           line-height: 22px;
-          color: $grey-tabs;
+          color: $gray;
         }
       }
       &-create,
       &-update{
         font-size: 13px;
         line-height: 22px;
-        color: $grey-tabs;
+        color: $gray;
       }
       &-create{
         margin: 0 0 8px 0;
@@ -278,7 +293,7 @@
   }
 
   &__bonus{
-    color: $black-one;
+    color: $black;
     padding: 0 0 0 38px;
     &-title{
       font-family: $font-popins-semb;
@@ -291,12 +306,14 @@
       font-size: 24px;
       line-height: 24px;
       margin: 0 0 5px 0;
+      color: $green-white;
     }
     &-text{
       font-size: 13px;
       line-height: 18px;
       letter-spacing: -0.004em;
       margin: 0 0 10px 0;
+      color: $gray;
     }
     &-link{
       display: inline-block;
@@ -308,11 +325,11 @@
     &-subtext{
       font-size: 13px;
       line-height: 16px;
-      color: $black-one;
+      color: $gray;
       max-width: 160px;
       span{
         font-family: $font-popins-semb;
-        color: $black-one;
+        color: $gray;
       }
     }
   }
@@ -347,7 +364,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 0 15px 0;
-      border-bottom: 2px solid $pink;
+      border-bottom: 2px solid $white-bg;
     }
   }
 }
@@ -397,7 +414,9 @@
     background: $white;
     &__breadcrumbs {
       margin: 0 0 10px 0;
+      overflow-x: scroll;
       &-link {
+        white-space: nowrap;
         font-size: 12px;
         line-height: 20px;
       }
@@ -443,6 +462,7 @@
     &__info{
       &-buttons{
         &-play{
+          margin: 0 0 5px 0px;
           font-size: 13px;
           line-height: 20px;
           padding: 10px 70px 8px;
@@ -456,7 +476,7 @@
         flex-direction: column;
         padding-bottom: 15px;
         margin-bottom: 5px;
-        border-bottom: 2px solid $pink;
+        border-bottom: 2px solid $white-bg;
       }
       &-image{
         margin: 0 0 15px 0;
@@ -471,6 +491,7 @@
 
       }
       &-title{
+        align-self: center;
         margin: 0 0 2px 0;
         font-size: 17px;
         line-height: 26px;
@@ -486,7 +507,7 @@
       }
       &-country{
         padding-bottom: 10px ;
-        border-bottom: 2px solid $pink;
+        border-bottom: 2px solid $white-bg;
         align-items: center;
         &-wrap{
           flex: 1 1 auto;

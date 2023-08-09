@@ -2,14 +2,17 @@
   background: $white;
   padding: 30px;
   border-radius: 8px;
+  box-shadow: $shadow-text-3;
   margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
   &__title{
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
   }
   &__list{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 0 20px 0;
   }
   &__item{
@@ -35,7 +38,7 @@
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.01em;
-      color: $black-one;
+      color: $black;
     }
     &-subtitle{
       font-size: 14px;
@@ -45,33 +48,25 @@
     }
   }
   &__all-link{
+    align-self: center;
     display: inline-block;
-    position: relative;
+    padding: 14px 30px 12px;
     font-size: 15px;
     line-height: 20px;
-    color: $black-one;
-    transition: color $transition;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 11px;
-      height: 7px;
-      top: 56%;
-      right: -15px;
-      transform: translateY(-50%);
-      background: url("../img/page3/bonuses/arrow.svg") no-repeat 0 0/contain;
-    }
-    &:hover{
-      color: $orangeBtn-hover;
-    }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .games {
     padding: 30px 15px 20px;
-    margin: 0 0 10px 0;
     border-radius: 0;
+    &__all-link{
+      align-self: center;
+      width: 80%;
+      text-align: center;
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -91,11 +86,15 @@
 
 @media screen and (max-width: 600px) {
   .games{
+    &__all-link{
+      width: 100%;
+    }
     &__list{
       flex-direction: column;
       align-items: stretch;
     }
     &__item{
+      max-width: 100%;
       &-image{
         max-width: 100%;
         min-width: 100%;
