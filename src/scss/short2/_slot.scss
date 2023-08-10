@@ -1,40 +1,19 @@
 //casino-slot block     SHORT-2
 .casino-slot {
-  &._onWhite{
-    padding: 15px;
-    border-radius: 8px;
-    @media screen and (max-width: 350px){
-      padding: 5px;
-    }
+
+    .casino-slot__item{
+      border: 1px solid $gray;
+
   }
-  background: $pink;
 
   margin: 0 0 20px 0;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-
-
-  &__link {
-    font-family: $font-popins-semb;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: $white;
-    align-self: center;
-    text-align: center;
-    padding: 19px 85px 17px;
-  }
 
 
   &__list {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 15px;
-    margin: 0 0 30px 0;
+
   }
 
   &__item {
@@ -51,13 +30,12 @@
       cursor: pointer;
       top: 20px;
       right: 20px;
-      padding: 10.5px;
 
       &-text {
         display: none;
         padding: 15px;
         border-radius: 8px;
-        background: $burgundyBtn;
+        background: $green-grad;
         color: $white;
         width: 150px;
         position: absolute;
@@ -86,13 +64,13 @@
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 0 2px 0;
     }
 
     &-licensed {
       display: flex;
-      color: $blue;
+      color: $purple;
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
@@ -123,7 +101,7 @@
       display: grid;
       grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
       gap: 15px;
-      margin: 0 0 30px 0;
+
     }
 
     &__item {

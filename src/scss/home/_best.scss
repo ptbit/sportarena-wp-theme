@@ -141,7 +141,7 @@
       display: inline-block;
       font-size: 10px;
       line-height: 11px;
-      color: $grey;
+      color: $gray;
       transition: color $transition;
       &:hover{
         color: $black;
@@ -313,7 +313,7 @@
         align-items: flex-start;
         font-size: 12px;
         line-height: 28px;
-        color: $grey;
+        color: $gray;
 
         &::before {
           content: '';

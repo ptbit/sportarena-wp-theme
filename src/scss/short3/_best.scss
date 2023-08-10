@@ -1,42 +1,20 @@
 //casino-review block    SHORT-3
 
 .casino-review {
-  background: $pink;
+
   margin: 0 0 20px 0;
-  &._onWhite{
-    padding: 15px;
-    border-radius: 8px;
-    @media screen and (max-width: 350px){
-      padding: 5px;
-    }
-  }
 
-  &__all-link {
-    display: inline-block;
-    font-family: $font-popins-semb;
-    font-size: 17px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: $white;
-    align-self: center;
-    text-align: center;
-    padding: 19px 85px 17px;
-  }
+    .casino-review__item{
+      border: 1px solid $gray;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
   }
-
 
   &__list {
     display: grid;
-    //grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
     grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
     justify-content: start;
     gap: 15px;
-    margin: 0 0 30px 0;
+
   }
 
   &__item {
@@ -69,7 +47,7 @@
         font-size: 20px;
         line-height: 16px;
         letter-spacing: -0.004em;
-        color: $burgundy;
+        color: $green-white;
         margin: 0 0 5px 0;
       }
 
@@ -77,7 +55,7 @@
         max-width: 70px;
         font-size: 11px;
         line-height: 14px;
-        color: $black-one;
+        color: $black;
 
       }
     }
@@ -86,7 +64,7 @@
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 0 2px 0;
     }
 
@@ -96,7 +74,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
-      color: $blue;
+      color: $purple;
       margin: 0 0 10px 0;
 
       &-one {
@@ -123,7 +101,7 @@
       &-text {
         font-size: 12px;
         line-height: 12px;
-        color: $black-one;
+        color: $black;
       }
 
       &-star {
@@ -139,20 +117,20 @@
 
     &-item {
       padding: 8px 0;
-      border-top: 1px solid $grey-white;
+      border-top: 1px solid $white-bg;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       &:last-child {
-        border-bottom: 1px solid $grey-white;
+        border-bottom: 1px solid $white-bg;
       }
 
       &-title {
         font-size: 13px;
         line-height: 20px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $black;
         margin: 0 10px 0 0;
       }
 
@@ -161,7 +139,7 @@
         font-size: 15px;
         line-height: 22px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $black;
       }
     }
 
@@ -194,7 +172,7 @@
       display: grid;
       grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
       gap: 15px;
-      margin: 0 0 30px 0;
+
     }
 
   }
@@ -211,7 +189,7 @@
       grid-template-columns: 100%;
       padding: 0;
       gap: 10px;
-      margin: 0 0 20px 0;
+
     }
 
     &__item {
