@@ -7,18 +7,24 @@
     max-width: 1270px;
     margin: 0 auto;
     padding: 0 15px;
+    overflow-x: scroll;
   }
 
   &-link {
+    white-space: nowrap;
     display: inline-block;
     position: relative;
     font-size: 12px;
     line-height: 20px;
-    color: $grey-tabs;
+    color: $black;
     transition: color $transition;
 
     &:hover {
-      color: $black-one;
+      color: $gray;
+    }
+
+    &:last-child:hover{
+      color: $black;
     }
 
     &:not(:last-child) {
@@ -29,7 +35,7 @@
         position: absolute;
         font-size: 12px;
         line-height: 20px;
-        color: $grey;
+        color: $black;
         right: -11px;
         top: 50%;
         transform: translateY(-50%);

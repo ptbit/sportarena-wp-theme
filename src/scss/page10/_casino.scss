@@ -1,5 +1,6 @@
 .casino {
-  background: $white url("../img/page3/casino/bg-desc.svg") no-repeat right center/ contain;
+  background: $white;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.05));
 
   &__container {
     padding: 5px 15px 40px 15px;
@@ -17,16 +18,16 @@
       position: relative;
       font-size: 12px;
       line-height: 20px;
-      color: $black-one;
+      color: $gray;
       transition: color $transition;
 
       &:hover {
-        color: $grey;
+        color: $black;
       }
 
       &:last-child{
         &:hover{
-          color: $black-one;
+          color: $gray;
         }
       }
 
@@ -38,7 +39,7 @@
           position: absolute;
           font-size: 12px;
           line-height: 20px;
-          color: $grey;
+          color: $gray;
           right: -11px;
           top: 50%;
           transform: translateY(-50%);
@@ -76,36 +77,30 @@
       font-family: $font-popins-semb;
       font-size: 22px;
       line-height: 33px;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 0 4px 0;
     }
 
-    &-reviews {
+    &-reviews{
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 9px 17px 7px;
-      background: $pink;
-      border-radius: 100px;
       margin: 0 0 10px 0;
-
-      &-text {
+      &-text{
         font-size: 12px;
         line-height: 12px;
-        color: $black-one;
+        color: $gray;
       }
-
       &-star,
-      &-comment {
+      &-comment{
         display: flex;
         align-items: center;
-
-        img {
+        img{
           margin: 0 6px 0 0;
         }
       }
-
       &-comment{
+        display: none;
         margin: 0 0 0 12px;
       }
     }
@@ -116,7 +111,7 @@
       align-items: center;
       font-size: 13px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $black;
 
       &-create {
         margin: 0 20px 0 0;
@@ -128,7 +123,7 @@
       align-items: center;
       font-size: 14px;
       line-height: 20px;
-      color: $black-one;
+      color: $gray;
 
       &:not(:last-child) {
         margin: 0 0 15px 0;
@@ -139,6 +134,7 @@
       }
 
       &-text {
+        color: $black;
         font-family: $font-popins-semb;
       }
     }

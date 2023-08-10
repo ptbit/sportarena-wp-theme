@@ -1,9 +1,11 @@
 .contacts{
-  padding: 40px 0 70px 0;
+  padding: 50px  0;
+  background: $white-bg;
   &__row{
     display: flex;
   }
   &__info{
+    box-shadow: $shadow-text-2;
     padding: 40px 50px;
     background: $white;
     border-radius: 8px;
@@ -14,21 +16,21 @@
       font-family: $font-popins-semb;
       font-size: 24px;
       line-height: 36px;
-      color: $black-one;
+      color: $black;
       margin: 0 0 10px 0;
     }
     &-text{
       max-width: 550px;
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $gray;
       margin: 0 0 35px 0;
     }
     &-subtitle{
       font-family: $font-popins-semb;
       font-size: 17px;
       line-height: 25px;
-      color: $black-one;
+      color: $black;
       margin: 0 0 15px 0;
     }
     &-list{
@@ -48,7 +50,7 @@
       &-title{
         font-size: 15px;
         line-height: 20px;
-        color: $grey-tabs;
+        color: $gray;
       }
 
       &-link{
@@ -57,7 +59,7 @@
         font-family: $font-popins-semb;
         font-size: 15px;
         line-height: 20px;
-        color: $black-one;
+        color: $black;
         text-decoration: underline;
       }
 
@@ -66,6 +68,7 @@
   }
 
   &__social{
+
     display: flex;
     align-items: center;
     &-item{
@@ -92,16 +95,18 @@
     &-text{
       font-size: 13px;
       line-height: 20px;
-      color: $grey-tabs;
+      color: $gray;
       margin: 0 0 10px 0;
     }
 
   }
 
   &__form{
+
     display: flex;
     flex-direction: column;
     &-wrap{
+      box-shadow: $shadow-text-2;
       padding: 40px 30px 30px 30px;
       background: $white;
       border-radius: 8px;
@@ -113,7 +118,7 @@
       text-align: center;
       font-size: 24px;
       line-height: 36px;
-      color: $black-one;
+      color: $black;
       margin: 0 0 15px 0;
     }
     &-item{
@@ -133,16 +138,16 @@
     &-input{
       display: inline-block;
       width: 100%;
-      background: $pink;
+      background: $white-bg;
       border-radius: 8px;
       padding: 10px 20px 8px;
       font-size: 15px;
       line-height: 30px;
-      color: $grey-tabs;
+      color: $black;
       &::placeholder{
         font-size: 15px;
         line-height: 30px;
-        color: $grey-tabs;
+        color: $black;
       }
     }
 
@@ -150,17 +155,17 @@
       resize: none;
       display: inline-block;
       width: 100%;
-      background: $pink;
+      background: $white-bg;
       border-radius: 8px;
       padding: 10px 20px 8px;
       font-size: 15px;
       line-height: 30px;
-      color: $grey-tabs;
+      color: $black;
       height: 100%;
       &::placeholder{
         font-size: 15px;
         line-height: 30px;
-        color: $grey-tabs;
+        color: $black;
       }
     }
 
@@ -200,14 +205,14 @@
 
 @media screen and (max-width: 600px) {
   .contacts{
-    padding: 0 0 40px 0;
+    padding: 0 0 30px 0;
     &__container{
       padding: 0;
     }
     &__info{
       border-radius: 0;
       padding: 30px 15px;
-      margin: 0 0 10px 0;
+      margin: 0 0 20px 0;
       &-title{
         font-size: 20px;
         line-height: 30px;
@@ -215,7 +220,7 @@
       }
       &-text{
         font-size: 13px;
-        line-height: 32px;
+        line-height: 26px;
         margin: 0 0 20px 0;
       }
       &-list{

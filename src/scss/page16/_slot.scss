@@ -1,6 +1,6 @@
 .slot {
   padding: 50px 0;
-  background: $burgundy url("../img/home/slot/bg-desc.webp") no-repeat 50% 0/cover;
+  background: $green url("../img/home/slot/bg-desc.webp") no-repeat 50% 0/cover;
 
   &__container{
     display: flex;
@@ -10,14 +10,15 @@
   &__title {
     margin: 0 0 10px 0;
     color: $white;
+    text-shadow: $shadow-text-2;
     text-align: center;
   }
 
   &__text {
-
     font-size: 15px;
     line-height: 22px;
-    color: $grey;
+    color: $gray-text-on-green;
+    text-shadow: $shadow-text-2;
     text-align: center;
     max-width: 940px;
     margin: 0 auto 20px auto;
@@ -28,7 +29,6 @@
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
-    color: $white;
     align-self: center;
     text-align: center;
     padding: 19px 85px 17px;
@@ -43,6 +43,7 @@
   }
 
   &__item{
+    box-shadow: $shadow-text-3;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -56,16 +57,15 @@
       cursor: pointer;
       top: 20px;
       right: 20px;
-      padding: 10.5px;
       &-text{
         display: none;
         padding: 15px;
         border-radius: 8px;
-        background: $burgundyBtn;
+        background: $green-grad;
         color: $white;
         width: 150px;
         position: absolute;
-        top: 50px;
+        top: 35px;
         right: 0;
         font-size: 12px;
         line-height: 15px;
@@ -86,12 +86,12 @@
       font-size: 17px;
       line-height: 26px;
       letter-spacing: -0.004em;
-      color: $black-one;
+      color: $black;
       margin: 0 0 2px 0;
     }
     &-licensed{
       display: flex;
-      color: $blue;
+      color: $purple;
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
@@ -144,7 +144,8 @@
 
 @media screen and (max-width: 600px){
   .slot{
-    background: $burgundy-gradient;
+    padding: 30px 0;
+    background: $green-grad-2;
     &__text{
       font-size: 13px;
       line-height: 22px;

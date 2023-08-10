@@ -7,13 +7,13 @@
 @import "base/wrapper-aside2";
 
 
-.title {
+.title{
   font-family: $font-popins-semb;
-  color: $black-one;
-  font-size: 24px;
-  line-height: 36px;
-  @media screen and (max-width: 600px) {
-    font-size: 20px;
+  color: $black;
+  font-size: 32px;
+  line-height: 39px;
+  @media screen and (max-width: 600px){
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -29,13 +29,12 @@ body {
   &._lock {
     overflow: hidden;
   }
-
   font-family: $font-popins-reg;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: $black-one;
-  background: $pink;
+  color: $black;
+  background: $white-bg;
 }
 
 // подключения компонентов страницы
@@ -68,6 +67,12 @@ body {
 
   @media screen and (max-width: 600px){
     min-width: auto;
+  }
+}
+
+.wrapper {
+  @media screen and (max-width: 1024px){
+    padding: 15px 0 0 0;
   }
 }
 

@@ -3,6 +3,7 @@
   background: $white;
   border-radius: 8px;
   margin: 0 0 20px 0;
+  box-shadow: $shadow-text-3;
   &__info{
     display: flex;
     align-items: center;
@@ -20,13 +21,13 @@
           font-family: $font-popins-semb;
           font-size: 17px;
           line-height: 20px;
-          color: $black-one;
+          color: $black;
           margin: 0 0 5px 0;
         }
         &:nth-child(2){
           font-size: 13px;
           line-height: 20px;
-          color: $grey-tabs;
+          color: $gray;
         }
       }
     }
@@ -36,7 +37,7 @@
     p{
       font-size: 15px;
       line-height: 30px;
-      color: $black-one;
+      color: $black;
     }
   }
   &__social{
@@ -87,27 +88,31 @@
   }
 }
 
-.content-table{
+.content-table {
   border-radius: 20px;
   overflow-x: hidden;
-  table{
+
+  table {
     border-collapse: collapse;
     width: 100%;
     margin: 0 0 20px 0;
     background: $white;
-    tr,td{
+
+    tr, td {
       border: 1px solid #ddd;
       padding: 15px;
-      color: $black-one;
+      color: $black;
       font-size: 15px;
       line-height: 20px;
     }
+
     tr:first-child {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background: $burgundy-gradient;
-      td{
+      background: $green-grad-2;
+
+      td {
         color: $white;
       }
 
@@ -131,61 +136,71 @@
 
 
 
-.news__blog{
-  h2{
+.news__blog {
+  a{
+    color: $black;
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  h2 {
     font-family: $font-popins-semb;
     font-size: 28px;
     line-height: 48px;
-    color: $black-one;
+    color: $black;
     margin: 0 0 10px 0;
   }
 
-  h3,h4,h5,h6{
+  h3, h4, h5, h6 {
     font-family: $font-popins-semb;
     letter-spacing: -0.01em;
-    color: $black-one;
+    color: $black;
   }
 
-  h3{
+  h3 {
     font-size: 20px;
     line-height: 40px;
   }
 
-  h4{
+  h4 {
     font-size: 18px;
     line-height: 48px;
   }
 
-  h5{
+  h5 {
     font-size: 16px;
     line-height: 48px;
   }
 
-  h6{
+  h6 {
     font-size: 14px;
     line-height: 48px;
   }
 
-  p, li{
+  p, li {
     font-family: $font-popins-reg;
     font-size: 15px;
     line-height: 30px;
     margin: 0 0 20px 0;
+    color: $black;
   }
 
-  ol{
+  ol {
     list-style-type: none;
     margin: 0 0 30px 0;
     counter-reset: counter-ol;
-    li{
+
+    li {
       position: relative;
       padding-left: 35px;
-      &::before{
+
+      &::before {
         position: absolute;
         top: 2px;
         left: 0;
         counter-increment: counter-ol;
-        content: counter(counter-ol) " " ;
+        content: counter(counter-ol) " ";
         display: flex;
         align-items: center;
         justify-content: center;
@@ -196,23 +211,28 @@
         font-size: 15px;
         line-height: 25px;
         border-radius: 50%;
-        background: $burgunde-circle-gradient;
+        background: $green-grad-2;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 20px 0;
       }
-      p{
+
+      p {
         margin: 0;
+        color: $black;
       }
     }
   }
 
-  ul{
+  ul {
     margin: 0 0 30px 0;
-    li{
+
+    li {
       position: relative;
       padding: 0 0 0 47px;
-      &::before{
+
+      &::before {
         content: 'i';
         position: absolute;
         display: flex;
@@ -227,48 +247,53 @@
         color: $white;
         font-family: sans-serif;
         border-radius: 8px;
-        background: $burgundy-gradient;
+        background: $green-grad-2;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin: 0 0 15px 0;
       }
-      p{
+
+      p {
         margin: 0;
+        color: $black;
       }
     }
   }
 
-  blockquote{
+  blockquote {
     position: relative;
     padding: 85px 30px 20px;
     border-radius: 8px;
-    background: $burgundy-gradient;
+    background: $green-grad-2;
     color: $white;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.01em;
     margin: 0 0 20px 0;
-    &::before{
+
+    &::before {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
       line-height: 65px;
       transform: scale(1, -1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 30px;
       left: 30px;
     }
-    &::after{
+
+    &::after {
       pointer-events: none;
       content: '‟';
       font-size: 65px;
       line-height: 65px;
       transform: scale(-1, 1);
       height: 18px;
-      color: $orange;
+      color: $salad;
       position: absolute;
       display: inline-block;
       top: 40px;

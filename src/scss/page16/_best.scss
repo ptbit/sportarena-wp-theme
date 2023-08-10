@@ -1,6 +1,6 @@
 .best {
-  padding: 60px 0 50px 0;
-  background: $pink;
+  padding: 50px 0;
+  background: $white-bg;
 
   &__container{
     display: flex;
@@ -16,10 +16,11 @@
     font-size: 15px;
     line-height: 22px;
     text-align: center;
-    color: $black-one;
+    color: $gray;
     max-width: 940px;
     margin: 0 auto 20px auto;
   }
+
 
 
   &__link{
@@ -29,7 +30,7 @@
     align-self: center;
     text-align: center;
     font-family: $font-popins-semb;
-    padding: 19px 85px 17px;
+    padding: 17px 85px 17px;
   }
 
   &__list{
@@ -39,13 +40,14 @@
   }
 
   &__item {
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.10));
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     border-radius: 12px;
-    background: $white url('../img/home/best/coupon-bg.svg') no-repeat right center/contain;
+    background: $white;
     &:not(:last-child){
       margin: 0 0 10px 0;
     }
@@ -67,7 +69,7 @@
       color: $grey;
       transition: color $transition;
       &:hover{
-        color: $black-one;
+        color: $black;
       }
     }
 
@@ -76,7 +78,7 @@
       display: flex;
       align-items: center;
       padding: 25px 0px 25px 25px;
-      border-right: 3px dotted $pink;
+      border-right: 3px dotted $white-bg;
       position: relative;
       &::before,
       &::after{
@@ -84,7 +86,7 @@
         pointer-events: none;
         width: 19px;
         height: 19px;
-        background: $pink;
+        background: $white-bg;
         border-radius: 50%;
         right: -11px;
       }
@@ -113,7 +115,7 @@
         top: 0;
         left: 0;
         font-family: $font-popins-semb;
-        background: $burgundy;
+        background: $salad;
         border-radius: 8px 0 8px 0;
         width: 28px;
         height: 28px;
@@ -122,7 +124,7 @@
         justify-content: center;
         font-size: 16px;
         line-height: 20px;
-        color: $white;
+        color: $black;
       }
     }
 
@@ -139,7 +141,7 @@
       font-size: 22px;
       line-height: 20px;
       letter-spacing: -0.004em;
-      color: $grey-tabs;
+      color: $black;
       margin: 0 0 8px 0;
     }
 
@@ -147,7 +149,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: -0.004em;
-      color: $blue;
+      color: $purple;
       display: flex;
       align-items: center;
       margin: 0 0 10px 0;
@@ -175,7 +177,7 @@
         &-text {
           font-size: 12px;
           line-height: 12px;
-          color: $black-one;
+          color: $gray;
           white-space: nowrap;
         }
       }
@@ -192,7 +194,7 @@
         &-text {
           font-size: 12px;
           line-height: 12px;
-          color: $black-one;
+          color: $gray;
           white-space: nowrap;
         }
       }
@@ -202,7 +204,6 @@
       display: inline-block;
       font-size: 15px;
       line-height: 20px;
-      color: $white;
       padding: 12px 47px 10px;
     }
 
@@ -217,13 +218,13 @@
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;
-        padding: 7px 25px 5px;
+        padding: 7px 25px;
         font-size: 13px;
-        line-height: 20px;
-        border-radius: 8px;
-        color: $black-one;
-        background: $pink;
-        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 0px rgba(255, 255, 255, 0.2);
+        line-height: 16px;
+        border-radius: 100px;
+        color: $white;
+        background: $purple;
+
       }
     }
 
@@ -268,7 +269,7 @@
         font-family: $font-popins-semb;
         font-size: 15px;
         line-height: 18px;
-        color: $black-one;
+        color: $black;
         margin: 0 0 5px 0;
       }
 
@@ -277,7 +278,7 @@
         font-size: 24px;
         line-height: 24px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $green-white;
         margin: 0 0 5px 0;
       }
 
@@ -285,14 +286,13 @@
         font-size: 13px;
         line-height: 18px;
         letter-spacing: -0.004em;
-        color: $black-one;
+        color: $gray;
         margin: 0 0 10px 0;
       }
 
       &-link {
         display: inline-block;
         padding: 12px 28px 10px;
-        color: $black-font-orangeBtn;
         font-size: 15px;
         line-height: 20px;
       }
@@ -311,25 +311,25 @@
       padding: 0 15px;
     }
 
-
     &__list{
-      display: flex;
-      overflow-x: scroll;
-      align-items: stretch;
+      display: grid;
+      grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+      gap: 15px;
       &._openItem{
         align-items: flex-start;
       }
     }
     &__item{
       min-width: 310px;
-      max-width: 325px;
+      max-width: 100%;
       flex-direction: column;
       background: $white;
-
-      &:not(:last-child){
-        margin: 0 15px 0 0;
+      margin: 0 !important;
+      &-image{
+        max-width: 349px
       }
       &-wrapper{
+        width: 100%;
         flex: 0 1 auto;
         flex-direction: column;
         padding: 10px 10px 20px 10px;
@@ -350,6 +350,11 @@
       }
       &-image{
         margin: 0 0 15px 0;
+        max-width: 100%;
+        min-width: 100%;
+        img{
+          min-width: 100%;
+        }
 
       }
       &-info{
@@ -375,7 +380,6 @@
         width: 100%;
         height: 100%;
         padding: 25px 10px;
-        background: url("../img/home/best/coupon-bg-tab.svg") no-repeat 0 50%/cover;
         &-subtitle{
           text-align: center;
         }
@@ -391,9 +395,32 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .best{
+    &__list{
+      display: grid;
+      grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+      gap: 15px;
+
+    }
+    &__item{
+      min-width: 250px;
+    }
+  }
+}
+
 @media screen and (max-width: 600px){
   .best{
-    padding: 50px 0 40px 0;
+    padding: 30px 0;
+
+    &__list{
+      grid-template-columns: 100%;
+    }
+    &__item{
+      &-image{
+        max-width: 100%;
+      }
+    }
 
     &__text{
       font-size: 13px;

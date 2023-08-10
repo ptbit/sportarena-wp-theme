@@ -4,8 +4,8 @@ import { burger } from './functions/burger';
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
-//header input
-import { inputComponent } from './components/inputHeaderComponent';
+//Language
+import { languageComponent } from './components/languageComponent.js';
 
 //Footer cookie
 //import { footerCookie } from './components/footerCookieComponent';

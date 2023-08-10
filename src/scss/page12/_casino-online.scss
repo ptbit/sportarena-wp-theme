@@ -4,137 +4,193 @@
   top: 15px;
   display: flex;
   flex-direction: column;
-  &__wrap{
-    padding: 30px 40px;
-    border-radius: 8px;
-    background: $burgundy-gradient;
+
+  &__wrap {
+    padding: 30px 35px;
+    border-radius: 20px;
+    background: $green-grad-2;
     margin: 0 0 20px 0;
   }
 
-  &__all-link{
-    align-self: center ;
+  &__all-link {
+    align-self: center;
     display: inline-block;
-    padding: 18px 40px 16px;
+    padding: 11px 40px 10px;
     font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.02em;
     margin: 0 auto;
   }
 
-  &__title{
+  &__title {
     font-family: $font-popins-semb;
     font-size: 20px;
-    line-height: 48px;
+    line-height: 30px;
     letter-spacing: -0.01em;
     color: $white;
     margin: 0 0 10px 0;
     text-align: center;
+    text-shadow: $shadow-text-2;
   }
 
-  &__tabs{
+  &__tabs {
     width: 100%;
     display: flex;
     align-items: center;
-    background: $pink;
-    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 5px;
+    background: $gray-tabs;
+    border-radius: 100px;
+    padding: 0 28px;
     margin: 0 0 20px 0;
-    &-btn{
+
+    &-btn {
       width: calc(50% - 2.5px);
+      font-family: $font-popins-semb;
+      position: relative;
       display: inline-block;
-      padding: 7px 15px 5px;
-      color: $black-font-orangeBtn;
+      padding: 9px 0;
       font-size: 13px;
-      border-radius: 8px;
       line-height: 22px;
+      color: $gray-text-on-green;
+      border-radius: 8px;
       background: transparent;
-      transition: background-color $transition;
-      &:first-child{
+      transition: background-color $transition, color $transition, box-shadow $transition;
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $green;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $salad;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity $transition;
+      }
+      &:first-child {
         margin: 0 5px 0 0;
       }
-      &:hover{
-        background: $orangeBtn;
-        box-shadow: $boxShadowBtn;
+
+      &:hover {
+        color: $salad;
       }
+
+      &:hover::after,
+      &:hover::before{
+        opacity: 1;
+      }
+
       &-one,
-      &-two{
-        &._active{
-          background: $orangeBtn;
-          box-shadow: $boxShadowBtn;
+      &-two {
+        &._active::after,
+        &._active::before {
+          opacity: 1;
         }
       }
+
+      &-one,
+      &-two {
+        &._active {
+          color: $salad;
+        }
+      }
+
     }
   }
 
-  &__list{
-    &-one{
-      &._hidden{
+  &__list {
+    &-one {
+      &._hidden {
         display: none;
       }
     }
-    &-two{
-      &._hidden{
+
+    &-two {
+      &._hidden {
         display: none;
       }
     }
   }
 
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     width: 315px;
-    &:not(:last-child){
-      margin: 0 0 15px 0;
-    }
+
     &-btn{
       margin-top: 25px !important;
       display: flex;
       justify-content: center;
     }
-    &-image{
+
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+    }
+
+    &-image {
+
       min-width: 100px;
       max-width: 100px;
       margin: 0 15px 0 0;
-      img{
+
+      img {
         width: 100px;
         height: 46px;
         object-fit: cover;
         border-radius: 8px;
       }
     }
-    &-info{
+
+    &-info {
       flex: 1 1 auto;
       margin: 0 15px 0 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    &-title{
+
+    &-title {
       font-family: $font-popins-reg;
       font-size: 14px;
       line-height: 21px;
       letter-spacing: -0.004em;
       color: $white;
+      text-shadow: $shadow-text-2;
     }
-    &-reviews{
+
+    &-reviews {
       display: flex;
       align-items: center;
-      &-img{
+
+      &-img {
         display: inline-block;
         margin: 0 5px 0 0;
       }
-      &-grade{
+
+      &-grade {
         font-family: $font-popins-reg;
         font-size: 12px;
         line-height: 18px;
-        color: $grey;
+        color: $white-hover;
+        text-shadow: $shadow-text-2;
       }
     }
-    &-link{
+
+    &-link {
       display: inline-block;
       padding: 7px 26px 5px;
-      font-family: $font-popins-reg;
       font-size: 13px;
       line-height: 20px;
 

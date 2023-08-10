@@ -7,13 +7,13 @@
 @import "base/wrapper-aside2";
 
 
-.title {
+.title{
   font-family: $font-popins-semb;
-  color: $black-one;
-  font-size: 24px;
-  line-height: 36px;
-  @media screen and (max-width: 600px) {
-    font-size: 20px;
+  color: $black;
+  font-size: 32px;
+  line-height: 39px;
+  @media screen and (max-width: 600px){
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -29,23 +29,16 @@ body {
   &._lock {
     overflow: hidden;
   }
-
   font-family: $font-popins-reg;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: $black-one;
-  background: $pink;
+  color: $black;
+  background: $white-bg;
 }
 
 // подключения компонентов страницы
 @import "general-block/header";
-
-.header {
-  position: relative;
-  background: $burgunde-header-gradient;
-  z-index: 3;
-}
 
 .main{
   margin: 0 40px 0 0;
@@ -75,7 +68,7 @@ body {
 .wrapper {
   padding: 30px 0 50px 0;
   @media screen and (max-width: 1024px){
-    padding: 15px 0 50px 0;
+    padding: 15px 0 0 0;
   }
 }
 
@@ -85,4 +78,4 @@ body {
 //main
 @import "page13/_breadcrumbs";
 @import "page13/_author";
-@import "page5/_news";
+@import "page3/_news";

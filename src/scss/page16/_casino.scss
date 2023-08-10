@@ -1,6 +1,6 @@
 .casino{
-  padding: 150px 0 50px 0;
-  background: $burgundy url("../img/page16/bg-desc.webp") no-repeat 50% 0/cover;
+  padding: 70px 0;
+  background: $green url("../img/home/slot/bg-desc.webp") no-repeat 50% 0/cover;
   &__container{
     display: flex;
     flex-direction: column;
@@ -10,12 +10,9 @@
     font-family: $font-popins-semb;
     font-size: 160px;
     line-height: 160px;
-    background-color: #B28A4C;
-    background-image: linear-gradient(0deg, #663500 -121.43%, #B28A4C 14.29%, #D0AD6A 148.21%, #FDEDC9 260.71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
-    -webkit-text-stroke: 2px rgba(190, 151, 87, 0.2);
+    color: $white;
+    text-shadow: $shadow-text-3;
+    -webkit-text-stroke: 2px $salad;
     margin: 0 ;
   }
   &__title{
@@ -41,11 +38,16 @@
 
 @media screen and (max-width: 600px){
   .casino{
-    padding: 150px 0 45px 0;
-    background: $burgundy url("../img/page16/bg-mob.webp") no-repeat 50% 0/cover;
+    padding: 50px 0;
+    background: $green-grad-2;
     &__error{
       font-size: 100px;
       line-height: 100px;
+    }
+    &__link{
+      padding: 18px 15px 16px;
+      width: 100%;
+      text-align: center;
     }
   }
 }

@@ -1,7 +1,7 @@
 .public{
   position: relative;
   padding: 0 0 30px 0;
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $black;
   margin: 0 0 20px 0;
   &__link{
     position: absolute;
@@ -18,7 +18,7 @@
   }
   h2{
     font-family: $font-popins-semb;
-    color: $black-one;
+    color: $black;
     font-size: 24px;
     line-height: 36px;
     margin: 0 0 10px 0;
@@ -33,7 +33,7 @@
     p{
       font-size: 15px;
       line-height: 22px;
-      color: $grey-tabs;
+      color: $black;
       &:not(:last-child){
         margin: 0 20px 0 0;
       }
