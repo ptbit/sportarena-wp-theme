@@ -148,7 +148,7 @@
   }
 
   &__text {
-    color: $grey;
+    color: $gray;
     font-size: 13px;
     line-height: 20px;
 
@@ -164,15 +164,54 @@
     position: fixed;
     width: 80%;
     padding: 20px 40px;
-    background: $burgundy-gradient;
+    border: 1px solid $white;
+    background: $green-grad-2;
     z-index: 10;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 30px;
-    //display: flex;
-    display: none;
+    display: flex;
+    //display: none;
     align-items: center;
+
+    .close-cookie{
+      cursor: pointer;
+      position: absolute;
+      right: 18px;
+      top: -8px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid $white;
+      background: $green-grad-2;
+      span{
+        position: relative;
+        width: 26px;
+        height: 26px;
+        display: block;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 60%;
+          height: 2px;
+          background-color: $white;
+        }
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
 
     &._hidden {
       display: none;
@@ -197,7 +236,7 @@
       letter-spacing: 0.01em;
       color: $white;
       flex: 1 1 auto;
-      margin: 0 20px 0 0;
+      margin: 0 21px 0 0;
     }
 
     &-btn {
@@ -350,7 +389,7 @@
       &-text {
         font-size: 13px;
         line-height: 22px;
-        margin: 0 0 10px 0;
+        margin: 0 15px 0 0;
       }
 
       &-info {

@@ -9,7 +9,7 @@ import { accorderon } from './functions/accorderon';
 
 
 //Footer cookie
-//import { footerCookie } from './components/footerCookieComponent';
+import { footerCookie } from './components/footerCookieComponent';
 
 //btn scrollTop
 import { scrollTop } from './components/scrollTopComponent';

@@ -5,7 +5,7 @@ import { burger } from './functions/burger';
 import { languageComponent } from './components/languageComponent.js';
 
 //Footer cookie
-//import { footerCookie } from './components/footerCookieComponent';
+import { footerCookie } from './components/footerCookieComponent';
 
 //btn scrollTop
 import { scrollTop } from './components/scrollTopComponent';

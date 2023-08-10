@@ -66,7 +66,7 @@
       display: inline-block;
       font-size: 10px;
       line-height: 11px;
-      color: $grey;
+      color: $gray;
       transition: color $transition;
       &:hover{
         color: $black;
@@ -238,7 +238,7 @@
         align-items: flex-start;
         font-size: 12px;
         line-height: 28px;
-        color: $grey;
+        color: $gray;
 
         &::before {
           content: '';
@@ -334,7 +334,7 @@
         flex-direction: column;
         padding: 10px 10px 20px 10px;
         border-right: none;
-        border-bottom: 3px dotted $pink;
+        border-bottom: 3px dotted $white-bg;
         &::before{
           right: -20px;
           bottom: -11px;

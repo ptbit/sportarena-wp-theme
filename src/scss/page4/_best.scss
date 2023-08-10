@@ -314,10 +314,10 @@
         gap: 10px;
       }
       &-item{
-        border-top: 1px solid $grey-white;
+        border-top: 1px solid $white-bg;
         &:last-child,
         &:nth-child(3){
-          border-bottom: 1px solid $grey-white;
+          border-bottom: 1px solid $white-bg;
         }
       }
     }
