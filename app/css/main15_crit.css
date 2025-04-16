@@ -536,7 +536,6 @@ body._lock {
   width: 176px;
   min-width: 176px;
   height: 60px;
-  border: 1px dashed red;
 }
 .header__menu {
   display: -webkit-box;
