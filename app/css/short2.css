@@ -22,7 +22,7 @@
   flex-direction: column;
   padding: 20px;
   border-radius: 12px;
-  background: #FFFFFF;
+  background: #ffffff;
   position: relative;
   max-width: 330px;
 }
@@ -36,9 +36,9 @@
   display: none;
   padding: 15px;
   border-radius: 8px;
-  background: -webkit-gradient(linear, right top, left top, from(#0B764F), to(#0B764F));
-  background: linear-gradient(270deg, #0B764F 0%, #0B764F 100%);
-  color: #FFFFFF;
+  background: -webkit-gradient(linear, right top, left top, from(#0b764f), to(#0b764f));
+  background: linear-gradient(270deg, #0b764f 0%, #0b764f 100%);
+  color: #ffffff;
   width: 150px;
   position: absolute;
   top: 50px;
@@ -63,14 +63,14 @@
   font-size: 17px;
   line-height: 26px;
   letter-spacing: -0.004em;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 2px 0;
 }
 .casino-slot__item-licensed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #7387BA;
+  color: #7387ba;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.004em;

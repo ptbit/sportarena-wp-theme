@@ -15,7 +15,7 @@
 .casino-providers__item {
   width: 100%;
   padding: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -30,13 +30,13 @@
 .casino-providers__item-title {
   font-size: 17px;
   line-height: 26px;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 2px 0;
 }
 .casino-providers__item-info {
   font-size: 13px;
   line-height: 16px;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 20px 0;
 }
 .casino-providers__item-info span {

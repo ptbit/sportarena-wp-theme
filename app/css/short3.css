@@ -24,7 +24,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -58,13 +58,13 @@
   max-width: 70px;
   font-size: 11px;
   line-height: 14px;
-  color: #151A18;
+  color: #151a18;
 }
 .casino-review__item-title {
   font-size: 17px;
   line-height: 26px;
   letter-spacing: -0.004em;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 2px 0;
 }
 .casino-review__item-licensed {
@@ -77,7 +77,7 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.004em;
-  color: #7387BA;
+  color: #7387ba;
   margin: 0 0 10px 0;
 }
 .casino-review__item-licensed-one {
@@ -104,7 +104,7 @@
 .casino-review__item-review-text {
   font-size: 12px;
   line-height: 12px;
-  color: #151A18;
+  color: #151a18;
 }
 .casino-review__item-review-star {
   margin: 0 10px 0 0;
@@ -121,7 +121,7 @@
 }
 .casino-review__item-item {
   padding: 8px 0;
-  border-top: 1px solid #F3F5F6;
+  border-top: 1px solid #f3f5f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,13 +133,13 @@
   justify-content: space-between;
 }
 .casino-review__item-item:last-child {
-  border-bottom: 1px solid #F3F5F6;
+  border-bottom: 1px solid #f3f5f6;
 }
 .casino-review__item-item-title {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: -0.004em;
-  color: #151A18;
+  color: #151a18;
   margin: 0 10px 0 0;
 }
 .casino-review__item-item-info {
@@ -147,7 +147,7 @@
   font-size: 15px;
   line-height: 22px;
   letter-spacing: -0.004em;
-  color: #151A18;
+  color: #151a18;
 }
 .casino-review__item-buttons {
   display: -webkit-box;
@@ -199,10 +199,10 @@
     gap: 10px;
   }
   .casino-review__item-item {
-    border-top: 1px solid #F3F5F6;
+    border-top: 1px solid #f3f5f6;
   }
   .casino-review__item-item:last-child, .casino-review__item-item:nth-child(3) {
-    border-bottom: 1px solid #F3F5F6;
+    border-bottom: 1px solid #f3f5f6;
   }
 }
 /*# sourceMappingURL=short3.css.map */

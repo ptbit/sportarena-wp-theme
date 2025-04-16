@@ -1,46 +1,47 @@
 //transition
-$transition: .3s ease;
+$transition: 0.3s ease;
 
 //fonts
 $font-popins-reg: 'Popins-reg', sans-serif;
+$font-popins-med: 'Popins-medium', sans-serif;
 $font-popins-semb: 'Popins-semb', sans-serif;
 
-$green-circle: #31A265;
-$red-circle: #FF5767;
-$yellow-circle: #FF7D04;
-$grey-bg-circle: #E8E8E8;
-$red: #FF044F;
+$green-circle: #31a265;
+$red-circle: #ff5767;
+$yellow-circle: #ff7d04;
+$grey-bg-circle: #e8e8e8;
+$red: #E5053D;
+$pink: #E82052;
 
 $shadow-text: 0px 3px 3px rgba(0, 0, 0, 0.25);
 $shadow-text-2: 0px 2px 1px rgba(0, 0, 0, 0.25);
-$shadow-text-3: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
-$salad-shadow-btn: 0px 4px 14px 0px rgba(9, 93, 61, 0.50);
+$shadow-text-3: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+$salad-shadow-btn: 0px 4px 14px 0px rgba(9, 93, 61, 0.5);
 
-
-$black: #151A18;
-$white: #FFFFFF;
-$white-title: #F7F6F4;
-$white-bg: #F3F5F6;
+$black: #151a18;
+$white: #ffffff;
+$white-title: #f7f6f4;
+$white-bg: #f3f5f6;
 $white-bg-hover: #b8c0c2;
 $white-hover: #bdbbbb;
 $gray: #858585;
-$grey-footer: #C1C1D4;
-$gray-text-on-green: #D2E4DD;
+$grey-footer: #c1c1d4;
+$gray-text-on-green: #d2e4dd;
 $gray-border-menu-hover: #c8c8d0;
-$gray-opacity: rgba(17, 17, 17, 0.50);
-$gray-border-btn: #C2C3C4;
+$gray-opacity: rgba(17, 17, 17, 0.5);
+$gray-border-btn: #c2c3c4;
 $gray-white: #d9dde0;
-$gray-tabs: rgba(0, 0, 0, 0.20);
-$gray-links: #2C312F;
-$salad: #E7FD52;
-$purple: #7387BA;
+$gray-tabs: rgba(0, 0, 0, 0.2);
+$gray-links: #2c312f;
+$salad: #e7fd52;
+$purple: #7387ba;
 $salad-hover: #abbe45;
-$green: #0B764F;
-$green-transparent: rgba(0, 0, 0, 0.30);
+$green: #0b764f;
+$green-transparent: rgba(0, 0, 0, 0.3);
 $green-transparent-hover: rgba(26, 25, 25, 0.3);
-$green-dark: #283D1A;
+$green-dark: #283d1a;
 $green-white: #038941;
 $green-hover: #06602f;
-$green-grad: linear-gradient(270deg, #0B764F 0%, #0B764F 100%);
-$green-grad-2: linear-gradient(180deg, #085A3D 0%, #038941 100%);
+$green-grad: linear-gradient(270deg, #0b764f 0%, #0b764f 100%);
+$green-grad-2: linear-gradient(180deg, #085a3d 0%, #038941 100%);
 $gray-border-menu: rgba(255, 255, 255, 0.1);

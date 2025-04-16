@@ -11,7 +11,7 @@
 .casino-best__text {
   font-size: 15px;
   line-height: 22px;
-  color: #151A18;
+  color: #151a18;
   max-width: 940px;
   margin: 0 0 20px 0;
 }
@@ -46,7 +46,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .casino-best__item-link_wrap {
   display: -webkit-box;
@@ -72,7 +72,7 @@
   transition: color 0.3s ease;
 }
 .casino-best__item-sublink:hover {
-  color: #151A18;
+  color: #151a18;
 }
 .casino-best__item-wrapper {
   -webkit-box-flex: 0;
@@ -89,7 +89,7 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 10px 10px 20px 10px;
-  border-bottom: 3px dotted #F3F5F6;
+  border-bottom: 3px dotted #f3f5f6;
   position: relative;
 }
 .casino-best__item-wrapper::before, .casino-best__item-wrapper::after {
@@ -97,7 +97,7 @@
   pointer-events: none;
   width: 19px;
   height: 19px;
-  background: #F3F5F6;
+  background: #f3f5f6;
   border-radius: 50%;
   right: -11px;
 }
@@ -127,7 +127,7 @@
   top: 0;
   left: 0;
   font-family: "Popins-semb", sans-serif;
-  background: #E7FD52;
+  background: #e7fd52;
   border-radius: 8px 0 8px 0;
   width: 28px;
   height: 28px;
@@ -142,7 +142,7 @@
   justify-content: center;
   font-size: 16px;
   line-height: 20px;
-  color: #151A18;
+  color: #151a18;
 }
 .casino-best__item-info {
   display: -webkit-box;
@@ -163,14 +163,14 @@
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.004em;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 8px 0;
 }
 .casino-best__item-licensed {
   font-size: 12px;
   line-height: 15px;
   letter-spacing: -0.004em;
-  color: #7387BA;
+  color: #7387ba;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,8 +268,8 @@
   font-size: 13px;
   line-height: 20px;
   border-radius: 8px;
-  color: #FFFFFF;
-  background: #7387BA;
+  color: #ffffff;
+  background: #7387ba;
 }
 .casino-best__item-plus, .casino-best__item-minus {
   display: -webkit-box;
@@ -325,7 +325,7 @@
   font-family: "Popins-semb", sans-serif;
   font-size: 15px;
   line-height: 18px;
-  color: #151A18;
+  color: #151a18;
   margin: 0 0 5px 0;
 }
 .casino-best__item-coupon-subtitle {

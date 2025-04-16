@@ -229,39 +229,44 @@
   &__row {
     display: flex;
     align-items: center;
+    margin-top: 30px;
   }
 
   &__logo {
     flex: 1 1 auto;
-    margin: 0 15px 0 0;
+    // margin: 0 15px 0 0;
     position: relative;
     z-index: 10;
-    &-link {
-      display: flex;
-      align-items: center;
-      font-family: $font-popins-semb;
-      font-size: 24px;
-      line-height: 24px;
-      text-transform: uppercase;
-      color: $white;
-      @include breakpoint($tablet-bp) {
-        font-size: 18px;
-        line-height: 18px;
-      }
-    }
+    width: 176px;
+    min-width: 176px;
+    height: 60px;
+    border: 1px dashed red;
+    // &-link {
+    //   display: flex;
+    //   align-items: center;
+    //   font-family: $font-popins-semb;
+    //   font-size: 24px;
+    //   line-height: 24px;
+    //   text-transform: uppercase;
+    //   color: $white;
+    //   @include breakpoint($tablet-bp) {
+    //     font-size: 18px;
+    //     line-height: 18px;
+    //   }
+    // }
 
-    @include breakpoint($tablet-bp) {
-      max-width: 100%;
-      flex: 0 1 auto;
-      margin: 0 15px 0 0;
-    }
-    img {
-      margin: 0 10px 0 0;
-      max-width: 54px;
-      @include breakpoint($tablet-bp) {
-        max-width: 40px;
-      }
-    }
+    // @include breakpoint($tablet-bp) {
+    //   max-width: 100%;
+    //   flex: 0 1 auto;
+    //   margin: 0 15px 0 0;
+    // }
+    // img {
+    // margin: 0 10px 0 0;
+    // max-width: 54px;
+    // @include breakpoint($tablet-bp) {
+    // max-width: 40px;
+    // }
+    // }
   }
 
   &__menu {
@@ -400,40 +405,41 @@
       a,
       span {
         cursor: pointer;
-        font-family: $font-popins-reg;
+        font-family: $font-popins-med;
         display: flex;
         align-items: center;
         color: $white;
         text-decoration: none;
-        padding: 28px 0 28px;
-        font-size: 14px;
+        // padding: 28px 0 28px;
+        padding-block: 20px;
+        font-size: 16px;
         line-height: 20px;
         transition: color $transition;
         @media screen and (max-width: 1350px) {
-          font-size: 14px;
+          font-size: 16px;
         }
         @media screen and (max-width: 1279px) {
-          font-size: 12px;
+          font-size: 14px;
         }
         @media screen and (max-width: 1080px) {
-          font-size: 11px;
+          font-size: 12px;
         }
 
-        &:hover::after {
-          border-color: transparent transparent $salad transparent;
-        }
-        &::after {
-          content: '';
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 4px 6px 4px;
-          border-color: transparent transparent $gray transparent;
-          transform: rotate(180deg);
-          margin: 0 0 0 6px;
-          transition: border-color $transition;
-        }
+        // &:hover::after {
+        //   border-color: transparent transparent $salad transparent;
+        // }
+        // &::after {
+        //   content: '';
+        //   display: inline-block;
+        //   width: 0;
+        //   height: 0;
+        //   border-style: solid;
+        //   border-width: 0 4px 6px 4px;
+        //   border-color: transparent transparent $gray transparent;
+        //   transform: rotate(180deg);
+        //   margin: 0 0 0 6px;
+        //   transition: border-color $transition;
+        // }
       }
 
       .sub-menu {
@@ -441,7 +447,7 @@
         display: none;
         position: absolute;
         background-color: $black;
-        border-top: 1px solid $salad;
+        border-top: 1px solid $pink;
         border-radius: 0 0 2px 2px;
         min-width: 220px;
         max-width: 220px;
@@ -497,7 +503,7 @@
               position: absolute;
               right: 15px;
               top: 45%;
-              transform: translateX(-50%) rotate(90deg);
+              transform: translateX(-50%) rotate(-90deg);
             }
             &:hover {
               background: $gray-links;
@@ -512,6 +518,40 @@
             top: 0;
             left: 100%;
             border-radius: 0 2px 2px 2px;
+          }
+        }
+      }
+      &:has(.sub-menu) {
+        a {
+          &:hover::after {
+            background-color: $pink;
+          }
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 9px;
+            background-color: rgba(255, 255, 255, 0.6);
+            -webkit-mask: url('../img/header-menu-arrow.svg') no-repeat center;
+            -webkit-mask-size: contain;
+            mask: url('../img/header-menu-arrow.svg') no-repeat center;
+            mask-size: contain;
+            margin: 0 0 0 4px;
+            transition: background-color $transition;
+          }
+        }
+      }
+      &.active {
+        a {
+          &::before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            margin-top: 30px;
+            height: 3px;
+            border-radius: 2px;
+            background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%),
+              linear-gradient(180deg, $pink 0%, #e9305e 100%);
           }
         }
       }
