@@ -1,1 +1,381 @@
-.casino-best{margin:0 0 20px}.casino-best .casino-best__item{border:1px solid #858585}.casino-best__title{margin:0 0 10px}.casino-best__text{font-size:15px;line-height:22px;color:#151a18;max-width:940px;margin:0 0 20px}.casino-best__list{width:100%;counter-reset:my-counter;display:-ms-grid;display:grid;-ms-grid-columns:calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);grid-template-columns:calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);gap:15px}.casino-best__list._openItem{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.casino-best__item{overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:100%;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-radius:12px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background:#fff}.casino-best__item-link_wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.casino-best__item-link{margin:0 0 5px}.casino-best__item-sublink{display:inline-block;font-size:10px;line-height:11px;color:#858585;-webkit-transition:color .3s;transition:color .3s}.casino-best__item-sublink:hover{color:#151a18}.casino-best__item-wrapper{-webkit-box-flex:0;-ms-flex:0 1 auto;flex:0 1 auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:10px 10px 20px;border-bottom:3px dotted #f3f5f6;position:relative}.casino-best__item-wrapper::after,.casino-best__item-wrapper::before{position:absolute;pointer-events:none;width:19px;height:19px;background:#f3f5f6;border-radius:50%;right:-11px}.casino-best__item-wrapper::before{right:-20px;bottom:-11px}.casino-best__item-wrapper::after{top:auto;bottom:-11px;left:-20px}.casino-best__item-image{min-width:100%;border-radius:8px;position:relative;margin:0 0 15px}.casino-best__item-image img{min-width:100%;border-radius:8px}.casino-best__item-image::before{counter-increment:my-counter;content:counter(my-counter) " ";position:absolute;top:0;left:0;font-family:Popins-semb,sans-serif;background:#e7fd52;border-radius:8px 0;width:28px;height:28px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:16px;line-height:20px;color:#151a18}.casino-best__item-info{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 0 25px;min-width:164px}.casino-best__item-title{font-family:Popins-semb,sans-serif;font-size:20px;line-height:20px;letter-spacing:-.004em;color:#151a18;margin:0 0 8px}.casino-best__item-licensed{font-size:12px;line-height:15px;letter-spacing:-.004em;color:#7387ba;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 0 10px}.casino-best__item-licensed-one{margin:0 8px 0 0}.casino-best__item-rating{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 0 15px}.casino-best__item-rating-star{margin:0 10px 0 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.casino-best__item-rating-star img{display:inline-block;margin:0 6px 0 0}.casino-best__item-rating-star-text{font-size:12px;line-height:12px;color:#858585;white-space:nowrap}.casino-best__item-rating-comment{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.casino-best__item-rating-comment img{display:inline-block;margin:0 5px 0 0}.casino-best__item-rating-comment-text{font-size:12px;line-height:12px;color:#858585;white-space:nowrap}.casino-best__item-link{display:inline-block;font-size:15px;line-height:20px;padding:12px 47px 10px}.casino-best__item-reviews{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;display:none;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}.casino-best__item-reviews._show{display:-webkit-box;display:-ms-flexbox;display:flex}.casino-best__item-reviews-plus{margin:0 0 20px}.casino-best__item-reviews-btn{display:inline-block;position:absolute;bottom:-17px;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);cursor:pointer;padding:7px 25px 5px;font-size:13px;line-height:20px;border-radius:8px;color:#fff;background:#7387ba}.casino-best__item-minus,.casino-best__item-plus{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.casino-best__item-minus-txt,.casino-best__item-plus-txt{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;font-size:12px;line-height:28px;color:#858585}.casino-best__item-minus-txt::before,.casino-best__item-plus-txt::before{content:"";display:inline-block;margin:6px 8px 0 0;min-width:16px;min-height:16px}.casino-best__item-plus{margin:0 30px 0 0}.casino-best__item-plus-txt::before{background:url(../img/home/best/arrow.svg) 0 0/contain no-repeat}.casino-best__item-coupon{max-width:240px;min-width:240px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%;padding:25px 10px}.casino-best__item-coupon-title{font-family:Popins-semb,sans-serif;font-size:15px;line-height:18px;color:#151a18;margin:0 0 5px}.casino-best__item-coupon-subtitle{text-align:center;font-family:Popins-semb,sans-serif;font-size:21px;line-height:21px;letter-spacing:-.004em;color:#038941;margin:0 0 5px}.casino-best__item-coupon-text{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;font-size:13px;line-height:18px;letter-spacing:-.004em;color:#858585;margin:0 0 10px}.casino-best__item-coupon-link{width:60%;text-align:center;display:inline-block;padding:12px 28px 10px;font-size:15px;line-height:20px}@media screen and (max-width:1240px){.casino-best__list{display:-ms-grid;display:grid;-ms-grid-columns:calc(50% - 7.5px) calc(50% - 7.5px);grid-template-columns:calc(50% - 7.5px) calc(50% - 7.5px);gap:15px}}@media screen and (max-width:600px){.casino-best__list{-ms-grid-columns:100%;grid-template-columns:100%}.casino-best__all-link{width:calc(100% - 30px)}.casino-best__text{font-size:13px;line-height:22px}}
+/* stylelint-disable */
+.casino-best {
+  margin: 0 0 20px 0;
+}
+.casino-best .casino-best__item {
+  border: 1px solid #858585;
+}
+.casino-best__title {
+  margin: 0 0 10px 0;
+}
+.casino-best__text {
+  font-size: 15px;
+  line-height: 22px;
+  color: #151A18;
+  max-width: 940px;
+  margin: 0 0 20px 0;
+}
+.casino-best__list {
+  width: 100%;
+  counter-reset: my-counter;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+  grid-template-columns: calc(33.333% - 10px) calc(33.333% - 10px) calc(33.333% - 10px);
+  gap: 15px;
+}
+.casino-best__list._openItem {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.casino-best__item {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #FFFFFF;
+}
+.casino-best__item-link_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.casino-best__item-link {
+  margin: 0 0 5px 0;
+}
+.casino-best__item-sublink {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 11px;
+  color: #858585;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.casino-best__item-sublink:hover {
+  color: #151A18;
+}
+.casino-best__item-wrapper {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 10px 20px 10px;
+  border-bottom: 3px dotted #F3F5F6;
+  position: relative;
+}
+.casino-best__item-wrapper::before, .casino-best__item-wrapper::after {
+  position: absolute;
+  pointer-events: none;
+  width: 19px;
+  height: 19px;
+  background: #F3F5F6;
+  border-radius: 50%;
+  right: -11px;
+}
+.casino-best__item-wrapper::before {
+  right: -20px;
+  bottom: -11px;
+}
+.casino-best__item-wrapper::after {
+  top: auto;
+  bottom: -11px;
+  left: -20px;
+}
+.casino-best__item-image {
+  min-width: 100%;
+  border-radius: 8px;
+  position: relative;
+  margin: 0 0 15px 0;
+}
+.casino-best__item-image img {
+  min-width: 100%;
+  border-radius: 8px;
+}
+.casino-best__item-image::before {
+  counter-increment: my-counter;
+  content: counter(my-counter) " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Popins-semb", sans-serif;
+  background: #E7FD52;
+  border-radius: 8px 0 8px 0;
+  width: 28px;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: #151A18;
+}
+.casino-best__item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 25px 0;
+  min-width: 164px;
+}
+.casino-best__item-title {
+  font-family: "Popins-semb", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.004em;
+  color: #151A18;
+  margin: 0 0 8px 0;
+}
+.casino-best__item-licensed {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.004em;
+  color: #7387BA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.casino-best__item-licensed-one {
+  margin: 0 8px 0 0;
+}
+.casino-best__item-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+.casino-best__item-rating-star {
+  margin: 0 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.casino-best__item-rating-star img {
+  display: inline-block;
+  margin: 0 6px 0 0;
+}
+.casino-best__item-rating-star-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: #858585;
+  white-space: nowrap;
+}
+.casino-best__item-rating-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.casino-best__item-rating-comment img {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+.casino-best__item-rating-comment-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: #858585;
+  white-space: nowrap;
+}
+.casino-best__item-link {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 12px 47px 10px;
+}
+.casino-best__item-reviews {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.casino-best__item-reviews._show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.casino-best__item-reviews-plus {
+  margin: 0 0 20px 0;
+}
+.casino-best__item-reviews-btn {
+  display: inline-block;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  cursor: pointer;
+  padding: 7px 25px 5px;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  background: #7387BA;
+}
+.casino-best__item-plus, .casino-best__item-minus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.casino-best__item-plus-txt, .casino-best__item-minus-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 28px;
+  color: #858585;
+}
+.casino-best__item-plus-txt::before, .casino-best__item-minus-txt::before {
+  content: "";
+  display: inline-block;
+  margin: 6px 8px 0 0;
+  min-width: 16px;
+  min-height: 16px;
+}
+.casino-best__item-plus {
+  margin: 0 30px 0 0;
+}
+.casino-best__item-plus-txt::before {
+  background: url("../img/home/best/arrow.svg") no-repeat 0% 0%/contain;
+}
+.casino-best__item-coupon {
+  max-width: 240px;
+  min-width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px 10px;
+}
+.casino-best__item-coupon-title {
+  font-family: "Popins-semb", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #151A18;
+  margin: 0 0 5px 0;
+}
+.casino-best__item-coupon-subtitle {
+  text-align: center;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: -0.004em;
+  color: #038941;
+  margin: 0 0 5px 0;
+}
+.casino-best__item-coupon-text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.004em;
+  color: #858585;
+  margin: 0 0 10px 0;
+}
+.casino-best__item-coupon-link {
+  width: 60%;
+  text-align: center;
+  display: inline-block;
+  padding: 12px 28px 10px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 1240px) {
+  .casino-best__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    grid-template-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .casino-best__list {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+  }
+  .casino-best__all-link {
+    width: calc(100% - 30px);
+  }
+  .casino-best__text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+/*# sourceMappingURL=short1.css.map */
