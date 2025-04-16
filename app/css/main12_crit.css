@@ -21,6 +21,13 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Popins-bold";
+  src: url("../fonts/../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 .burgundy-btn {
   font-family: "Popins-semb", sans-serif;
   text-transform: uppercase;
@@ -542,11 +549,47 @@ body._lock {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  margin: 0 15px 0 0;
   position: relative;
   z-index: 10;
-  width: 176px;
-  min-width: 176px;
   height: 60px;
+}
+.header__logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .header__logo-link {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    margin: 0 15px 0 0;
+  }
+}
+.header__logo img {
+  margin: 0 10px 0 0;
+  max-width: 54px;
+}
+@media screen and (max-width: 1024px) {
+  .header__logo img {
+    max-width: 40px;
+  }
 }
 .header__menu {
   display: -webkit-box;
@@ -751,7 +794,7 @@ body._lock {
   align-items: center;
   color: #ffffff;
   text-decoration: none;
-  padding-block: 20px;
+  padding: 28px 0 28px;
   font-size: 16px;
   line-height: 20px;
   -webkit-transition: color 0.3s ease;
@@ -774,6 +817,26 @@ body._lock {
   .menu .menu-list .menu-item span {
     font-size: 12px;
   }
+}
+.menu .menu-list .menu-item a:hover::after,
+.menu .menu-list .menu-item span:hover::after {
+  border-color: transparent transparent #e7fd52 transparent;
+}
+.menu .menu-list .menu-item a::after,
+.menu .menu-list .menu-item span::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4px 6px 4px;
+  border-color: transparent transparent #858585 transparent;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin: 0 0 0 6px;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 .menu .menu-list .menu-item .sub-menu {
   padding: 10px 0;
@@ -863,9 +926,9 @@ body._lock {
   position: absolute;
   right: 15px;
   top: 45%;
-  -webkit-transform: translateX(-50%) rotate(-90deg);
-  -ms-transform: translateX(-50%) rotate(-90deg);
-  transform: translateX(-50%) rotate(-90deg);
+  -webkit-transform: translateX(-50%) rotate(90deg);
+  -ms-transform: translateX(-50%) rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
 }
 .menu .menu-list .menu-item .sub-menu .menu-item a:hover,
 .menu .menu-list .menu-item .sub-menu .menu-item span:hover {
@@ -882,24 +945,6 @@ body._lock {
   top: 0;
   left: 100%;
   border-radius: 0 2px 2px 2px;
-}
-.menu .menu-list .menu-item:has(.sub-menu) a:hover::after {
-  background-color: #E82052;
-}
-.menu .menu-list .menu-item:has(.sub-menu) a::after {
-  content: "";
-  display: inline-block;
-  width: 13px;
-  height: 9px;
-  background-color: rgba(255, 255, 255, 0.6);
-  -webkit-mask: url("../img/header-menu-arrow.svg") no-repeat center;
-  -webkit-mask-size: contain;
-  -webkit-mask: url("../img/header-menu-arrow.svg") no-repeat center;
-  mask: url("../img/header-menu-arrow.svg") no-repeat center;
-  mask-size: contain;
-  margin: 0 0 0 4px;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
 }
 .menu .menu-list .menu-item.active a::before {
   content: "";
