@@ -616,6 +616,10 @@ body._lock {
     font-size: 12px;
   }
 }
+.menu .menu-list .menu-item a:hover,
+.menu .menu-list .menu-item span:hover {
+  color: #E82052;
+}
 .menu .menu-list .menu-item .sub-menu {
   padding: 10px 0;
   display: none;
