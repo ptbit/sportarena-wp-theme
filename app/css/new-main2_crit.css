@@ -627,8 +627,7 @@ body._lock {
   position: relative;
   margin: 0;
 }
-.menu .menu-list .menu-item .sub-menu .menu-item a,
-.menu .menu-list .menu-item .sub-menu .menu-item span {
+.menu .menu-list .menu-item .sub-menu .menu-item > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,40 +642,34 @@ body._lock {
   transition: background-color 0.3s ease;
 }
 @media screen and (max-width: 1350px) {
-  .menu .menu-list .menu-item .sub-menu .menu-item a,
-  .menu .menu-list .menu-item .sub-menu .menu-item span {
+  .menu .menu-list .menu-item .sub-menu .menu-item > a {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 1279px) {
-  .menu .menu-list .menu-item .sub-menu .menu-item a,
-  .menu .menu-list .menu-item .sub-menu .menu-item span {
+  .menu .menu-list .menu-item .sub-menu .menu-item > a {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 1080px) {
-  .menu .menu-list .menu-item .sub-menu .menu-item a,
-  .menu .menu-list .menu-item .sub-menu .menu-item span {
+  .menu .menu-list .menu-item .sub-menu .menu-item > a {
     font-size: 11px;
   }
 }
-.menu .menu-list .menu-item .sub-menu .menu-item a::after,
-.menu .menu-list .menu-item .sub-menu .menu-item span::after {
+.menu .menu-list .menu-item .sub-menu .menu-item > a::after {
   margin: 0;
   position: absolute;
   right: 15px;
   top: 45%;
-  -webkit-transform: translateX(-50%) rotate(-90deg);
-  -ms-transform: translateX(-50%) rotate(-90deg);
-  transform: translateX(-50%) rotate(-90deg);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
-.menu .menu-list .menu-item .sub-menu .menu-item a:hover,
-.menu .menu-list .menu-item .sub-menu .menu-item span:hover {
+.menu .menu-list .menu-item .sub-menu .menu-item > a:hover {
   background: #2c312f;
 }
 @media screen and (max-width: 1024px) {
-  .menu .menu-list .menu-item .sub-menu .menu-item a:hover,
-  .menu .menu-list .menu-item .sub-menu .menu-item span:hover {
+  .menu .menu-list .menu-item .sub-menu .menu-item > a:hover {
     background: transparent;
   }
 }
@@ -686,10 +679,10 @@ body._lock {
   left: 100%;
   border-radius: 0 2px 2px 2px;
 }
-.menu .menu-list .menu-item:has(.sub-menu) a:hover::after {
+.menu .menu-list .menu-item:has(.sub-menu) > a:hover::after {
   background-color: #E82052;
 }
-.menu .menu-list .menu-item:has(.sub-menu) a::after {
+.menu .menu-list .menu-item:has(.sub-menu) > a::after {
   content: "";
   display: inline-block;
   width: 13px;
@@ -823,7 +816,7 @@ body._lock {
     right: 10px;
     top: 21px;
   }
-  .menu .menu-list .menu-item.mobile-active a::after {
+  .menu .menu-list .menu-item.mobile-active > a::after {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -832,7 +825,13 @@ body._lock {
   .menu .menu-list .menu-item.mobile-active .sub-menu {
     display: block;
   }
-  .menu .menu-list .menu-item.mobile-active .sub-menu a::after {
+  .menu .menu-list .menu-item.mobile-active .sub-menu > a:hover {
+    color: #E82052;
+  }
+  .menu .menu-list .menu-item.mobile-active .sub-menu > a:hover::after {
+    background-color: #e82052;
+  }
+  .menu .menu-list .menu-item.mobile-active .sub-menu > a::after {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
