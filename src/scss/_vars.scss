@@ -2,10 +2,11 @@
 $transition: 0.3s ease;
 
 //fonts
-$font-popins-reg: 'Popins-reg', sans-serif;
-$font-popins-med: 'Popins-medium', sans-serif;
-$font-popins-semb: 'Popins-semb', sans-serif;
-$font-popins-bold: 'Popins-bold', sans-serif;
+$font-popins-reg: 'Popins-reg', sans-serif; //400
+$font-popins-med: 'Popins-medium', sans-serif; //500
+$font-popins-semb: 'Popins-semb', sans-serif; //600
+$font-popins-bold: 'Popins-bold', sans-serif; //700
+$font-inter-semb: 'Popins-semb', sans-serif; //600
 
 $green-circle: #31a265;
 $red-circle: #ff5767;
@@ -49,3 +50,4 @@ $gray-border-menu: rgba(255, 255, 255, 0.1);
 
 
 $burger-bg-color: #130D2C;
+$footer-bg-color: #100C23;
