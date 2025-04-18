@@ -22,7 +22,6 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 26px;
 }
 .footer__menu {
   display: -webkit-box;
