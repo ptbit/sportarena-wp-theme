@@ -2,14 +2,13 @@
 import { burger } from './functions/burger';
 
 //Language
-import { languageComponent } from './components/languageComponent.js';
+// import { languageComponent } from './components/languageComponent.js';
 
 //Acordeon
 import { accorderon } from './functions/accorderon';
 
-
 //Footer cookie
-import { footerCookie } from './components/footerCookieComponent';
+// import { footerCookie } from './components/footerCookieComponent';
 
 //btn scrollTop
 import { scrollTop } from './components/scrollTopComponent';
@@ -22,3 +21,6 @@ import { bestItemMobButton } from './components/home/bestItem-mobButtonComponent
 
 //News Tabs
 import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
+
+// import { footerMenu } from './new-page-scripts/footer-menu.js';
+// console.log('footer menu');

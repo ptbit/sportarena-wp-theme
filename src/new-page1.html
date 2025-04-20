@@ -16,4 +16,23 @@
       @include('partials/general-block/new-footer.html')
     </div>
   </body>
+  <script>
+    // window.onload = footerMenu();
+    document.addEventListener('DOMContentLoaded', footerMenu);
+    function footerMenu() {
+      const meneItems = document.querySelectorAll('.footer__menu-title');
+      // console.log('meneItems:', meneItems);
+      meneItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          const parent = item.parentNode;
+          console.log('parent:', parent);
+          const submenuItems = parent.querySelectorAll('.footer__menu-link');
+          console.log('submenuItems:', submenuItems);
+          submenuItems.forEach((item) => {
+            item.classList.toggle('footer__menu-link--active');
+          });
+        });
+      });
+    }
+  </script>
 </html>

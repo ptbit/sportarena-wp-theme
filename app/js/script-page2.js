@@ -1,48 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/components/footerCookieComponent.js":
-/*!****************************************************!*\
-  !*** ./src/js/components/footerCookieComponent.js ***!
-  \****************************************************/
-/***/ (() => {
-
-//localStorage.clear();
-const footer = document.querySelector('.footer');
-const language = 'EN';
-window.addEventListener('load', () => {
-  if (localStorage.getItem('cookieStatus') !== 'true') {
-    const cookieBlock = document.createElement('div');
-    cookieBlock.classList.add('footer__cookie');
-    footer.append(cookieBlock);
-    let textCookie = '';
-    let textBtn = '';
-    if (language === 'EN') {
-      textCookie = 'This site uses cookies to save data. By continuing to follow the site, you will be welcome to save cookies';
-      textBtn = 'Okey';
-    } else {
-      textCookie = 'Этот сайт использует файлы cookie для сохранения данных. Продолжая следить за сайтом, вы можете сохранить файлы cookie.';
-      textBtn = 'Океюшки';
-    }
-    const closeBtn = `<div class="close-cookie"><span></span> </div>`;
-    const imgCookie = `<div class="footer__cookie-img"><img loading="lazy" src="img/general-block-image/footer/cookie.webp" width="40" height="40" alt="image-casino"></div>`;
-    const cookieInfo = `<p class="footer__cookie-text">${textCookie}</p>` + `<button type="button" aria-label="button-close" class="footer__cookie-btn orange-btn">${textBtn}</button>`;
-    cookieBlock.innerHTML = closeBtn + imgCookie + cookieInfo;
-    const closeBtnDoc = cookieBlock.querySelector('.close-cookie');
-    const okBtnDoc = cookieBlock.querySelector('.footer__cookie-btn');
-    closeBtnDoc.addEventListener('click', () => {
-      cookieBlock.classList.add('_hidden');
-    });
-    okBtnDoc.addEventListener('click', () => {
-      localStorage.setItem('cookieStatus', 'true');
-      console.log(localStorage.coockieStatus);
-      cookieBlock.classList.add('_hidden');
-    });
-  }
-});
-
-/***/ }),
-
 /***/ "./src/js/components/home/bestItem-mobButtonComponent.js":
 /*!***************************************************************!*\
   !*** ./src/js/components/home/bestItem-mobButtonComponent.js ***!
@@ -70,38 +28,6 @@ bestItemWrapper.forEach(item => {
     });
   });
 });
-
-/***/ }),
-
-/***/ "./src/js/components/languageComponent.js":
-/*!************************************************!*\
-  !*** ./src/js/components/languageComponent.js ***!
-  \************************************************/
-/***/ (() => {
-
-const languageSelect = document.querySelector('.header__language-select');
-const languageSelectEn = document.querySelector('.header__language-en');
-const languageSelectPt = document.querySelector('.header__language-pt');
-const languageList = document.querySelector('.header__language-list');
-const headerLanguage = document.querySelector('.header__language');
-languageSelectEn.addEventListener('click', () => {
-  languageSelect.classList.remove('_pt');
-  languageSelect.classList.add('_en');
-  languageSelectPt.classList.remove('_active');
-  languageSelectEn.classList.add('_active');
-});
-languageSelectPt.addEventListener('click', () => {
-  languageSelect.classList.add('_pt');
-  languageSelect.classList.remove('_en');
-  languageSelectPt.classList.add('_active');
-  languageSelectEn.classList.remove('_active');
-});
-if (window.innerWidth <= 1024) {
-  headerLanguage.addEventListener('click', () => {
-    languageList.classList.toggle('_open');
-    headerLanguage.classList.toggle('_open');
-  });
-}
 
 /***/ }),
 
@@ -389,29 +315,25 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/burger */ "./src/js/functions/burger.js");
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_functions_burger__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_languageComponent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/languageComponent.js */ "./src/js/components/languageComponent.js");
-/* harmony import */ var _components_languageComponent_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_languageComponent_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_accorderon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/accorderon */ "./src/js/functions/accorderon.js");
-/* harmony import */ var _functions_accorderon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_functions_accorderon__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_footerCookieComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footerCookieComponent */ "./src/js/components/footerCookieComponent.js");
-/* harmony import */ var _components_footerCookieComponent__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_footerCookieComponent__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/scrollTopComponent */ "./src/js/components/scrollTopComponent.js");
-/* harmony import */ var _components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/bestItem-mobButtonComponent */ "./src/js/components/home/bestItem-mobButtonComponent.js");
-/* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabsBtnNewsComponent.js */ "./src/js/components/tabsBtnNewsComponent.js");
-/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _functions_accorderon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/accorderon */ "./src/js/functions/accorderon.js");
+/* harmony import */ var _functions_accorderon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_functions_accorderon__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/scrollTopComponent */ "./src/js/components/scrollTopComponent.js");
+/* harmony import */ var _components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/bestItem-mobButtonComponent */ "./src/js/components/home/bestItem-mobButtonComponent.js");
+/* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tabsBtnNewsComponent.js */ "./src/js/components/tabsBtnNewsComponent.js");
+/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4__);
 //Реализация бургер-меню
 
 
 //Language
-
+// import { languageComponent } from './components/languageComponent.js';
 
 //Acordeon
 
 
 //Footer cookie
-
+// import { footerCookie } from './components/footerCookieComponent';
 
 //btn scrollTop
 
@@ -424,6 +346,9 @@ __webpack_require__.r(__webpack_exports__);
 
 //News Tabs
 
+
+// import { footerMenu } from './new-page-scripts/footer-menu.js';
+// console.log('footer menu');
 })();
 
 /******/ })()
