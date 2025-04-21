@@ -161,30 +161,19 @@
       text-transform: uppercase;
       letter-spacing: 0.28px;
       text-shadow: 0px 1.366px 0.683px rgba(0, 0, 0, 0.25);
-      background-color: $pink;
-      border-radius: 4px;
-      background-clip: padding-box;
-      border: 1px solid transparent;
+
       position: relative;
       transition: all $transition;
-      box-shadow: 0px 2.73239px 5.46479px rgba(255, 98, 65, 0.48);
+
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+      box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
 
       @include breakpoint($tablet-bp) {
         height: 54px;
       }
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        margin: -1px;
-        border-radius: 4px;
-        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5));
-        transition: all $transition;
-      }
+
       &::after {
         content: '';
         width: 17.67px;
@@ -246,7 +235,7 @@
   justify-content: end;
   flex: 1 1 auto;
   margin-right: 34px;
-
+  overflow: auto;
   @media screen and (max-width: 1279px) {
     margin-right: 24px;
   }
@@ -430,7 +419,7 @@
   @media (max-width: 1024px) {
     flex-direction: column;
     justify-content: stretch;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-bottom: 50px;
 
     .menu-list {
@@ -439,12 +428,6 @@
       width: 100%;
       margin: 0 auto;
 
-      // &:last-child {
-      //   border-bottom: 1px solid #e32cc49f;
-      // }
-      // > .menu-item {
-      //   border-top: 1px solid #e32cc49f;
-      // }
       > .menu-item {
         &::before {
           content: '';
@@ -667,5 +650,35 @@
     &__link {
       background: $green-white;
     }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header {
+    &__logo {
+      width: 94px;
+      min-width: auto;
+      height: 32px;
+    }
+    &__button {
+      a {
+        height: 34px;
+        width: 134px;
+        padding: 0px 12px;
+        font-size: 12px;
+        letter-spacing: 0.24px;
+        justify-content: space-between;
+        align-items: center;
+        &::after {
+          width: 15px;
+          height: 11px;
+        }
+      }
+    }
+  }
+  .menu__icon {
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
   }
 }
