@@ -6,8 +6,7 @@
     <div class="wrapper">
       @include('partials/general-block/new-header.html')
       <main class="main">
-        @include('partials/new-page1/hero.html')
-        @include('partials/new-page1/info.html')
+        @include('partials/new-page1/hero.html') @include('partials/new-page1/info.html')
         <!-- @include('partials/page2/casino.html')
         @include('partials/home/best.html')
         @include('partials/home/news.html')
@@ -19,20 +18,5 @@
     </div>
   </body>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', footerMenu);
-    function footerMenu() {
-      const meneItems = document.querySelectorAll('.footer__menu-title');
-      meneItems.forEach((item) => {
-        item.addEventListener('click', () => {
-          const parent = item.parentNode;
-          const submenuItems = parent.querySelectorAll('.footer__menu-link');
-
-          submenuItems.forEach((item) => {
-            item.classList.toggle('footer__menu-link--active');
-          });
-        });
-      });
-    }
-  </script>
+  <script></script>
 </html>

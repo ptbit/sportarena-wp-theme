@@ -70,31 +70,6 @@ btnUp.addEventListener();
 
 /***/ }),
 
-/***/ "./src/js/components/tabsBtnNewsComponent.js":
-/*!***************************************************!*\
-  !*** ./src/js/components/tabsBtnNewsComponent.js ***!
-  \***************************************************/
-/***/ (() => {
-
-const btnTabsOne = document.querySelector('.casino-online__tabs-btn-one');
-const btnTabsTwo = document.querySelector('.casino-online__tabs-btn-two');
-const newsItemListOne = document.querySelector('.casino-online__list-one');
-const newsItemListTwo = document.querySelector('.casino-online__list-two');
-btnTabsOne.addEventListener('click', () => {
-  btnTabsOne.classList.add('_active');
-  newsItemListOne.classList.remove('_hidden');
-  btnTabsTwo.classList.remove('_active');
-  newsItemListTwo.classList.add('_hidden');
-});
-btnTabsTwo.addEventListener('click', () => {
-  btnTabsTwo.classList.add('_active');
-  newsItemListTwo.classList.remove('_hidden');
-  btnTabsOne.classList.remove('_active');
-  newsItemListOne.classList.add('_hidden');
-});
-
-/***/ }),
-
 /***/ "./src/js/functions/accorderon.js":
 /*!****************************************!*\
   !*** ./src/js/functions/accorderon.js ***!
@@ -321,8 +296,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_scrollTopComponent__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/bestItem-mobButtonComponent */ "./src/js/components/home/bestItem-mobButtonComponent.js");
 /* harmony import */ var _components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_home_bestItem_mobButtonComponent__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/tabsBtnNewsComponent.js */ "./src/js/components/tabsBtnNewsComponent.js");
-/* harmony import */ var _components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_tabsBtnNewsComponent_js__WEBPACK_IMPORTED_MODULE_4__);
 //Реализация бургер-меню
 
 
@@ -345,10 +318,50 @@ __webpack_require__.r(__webpack_exports__);
 //import { scrollAnchors } from './functions/scrollAnchors';
 
 //News Tabs
-
+// import { tabsBtnNews } from './components/tabsBtnNewsComponent.js';
 
 // import { footerMenu } from './new-page-scripts/footer-menu.js';
 // console.log('footer menu');
+document.addEventListener('DOMContentLoaded', footerMenu);
+function footerMenu() {
+  const meneItems = document.querySelectorAll('.footer__menu-title');
+  meneItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentNode;
+      const submenuItems = parent.querySelectorAll('.footer__menu-link');
+      submenuItems.forEach(item => {
+        item.classList.toggle('footer__menu-link--active');
+      });
+    });
+  });
+}
+// import Swiper from 'swiper';
+// import { Navigation, Pagination } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// const swiper = new Swiper('.info__swiper', {
+
+// autoplay: {
+//   delay: 5000,
+// },
+// If we need pagination
+// pagination: {
+//   el: '.swiper-pagination',
+// },
+// bulletActiveClass: 'swiper-pagination-bullet-active',
+
+// Navigation arrows
+// navigation: {
+//   nextEl: '.swiper-button-next',
+//   prevEl: '.swiper-button-prev',
+// },
+
+// And if we need scrollbar
+// scrollbar: {
+//   el: '.swiper-scrollbar',
+// },
+// });
 })();
 
 /******/ })()

@@ -201,14 +201,73 @@
     </div>
   </div>
 </section>
-
-        <section class="info">
+ <section class="info">
   <div class="info__container">
     <h1 class="info__title">Favbet Aviator Info</h1>
     <p class="info__text">
       In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
       more than 32 million players every month. Aviator is a popular
     </p>
+    <div class="info__swiper swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/license.svg" alt="slide icon" />
+            <span class="slide__title">License:</span>
+          </div>
+          <p class="slide__text">Curacao</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/year.svg" alt="slide icon" />
+            <span class="slide__title">Year of Launch:</span>
+          </div>
+          <p class="slide__text">2018</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Company</span>
+          </div>
+          <p class="slide__text">Umbrella Development B.V.</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/language.svg" alt="slide icon" />
+            <span class="slide__title">Languages:</span>
+          </div>
+          <p class="slide__text">9 languages</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Languages:</span>
+          </div>
+          <p class="slide__text">9 languages</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Languages:</span>
+          </div>
+          <p class="slide__text">9 languages</p>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
   </div>
 </section>
 
@@ -291,20 +350,5 @@
     </div>
   </body>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', footerMenu);
-    function footerMenu() {
-      const meneItems = document.querySelectorAll('.footer__menu-title');
-      meneItems.forEach((item) => {
-        item.addEventListener('click', () => {
-          const parent = item.parentNode;
-          const submenuItems = parent.querySelectorAll('.footer__menu-link');
-
-          submenuItems.forEach((item) => {
-            item.classList.toggle('footer__menu-link--active');
-          });
-        });
-      });
-    }
-  </script>
+  <script></script>
 </html>

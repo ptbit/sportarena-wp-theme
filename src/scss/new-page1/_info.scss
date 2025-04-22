@@ -1,6 +1,10 @@
 .info {
   background: #130d2c;
-  border: 1px dashed red;
+  // border: 1px dashed red;
+  color: white;
+  &__container {
+    padding-bottom: 30px;
+  }
   &__title {
     font-family: $font-popins-semb;
     font-size: 40px;
@@ -9,5 +13,61 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  &__text {
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__swiper {
+  }
+}
+.swiper {
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  &-slide {
+    width: 288px;
+    height: 96px;
+    padding: 20px 24px;
+  }
+  // &-pagination {
+  //   height: 40px;
+  //   margin-top: 10px;
+  //   border: 1px dashed green;
+  // }
+  &-button-prev {
+  }
+  &-button-next {
+  }
+  &-scrollbar {
+  }
+}
+.slide {
+  background: url('../img/new-page/info-item-bg.png') no-repeat 0 0 / cover;
+
+  &__header {
+    margin-bottom: 8px;
+  }
+  &__ico {
+    margin-right: 4px;
+    width: 24px;
+    height: 24px;
+  }
+  &__title {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__text {
+    color: #fff;
+    font-family: $font-popins-semb;
+    font-size: 16px;
+    line-height: 150%;
   }
 }

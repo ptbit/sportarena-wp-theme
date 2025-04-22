@@ -332,7 +332,10 @@
 }
 .info {
   background: #130d2c;
-  border: 1px dashed red;
+  color: white;
+}
+.info__container {
+  padding-bottom: 30px;
 }
 .info__title {
   font-family: "Popins-semb", sans-serif;
@@ -342,6 +345,49 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.info__text {
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-reg", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.swiper-slide {
+  width: 288px;
+  height: 96px;
+  padding: 20px 24px;
+}
+.slide {
+  background: url("../img/new-page/info-item-bg.png") no-repeat 0 0/cover;
+}
+.slide__header {
+  margin-bottom: 8px;
+}
+.slide__ico {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+}
+.slide__title {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Popins-reg", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.slide__text {
+  color: #fff;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .footer {
