@@ -81,12 +81,13 @@
 }
 
 .header {
-  position: relative;
+  // position: relative;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 200;
-  background: $black;
+  background: transparent;
   @include breakpoint($tablet-bp) {
     padding: 9px 0;
   }
@@ -655,10 +656,14 @@
 
 @media screen and (max-width: 560px) {
   .header {
+    padding: 25px 0;
     &__logo {
       width: 94px;
       min-width: auto;
       height: 32px;
+    }
+    &__row {
+      margin-top: 0;
     }
     &__button {
       a {

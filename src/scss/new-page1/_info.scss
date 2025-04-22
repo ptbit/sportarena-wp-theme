@@ -1,0 +1,13 @@
+.info {
+  background: #130d2c;
+  border: 1px dashed red;
+  &__title {
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

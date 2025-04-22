@@ -1,0 +1,308 @@
+.hero {
+  background: #130d2c url('../img/new-page/hero-bg-desk.png') no-repeat 50% 0 / cover;
+  padding-top: 134px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 350px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+  }
+  @include breakpoint($tablet-bp) {
+    padding-top: 130px;
+  }
+
+  &__container {
+    display: flex;
+    padding-bottom: 80px;
+    gap: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  &__left {
+    max-width: 600px;
+  }
+  &__back-btn {
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-family: $font-popins-semb;
+    line-height: 114%;
+    font-size: 54px;
+    background: linear-gradient(204deg, #fff 72%, #e6466e 82%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__text {
+    margin-bottom: 26px;
+    font-family: $font-popins-reg;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 555px;
+  }
+  &__sub-text {
+    color: rgba(255, 255, 255, 0.2);
+    font-family: $font-popins-reg;
+    font-size: 12px;
+    line-height: 150%;
+    max-width: 555px;
+  }
+  &__right {
+    width: 50%;
+  }
+}
+
+.back-btn {
+  color: $pink;
+  text-transform: uppercase;
+  font-family: $font-popins-bold;
+  font-size: 20px;
+  display: flex;
+  gap: 18px;
+  width: fit-content;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 27px;
+    height: 18px;
+    background-color: $pink;
+    -webkit-mask: url('../img/new-page/play-btn.svg') no-repeat center;
+    -webkit-mask-size: contain;
+    mask: url('../img/new-page/play-btn.svg') no-repeat center;
+    mask-size: contain;
+    transform: rotate(180deg);
+    margin-bottom: 2px;
+    transition: all $transition;
+  }
+  &:hover {
+    color: #ff3a6c;
+    &::before {
+      background-color: #ff3a6c;
+    }
+  }
+}
+
+.right {
+  position: relative;
+  max-width: 560px;
+  padding: 30px 40px 40px;
+  border-radius: 12px;
+  border: 1px solid #ffffff33;
+
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  // backdrop-filter: blur(25px);
+  backdrop-filter: brightness(120%) blur(25px);
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -21px;
+    left: -21px;
+    width: 143px;
+    height: 144px;
+    border-radius: 12px;
+    background: #ff267e;
+    filter: blur(60px);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -21px;
+    right: -21px;
+    width: 143px;
+    height: 144px;
+    border-radius: 12px;
+    background: #ff267e;
+    filter: blur(60px);
+  }
+
+  &__header {
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: $font-popins-semb;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  &__logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__list {
+    margin-bottom: 26px;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 8px;
+    color: #fff;
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url('../img/new-page/hero-check-icon.png') no-repeat 0 0 / cover;
+    }
+  }
+  &__bonus {
+  }
+}
+
+.bonus {
+  position: relative;
+  z-index: 1;
+  &__text {
+    padding: 20px 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0f0c22;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+    color: #fff;
+    font-family: $font-popins-semb;
+    font-size: 20px;
+    line-height: 150%;
+  }
+  &__btn {
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px 2px 12px 12px;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+    box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+
+    color: #fff;
+    text-shadow: 0px 1.366px 0.683px rgba(0, 0, 0, 0.25);
+    font-family: $font-popins-bold;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+  &__btn__arrow {
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .right {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__logo {
+      position: static;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    &__container {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__right {
+      width: 100%;
+      margin: 45px auto 0;
+    }
+    &__left {
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 49px;
+    }
+  }
+  .back-btn {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    gap: 8px;
+    margin-bottom: 0;
+    letter-spacing: 0.28px;
+    &::before {
+      width: 14px;
+      height: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 89px;
+    &__title {
+      font-size: 32px;
+      line-height: 120%;
+      background: linear-gradient(204deg, #fff 47%, #e6466e 79%, #e548ca 97%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__container {
+      padding-bottom: 40px;
+    }
+  }
+  .right {
+    padding: 20px;
+    &__title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 130%;
+    }
+    &__text {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    &__sub-text {
+      font-size: 10px;
+    }
+    &__logo {
+      width: 80px;
+      height: 80px;
+    }
+    &__header {
+      margin-bottom: 20px;
+    }
+    &__item {
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      &::before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .bonus {
+    &__text {
+      font-size: 16px;
+      line-height: 130%;
+      padding: 20px;
+    }
+    &__btn {
+      padding: 16px 20px;
+    }
+  }
+}
