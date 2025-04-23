@@ -577,13 +577,17 @@ body._lock {
   color: #E82052;
 }
 .menu .menu-list .menu-item .sub-menu {
-  padding: 10px 0;
+  padding: 10px 4px;
   display: none;
   position: absolute;
-  background-color: #151a18;
-  border-top: 1px solid #E82052;
-  border-radius: 0 0 2px 2px;
-  min-width: 220px;
+  background: #201a37;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   max-width: 220px;
   z-index: 1;
   left: -10px;
@@ -593,19 +597,25 @@ body._lock {
 }
 @media screen and (max-width: 1350px) {
   .menu .menu-list .menu-item .sub-menu {
-    min-width: 210px;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     max-width: 210px;
   }
 }
 @media screen and (max-width: 1279px) {
   .menu .menu-list .menu-item .sub-menu {
-    min-width: 200px;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     max-width: 200px;
   }
 }
 @media screen and (max-width: 1130px) {
   .menu .menu-list .menu-item .sub-menu {
-    min-width: 180px;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     max-width: 180px;
   }
 }
@@ -626,49 +636,62 @@ body._lock {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  padding: 7px 35px 6px 20px;
-  font-size: 12px;
+  padding: 13px 35px 11px 16px;
+  font-size: 16px;
   color: #ffffff;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-@media screen and (max-width: 1350px) {
-  .menu .menu-list .menu-item .sub-menu .menu-item > a {
-    font-size: 12px;
-  }
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 1279px) {
   .menu .menu-list .menu-item .sub-menu .menu-item > a {
-    font-size: 12px;
+    font-size: 14px;
+    padding: 10px 30px 9px 12px;
   }
 }
 @media screen and (max-width: 1080px) {
   .menu .menu-list .menu-item .sub-menu .menu-item > a {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 .menu .menu-list .menu-item .sub-menu .menu-item > a::after {
   margin: 0;
   position: absolute;
-  right: 15px;
-  top: 45%;
+  right: 10px;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 .menu .menu-list .menu-item .sub-menu .menu-item > a:hover {
-  background: #2c312f;
+  border-radius: 4px;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+  -webkit-box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.4);
+  box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.4);
 }
 @media screen and (max-width: 1024px) {
   .menu .menu-list .menu-item .sub-menu .menu-item > a:hover {
     background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #e82052;
+  }
+}
+.menu .menu-list .menu-item .sub-menu .menu-item > a:hover::after {
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+@media (max-width: 1024px) {
+  .menu .menu-list .menu-item .sub-menu .menu-item > a:hover::after {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    background-color: #e82052;
   }
 }
 .menu .menu-list .menu-item .sub-menu .menu-item .sub-menu {
-  border-top: none;
   top: 0;
   left: 100%;
-  border-radius: 0 2px 2px 2px;
 }
 .menu .menu-list .menu-item:has(.sub-menu) > a:hover::after {
   background-color: #E82052;
@@ -807,14 +830,20 @@ body._lock {
     right: 10px;
     top: 21px;
   }
+  .menu .menu-list .menu-item.mobile-active > a {
+    color: #e82052 !important;
+  }
   .menu .menu-list .menu-item.mobile-active > a::after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(-180deg) !important;
+    -ms-transform: rotate(-180deg) !important;
+    transform: rotate(-180deg) !important;
     background-color: #e82052;
   }
   .menu .menu-list .menu-item.mobile-active .sub-menu {
     display: block;
+  }
+  .menu .menu-list .menu-item.mobile-active .sub-menu > a {
+    color: #e82052;
   }
   .menu .menu-list .menu-item.mobile-active .sub-menu > a:hover {
     color: #E82052;

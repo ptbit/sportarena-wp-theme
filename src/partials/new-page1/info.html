@@ -6,9 +6,7 @@
       more than 32 million players every month. Aviator is a popular
     </p>
     <div class="info__swiper swiper">
-      <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
-        <!-- Slides -->
         <div class="swiper-slide slide">
           <div class="slide__header">
             <img class="slide__ico" src="img/new-page/slide-ico/license.svg" alt="slide icon" />
@@ -36,34 +34,64 @@
         <div class="swiper-slide slide">
           <div class="slide__header">
             <img class="slide__ico" src="img/new-page/slide-ico/language.svg" alt="slide icon" />
-            <span class="slide__title">Languages:</span>
+            <span class="slide__title">Min Deposit:</span>
           </div>
-          <p class="slide__text">9 languages</p>
+          <p class="slide__text">100 INR</p>
         </div>
 
         <div class="swiper-slide slide">
           <div class="slide__header">
             <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
-            <span class="slide__title">Languages:</span>
+            <span class="slide__title">Withdrawal Limit:</span>
           </div>
-          <p class="slide__text">9 languages</p>
+          <p class="slide__text">Min 1000 / Max 250,000 INR</p>
         </div>
 
         <div class="swiper-slide slide">
           <div class="slide__header">
             <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
-            <span class="slide__title">Languages:</span>
+            <span class="slide__title">Bonuses:</span>
           </div>
-          <p class="slide__text">9 languages</p>
+          <p class="slide__text">200% up to 24,000 INR</p>
         </div>
       </div>
-      <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
     </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiper = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 620 && !swiper) {
+      swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 620 && swiper) {
+      swiper.destroy(true, true); // повністю прибрати swiper-структуру
+      swiper = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>

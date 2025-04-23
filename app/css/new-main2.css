@@ -341,7 +341,7 @@
   font-family: "Popins-semb", sans-serif;
   font-size: 40px;
   line-height: 130%;
-  background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -353,7 +353,11 @@
   font-size: 16px;
   line-height: 150%;
 }
-.swiper-wrapper {
+.info .swiper {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+.info .swiper-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,35 +365,65 @@
   flex-wrap: wrap;
   gap: 14px;
 }
-.swiper-slide {
-  width: 288px;
+.info .swiper-slide {
+  max-width: 288px;
   height: 96px;
   padding: 20px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(217, 217, 217, 0.04)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+  -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
-.slide {
-  background: url("../img/new-page/info-item-bg.png") no-repeat 0 0/cover;
+.info .swiper-button-prev {
+  display: none;
 }
-.slide__header {
+.info .swiper-button-next {
+  display: none;
+}
+.info .slide__header {
   margin-bottom: 8px;
 }
-.slide__ico {
+.info .slide__ico {
   margin-right: 4px;
   width: 24px;
   height: 24px;
 }
-.slide__title {
+.info .slide__title {
   color: rgba(255, 255, 255, 0.6);
   font-family: "Popins-reg", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
-.slide__text {
+.info .slide__text {
   color: #fff;
   font-family: "Popins-semb", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
 
+@media screen and (max-width: 620px) {
+  .info .swiper-wrapper {
+    -ms-flex-wrap: initial;
+    flex-wrap: initial;
+    gap: 0;
+    padding-bottom: 20px;
+  }
+  .info .swiper-slide {
+    width: auto;
+    max-width: none;
+    height: auto;
+    width: 288px;
+  }
+  .info .swiper-pagination-bullet {
+    background-color: #e5053d;
+    width: 12px;
+    height: 12px;
+  }
+}
 .how-get {
   background-color: #100c23;
 }
