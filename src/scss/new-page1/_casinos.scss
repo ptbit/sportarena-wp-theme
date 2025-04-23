@@ -16,22 +16,31 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  &__text {
-    margin-bottom: 38px;
+  &__description {
     color: rgba(255, 255, 255, 0.8);
     font-family: $font-popins-reg;
     font-size: 16px;
     line-height: 150%;
   }
-  &__list {
+  // &__list {
+  //   display: flex;
+  //   gap: 20px;
+  //   overflow-x: scroll;
+  // }
+  &__header {
+    margin-bottom: 38px;
     display: flex;
     gap: 20px;
-    overflow-x: scroll;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    flex: 1;
   }
   &__buttons {
-    position: absolute;
-    top: 130px;
-    right: 0;
+    // position: absolute;
+    // top: 130px;
+    // right: 0;
     display: flex;
     gap: 10px;
   }
@@ -66,20 +75,20 @@
       background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
     }
   }
-  &__casino {
-    min-width: 330px;
-    height: 262px;
-  }
+  // &__casino {
+  //   min-width: 330px;
+  //   height: 262px;
+  // }
 }
 
 .casino {
-  border-radius: 12px;
-  border: 1px solid rgba(225, 32, 193, 0.4);
-  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // border-radius: 12px;
+  // border: 1px solid rgba(225, 32, 193, 0.4);
+  // box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  // padding: 30px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 
   &__header {
     display: flex;
@@ -116,5 +125,68 @@
     font-family: $font-popins-semb;
     font-size: 14px;
     line-height: 150%;
+  }
+}
+
+////////////////////////////////////
+.casinos {
+  &__container{
+    padding: 40px 0;
+  }
+  &__header{
+    margin-bottom: 24px;
+    padding: 0 14px;
+  }
+  &__title{
+    margin-bottom: 14px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+  }
+  &__description {
+    font-size: 12px;
+    text-align: center;
+  }
+  &__buttons {
+    display: none;
+  }
+  .swiper {
+    padding: 0 0 40px;
+  }
+  .swiper-slide {
+    min-width: none;
+    height: 262px;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .swiper-pagination-bullet {
+    width: 0;
+    height: 0;
+    bottom: 0;
+  }
+  // .swiper-buttons{
+  //   position: absolute;
+  //   top: 0px;
+  //   right: 0;
+  //   z-index: 222;
+  //   border: 1px dashed rgb(243, 165, 165);
+
+  //   button{
+  //     padding: 20px;
+  //   }
+  // }
+}
+@media screen and (max-width: 620px) {
+  .casinos {
+    .swiper-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+    }
   }
 }
