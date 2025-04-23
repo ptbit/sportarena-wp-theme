@@ -134,6 +134,9 @@
     }
     &__item {
       flex-direction: column-reverse;
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+      }
     }
   }
   .item {
