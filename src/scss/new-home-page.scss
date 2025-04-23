@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'mixins';
+
+// подключения компонентов страницы
+@import 'new-home-page/_hero';
+// @import 'new-home-page/_info';
+// @import 'new-home-page/_how-get';
+// @import 'new-home-page/_casinos';
+
+// @import 'new-page1/_carousel';
+
+// @import "page2/_news";
+// @import "general-block/_faq.scss";
+// @import "general-block/_author.scss";
+// @import "general-block/_subscribe.scss";
+
+@import 'general-block/_new-footer.scss';

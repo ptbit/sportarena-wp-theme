@@ -1,0 +1,114 @@
+.hero {
+  background: #130d2c url('../img/new-page/hero-bg-desk.png') no-repeat 50% 0 / cover;
+  padding-top: 134px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 377px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+  }
+  @include breakpoint($tablet-bp) {
+    padding-top: 130px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 59px;
+  }
+  &__info {
+    width: 50%;
+    max-width: 552px;
+    border: 1px dashed rgba(233, 231, 231, 0.308);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 130px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-family: $font-popins-semb;
+    font-size: 54px;
+    line-height: 114%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__play-btn {
+    height: 66px;
+    width: fit-content;
+    padding: 0 42px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+    box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    transition: background-color $transition;
+
+    &:hover {
+      background-color: #b4012e;
+    }
+  }
+  &__button-arrow {
+    width: 27px;
+    height: 19px;
+    padding-top: 2px;
+  }
+  &__plane {
+    position: absolute;
+    bottom: -63px;
+    right: -75px;
+    border: 1px dashed rgba(255, 255, 0, 0.329);
+  }
+  &__devices {
+    width: 50%;
+    border: 1px dashed rgba(255, 0, 0, 0.301);
+    position: relative;
+    z-index: 1;
+    background-color: #adadad;
+  }
+  &__ipad {
+    padding: 19px;
+    width: 509px;
+    height: 390px;
+    background: url('../img/new-home-page/hero/ipad.png') no-repeat 0 0 / cover;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+      border-radius: 50px;
+    }
+  }
+  &__iphone {
+  }
+  &__marker {
+  }
+}
+.marker {
+  &--ipad {
+  }
+  &--iphone {
+  }
+}
