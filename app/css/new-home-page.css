@@ -473,6 +473,35 @@
     height: 230px;
   }
 }
+.game__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.game__item {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  border: 1px dashed red;
+}
+.game__item--1 {
+  width: 50%;
+}
+.game__item--2 {
+  width: 50%;
+}
+.game__item p {
+  font-size: 44px;
+  color: #E82052;
+  text-align: center;
+}
+
+.benefits__title {
+  font-size: 64px;
+  color: #E82052;
+}
+
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;

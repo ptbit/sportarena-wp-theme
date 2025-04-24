@@ -1,0 +1,25 @@
+.game {
+  &__container {
+    display: flex;
+  }
+  &__item {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border: 1px dashed red;
+    &--1 {
+      width: 50%;
+    }
+    &--2 {
+      width: 50%;
+    }
+    &--3 {
+    }
+    p {
+      font-size: 44px;
+      color: $pink;
+      text-align: center;
+    }
+  }
+}
