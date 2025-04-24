@@ -21,8 +21,6 @@
   }
   &__info {
     width: 44%;
-    // max-width: 552px;
-    // border: 1px dashed rgba(233, 231, 231, 0.308);
     position: relative;
     z-index: 1;
     margin-bottom: 130px;
@@ -33,7 +31,6 @@
       right: -75px;
       width: 227px;
       height: 110px;
-      // border: 1px dashed rgba(255, 255, 0, 0.329);
       background: url('../img/new-home-page/hero/plane-small.svg') no-repeat 0 0 / cover;
     }
   }
@@ -87,7 +84,6 @@
 
   &__devices {
     width: 50%;
-    // border: 1px dashed rgba(255, 0, 0, 0.301);
     position: relative;
     z-index: 1;
     &::before {
@@ -97,7 +93,6 @@
       left: -97px;
       width: 366px;
       height: 134px;
-      // border: 1px dashed rgba(255, 255, 0, 0.329);
       background: url('../img/new-home-page/hero/plane-big.svg') no-repeat 0 0 / cover;
     }
   }
@@ -128,7 +123,6 @@
   }
   &__marker {
     width: 320px;
-    // height: 100px;
     padding: 20px;
     border: 1px solid 1px solid rgba(153, 153, 153, 0.2);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
@@ -153,8 +147,6 @@
       height: 60px;
       box-shadow: 0px 4px 8px -2px rgba(221, 0, 184, 0.48);
       border-radius: 50%;
-    }
-    &__details {
     }
     &__title {
       margin-bottom: 8px;
@@ -283,7 +275,6 @@
   .hero {
     &__devices {
       width: 100%;
-      // padding-inline: 20px;
       margin-left: 0;
       &::before {
         left: -97px;
@@ -336,7 +327,6 @@
       margin-left: -90px;
       top: 10px;
       width: 290px;
-      // height: fit-content;
       height: 63vw;
     }
     &__marker {
@@ -456,19 +446,16 @@
     }
   }
 }
-// @media screen and (max-width: 375px) {}
 @media screen and (max-width: 480px) {
   .hero {
     &__ipad {
       margin-left: 10px;
-      // margin-bottom: 35px;
-      // margin-top: 25px;
+
       width: 240px;
     }
     &__iphone {
       width: 150px;
       height: 230px;
-      // margin-left: -40px;
     }
   }
 }
