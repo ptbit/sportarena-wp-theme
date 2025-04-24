@@ -20,12 +20,22 @@
     gap: 59px;
   }
   &__info {
-    width: 50%;
-    max-width: 552px;
-    border: 1px dashed rgba(233, 231, 231, 0.308);
+    width: 44%;
+    // max-width: 552px;
+    // border: 1px dashed rgba(233, 231, 231, 0.308);
     position: relative;
     z-index: 1;
     margin-bottom: 130px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -63px;
+      right: -75px;
+      width: 227px;
+      height: 110px;
+      // border: 1px dashed rgba(255, 255, 0, 0.329);
+      background: url('../img/new-home-page/hero/plane-small.svg') no-repeat 0 0 / cover;
+    }
   }
   &__title {
     margin-bottom: 30px;
@@ -74,21 +84,28 @@
     height: 19px;
     padding-top: 2px;
   }
-  &__plane {
-    position: absolute;
-    bottom: -63px;
-    right: -75px;
-    border: 1px dashed rgba(255, 255, 0, 0.329);
-  }
+
   &__devices {
     width: 50%;
-    border: 1px dashed rgba(255, 0, 0, 0.301);
+    // border: 1px dashed rgba(255, 0, 0, 0.301);
     position: relative;
     z-index: 1;
-    background-color: #adadad;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -97px;
+      width: 366px;
+      height: 134px;
+      // border: 1px dashed rgba(255, 255, 0, 0.329);
+      background: url('../img/new-home-page/hero/plane-big.svg') no-repeat 0 0 / cover;
+    }
   }
   &__ipad {
-    padding: 19px;
+    padding: 16px;
+    transform: rotate(-13deg);
+    margin-left: 20px;
+    margin-top: 59px;
     width: 509px;
     height: 390px;
     background: url('../img/new-home-page/hero/ipad.png') no-repeat 0 0 / cover;
@@ -102,13 +119,356 @@
     }
   }
   &__iphone {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    background: url('../img/new-home-page/hero/iphone.png') no-repeat 0 0 / cover;
+    height: 485px;
+    width: 276px;
   }
   &__marker {
+    width: 320px;
+    // height: 100px;
+    padding: 20px;
+    border: 1px solid 1px solid rgba(153, 153, 153, 0.2);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .marker {
+    &--ipad {
+      bottom: 40px;
+      left: 0px;
+    }
+    &--iphone {
+      right: -30px;
+      bottom: 100px;
+    }
+    &__icon {
+      width: 60px;
+      height: 60px;
+      box-shadow: 0px 4px 8px -2px rgba(221, 0, 184, 0.48);
+      border-radius: 50%;
+    }
+    &__details {
+    }
+    &__title {
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-family: $font-popins-semb;
+      font-size: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    &__description {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
   }
 }
-.marker {
-  &--ipad {
+@media screen and (max-width: 1400px) {
+  .hero {
+    &__info {
+      &::before {
+        right: 0;
+      }
+    }
+    &__devices {
+      &::before {
+        left: -117px;
+      }
+    }
+    &__ipad {
+      margin-left: -20px;
+    }
+    &__iphone {
+      right: 0;
+    }
+    .marker--ipad {
+      left: -40px;
+    }
+    .marker--iphone {
+      right: 0;
+    }
   }
-  &--iphone {
+}
+@media screen and (max-width: 1250px) {
+  .hero {
+    &__title {
+      margin-bottom: 25px;
+      font-size: 50px;
+    }
+    &__sub-title {
+      font-size: 15px;
+    }
+    &__container {
+      gap: 0;
+    }
+    &__info {
+      width: 47%;
+    }
+    &__devices {
+      width: 53%;
+      transform: scale(0.9);
+      transform-origin: top right;
+    }
+    &__marker {
+      width: 290px;
+      padding: 18px;
+    }
+    .marker {
+      &__icon {
+        width: 50px;
+        height: 50px;
+      }
+      &__title {
+        font-size: 20px;
+      }
+      &__description {
+        font-size: 14px;
+      }
+      &--ipad {
+        bottom: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .hero {
+    &__info {
+      transform: scale(0.9);
+      transform-origin: top left;
+    }
+  }
+}
+@media screen and (max-width: 1090px) {
+  .hero {
+    &__container {
+      padding-top: 30px;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 40px;
+    }
+    &__info {
+      width: 100%;
+      transform: scale(1);
+    }
+    &__devices {
+      width: 80%;
+      height: 510px;
+      margin-left: 50px;
+      transform: scale(1);
+    }
+    &__ipad {
+      margin-left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero {
+    &__devices {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    &__devices {
+      width: 100%;
+      // padding-inline: 20px;
+      margin-left: 0;
+      &::before {
+        left: -97px;
+      }
+    }
+    &__info {
+      margin-top: 70px;
+      margin-bottom: 90px;
+      &::before {
+        bottom: -45px;
+      }
+    }
+    &__ipad {
+      margin-left: 40px;
+    }
+    &__marker {
+      position: static;
+      display: flex;
+      width: 46%;
+      margin-top: 70px;
+    }
+    .marker {
+      &--iphone {
+        margin-left: auto;
+        margin-top: -85px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .hero {
+    &__devices {
+      display: flex;
+      height: fit-content;
+    }
+    &__inner {
+      display: flex;
+      height: fit-content;
+      margin: 0 auto;
+      width: 100%;
+    }
+    &__ipad {
+      margin-bottom: 50px;
+      background-size: contain;
+      height: fit-content;
+    }
+    &__iphone {
+      position: relative;
+      background-size: contain;
+      margin-left: -90px;
+      top: 10px;
+      width: 290px;
+      // height: fit-content;
+      height: 63vw;
+    }
+    &__marker {
+      position: absolute;
+      width: 49%;
+    }
+    .marker {
+      &--ipad {
+        margin: 0;
+        left: 0;
+        bottom: -100px;
+      }
+      &--iphone {
+        margin: 0;
+        bottom: -100px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 80px;
+    &__container {
+      padding-top: 20px;
+    }
+  }
+}
+@media screen and (max-width: 675px) {
+  .hero {
+    &__info {
+      margin-top: 110px;
+      margin-bottom: 40px;
+      &::before {
+        display: none;
+      }
+    }
+    &__devices {
+      &::before {
+        width: 187px;
+        height: 68px;
+        left: -45px;
+      }
+    }
+    &__inner {
+      width: auto;
+    }
+    &__ipad {
+      width: 360px;
+      margin-left: 20px;
+      margin-bottom: 35px;
+      margin-top: 25px;
+    }
+    &__iphone {
+      width: 185px;
+      height: 370px;
+      margin-left: -40px;
+    }
+    &__marker {
+      flex-direction: column;
+      gap: 10px;
+      padding: 18px;
+    }
+    &__title {
+      margin-bottom: 26px;
+      font-size: 32px;
+      line-height: 120%;
+    }
+    &__sub-title {
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 150%;
+    }
+    &__play-btn {
+      height: 48px;
+      padding: 0 23px;
+      gap: 36px;
+      font-size: 16px;
+      letter-spacing: 0.32px;
+    }
+    &__button-arrow {
+      width: 22px;
+      height: 15px;
+    }
+    .marker {
+      &__icon {
+        width: 54px;
+        height: 54px;
+      }
+      &__details {
+      }
+      &__title {
+        margin-bottom: 6px;
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        text-align: center;
+      }
+      &__description {
+        font-size: 12px;
+        letter-spacing: 0.24px;
+        text-align: center;
+      }
+      &--ipad,
+      &--iphone {
+        bottom: -145px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 555px) {
+  .hero {
+    &__ipad {
+      width: 310px;
+    }
+    &__iphone {
+      width: 155px;
+      height: 300px;
+    }
+  }
+}
+// @media screen and (max-width: 375px) {}
+@media screen and (max-width: 480px) {
+  .hero {
+    &__ipad {
+      margin-left: 10px;
+      // margin-bottom: 35px;
+      // margin-top: 25px;
+      width: 240px;
+    }
+    &__iphone {
+      width: 150px;
+      height: 230px;
+      // margin-left: -40px;
+    }
   }
 }

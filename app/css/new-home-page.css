@@ -28,12 +28,19 @@
   gap: 59px;
 }
 .hero__info {
-  width: 50%;
-  max-width: 552px;
-  border: 1px dashed rgba(233, 231, 231, 0.308);
+  width: 44%;
   position: relative;
   z-index: 1;
   margin-bottom: 130px;
+}
+.hero__info::before {
+  content: "";
+  position: absolute;
+  bottom: -63px;
+  right: -75px;
+  width: 227px;
+  height: 110px;
+  background: url("../img/new-home-page/hero/plane-small.svg") no-repeat 0 0/cover;
 }
 .hero__title {
   margin-bottom: 30px;
@@ -88,21 +95,27 @@
   height: 19px;
   padding-top: 2px;
 }
-.hero__plane {
-  position: absolute;
-  bottom: -63px;
-  right: -75px;
-  border: 1px dashed rgba(255, 255, 0, 0.329);
-}
 .hero__devices {
   width: 50%;
-  border: 1px dashed rgba(255, 0, 0, 0.301);
   position: relative;
   z-index: 1;
-  background-color: #adadad;
+}
+.hero__devices::before {
+  content: "";
+  position: absolute;
+  top: -36px;
+  left: -97px;
+  width: 366px;
+  height: 134px;
+  background: url("../img/new-home-page/hero/plane-big.svg") no-repeat 0 0/cover;
 }
 .hero__ipad {
-  padding: 19px;
+  padding: 16px;
+  -webkit-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+  margin-left: 20px;
+  margin-top: 59px;
   width: 509px;
   height: 390px;
   background: url("../img/new-home-page/hero/ipad.png") no-repeat 0 0/cover;
@@ -115,6 +128,350 @@
   -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
   border-radius: 50px;
+}
+.hero__iphone {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  background: url("../img/new-home-page/hero/iphone.png") no-repeat 0 0/cover;
+  height: 485px;
+  width: 276px;
+}
+.hero__marker {
+  width: 320px;
+  padding: 20px;
+  border: 1px solid 1px solid rgba(153, 153, 153, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.084)), to(rgba(217, 217, 217, 0.042)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.hero .marker--ipad {
+  bottom: 40px;
+  left: 0px;
+}
+.hero .marker--iphone {
+  right: -30px;
+  bottom: 100px;
+}
+.hero .marker__icon {
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0px 4px 8px -2px rgba(221, 0, 184, 0.48);
+  box-shadow: 0px 4px 8px -2px rgba(221, 0, 184, 0.48);
+  border-radius: 50%;
+}
+.hero .marker__title {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.hero .marker__description {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-reg", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero__info::before {
+    right: 0;
+  }
+  .hero__devices::before {
+    left: -117px;
+  }
+  .hero__ipad {
+    margin-left: -20px;
+  }
+  .hero__iphone {
+    right: 0;
+  }
+  .hero .marker--ipad {
+    left: -40px;
+  }
+  .hero .marker--iphone {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .hero__title {
+    margin-bottom: 25px;
+    font-size: 50px;
+  }
+  .hero__sub-title {
+    font-size: 15px;
+  }
+  .hero__container {
+    gap: 0;
+  }
+  .hero__info {
+    width: 47%;
+  }
+  .hero__devices {
+    width: 53%;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+  }
+  .hero__marker {
+    width: 290px;
+    padding: 18px;
+  }
+  .hero .marker__icon {
+    width: 50px;
+    height: 50px;
+  }
+  .hero .marker__title {
+    font-size: 20px;
+  }
+  .hero .marker__description {
+    font-size: 14px;
+  }
+  .hero .marker--ipad {
+    bottom: 20px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .hero__info {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .hero__container {
+    padding-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero__info {
+    width: 100%;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .hero__devices {
+    width: 80%;
+    height: 510px;
+    margin-left: 50px;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .hero__ipad {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero__devices {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero__devices {
+    width: 100%;
+    margin-left: 0;
+  }
+  .hero__devices::before {
+    left: -97px;
+  }
+  .hero__info {
+    margin-top: 70px;
+    margin-bottom: 90px;
+  }
+  .hero__info::before {
+    bottom: -45px;
+  }
+  .hero__ipad {
+    margin-left: 40px;
+  }
+  .hero__marker {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 46%;
+    margin-top: 70px;
+  }
+  .hero .marker--iphone {
+    margin-left: auto;
+    margin-top: -85px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .hero__devices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .hero__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero__ipad {
+    margin-bottom: 50px;
+    background-size: contain;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .hero__iphone {
+    position: relative;
+    background-size: contain;
+    margin-left: -90px;
+    top: 10px;
+    width: 290px;
+    height: 63vw;
+  }
+  .hero__marker {
+    position: absolute;
+    width: 49%;
+  }
+  .hero .marker--ipad {
+    margin: 0;
+    left: 0;
+    bottom: -100px;
+  }
+  .hero .marker--iphone {
+    margin: 0;
+    bottom: -100px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 80px;
+  }
+  .hero__container {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .hero__info {
+    margin-top: 110px;
+    margin-bottom: 40px;
+  }
+  .hero__info::before {
+    display: none;
+  }
+  .hero__devices::before {
+    width: 187px;
+    height: 68px;
+    left: -45px;
+  }
+  .hero__inner {
+    width: auto;
+  }
+  .hero__ipad {
+    width: 360px;
+    margin-left: 20px;
+    margin-bottom: 35px;
+    margin-top: 25px;
+  }
+  .hero__iphone {
+    width: 185px;
+    height: 370px;
+    margin-left: -40px;
+  }
+  .hero__marker {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+  }
+  .hero__title {
+    margin-bottom: 26px;
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .hero__sub-title {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .hero__play-btn {
+    height: 48px;
+    padding: 0 23px;
+    gap: 36px;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
+  .hero__button-arrow {
+    width: 22px;
+    height: 15px;
+  }
+  .hero .marker__icon {
+    width: 54px;
+    height: 54px;
+  }
+  .hero .marker__title {
+    margin-bottom: 6px;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-align: center;
+  }
+  .hero .marker__description {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+    text-align: center;
+  }
+  .hero .marker--ipad, .hero .marker--iphone {
+    bottom: -145px;
+  }
+}
+@media screen and (max-width: 555px) {
+  .hero__ipad {
+    width: 310px;
+  }
+  .hero__iphone {
+    width: 155px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__ipad {
+    margin-left: 10px;
+    width: 240px;
+  }
+  .hero__iphone {
+    width: 150px;
+    height: 230px;
+  }
 }
 .footer {
   padding: 50px 0 45px 0;
