@@ -204,8 +204,7 @@
     </div>
   </div>
 </section>
-
-        <section class="info">
+ <section class="info">
   <div class="info__container">
     <h1 class="info__title">Favbet Aviator Info</h1>
     <p class="info__text">
@@ -302,8 +301,7 @@
     window.addEventListener('resize', initOrDestroySwiper);
   });
 </script>
-
-        <section class="how-get">
+ <section class="how-get">
   <div class="how-get__container">
     <div class="how-get__item item">
       <div class="item__logo">
@@ -397,7 +395,7 @@
 
     <div class="swiper casinosSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -407,7 +405,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -417,7 +415,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -427,7 +425,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -437,7 +435,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -447,7 +445,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -457,7 +455,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -467,7 +465,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -477,7 +475,7 @@
           </div>
           <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide casino">
           <div class="casino__header">
             <div class="casino__info">
               <p class="casino__title">Favbet</p>
@@ -523,7 +521,41 @@
       },
 
       breakpoints: {
-        620: {
+        550: {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 15,
+          centeredSlides: true,
+          grabCursor: true,
+          initialSlide: 0,
+
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+
+          autoplay: {
+            delay: 3000,
+          },
+
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+          autoplay: false,
+        },
+        1025: {
           loop: false,
           centeredSlides: false,
           slidesPerView: 3.5,
@@ -533,6 +565,7 @@
             nextEl: '.casinos__button--next',
             prevEl: '.casinos__button--prew',
           },
+          autoplay: false,
         },
       },
     });

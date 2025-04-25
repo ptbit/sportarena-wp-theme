@@ -934,9 +934,10 @@
 }
 @media screen and (max-width: 750px) {
   .benefits__container {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 30px;
+    padding: 30px 0;
+  }
+  .benefits__title, .benefits__sub-title {
+    padding: 0 15px;
   }
 }
 @media (max-width: 490px) {
@@ -961,6 +962,220 @@
   }
   .benefits .card__text {
     font-size: 12px;
+  }
+}
+.games {
+  color: #E82052;
+  background-color: #130d2c;
+}
+.games__container {
+  padding: 100px 15px;
+  position: relative;
+}
+.games__title {
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.games__description {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-reg", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.games__header {
+  margin-bottom: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.games__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.games__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.games__button {
+  width: 54px;
+  height: 54px;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+  -webkit-box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+  box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+  border-radius: 12px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.games__button img {
+  width: 19px;
+  height: 26px;
+}
+.games__button--prew img {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.games__button--next img {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.games__button:hover {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+}
+.games__button:disabled,
+.games__button button[disabled] {
+  cursor: no-drop;
+  opacity: 0.5;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+}
+.games .casino {
+  border-radius: 12px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 24px;
+}
+.games .casino__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.games .casino__title {
+  color: #fff;
+  font-family: "Popins-medium", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+}
+.games .casino__sub-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-reg", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+.games .casino__logo {
+  min-width: 98px;
+  height: 98px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff267e), to(#af1554));
+  background: linear-gradient(180deg, #ff267e 0%, #af1554 100%);
+}
+.games .casino__bonus {
+  padding: 19px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0c22;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  color: #fff;
+  font-family: "Popins-semb", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+.games .swiper-pagination {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .games__container {
+    padding: 40px 0;
+  }
+  .games__header {
+    margin-bottom: 24px;
+    padding: 0 14px;
+  }
+  .games__title {
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .games__description {
+    font-size: 12px;
+  }
+  .games .swiper {
+    padding: 0 0 40px;
+  }
+  .games .swiper-slide {
+    min-width: none;
+    height: 288px;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .games .swiper-pagination-bullet {
+    width: 0;
+    height: 0;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .games__title {
+    width: 100%;
+  }
+  .games__description {
+    text-align: center;
+  }
+  .games__buttons {
+    display: none;
+  }
+  .games .swiper-pagination {
+    display: block;
+  }
+  .games .swiper-pagination-bullet {
+    background-color: #e5053d;
+    width: 12px;
+    height: 12px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .games .swiper-pagination-bullet:hover {
+    opacity: 0.8;
   }
 }
 .footer {
