@@ -16,8 +16,8 @@
       left: -120px;
       top: 50%;
       position: absolute;
-      width: 141px;
-      height: 141px;
+      width: 241px;
+      height: 241px;
       transform: translateY(-50%);
       border-radius: 50%;
       filter: blur(200px);
@@ -191,6 +191,13 @@
         'text'
         'image'
         'table';
+      &::before {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 193px;
+        height: 193px;
+      }
     }
     &__title {
       text-align: center;

@@ -494,8 +494,8 @@
   left: -120px;
   top: 50%;
   position: absolute;
-  width: 141px;
-  height: 141px;
+  width: 241px;
+  height: 241px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -670,6 +670,15 @@
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "text" "image" "table";
+  }
+  .game__container::before {
+    top: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 193px;
+    height: 193px;
   }
   .game__title {
     text-align: center;
