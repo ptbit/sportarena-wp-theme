@@ -1,5 +1,26 @@
 .benefits {
   background: #100c23;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 530px;
+    background: url('../img/new-home-page/benefits/lights-1.png') no-repeat 0 0 / cover;
+    filter: blur(10px);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 530px;
+    background: url('../img/new-home-page/benefits/lights-2.png') no-repeat 0 0 / cover;
+    filter: blur(10px);
+  }
   &__container {
     padding: 50px 15px 70px;
   }
@@ -15,7 +36,8 @@
     -webkit-text-fill-color: transparent;
   }
   &__sub-title {
-    margin-bottom: 55px;
+    margin: 0 auto 55px;
+    max-width: 555px;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
     font-family: $font-popins-reg;
@@ -23,52 +45,145 @@
     line-height: 150%;
   }
   &__cards {
-    // display: flex;
   }
   &__card {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background: #393737 0% 0% / 100px 100px repeat;
+      filter: blur(10px);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 64px;
+      height: 64px;
+      background: url('../img/new-home-page/benefits/corner.png') no-repeat 0 0 / cover;
+    }
+  }
+
+  .swiper {
+    padding-bottom: 40px;
+    &-wrapper {
+      width: 100%;
+    }
+    &-slide {
+    }
+    &-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+      transition: opacity $transition;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 22px;
+      border: 1px solid $pink;
+      border-radius: 12px;
+      height: 344px;
+      &__title {
+        color: #fff;
+        text-align: center;
+        font-family: $font-popins-semb;
+        font-size: 22px;
+        line-height: 130%;
+      }
+      &__ico {
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+        height: 140px;
+      }
+      &__text {
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-family: $font-popins-reg;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
   }
 }
 
-.swiper {
-  &-wrapper {
+@media screen and (max-width: 900px) {
+  .benefits {
+    &::before {
+      left: 40px;
+    }
+    &::after {
+      display: none;
+    }
+    &__title {
+      margin-bottom: 17px;
+      font-size: 32px;
+    }
+    &__sub-title {
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+    .card {
+      height: 270px;
+      padding: 25px;
+      &__ico {
+        width: 110px;
+        height: 110px;
+      }
+      &__title {
+        font-size: 20px;
+      }
+      &__text {
+        font-size: 13px;
+      }
+    }
   }
-  &-slide {
-  }
-  &-pagination {
-  }
- 
 }
-
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 22px;
-  border: 1px solid $pink;
-  border-radius: 12px;
-  height: 344px;
-  &__title {
-    color: #fff;
-    text-align: center;
-    font-family: $font-popins-semb;
-    font-size: 22px;
-    line-height: 130%;
+@media screen and (max-width: 750px) {
+  .benefits {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 30px;
+    }
   }
-  &__ico {
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
-  }
-  &__text {
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    font-family: $font-popins-reg;
-    font-size: 14px;
-    line-height: 150%;
+}
+@media (max-width: 490px) {
+  .benefits {
+    &__title {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+    &__sub-title {
+      margin-bottom: 24px;
+      font-size: 12px;
+    }
+    .card {
+      height: 270px;
+      padding: 25px;
+      &__ico {
+        width: 110px;
+        height: 110px;
+      }
+      &__title {
+        font-size: 18px;
+      }
+      &__text {
+        font-size: 12px;
+      }
+    }
   }
 }

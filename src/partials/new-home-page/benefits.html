@@ -43,11 +43,11 @@
 
   function startSwiper() {
     const swiper = new Swiper('.cardsSwiper', {
-      slidesPerView: 4,
+      slidesPerView: 1.5,
       spaceBetween: 15,
       loop: true,
-      centeredSlides: true,
       grabCursor: true,
+      centeredSlides: true,
       initialSlide: 0,
       autoplay: {
         delay: 3000,
@@ -63,10 +63,64 @@
           slidesPerView: 5,
           spaceBetween: 18,
           grabCursor: true,
-          // navigation: {
-          //   nextEl: '.casinos__button--next',
-          //   prevEl: '.casinos__button--prew',
-          // },
+        },
+        1030: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
         },
       },
     });
