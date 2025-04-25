@@ -383,7 +383,7 @@
 @media screen and (max-width: 675px) {
   .hero__info {
     margin-top: 110px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .hero__info::before {
     display: none;
@@ -731,6 +731,9 @@
   }
 }
 @media (max-width: 490px) {
+  .game__container {
+    padding: 40px 14px;
+  }
   .game__title {
     font-size: 24px;
     margin-bottom: 14px;
@@ -743,6 +746,10 @@
   }
   .game__table-info {
     font-size: 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 33px;
   }
   .game__table-text {
     font-size: 12px;
