@@ -1,9 +1,74 @@
 .benefits {
-  background: #130d2c;
+  background: #100c23;
   &__container {
+    padding: 50px 15px 70px;
   }
   &__title {
-    font-size: 64px;
-    color: $pink;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    margin-bottom: 55px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__cards {
+    // display: flex;
+  }
+  &__card {
+  }
+}
+
+.swiper {
+  &-wrapper {
+  }
+  &-slide {
+  }
+  &-pagination {
+  }
+ 
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 22px;
+  border: 1px solid $pink;
+  border-radius: 12px;
+  height: 344px;
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-family: $font-popins-semb;
+    font-size: 22px;
+    line-height: 130%;
+  }
+  &__ico {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+  }
+  &__text {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-family: $font-popins-reg;
+    font-size: 14px;
+    line-height: 150%;
   }
 }

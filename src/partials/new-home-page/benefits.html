@@ -1,5 +1,75 @@
 <section class="benefits">
   <div class="benefits__container">
-    <h2 class="benefits__title">Benefits TITLE</h2>
+    <h2 class="benefits__title">Benefits of playing Aviator games online</h2>
+    <p class="benefits__sub-title">
+      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+    </p>
+    <div class="swiper cardsSwiper">
+      <div class="swiper-wrapper benefits__cards">
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">HIGH RTP</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-1.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">BEGINNER- FRIENDLY</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-2.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">SOCIAL COMPONENTS</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-3.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">MOBILE-READY</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-4.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">PROVABLY FAIR</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-5.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', startSwiper);
+
+  function startSwiper() {
+    const swiper = new Swiper('.cardsSwiper', {
+      slidesPerView: 4,
+      spaceBetween: 15,
+      loop: true,
+      centeredSlides: true,
+      grabCursor: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 18,
+          grabCursor: true,
+          // navigation: {
+          //   nextEl: '.casinos__button--next',
+          //   prevEl: '.casinos__button--prew',
+          // },
+        },
+      },
+    });
+    console.log(swiper);
+  }
+</script>
