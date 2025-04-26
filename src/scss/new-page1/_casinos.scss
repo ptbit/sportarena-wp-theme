@@ -33,7 +33,6 @@
     flex: 1;
   }
   &__buttons {
-
     display: flex;
     gap: 10px;
   }
@@ -116,6 +115,17 @@
       line-height: 150%;
     }
   }
+  .swiper-wrapper {
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 54px;
+      background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+    }
+  }
   .swiper-pagination {
     display: none;
   }
@@ -178,7 +188,7 @@
       width: 12px;
       height: 12px;
       transition: opacity $transition;
-      &:hover{
+      &:hover {
         opacity: 0.8;
       }
     }
