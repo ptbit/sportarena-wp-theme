@@ -1,6 +1,6 @@
 .game {
   color: rgba(255, 255, 255, 0.8);
-  background: #130d2c;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
 
   &__container {
     display: grid;

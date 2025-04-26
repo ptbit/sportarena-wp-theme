@@ -1,1 +1,98 @@
-<p>7-features.html</p>
+<section class="features">
+  <div class="features__container">
+    <h2 class="features__title">Aviator Game Features</h2>
+    <p class="features__sub-title">
+      The Aviator Crash game has many unique features that attract players. Due to these features, Sprib's game remains one of the most
+      popular choices even five
+    </p>
+    <div class="swiper featuresSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">DOUBLE BET</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-1.png" alt="game feature image" />
+          </div>
+        </div>
+
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">IN-GAME CHAT</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-2.png" alt="game feature image" />
+          </div>
+        </div>
+
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">IN-GAME CHAT</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-3.png" alt="game feature image" />
+          </div>
+        </div>
+
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">IN-GAME CHAT</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-4.png" alt="game feature image" />
+          </div>
+        </div>
+
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">IN-GAME CHAT</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-5.png" alt="game feature image" />
+          </div>
+        </div>
+
+        <div class="swiper-slide features-item">
+          <p class="features-item__title">IN-GAME CHAT</p>
+          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <div class="features-item__img">
+            <img src="../img/new-home-page/features/item-6.png" alt="game feature image" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiper = null;
+
+function initOrDestroySwiper() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 799 && !swiper) {
+    swiper = new Swiper('.featuresSwiper', {
+      loop: true,
+      slidesPerView: 1.2,
+      grabCursor: true,
+      spaceBetween: 15,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  } else if (screenWidth > 799 && swiper) {
+    swiper.destroy(true, true); 
+    swiper = null;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initOrDestroySwiper();
+  window.addEventListener('resize', initOrDestroySwiper);
+});
+
+</script>
