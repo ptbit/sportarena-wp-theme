@@ -201,10 +201,195 @@
 </section>
 
         <!--  -->
+        <section class="game">
+  <div class="game__container">
+    <div class="game__item game__item--1">
+      <h2 class="game__title">What is Aviator game?</h2>
+      <p class="game__sub-title">
+        In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
+        more than 32 million players every month. Aviator is a popular example of the crash game genre, which has emerged in recent years
+        and attracted a significant following. The Aviator game is
+      </p>
+    </div>
+    <div class="game__item game__item--2">
+      <table class="game__table">
+        <caption class="game__table-title">
+          गेम की जानकारीस्रोत
+        </caption>
+        <tbody>
+          <tr class="game__table-row">
+            <td class="game__table-info">Developer</td>
+            <td class="game__table-text">Spribe OU, Tallinn, EU Source</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">Release</td>
+            <td class="game__table-text">January 2019</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">License</td>
+            <td class="game__table-text">UKGC, lic. No 57302, MGA, GGC, show all</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">Type</td>
+            <td class="game__table-text">Video Game/Casino Crash/Slot</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">Currency</td>
+            <td class="game__table-text">INR, USD, EUR Min/Max bet INR 10/INR 10,000</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">RTP %</td>
+            <td class="game__table-text">97</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">Volatility</td>
+            <td class="game__table-text">Medium</td>
+          </tr>
+          <tr class="game__table-row">
+            <td class="game__table-info">Reliability</td>
+            <td class="game__table-text">Provably Fair</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="game__item game__item--3">
+      <div class="game__phone">
+        <img src="../img/new-home-page/hero/phone-inner.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
 
         <!--  -->
+        <section class="benefits">
+  <div class="benefits__container">
+    <h2 class="benefits__title">Benefits of playing Aviator games online</h2>
+    <p class="benefits__sub-title">
+      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+    </p>
+    <div class="swiper cardsSwiper">
+      <div class="swiper-wrapper benefits__cards">
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">HIGH RTP</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-1.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">BEGINNER- FRIENDLY</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-2.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">SOCIAL COMPONENTS</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-3.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">MOBILE-READY</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-4.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+        <div class="swiper-slide benefits__card card">
+          <p class="card__title">PROVABLY FAIR</p>
+          <img class="card__ico" src="../img/new-home-page/benefits/icon-5.png" alt="benefit card icon" />
+          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <!--  -->
+<script>
+  document.addEventListener('DOMContentLoaded', startSwiper);
+
+  function startSwiper() {
+    const swiper = new Swiper('.cardsSwiper', {
+      slidesPerView: 1.5,
+      spaceBetween: 15,
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 18,
+          grabCursor: true,
+        },
+        1030: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+      },
+    });
+    console.log(swiper);
+  }
+</script>
 
         <!--  -->
         <section class="evening">
@@ -251,7 +436,7 @@
       centeredSlides: true,
       grabCursor: true,
       autoplay: {
-        delay: 3000,
+        delay: 4000,
       },
       pagination: {
         el: '.swiper-pagination',
@@ -270,7 +455,7 @@
             clickable: true,
           },
           autoplay: {
-            delay: 3000,
+            delay: 4000,
           },
         },
         1260: {
@@ -281,7 +466,7 @@
           centeredSlides: true,
           grabCursor: true,
           autoplay: {
-            delay: 3000,
+            delay: 5000,
           },
         },
       },
@@ -290,6 +475,312 @@
 </script>
 
         <!--  -->
+        <section class="games">
+  <div class="games__container">
+    <div class="games__header">
+      <div class="games__text">
+        <h2 class="games__title">Appreciation letter</h2>
+        <p class="games__description">
+          Leading Indian gaming influencers share their real-life experiences with the Aviator game. Learn how they approach the gameplay,
+          manage risks and celebrate their wins.
+        </p>
+      </div>
+      <div class="games__buttons">
+        <button class="games__button games__button--prew">
+          <img src="img/new-page/up-btn-desk.svg" alt="game avatar" />
+        </button>
+        <button class="games__button games__button--next">
+          <img src="img/new-page/up-btn-desk.svg" alt="game avatar" />
+        </button>
+      </div>
+    </div>
+
+    <div class="swiper gamesSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-1.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-2.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-3.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-4.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-1.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+
+        <div class="swiper-slide game-item">
+          <div class="game-item__marker">
+            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <p class="game-item__marker-text">play now</p>
+          </div>
+          <div class="game-item__avatar">
+            <img src="img/new-home-page/games/avatar-2.png" alt="game avatar" />
+          </div>
+          <p class="game-item__title">@WasimGamerHindi</p>
+          <div class="game-item__rates">
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹500</p>
+              <p class="game-item__rate-text">Bet</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">1.8x</p>
+              <p class="game-item__rate-text">Cash-Out Multiplier</p>
+            </div>
+            <div class="game-item__rate">
+              <p class="game-item__rate-title">₹900</p>
+              <p class="game-item__rate-text">Outcome:</p>
+              <p class="game-item__rate-profit">profit of ₹400</p>
+            </div>
+          </div>
+          <p class="game-item__sub-title">
+            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
+            recommend this approach, but it worked for me here!»
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function initSwiper() {
+    const swiper = new Swiper('.gamesSwiper', {
+      loop: true,
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      centeredSlides: true,
+      grabCursor: true,
+      initialSlide: 0,
+
+      navigation: {
+        nextEl: '.games__button--next',
+        prevEl: '.games__button--prew',
+      },
+
+      autoplay: {
+        delay: 3000,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        550: {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 15,
+          centeredSlides: true,
+          grabCursor: true,
+          initialSlide: 0,
+
+          navigation: {
+            nextEl: '.games__button--next',
+            prevEl: '.games__button--prew',
+          },
+
+          autoplay: {
+            delay: 3000,
+          },
+
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.games__button--next',
+            prevEl: '.games__button--prew',
+          },
+          autoplay: false,
+        },
+        1025: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 3,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.games__button--next',
+            prevEl: '.games__button--prew',
+          },
+          autoplay: false,
+        },
+        1200: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 3.75,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.games__button--next',
+            prevEl: '.games__button--prew',
+          },
+          autoplay: false,
+        },
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSwiper());
+</script>
+
+        <!--  -->
+        <section class="wins">
+  <h1 class="wins__title">wins</h1>
+</section>
 
       </main>
       <footer class="footer">
