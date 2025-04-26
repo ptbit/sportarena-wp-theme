@@ -21,7 +21,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
   margin: 0 60px 0 0;
 }
 .footer__item-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #ffffff;
   font-size: 17px;
   line-height: 22px;

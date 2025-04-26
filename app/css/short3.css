@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 .casino-review__item-rtp-percent {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 16px;
   letter-spacing: -0.004em;
@@ -143,7 +143,7 @@
   margin: 0 10px 0 0;
 }
 .casino-review__item-item-info {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 15px;
   line-height: 22px;
   letter-spacing: -0.004em;

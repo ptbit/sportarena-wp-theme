@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /* stylelint-disable */
 @font-face {
-  font-family: "Inter-semb";
+  font-family: "Inter-semibold";
   src: url("../fonts/../fonts/Inter-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "Popins-reg";
+  font-family: "Popins-regular";
   src: url("../fonts/../fonts/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
@@ -22,7 +22,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Popins-semb";
+  font-family: "Popins-semibold";
   src: url("../fonts/../fonts/Poppins-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
@@ -36,7 +36,7 @@
   font-style: normal;
 }
 .burgundy-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   color: #e7fd52;
   border-radius: 100px;
@@ -50,7 +50,7 @@
 }
 
 .white-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   color: #151a18;
   border-radius: 100px;
@@ -65,7 +65,7 @@
 }
 
 .transparent-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   color: #151a18;
   border-radius: 100px;
@@ -78,7 +78,7 @@
 }
 
 .transparent-salad-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   color: #e7fd52;
   border-radius: 100px;
@@ -91,7 +91,7 @@
 }
 
 .orange-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   border-radius: 100px;
   background: #e7fd52;
@@ -104,7 +104,7 @@
 }
 
 .grey-btn {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   border-radius: 100px;
   color: #151a18;
@@ -119,7 +119,7 @@
 }
 
 .grey-btn-two {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-transform: uppercase;
   border-radius: 200px;
   color: #e7fd52;
@@ -266,7 +266,7 @@ picture {
   }
 }
 .title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #151a18;
   font-size: 32px;
   line-height: 39px;
@@ -285,7 +285,7 @@ picture {
 }
 
 body {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0.02em;
@@ -458,7 +458,7 @@ body._lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: -0.004em;
@@ -568,7 +568,7 @@ body._lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -678,7 +678,7 @@ body._lock {
   transform: translateY(-50%);
 }
 .header__search-input {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   display: inline-block;
   width: 280px;
   padding: 15px 40px 13px 25px;
@@ -695,23 +695,23 @@ body._lock {
   }
 }
 .header__search-input::-webkit-input-placeholder {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
 }
 .header__search-input::-moz-placeholder {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
 }
 .header__search-input:-ms-input-placeholder {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
 }
 .header__search-input::-ms-input-placeholder {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
 }
 .header__search-input::placeholder {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
 }
 .header__search-input:focus {
@@ -1113,7 +1113,7 @@ body._lock {
 .drop-menu__title {
   padding: 7px 20px;
   background: #d9dde0;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: rgba(17, 17, 17, 0.5);
   font-size: 14px;
   line-height: 20px;
@@ -1150,7 +1150,7 @@ body._lock {
   border-radius: 4px;
 }
 .drop-menu__item-text {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: #151a18;
   font-size: 14px;
   line-height: 20px;
@@ -1234,7 +1234,7 @@ body._lock {
   margin: 0 0 20px 0;
 }
 .blog h2 {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 28px;
   color: #ffffff;
@@ -1457,7 +1457,7 @@ body._lock {
   transform: translateY(-50%);
 }
 .casino__title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   color: #ffffff;
   font-size: 38px;
@@ -1570,7 +1570,7 @@ body._lock {
   border-radius: 8px;
 }
 .public h2 {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #151a18;
   font-size: 24px;
   line-height: 36px;

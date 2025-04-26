@@ -29,7 +29,7 @@
   margin: 0 auto;
 }
 .casino-online__title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -0.01em;
@@ -53,7 +53,7 @@
 }
 .casino-online__tabs-btn {
   width: calc(50% - 2.5px);
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   position: relative;
   display: inline-block;
   padding: 9px 0;
@@ -164,7 +164,7 @@
   align-items: flex-start;
 }
 .casino-online__item-title {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.004em;
@@ -184,7 +184,7 @@
   margin: 0 5px 0 0;
 }
 .casino-online__item-reviews-grade {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: #bdbbbb;
@@ -240,7 +240,7 @@
 }
 .top__all-link {
   display: inline-block;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 17px;
   line-height: 20px;
   letter-spacing: 0.02em;
@@ -251,7 +251,7 @@
   padding: 19px 85px 17px;
 }
 .top h2 {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 25px;
   line-height: 32px;
   color: #151a18;
@@ -373,7 +373,7 @@
   border-radius: 100px;
   background: #ffffff;
   padding: 10px 19px 8px;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   font-size: 15px;
@@ -421,7 +421,7 @@
   line-height: 17px;
 }
 .subscribe__info-link {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #e7fd52;
   white-space: nowrap;
   text-decoration: underline;
@@ -488,7 +488,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -534,7 +534,7 @@
   margin: 0 60px 0 0;
 }
 .footer__item-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #ffffff;
   font-size: 17px;
   line-height: 22px;

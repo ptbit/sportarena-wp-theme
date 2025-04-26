@@ -115,7 +115,7 @@
       line-height: 150%;
     }
   }
-  .swiper-wrapper {
+  .swiper {
     &::after {
       content: '';
       position: absolute;
@@ -123,11 +123,12 @@
       top: 0;
       bottom: 0;
       width: 54px;
+      z-index: 1;
       background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
     }
-  }
-  .swiper-pagination {
-    display: none;
+    &-pagination {
+      display: none;
+    }
   }
 }
 
@@ -166,6 +167,15 @@
       width: 0;
       height: 0;
       bottom: 0;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .casinos {
+    .swiper {
+      &::after {
+        display: none;
+      }
     }
   }
 }

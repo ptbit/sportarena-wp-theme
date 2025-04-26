@@ -126,7 +126,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   background: #e7fd52;
   border-radius: 8px 0 8px 0;
   width: 28px;
@@ -159,7 +159,7 @@
   min-width: 164px;
 }
 .casino-best__item-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.004em;
@@ -322,7 +322,7 @@
   padding: 25px 10px;
 }
 .casino-best__item-coupon-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 15px;
   line-height: 18px;
   color: #151a18;
@@ -330,7 +330,7 @@
 }
 .casino-best__item-coupon-subtitle {
   text-align: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 21px;
   line-height: 21px;
   letter-spacing: -0.004em;

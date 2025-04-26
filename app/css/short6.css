@@ -40,7 +40,7 @@
   margin: 0 0 20px 0;
 }
 .casino-providers__item-info span {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
 }
 .casino-providers__item-link {
   width: 100%;
@@ -54,7 +54,7 @@
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   display: inline-block;
   padding: 18px 70px 16px;
   font-size: 17px;

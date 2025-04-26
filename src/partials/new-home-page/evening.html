@@ -1,0 +1,81 @@
+<section class="evening">
+  <div class="evening__swiper">
+    <div class="swiper phonesSwiper">
+      <div class="swiper-wrapper evening__phones">
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
+        </div>
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner-1.png" alt="" />
+        </div>
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner-2.png" alt="" />
+        </div>
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
+        </div>
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
+        </div>
+        <div class="swiper-slide evening__phone">
+          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <h2 class="evening__title">In the evening</h2>
+    <p class="evening__sub-title">
+      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+    </p>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', startSwiper);
+
+  function startSwiper() {
+    const swiper = new Swiper('.phonesSwiper', {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+      initialSlide: 0,
+      loop: true,
+      centeredSlides: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        700: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          initialSlide: 0,
+          loop: true,
+          centeredSlides: true,
+          grabCursor: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          autoplay: {
+            delay: 3000,
+          },
+        },
+        1260: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          initialSlide: 0,
+          loop: true,
+          centeredSlides: true,
+          grabCursor: true,
+          autoplay: {
+            delay: 3000,
+          },
+        },
+      },
+    });
+  }
+</script>

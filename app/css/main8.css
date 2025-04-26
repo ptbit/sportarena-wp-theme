@@ -61,7 +61,7 @@
   border-radius: 8px;
 }
 .pay__item-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: -0.004em;
@@ -100,7 +100,7 @@
   margin: 0 10px 0 0;
 }
 .pay__item-bonus {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.004em;
@@ -250,14 +250,14 @@
   text-decoration: none;
 }
 .news__blog h2 {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 28px;
   line-height: 48px;
   color: #151a18;
   margin: 0 0 10px 0;
 }
 .news__blog h3, .news__blog h4, .news__blog h5, .news__blog h6 {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   letter-spacing: -0.01em;
   color: #151a18;
 }
@@ -278,7 +278,7 @@
   line-height: 48px;
 }
 .news__blog p, .news__blog li {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 15px;
   line-height: 30px;
   margin: 0 0 20px 0;
@@ -308,7 +308,7 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #ffffff;
   min-width: 24px;
   min-height: 24px;
@@ -502,7 +502,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   padding: 22px 55px 21px 20px;
   background: #f3f5f6;
   border-radius: 8px;
@@ -808,7 +808,7 @@
   border-radius: 100px;
   background: #ffffff;
   padding: 10px 19px 8px;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
   font-size: 15px;
@@ -856,7 +856,7 @@
   line-height: 17px;
 }
 .subscribe__info-link {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #e7fd52;
   white-space: nowrap;
   text-decoration: underline;
@@ -923,7 +923,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
@@ -969,7 +969,7 @@
   margin: 0 60px 0 0;
 }
 .footer__item-title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   color: #ffffff;
   font-size: 17px;
   line-height: 22px;

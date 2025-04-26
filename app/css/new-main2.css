@@ -38,7 +38,7 @@
 }
 .hero__title {
   margin-bottom: 30px;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   line-height: 114%;
   font-size: 54px;
   background: linear-gradient(204deg, #fff 72%, #e6466e 82%, #e548ca 97%);
@@ -48,7 +48,7 @@
 }
 .hero__text {
   margin-bottom: 26px;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   line-height: 150%;
@@ -56,7 +56,7 @@
 }
 .hero__sub-text {
   color: rgba(255, 255, 255, 0.2);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 12px;
   line-height: 150%;
   max-width: 555px;
@@ -149,7 +149,7 @@
 .right__title {
   margin-bottom: 20px;
   color: #fff;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 24px;
   line-height: 150%;
 }
@@ -167,7 +167,7 @@
   position: relative;
   margin-bottom: 8px;
   color: #fff;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
   display: -webkit-box;
@@ -198,7 +198,7 @@
   -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
   box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
   color: #fff;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 20px;
   line-height: 150%;
 }
@@ -338,7 +338,7 @@
   padding-bottom: 30px;
 }
 .info__title {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 40px;
   line-height: 130%;
   background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
@@ -349,7 +349,7 @@
 .info__text {
   margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
@@ -394,13 +394,13 @@
 }
 .info .slide__title {
   color: rgba(255, 255, 255, 0.6);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
 .info .slide__text {
   color: #fff;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
@@ -495,7 +495,7 @@
 }
 .item__text {
   color: #fff;
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
@@ -505,7 +505,7 @@
 }
 .item__title {
   margin-bottom: 20px;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 40px;
   line-height: 130%;
   background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
@@ -516,7 +516,7 @@
 .item__sub-text {
   margin-bottom: 24px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
@@ -646,7 +646,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 40px;
   line-height: 130%;
   background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
@@ -656,7 +656,7 @@
 }
 .casinos__description {
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
 }
@@ -751,7 +751,7 @@
 }
 .casinos .casino__sub-title {
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 14px;
   line-height: 150%;
 }
@@ -771,17 +771,18 @@
   -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
   box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
   color: #fff;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 14px;
   line-height: 150%;
 }
-.casinos .swiper-wrapper::after {
+.casinos .swiper::after {
   content: "";
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 54px;
+  z-index: 1;
   background: -webkit-gradient(linear, left top, right top, from(rgba(19, 13, 44, 0)), to(#130d2c));
   background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
 }
@@ -831,6 +832,11 @@
     width: 0;
     height: 0;
     bottom: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .casinos .swiper::after {
+    display: none;
   }
 }
 @media screen and (max-width: 620px) {
@@ -930,14 +936,14 @@
 .footer__menu-title {
   text-transform: uppercase;
   color: #7e8087;
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 10px;
 }
 .footer__menu-link {
-  font-family: "Popins-semb", sans-serif;
+  font-family: "Popins-semibold", sans-serif;
   font-size: 16px;
   line-height: 29px;
   color: #ffffff;
@@ -1037,7 +1043,7 @@
   height: 44px;
 }
 .footer__info-text {
-  font-family: "Popins-reg", sans-serif;
+  font-family: "Popins-regular", sans-serif;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -1202,9 +1208,6 @@
     -webkit-transition: height 0.3s ease;
     transition: height 0.3s ease;
   }
-  .footer__menu-link:last-child {
-    margin-bottom: 10px;
-  }
   .footer__menu-link--active {
     overflow: auto;
     height: 30px;
@@ -1226,6 +1229,9 @@
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     margin-left: 14px;
+  }
+  .footer__menu-link--active:last-child {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=new-main2.css.map */

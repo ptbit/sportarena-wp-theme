@@ -1,0 +1,41 @@
+.wins {
+  background: #100c23;
+  position: relative;
+
+  &__container {
+    padding: 50px 15px 70px;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 1050px) {
+  .wins {
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .wins {
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+  }
+}

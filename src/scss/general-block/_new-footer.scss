@@ -307,9 +307,6 @@
         opacity: 0;
         padding-left: 20px;
         transition: height $transition;
-        &:last-child {
-          margin-bottom: 10px;
-        }
       }
       &-link--active {
         overflow: auto;
@@ -328,6 +325,9 @@
           margin: 0 0 0 4px;
           transform: rotate(-90deg);
           margin-left: 14px;
+        }
+        &:last-child {
+          margin-bottom: 10px;
         }
       }
     }
