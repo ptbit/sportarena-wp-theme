@@ -3,11 +3,14 @@
   position: relative;
 
   &__container {
-    padding: 50px 15px 70px;
+    padding: 70px 15px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
   }
-
   &__title {
-    text-align: center;
+    margin-bottom: 20px;
+    width: fit-content;
     font-family: $font-popins-semb;
     font-size: 40px;
     line-height: 130%;
@@ -16,26 +19,188 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &__sub-title {
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__left {
+    width: 60%;
+  }
+  &__table-wrapper {
+    img {
+      width: 100%;
+    }
+  }
+  &__buttons {
+    margin-bottom: 40px;
+    padding: 5px;
+    display: flex;
+    gap: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0f0c22;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  }
+  &__button {
+    padding: 15px;
+    width: 50%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    transition: background-color $transition;
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 0);
+      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%), rgba(229, 5, 61, 0.3);
+    }
+    &--active {
+      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+      box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+      &:hover {
+        background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+        box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+      }
+    }
+  }
+  &__table {
+  }
+  &__right {
+    width: 50%;
+    padding: 50px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    background: url('../img/new-home-page/wins/frame.png') no-repeat 0 0 / cover;
+    backdrop-filter: blur(25px);
+  }
+  &__phone {
+    width: 295px;
+    height: 411px;
+    position: relative;
+    margin: 30px auto 33px;
+    background: url('../img/new-home-page/wins/phone.png') no-repeat 0 0 / contain;
+    padding: 49px 15px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 143px;
+      background: linear-gradient(0deg, #1e1835 0%, rgba(30, 24, 53, 0) 100%);
+    }
+  }
+  &__phone-marker {
+    position: absolute;
+    left: -87px;
+    top: -20px;
+    padding: 20px;
+    transform: rotate(-15deg);
+    border-radius: 10px;
+    border: 1px solid rgba(153, 153, 153, 0.2);
+    background: lightgray 0% 0% / 100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(25px);
+    span {
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 40px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+  }
+  .hero__play-btn {
+  }
+  .hero__button-arrow {
+  }
 }
 
 @media (max-width: 1050px) {
   .wins {
+    &__container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+      max-width: 650px;
+      margin-inline: auto;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 33px 19px;
+    }
     &__title {
+      width: 100%;
       font-size: 32px;
+      text-align: center;
     }
     &__sub-title {
       font-size: 14px;
+      text-align: center;
+    }
+    &__buttons {
+      margin-bottom: 30px;
+    }
+    &__button {
+      padding: 13px;
+      font-size: 16px;
+    }
+    &__phone{
+      margin-bottom: 20px;
+    }
+    &__phone-marker {
+      padding: 13px;
+      span {
+        font-size: 27px;
+      }
     }
   }
 }
 
+@media (max-width: 520px) {
+  .wins {
+    &__phone {
+      width: 205px;
+      height: 290px;
+      &-marker {
+        left: -50px;
+        top: -30px;
+      }
+    }
+  }
+}
 @media (max-width: 490px) {
   .wins {
+    &__container {
+      padding: 40px 14px 30px;
+    }
     &__title {
+      margin-bottom: 14px;
       font-size: 24px;
     }
     &__sub-title {
+      margin-bottom: 20px;
       font-size: 12px;
+    }
+    &__buttons {
+      margin-bottom: 25px;
+    }
+    &__button {
+      font-size: 14px;
+      padding: 12px;
     }
   }
 }

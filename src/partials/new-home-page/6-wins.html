@@ -1,0 +1,45 @@
+<section class="wins">
+  <div class="wins__container">
+    <div class="wins__left">
+      <h2 class="wins__title">Aviator Top Bets and Big Wins</h2>
+      <p class="wins__sub-title">Examples of notable bets and wins from the past month based on available</p>
+      <div class="wins__table-wrapper">
+        <div class="wins__buttons">
+          <button class="wins__button wins__button--active">month</button>
+          <button class="wins__button">year</button>
+        </div>
+        <div class="wins__table">
+        <img src="../img/new-home-page/wins/table.png" alt="table" />
+
+        </div>
+      </div>
+    </div>
+    <div class="wins__right">
+      <div class="wins__phone">
+        <div class="wins__phone-marker"><span>RTP &#8722; 97%</span></div>
+        <img src="../img/new-home-page/wins/phone-inner.png" alt="phone-inner" />
+      </div>
+      <h2 class="wins__title">What about?</h2>
+      <p class="wins__sub-title">
+        In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
+        more than 32 million players every month. Aviator is a popular example of the crash game genre, which has emerged in recent years
+        and attracted a significant following. The Aviator
+      </p>
+      <a class="hero__play-btn" href="#">
+        Play online
+        <img class="hero__button-arrow" src="img/new-page/play-btn.svg" alt="play btn arrow" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.wins__button');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      buttons.forEach((btn) => btn.classList.remove('wins__button--active'));
+      button.classList.add('wins__button--active');
+    });
+  });
+</script>

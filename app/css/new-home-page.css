@@ -1582,10 +1582,18 @@
   position: relative;
 }
 .wins__container {
-  padding: 50px 15px 70px;
+  padding: 70px 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
 }
 .wins__title {
-  text-align: center;
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-family: "Popins-semibold", sans-serif;
   font-size: 40px;
   line-height: 130%;
@@ -1594,21 +1602,193 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.wins__sub-title {
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.wins__left {
+  width: 60%;
+}
+.wins__table-wrapper img {
+  width: 100%;
+}
+.wins__buttons {
+  margin-bottom: 40px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0c22;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+}
+.wins__button {
+  padding: 15px;
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+  font-family: "Popins-bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.wins__button:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%), rgba(229, 5, 61, 0.3);
+}
+.wins__button--active {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+  -webkit-box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+  box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+}
+.wins__button--active:hover {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+  -webkit-box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+  box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+}
+.wins__right {
+  width: 50%;
+  padding: 50px 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  background: url("../img/new-home-page/wins/frame.png") no-repeat 0 0/cover;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+}
+.wins__phone {
+  width: 295px;
+  height: 411px;
+  position: relative;
+  margin: 30px auto 33px;
+  background: url("../img/new-home-page/wins/phone.png") no-repeat 0 0/contain;
+  padding: 49px 15px 0;
+}
+.wins__phone::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 143px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#1e1835), to(rgba(30, 24, 53, 0)));
+  background: linear-gradient(0deg, #1e1835 0%, rgba(30, 24, 53, 0) 100%);
+}
+.wins__phone-marker {
+  position: absolute;
+  left: -87px;
+  top: -20px;
+  padding: 20px;
+  -webkit-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  border-radius: 10px;
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  background: lightgray 0% 0%/100px 100px repeat, -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(217, 217, 217, 0.04)));
+  background: lightgray 0% 0%/100px 100px repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+  -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+}
+.wins__phone-marker span {
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
 @media (max-width: 1050px) {
+  .wins__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .wins__left, .wins__right {
+    width: 100%;
+    max-width: 650px;
+    margin-inline: auto;
+  }
+  .wins__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 33px 19px;
+  }
   .wins__title {
+    width: 100%;
     font-size: 32px;
+    text-align: center;
   }
   .wins__sub-title {
     font-size: 14px;
+    text-align: center;
+  }
+  .wins__buttons {
+    margin-bottom: 30px;
+  }
+  .wins__button {
+    padding: 13px;
+    font-size: 16px;
+  }
+  .wins__phone {
+    margin-bottom: 20px;
+  }
+  .wins__phone-marker {
+    padding: 13px;
+  }
+  .wins__phone-marker span {
+    font-size: 27px;
+  }
+}
+@media (max-width: 520px) {
+  .wins__phone {
+    width: 205px;
+    height: 290px;
+  }
+  .wins__phone-marker {
+    left: -50px;
+    top: -30px;
   }
 }
 @media (max-width: 490px) {
+  .wins__container {
+    padding: 40px 14px 30px;
+  }
   .wins__title {
+    margin-bottom: 14px;
     font-size: 24px;
   }
   .wins__sub-title {
+    margin-bottom: 20px;
     font-size: 12px;
+  }
+  .wins__buttons {
+    margin-bottom: 25px;
+  }
+  .wins__button {
+    font-size: 14px;
+    padding: 12px;
   }
 }
 .footer {
