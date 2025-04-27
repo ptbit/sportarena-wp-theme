@@ -65,34 +65,33 @@
 <script>
   let swiper = null;
 
-function initOrDestroySwiper() {
-  const screenWidth = window.innerWidth;
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 799 && !swiper) {
-    swiper = new Swiper('.featuresSwiper', {
-      loop: true,
-      slidesPerView: 1.2,
-      grabCursor: true,
-      spaceBetween: 15,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: {
-        delay: 5000,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      }
-    });
-  } else if (screenWidth > 799 && swiper) {
-    swiper.destroy(true, true); 
-    swiper = null;
+    if (screenWidth <= 799 && !swiper) {
+      swiper = new Swiper('.featuresSwiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 799 && swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
   }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  initOrDestroySwiper();
-  window.addEventListener('resize', initOrDestroySwiper);
-});
-
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
 </script>

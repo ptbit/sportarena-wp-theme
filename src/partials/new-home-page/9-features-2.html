@@ -1,1 +1,134 @@
-<p>9-features-2.html</p>
+<section class="features2">
+  <div class="features2__container">
+    <div class="features2__header">
+      <h2 class="features2__title">Aviator Game Features</h2>
+      <p class="features2__sub-title">
+        The Aviator Crash game has many unique features that attract players. Due to these features, Spribe's game remains one of the most
+        popular choices even five
+      </p>
+    </div>
+    <div class="swiper features2Swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide features2-item">
+          <div class="features2-item__img">
+            <img src="../img/new-home-page/features2/item-1.png" alt="game feature image" />
+          </div>
+          <p class="features2-item__title">Learning the game’s interface</p>
+          <p class="features2-item__sub-title">
+            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
+            from the casino to proceed. Confirm the transaction and receive money.
+          </p>
+        </div>
+        <div class="swiper-slide features2-item">
+          <div class="features2-item__img">
+            <img src="../img/new-home-page/features2/item-2.png" alt="game feature image" />
+          </div>
+          <p class="features2-item__title">Placing bets</p>
+          <p class="features2-item__sub-title">
+            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
+            from the casino to proceed. Confirm the transaction and receive money.
+          </p>
+        </div>
+        <div class="swiper-slide features2-item">
+          <div class="features2-item__img">
+            <img src="../img/new-home-page/features2/item-3.png" alt="game feature image" />
+          </div>
+          <p class="features2-item__title">Waiting for the next round</p>
+          <p class="features2-item__sub-title">
+            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
+            from the casino to proceed. Confirm the transaction and receive money.
+          </p>
+        </div>
+        <div class="swiper-slide features2-item">
+          <div class="features2-item__img">
+            <img src="../img/new-home-page/features2/item-4.png" alt="game feature image" />
+          </div>
+          <p class="features2-item__title">Learning the game’s interface</p>
+          <p class="features2-item__sub-title">
+            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
+            from the casino to proceed. Confirm the transaction and receive money.
+          </p>
+        </div>
+        <div class="swiper-slide features2-item">
+          <div class="features2-item__img">
+            <img src="../img/new-home-page/features2/item-5.png" alt="game feature image" />
+          </div>
+          <p class="features2-item__title">Learning the game’s interface</p>
+          <p class="features2-item__sub-title">
+            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
+            from the casino to proceed. Confirm the transaction and receive money.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiperFeatures2 = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 1050 && !swiperFeatures2) {
+      swiperFeatures2 = new Swiper('.features2Swiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          720: {
+            loop: true,
+            slidesPerView: 2.2,
+            grabCursor: true,
+            spaceBetween: 15,
+            centeredSlides: true,
+            initialSlide: 0,
+            autoplay: {
+              delay: 5000,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          },
+          950: {
+            loop: true,
+            slidesPerView: 3.1,
+            grabCursor: true,
+            spaceBetween: 15,
+            centeredSlides: true,
+            initialSlide: 0,
+            // autoplay: {
+            //   delay: 5000,
+            // },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          },
+        },
+      });
+    } else if (screenWidth > 1050 && swiperFeatures2) {
+      swiperFeatures2.destroy(true, true);
+      swiperFeatures2 = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>
