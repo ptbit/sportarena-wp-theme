@@ -1,1 +1,136 @@
-<p>16-bonuses.html</p>
+<section class="bonuses">
+  <div class="bonuses__container">
+    <h2 class="bonuses__title">Available Aviator Bonuses</h2>
+    <p class="bonuses__sub-title">
+      Various bonuses can add to the bettor’s bankroll, prolonging the play time and granting additional winning chances. See all available
+      bonuses and promo
+    </p>
+    <div class="swiper bonusesSwiper">
+      <div class="swiper-wrapper bonuses__cards">
+        <div class="swiper-slide bonuses__card card">
+          <img class="card__ico" src="../img/new-home-page/bonuses/icon-1.png" alt="bonus card icon" />
+          <p class="card__title">No Deposit Bonuses</p>
+          <p class="card__text">
+            For new players, the no-deposit bonus serves as a perfect introduction to Aviator’s mechanics. This bonus, usually in the form
+            of small cash credits or free bets, allows users to explore
+          </p>
+        </div>
+        <div class="swiper-slide bonuses__card card">
+          <img class="card__ico" src="../img/new-home-page/bonuses/icon-2.png" alt="bonus card icon" />
+          <p class="card__title">First Deposit Bonus</p>
+          <p class="card__text">
+            Granted after a new bettor’s first deposit. The bonus money is calculated as a certain percentage of the deposited sum – between
+            100% to 250%. Sometimes it’s complemented with a bundle of free bets
+          </p>
+        </div>
+        <div class="swiper-slide bonuses__card card">
+          <img class="card__ico" src="../img/new-home-page/bonuses/icon-3.png" alt="bonus card icon" />
+          <p class="card__title">Welcome Bonus</p>
+          <p class="card__text">
+            This term is generally interchangeable with the first deposit bonus. However, a welcome bonus can also refer to a bonus package
+            covering several initial deposits from a new user. The match percentage
+          </p>
+        </div>
+        <div class="swiper-slide bonuses__card card">
+          <img class="card__ico" src="../img/new-home-page/bonuses/icon-4.png" alt="bonus card icon" />
+          <p class="card__title">Cashback Bonuses</p>
+          <p class="card__text">
+            This type of bonus program reimburses a portion of the player’s losses. If the net losses exceed a certain threshold, the user
+            can earn back from 1-5% to 15-20% as bonus funds.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="bonuses__note">
+      <img class="bonuses__ico" src="img/new-home-page/bonuses/pin.svg" alt="pin icon" />
+      <p class="bonuses__text">
+        Worth noting, all bonuses come with conditions to be mindful of: bet and win limits, validity period, wagering requirements, etc.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', startSwiper);
+
+  function startSwiper() {
+    const bonusesSwiper = new Swiper('.bonusesSwiper', {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 4,
+          spaceBetween: 30,
+          grabCursor: true,
+        },
+        1030: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 4,
+          spaceBetween: 10,
+          grabCursor: true,
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+      },
+    });
+  }
+</script>

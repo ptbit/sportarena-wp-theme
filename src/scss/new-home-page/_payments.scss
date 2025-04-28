@@ -1,6 +1,6 @@
 .payments {
   color: $pink;
-  background-color: #100c23;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
   &__container {
     padding: 70px 15px;
     position: relative;
@@ -11,7 +11,7 @@
     font-family: $font-popins-semb;
     font-size: 40px;
     line-height: 130%;
-    background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

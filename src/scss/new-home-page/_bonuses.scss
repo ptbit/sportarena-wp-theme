@@ -1,0 +1,200 @@
+.bonuses {
+  position: relative;
+  background: url('../img/new-home-page/bonuses/bg.png') no-repeat 50% 50% / cover;
+
+  &__container {
+    padding: 50px 15px;
+  }
+
+  &__title {
+    width: fit-content;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 20px;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    max-width: 700px;
+    margin: 0 auto 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__cards {
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    border-radius: 12px;
+    height: auto;
+  }
+  .swiper {
+    padding-bottom: 40px;
+    &-wrapper {
+      width: 100%;
+    }
+    &-slide {
+    }
+    &-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+      transition: opacity $transition;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .card {
+      &__ico {
+        width: 112px;
+        height: 112px;
+        margin-bottom: 20px;
+      }
+      &__title {
+        margin-bottom: 12px;
+        color: #fff;
+        text-align: center;
+        font-family: $font-popins-semb;
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      &__text {
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-family: $font-popins-reg;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+  }
+  &__note {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(50%);
+    max-width: 620px;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    padding: 16px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+    backdrop-filter: blur(25px);
+  }
+  &__ico {
+    width: 32px;
+    height: 32px;
+  }
+  &__text {
+    color: #fff;
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .bonuses {
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 14px;
+    }
+    .swiper {
+      .card {
+        padding: 15px 10px;
+        &__ico {
+          margin-bottom: 15px;
+        }
+        &__title {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        &__text {
+          font-size: 12px;
+        }
+      }
+    }
+    &__note {
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .bonuses {
+    &__container {
+      padding: 40px 0;
+    }
+    &__title {
+      padding: 0 15px;
+    }
+    &__sub-title {
+      padding: 0 15px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .bonuses {
+    &__note {
+      width: 95%;
+      position: relative;
+      transform: none;
+    }
+  }
+}
+@media (max-width: 490px) {
+  .bonuses {
+    &__container {
+      padding-bottom: 10px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+    .swiper {
+      .card {
+        &__ico {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 14px;
+        }
+        &__title {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        &__text {
+          font-size: 12px;
+        }
+      }
+    }
+    &__note {
+      padding: 13px 18px;
+      gap: 15px;
+      &__text {
+        font-size: 12px;
+      }
+    }
+  }
+}

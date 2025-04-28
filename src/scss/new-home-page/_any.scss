@@ -1,4 +1,4 @@
-.wins {
+.any {
   background: linear-gradient(to bottom, #130d2c, #100c23);
   position: relative;
 
@@ -7,6 +7,10 @@
   }
 
   &__title {
+    margin-bottom: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 800px;
     text-align: center;
     font-family: $font-popins-semb;
     font-size: 40px;
@@ -17,6 +21,9 @@
     -webkit-text-fill-color: transparent;
   }
   &__sub-title {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
     color: rgba(255, 255, 255, 0.8);
     font-family: $font-popins-reg;
     font-size: 16px;
@@ -25,7 +32,7 @@
 }
 
 @media (max-width: 1050px) {
-  .wins {
+  .any {
     &__title {
       font-size: 32px;
     }
@@ -36,7 +43,7 @@
 }
 
 @media (max-width: 490px) {
-  .wins {
+  .any {
     &__title {
       font-size: 24px;
     }

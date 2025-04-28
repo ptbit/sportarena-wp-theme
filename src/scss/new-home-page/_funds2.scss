@@ -12,102 +12,101 @@
       margin-bottom: 0;
     }
   }
-}
 
-.item {
-  &__logo {
-    width: 50%;
-    max-width: 558px;
-    position: relative;
-    width: 50%;
-  }
-  &__wrapper {
-    padding: 40px;
-    border: 1px solid #d3d3d33b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 408px;
-    border-radius: 12px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
-  }
+  .item {
+    &__logo {
+      width: 50%;
+      max-width: 558px;
+      position: relative;
+      width: 50%;
+    }
+    &__wrapper {
+      padding: 40px;
+      border: 1px solid #d3d3d33b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 408px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+    }
 
-  &__image {
-    object-fit: contain;
-    border-radius: 10px;
-    border: 1px solid #d3d3d33b;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
-    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
-    backdrop-filter: blur(25px);
-  }
-  &__description {
-    position: absolute;
-    border: 1px solid rgba(225, 32, 193, 0.4);
-    bottom: -40px;
-    max-width: 487px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 16px 20px;
-    background: linear-gradient(180deg, #282538 0%, rgba(217, 217, 217, 0.04) 100%);
-    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
-    backdrop-filter: blur(25px);
-  }
-  &__ico {
-    width: 32px;
-    height: 32px;
-  }
-  &__text {
-    color: #fff;
-    font-family: $font-popins-reg;
-    font-size: 16px;
-    line-height: 150%;
-  }
-  &__details {
-    width: 50%;
-    max-width: 558px;
-  }
-  &__title {
-    margin-bottom: 20px;
-    font-family: $font-popins-semb;
-    font-size: 40px;
-    line-height: 130%;
-    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  &__sub-texts {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  &__sub-text {
-    color: rgba(255, 255, 255, 0.8);
-    font-family: $font-popins-reg;
-    font-size: 16px;
-    line-height: 150%;
-    position: relative;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    &::before {
-      content: '';
-      width: 40px;
-      background: url('../img/new-home-page/funds2/vector.svg') no-repeat 0 50% / cover;
-      min-width: 40px;
-      min-height: 30px;
+    &__image {
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid #d3d3d33b;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+      backdrop-filter: blur(25px);
+    }
+    &__description {
+      position: absolute;
+      border: 1px solid rgba(225, 32, 193, 0.4);
+      bottom: -40px;
+      max-width: 487px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 20px;
+      background: linear-gradient(180deg, #282538 0%, rgba(217, 217, 217, 0.04) 100%);
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+      backdrop-filter: blur(25px);
+    }
+    &__ico {
+      width: 32px;
+      height: 32px;
+    }
+    &__text {
+      color: #fff;
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &__details {
+      width: 50%;
+      max-width: 558px;
+    }
+    &__title {
+      margin-bottom: 20px;
+      font-family: $font-popins-semb;
+      font-size: 40px;
+      line-height: 130%;
+      background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__sub-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__sub-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+      position: relative;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      &::before {
+        content: '';
+        width: 40px;
+        background: url('../img/new-home-page/funds2/vector.svg') no-repeat 0 50% / cover;
+        min-width: 40px;
+        min-height: 30px;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
     }
   }
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
 }
-
 @media screen and (max-width: 1220px) {
   .funds2 {
     &__item {
@@ -126,18 +125,18 @@
         flex-direction: column-reverse;
       }
     }
-  }
-  .item {
-    &__logo {
-      width: 100%;
-      margin: 0 auto;
-    }
-    &__details {
-      width: 100%;
-      margin: 0 auto;
-    }
-    &--reverse {
-      flex-direction: column-reverse;
+    .item {
+      &__logo {
+        width: 100%;
+        margin: 0 auto;
+      }
+      &__details {
+        width: 100%;
+        margin: 0 auto;
+      }
+      &--reverse {
+        flex-direction: column-reverse;
+      }
     }
   }
 }
@@ -149,36 +148,37 @@
         margin-bottom: 0;
       }
     }
-  }
-  .item {
-    gap: 28px;
-    &__title {
-      font-size: 24px;
-    }
-    &__sub-texts {
-      gap: 14px;
-    }
-    &__sub-text {
-      font-size: 12px;
-      gap: 15px;
-      &::before {
-        min-width: 29px;
-        min-height: 22px;
-      }
-    }
 
-    &__description {
-      padding: 13px 18px;
-      gap: 18px;
-      bottom: 10px;
-      transform: translateX(-50%) translateY(100%);
-    }
-    &__ico {
-      width: 28px;
-      height: 28px;
-    }
-    &__text {
-      font-size: 12px;
+    .item {
+      gap: 28px;
+      &__title {
+        font-size: 24px;
+      }
+      &__sub-texts {
+        gap: 14px;
+      }
+      &__sub-text {
+        font-size: 12px;
+        gap: 15px;
+        &::before {
+          min-width: 29px;
+          min-height: 22px;
+        }
+      }
+
+      &__description {
+        padding: 13px 18px;
+        gap: 18px;
+        bottom: 10px;
+        transform: translateX(-50%) translateY(100%);
+      }
+      &__ico {
+        width: 28px;
+        height: 28px;
+      }
+      &__text {
+        font-size: 12px;
+      }
     }
   }
 }
