@@ -1,1 +1,115 @@
-<p>11-how-to-play</p>
+<section class="how-to-play">
+  <div class="how-to-play__container">
+    <h2 class="how-to-play__title">How to Play the Aviator Betting Game: A Step-by-Step Guide</h2>
+    <p class="how-to-play__sub-title">
+      The Aviator Crash game has many unique features that attract players. Due to these features, Spribe's game remains one of the most
+      popular choices even five
+    </p>
+    <div class="swiper howToPlaySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#1</p>
+            <img src="../img/new-home-page/how-to-play/item-1.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#2</p>
+            <img src="../img/new-home-page/how-to-play/item-2.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#3</p>
+            <img src="../img/new-home-page/how-to-play/item-3.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#4</p>
+            <img src="../img/new-home-page/how-to-play/item-4.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#5</p>
+            <img src="../img/new-home-page/how-to-play/item-5.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+
+        <div class="swiper-slide how-to-play-item">
+          <div class="how-to-play-item__img">
+            <p class="how-to-play-item__img--num">#6</p>
+            <img src="../img/new-home-page/how-to-play/item-6.png" alt="game feature image" />
+          </div>
+          <p class="how-to-play-item__title">Aviator Game Features</p>
+          <p class="how-to-play-item__sub-title">
+            Aviator Crash game has many unique features that attract players. Because of these features
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiperHowToPlay = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 799 && !swiperHowToPlay) {
+      swiperHowToPlay = new Swiper('.howToPlaySwiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 799 && swiperHowToPlay) {
+      swiperHowToPlay.destroy(true, true);
+      swiperHowToPlay = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>

@@ -2847,6 +2847,202 @@
     padding: 8px;
   }
 }
+.how-to-play {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+}
+.how-to-play__container {
+  padding: 50px 15px 70px;
+}
+.how-to-play__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 740px;
+  text-align: center;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.how-to-play__sub-title {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+.how-to-play .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  row-gap: 60px;
+}
+.how-to-play .how-to-play-item {
+  width: 32%;
+}
+.how-to-play .how-to-play-item__title {
+  margin-bottom: 12px;
+  text-align: center;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 22px;
+  line-height: 130%;
+  padding: 0 15px;
+}
+.how-to-play .how-to-play-item__sub-title {
+  text-align: center;
+  padding: 0 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+.how-to-play .how-to-play-item__img {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background: #0f0c22;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  position: relative;
+  overflow: hidden;
+}
+.how-to-play .how-to-play-item__img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background: #393737 0% 0%/100px 100px repeat;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.how-to-play .how-to-play-item__img--num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px 1px;
+  background-color: #e120c1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px 14px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 30px;
+}
+.how-to-play .swiper-pagination {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .how-to-play__title {
+    margin-bottom: 14px;
+    font-size: 32px;
+    padding: 0 15px;
+  }
+  .how-to-play__sub-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+}
+@media (max-width: 1050px) {
+  .how-to-play .how-to-play-item {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 799px) {
+  .how-to-play__container {
+    padding: 40px 0;
+  }
+  .how-to-play .how-to-play-item {
+    width: auto;
+  }
+  .how-to-play .how-to-play-item::after {
+    width: 43px;
+    height: 43px;
+  }
+  .how-to-play .how-to-play-item__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .how-to-play .how-to-play-item__sub-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .how-to-play .swiper-wrapper {
+    padding-bottom: 40px;
+    gap: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: normal;
+    -ms-flex-pack: normal;
+    justify-content: normal;
+  }
+  .how-to-play .swiper-pagination {
+    display: block;
+  }
+  .how-to-play .swiper-pagination-bullet {
+    background-color: #e5053d;
+    width: 12px;
+    height: 12px;
+    -webkit-box-shadow: 0px 2.73239px 5.46479px rgba(255, 98, 65, 0.48);
+    box-shadow: 0px 2.73239px 5.46479px rgba(255, 98, 65, 0.48);
+    border-radius: 8px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .how-to-play .swiper-pagination-bullet:hover {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 490px) {
+  .how-to-play__title {
+    font-size: 24px;
+  }
+  .how-to-play__sub-title {
+    font-size: 12px;
+  }
+}
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;
