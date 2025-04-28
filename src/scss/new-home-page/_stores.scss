@@ -1,0 +1,187 @@
+.stores {
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  position: relative;
+
+  &__container {
+    padding: 50px 15px 70px;
+    display: flex;
+    gap: 50px;
+  }
+  &__store {
+    width: 50%;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    padding: 18px 20px 40px;
+
+    overflow: hidden;
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background: #605d5d 0% 0%/100px 100px repeat;
+      filter: blur(10px);
+    }
+  }
+  &__ico {
+    display: block;
+    height: 174px;
+    margin: 0 auto;
+  }
+  &__link {
+    z-index: 2;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    width: 180px;
+    height: 46px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0px 1.366px 0.683px rgba(0, 0, 0, 0.25);
+    font-family: $font-popins-bold;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+    box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+    transition: background $transition;
+    &::after {
+      content: '';
+      width: 15px;
+      height: 17px;
+      transform: rotate(90deg);
+      background: url('../img/new-page/up-btn-desk.svg') no-repeat 0 0 / cover;
+    }
+    &:hover {
+      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+    margin: 0 auto 20px;
+    max-width: 800px;
+    text-align: center;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    margin: 0 auto 30px;
+    text-align: center;
+    max-width: 440px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__showMoreBtn {
+    color: #e5053d;
+    text-align: center;
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all $transition;
+    background-color: transparent;
+    display: none;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 13px;
+      background-color: #e5053d;
+      -webkit-mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+      -webkit-mask-size: contain;
+      mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+      mask-size: contain;
+      margin: 0 0 0 8px;
+      transition: all $transition;
+    }
+    &:hover {
+      color: #b4012e;
+      &::after {
+        background-color: #b4012e;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .stores {
+    &__container {
+      gap: 20px;
+    }
+    &__store {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .stores {
+    &__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__store {
+      width: 100%;
+    }
+    &__ico {
+      height: 150px;
+    }
+    &__buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__showMoreBtn {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+    }
+    &__link {
+      margin: 0;
+      font-size: 12px;
+      width: 134px;
+      height: 34px;
+      justify-content: space-between;
+      padding: 0 15px;
+      &::after {
+        width: 10px;
+        height: 13px;
+      }
+    }
+  }
+}
+@media (max-width: 490px) {
+  .stores {
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+  }
+}
