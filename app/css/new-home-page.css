@@ -2653,6 +2653,200 @@
     font-size: 12px;
   }
 }
+.what-is {
+  background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  position: relative;
+  padding: 0 15px 50px;
+}
+.what-is__container {
+  padding: 50px 50px 0 60px;
+  max-width: 1224px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  background: url("../img/new-home-page/what-is/card-bg.png") no-repeat 20% 0/cover;
+}
+.what-is__title {
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.what-is__sub-title {
+  max-width: 440px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.what-is__play-btn {
+  margin-bottom: 54px;
+}
+.what-is__devices {
+  position: relative;
+  width: 60%;
+}
+.what-is__iphone {
+  width: 197px;
+  height: 275px;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  padding: 30px 9px;
+  z-index: 1;
+  background: url("../img/new-home-page/what-is/iphone.png") no-repeat 0 0/contain;
+}
+.what-is__ipad {
+  position: absolute;
+  right: 0px;
+  bottom: -19px;
+  width: 449px;
+  height: 345px;
+  padding: 14px;
+  background: url("../img/new-home-page/what-is/ipad.png") no-repeat 0 0/contain;
+}
+
+@media (max-width: 1200px) {
+  .what-is__container {
+    background: url("../img/new-home-page/what-is/card-bg.png") no-repeat 70% 0/cover;
+  }
+}
+@media (max-width: 1130px) {
+  .what-is__container {
+    padding-right: 10px;
+  }
+  .what-is__devices {
+    min-width: 530px;
+  }
+}
+@media (max-width: 1020px) {
+  .what-is__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: none;
+    gap: 55px;
+    padding: 40px 25px 0;
+    background: url("../img/new-home-page/what-is/card-bg-tab.png") no-repeat 0 100%/cover;
+  }
+  .what-is__title {
+    width: 100%;
+    text-align: center;
+  }
+  .what-is__sub-title {
+    max-width: none;
+    text-align: center;
+  }
+  .what-is__play-btn {
+    margin: 0 auto;
+  }
+  .what-is__devices {
+    width: 100%;
+    min-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .what-is__iphone {
+    position: relative;
+    margin-top: auto;
+    height: auto;
+    bottom: -5px;
+    padding-bottom: 0;
+  }
+  .what-is__ipad {
+    position: relative;
+    margin-top: auto;
+    height: auto;
+  }
+}
+@media (max-width: 1050px) {
+  .what-is__title {
+    font-size: 32px;
+  }
+  .what-is__sub-title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 740px) {
+  .what-is__devices {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 0;
+    min-width: auto;
+  }
+  .what-is__iphone {
+    width: 167px;
+  }
+  .what-is__ipad {
+    width: 367px;
+    height: 284px;
+    padding: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .what-is__ipad {
+    position: absolute;
+  }
+}
+@media (max-width: 550px) {
+  .what-is__iphone {
+    width: 130px;
+  }
+  .what-is__ipad {
+    width: 290px;
+    height: 224px;
+    padding: 8px;
+  }
+}
+@media (max-width: 490px) {
+  .what-is__title {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .what-is__sub-title {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 450px) {
+  .what-is__container {
+    gap: 75px;
+  }
+  .what-is__iphone {
+    width: 100px;
+  }
+  .what-is__ipad {
+    width: 250px;
+    height: 200px;
+    padding: 8px;
+  }
+}
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;
