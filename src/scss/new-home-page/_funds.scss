@@ -1,0 +1,68 @@
+.funds {
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  position: relative;
+
+  &__wrapper {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../img/new-home-page/funds/bg.png') no-repeat 50% 50% / cover;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    max-width: 830px;
+    padding: 0 15px;
+    text-align: center;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    max-width: 830px;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .funds {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+    &__sub-title {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .funds {
+    &__wrapper {
+      padding: 40px 0;
+      background-position-x: left;
+    }
+  }
+}
+@media (max-width: 490px) {
+  .funds {
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+  }
+}
