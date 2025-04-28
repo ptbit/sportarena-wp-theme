@@ -4211,6 +4211,185 @@
     font-size: 12px;
   }
 }
+.licenses {
+  background-color: #100c23;
+  position: relative;
+}
+.licenses__container {
+  padding: 50px 15px 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 100px;
+}
+.licenses__text {
+  width: 50%;
+}
+.licenses__table {
+  width: 50%;
+}
+.licenses__title {
+  margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 800px;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.licenses__sub-title {
+  margin-bottom: 43px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.licenses__risk {
+  padding: 33px 40px 40px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(231, 27, 78, 0.4)), to(rgba(217, 217, 217, 0.08)));
+  background: linear-gradient(180deg, rgba(231, 27, 78, 0.4) 0%, rgba(217, 217, 217, 0.08) 100%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 12px;
+}
+.licenses__risk-title {
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 20px;
+  line-height: 130%;
+}
+.licenses__risk-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.licenses__table {
+  color: white;
+}
+.licenses__table table {
+  width: 100%;
+}
+.licenses__table table thead tr {
+  border-bottom: 1px solid red;
+}
+.licenses__table table thead tr th {
+  padding: 20px 0 5px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 14px;
+  text-align: start;
+}
+.licenses__table table tbody {
+  position: relative;
+}
+.licenses__table table tbody::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.04%, rgba(227, 44, 196, 0.8)), to(rgba(227, 44, 196, 0)));
+  background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+}
+.licenses__table table tbody tr {
+  position: relative;
+}
+.licenses__table table tbody tr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.04%, rgba(227, 44, 196, 0.8)), to(rgba(227, 44, 196, 0)));
+  background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+}
+.licenses__table table tbody tr td {
+  padding: 20px 0 5px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Popins-semibold", sans-serif;
+}
+
+@media (max-width: 1300px) {
+  .licenses__container {
+    gap: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .licenses__title {
+    font-size: 32px;
+  }
+  .licenses__sub-title {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .licenses__risk-title {
+    font-size: 18px;
+  }
+  .licenses__risk-text {
+    font-size: 15px;
+  }
+  .licenses__table table thead tr th {
+    padding: 15px 0 5px;
+    font-size: 13px;
+  }
+  .licenses__table table tbody tr td {
+    padding: 15px 0 5px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 900px) {
+  .licenses__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .licenses__text {
+    width: 100%;
+  }
+  .licenses__table {
+    width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .licenses__container {
+    padding: 30px 15px 30px;
+  }
+  .licenses__title {
+    font-size: 24px;
+  }
+  .licenses__sub-title {
+    font-size: 12px;
+  }
+  .licenses__risk-title {
+    font-size: 14px;
+  }
+  .licenses__risk-text {
+    font-size: 12px;
+  }
+  .licenses__table table thead tr th {
+    padding: 12px 0 5px;
+    font-size: 12px;
+  }
+  .licenses__table table tbody tr td {
+    padding: 12px 0 5px;
+    font-size: 12px;
+  }
+}
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;

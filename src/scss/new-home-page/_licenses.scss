@@ -1,0 +1,210 @@
+.licenses {
+  background-color: #100c23;
+  position: relative;
+
+  &__container {
+    padding: 50px 15px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+  }
+  &__text {
+    width: 50%;
+  }
+  &__table {
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    width: fit-content;
+    max-width: 800px;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__sub-title {
+    margin-bottom: 43px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__risk {
+    padding: 33px 40px 40px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(231, 27, 78, 0.4) 0%, rgba(217, 217, 217, 0.08) 100%);
+    backdrop-filter: blur(25px);
+    border-radius: 12px;
+
+    &-title {
+      margin-bottom: 12px;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 20px;
+      line-height: 130%;
+    }
+    &-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__table {
+    color: white;
+    table {
+      width: 100%;
+      thead {
+        tr {
+          border-bottom: 1px solid red;
+          th {
+            padding: 20px 0 5px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: $font-inter-semb;
+            font-size: 14px;
+            text-align: start;
+          }
+        }
+      }
+      tbody {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+        }
+        tr {
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+          }
+          td {
+            padding: 20px 0 5px;
+            color: #fff;
+            font-size: 14px;
+            font-family: $font-inter-semb;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .licenses {
+    &__container {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .licenses {
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    &__risk {
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 15px;
+      }
+    }
+    &__table {
+      table {
+        thead {
+          tr {
+            th {
+              padding: 15px 0 5px;
+              font-size: 13px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 15px 0 5px;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .licenses {
+    &__container {
+      flex-direction: column;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__table {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 490px) {
+  .licenses {
+    &__container{
+      padding: 30px 15px 30px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+    &__risk {
+      &-title {
+        font-size: 14px;
+      }
+      &-text {
+        font-size: 12px;
+      }
+    }
+    &__table {
+      table {
+        thead {
+          tr {
+            th {
+              padding: 12px 0 5px;
+              font-size: 12px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 12px 0 5px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

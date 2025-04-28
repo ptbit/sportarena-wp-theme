@@ -228,191 +228,6 @@
         <!--  -->
 
         <!--  -->
-        <section class="payments">
-  <div class="payments__container">
-    <div class="payments__header">
-      <div class="payments__text">
-        <h2 class="payments__title">Main Casino Payment Methods in India</h2>
-        <p class="payments__description">
-          There are numerous payment methods available for Indian online gamblers. With such a wide range of options, it can be challenging
-          to decide which one to use.
-        </p>
-      </div>
-      <div class="payments__buttons">
-        <button class="payments__button payments__button--prev">
-          <img src="img/new-page/up-btn-desk.svg" alt="prev button" />
-        </button>
-        <button class="payments__button payments__button--next">
-          <img src="img/new-page/up-btn-desk.svg" alt="next button" />
-        </button>
-      </div>
-    </div>
-
-    <div class="swiper paymentsSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/visa.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">UPI</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/gpay.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">Google Pay</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/city24.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">AstroPay</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/gpay.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">Google Pay2</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/visa.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">Visa 2</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-
-        <div class="swiper-slide payment-item">
-          <div class="payment-item__avatar">
-            <img src="img/new-home-page/payments/city24.svg" alt="payment method image" />
-          </div>
-          <p class="payment-item__title">city24</p>
-          <p class="payment-item__sub-title">
-            An Indian mobile app that links together multiple payment methods for the user’s convenience. For anyone who wishes to play
-            Aviator game in India, UPI is an easy way to deposit INR. Withdrawals are neither fast nor widely available.
-          </p>
-        </div>
-      </div>
-
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  function initSwiper() {
-    const swiper = new Swiper('.paymentsSwiper', {
-      loop: true,
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      centeredSlides: true,
-      grabCursor: true,
-      initialSlide: 0,
-
-      navigation: {
-        nextEl: '.payments__button--next',
-        prevEl: '.payments__button--prev',
-      },
-
-      autoplay: {
-        delay: 3000,
-      },
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-
-      breakpoints: {
-        550: {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-
-          autoplay: {
-            delay: 3000,
-          },
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-        1025: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-        1200: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3.75,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-      },
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initSwiper());
-</script>
 
         <!--  -->
 
@@ -450,7 +265,87 @@
 </section>
 
         <!--  -->
-        <p>18-licenses.html</p>
+        <section class="licenses">
+  <div class="licenses__container">
+    <div class="licenses__text">
+      <div class="licenses__top">
+        <h3 class="licenses__title">Licenses & Certifications</h3>
+        <p class="licenses__sub-title">
+          Spribe has created a secure game with Aviator, ensuring no risks related to data security, fairness, or gameplay integrity for
+          users. While the game involves betting and the inherent risk of losing money, it fully complies with international safety and
+          security standards in the gambling industry. The developer is accredited and certified in multiple jurisdictions, and the game
+          studio holds several
+        </p>
+      </div>
+      <div class="licenses__risk">
+        <img class="licenses__risk-ico" src="img/new-home-page/licenses/risk.svg" alt="licenses risk image" />
+        <p class="licenses__risk-title">Financial Awareness and Risk Management</p>
+        <p class="licenses__risk-text">
+          The Aviator game online is designed for entertainment, where the thrill of crash gameplay comes from testing your luck. A gamer
+          should be aware that no strategy will definitely work and that a game should never be treated as a way to provide for certain
+          income reliably. It will help to develop a responsible and financially conscious
+        </p>
+      </div>
+    </div>
+    <div class="licenses__table">
+      <table>
+        <thead>
+          <tr>
+            <th>Jurisdiction</th>
+            <th>Regulating Authority</th>
+            <th>License Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ontario, Canada</td>
+            <td>Gibraltar Gaming Commission</td>
+            <td>Gaming-Related Supplier</td>
+          </tr>
+          <tr>
+            <td>Ontario, Canada2</td>
+            <td>Gibraltar 2</td>
+            <td>Gaming2</td>
+          </tr>
+          <tr>
+            <td>small</td>
+            <td>small</td>
+            <td>small</td>
+          </tr>
+          <tr>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptates, quidem, maiores maxime illum delectus, veritatis
+              aliquid id ex labore in. Non corporis, iure sint reprehenderit numquam ratione quod placeat?
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptates, quidem, maiores maxime illum delectus, veritatis
+              aliquid id ex labore in. Non corporis, iure sint reprehenderit numquam ratione quod placeat?
+            </td>
+            <td>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptates, quidem, maiores maxime illum delectus, veritatis
+              aliquid id ex labore in. Non corporis, iure sint reprehenderit numquam ratione quod placeat?
+            </td>
+          </tr>
+          <tr>
+            <td>small</td>
+            <td>small</td>
+            <td>small</td>
+          </tr>
+          <tr>
+            <td>Ontario, Canada</td>
+            <td>Gibraltar Gaming Commission</td>
+            <td>Gaming-Related Supplier</td>
+          </tr>
+          <tr>
+            <td>Ontario, Canada</td>
+            <td>Gibraltar Gaming Commission</td>
+            <td>Gaming-Related Supplier</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
         <!--  -->
         <p>19-benefits2.html</p>
