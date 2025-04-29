@@ -4,7 +4,7 @@
   // overflow-x: hidden;
 
   &__container {
-    overflow: hidden;
+    // overflow: hidden;
     padding: 50px 15px 70px;
     position: relative;
     display: grid;
@@ -198,7 +198,11 @@
       position: absolute;
       inset: 0;
       border-radius: 12px;
-      background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      background-color: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0.04) 100%
+      );
       backdrop-filter: blur(25px);
     }
     &--1 {
@@ -210,6 +214,13 @@
   }
 }
 
+@media (max-width: 1350px) {
+  .algorithm {
+    &__container {
+      overflow: hidden;
+    }
+  }
+}
 @media (max-width: 1150px) {
   .algorithm {
     &__item--1 {

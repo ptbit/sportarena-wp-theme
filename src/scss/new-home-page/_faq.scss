@@ -46,6 +46,7 @@
     backdrop-filter: blur(25px);
     &__title {
       margin-bottom: 20px;
+      font-size: 20px;
       color: #fff;
       font-family: $font-popins-semb;
       line-height: 130%;
@@ -166,9 +167,13 @@
       font-size: 32px;
     }
     .question {
+      &__title {
+        font-size: 16px;
+      }
+      &__text {
+        font-size: 14px;
+      }
       &__btn {
-        // width: 45px;
-        // height: 45px;
         padding: 10px;
         &::after {
           width: 15px;
@@ -176,13 +181,70 @@
         }
       }
     }
+    .details {
+      &__title {
+        font-size: 16px;
+      }
+      &__text {
+        font-size: 12px;
+      }
+    }
   }
 }
-
+@media (max-width: 1050px) {
+  .faq{
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__details{
+      max-width: none;
+    }
+  }
+}
 @media (max-width: 490px) {
   .faq {
+    &__container{
+      padding: 20px 0;
+    }
     &__title {
       font-size: 24px;
+      margin-bottom: 20px;
+      padding: 0 14px;
+    }
+    &__list{
+      padding: 0 14px;
+    }
+    .question {
+      &__header{
+        padding: 8px;
+      }
+      &__title {
+        font-size: 14px;
+        padding: 10px;
+      }
+      &__text {
+        padding: 20px 18px;
+        font-size: 12px;
+      }
+      &__btn {
+        padding: 8px;
+        &::after {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+    .details {
+      padding: 20px 0 20px 14px;
+      &__title {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      &__text {
+        padding-right: 10px;
+        font-size: 11px;
+        max-height: 330px;
+      }
     }
   }
 }
