@@ -20,16 +20,17 @@
   }
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     gap: 40px;
   }
   &__list {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 14px;
   }
   &__details {
-    width: 50%;
+    width: 100%;
     max-width: 558px;
   }
 
@@ -37,6 +38,7 @@
     padding: 40px;
     padding-bottom: 18px;
     padding-right: 0;
+    height: fit-content;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: #100c23;
@@ -65,16 +67,9 @@
     border-radius: 12px;
     border: 1px solid rgba(225, 32, 193, 0.4);
   }
-  &__question.active {
-    border: 1px solid yellow;
-    // .question {
-    // &__answer {
-    // height: auto;
-    // opacity: 1;
-    // visibility: visible;
-    // }
-    // }
-  }
+  // &__question.active {
+  //   border: 1px solid yellow;
+  // }
   .question {
     position: relative;
     transition: all $transition;
@@ -105,20 +100,35 @@
       font-size: 18px;
       line-height: 130%;
       padding-left: 22px;
+      padding-right: 10px;
     }
     &__btn {
       position: relative;
-      width: 54px;
-      height: 54px;
+      // width: 54px;
+      // height: 54px;
+      padding: 17.5px;
+      width: fit-content;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('../img/new-home-page/faq/arrow-bg.png') no-repeat 0 0 / cover;
+      transition: all $transition;
+      background: url('../img/new-home-page/faq/arrow-bg.png') no-repeat 50% 50% / contain;
       &::after {
         content: '';
         width: 19px;
-        height: 12px;
-        background: url('../img/new-home-page/faq/arrow.svg') no-repeat 0 0 / cover;
+        height: 19px;
+        transition: all $transition;
+        background: url('../img/new-home-page/faq/arrow.svg') no-repeat 50% 50% / contain;
+      }
+      &:hover {
+        background: url('../img/new-home-page/faq/arrow-bg-hover.png') no-repeat 50% 50% / contain;
+      }
+    }
+    &__btn.active {
+      background: url('../img/new-home-page/faq/arrow-bg-active.png') no-repeat 50% 50% / contain;
+
+      &::after {
+        transform: rotate(180deg);
       }
     }
     &__answer {
@@ -127,10 +137,11 @@
       height: 0;
       overflow: hidden;
       transition: height 3s;
+      opacity: 0;
     }
     &__answer.active {
       height: auto;
-      
+      opacity: 1;
     }
     &__text {
       padding: 20px 73px 32px 30px;
@@ -142,10 +153,28 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .faq {
+    &__wrapper {
+      gap: 20px;
+    }
+  }
+}
 @media (max-width: 1050px) {
   .faq {
     &__title {
       font-size: 32px;
+    }
+    .question {
+      &__btn {
+        // width: 45px;
+        // height: 45px;
+        padding: 10px;
+        &::after {
+          width: 15px;
+          height: 15px;
+        }
+      }
     }
   }
 }

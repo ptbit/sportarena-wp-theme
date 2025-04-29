@@ -517,11 +517,11 @@
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
       const answer = btn.parentElement.nextElementSibling;
-      // console.log(answer);
       answer.classList.toggle('active');
-      const question = btn.parentElement.parentElement;
-      question.classList.toggle('active');
+      // const question = btn.parentElement.parentElement;
+      // question.classList.toggle('active');
     });
   });
 </script>
