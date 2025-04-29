@@ -134,9 +134,9 @@
       }
     }
     &__note {
-      &__text {
-        font-size: 14px;
-      }
+    }
+    &__text {
+      font-size: 14px;
     }
   }
 }
@@ -193,9 +193,9 @@
     &__note {
       padding: 13px 18px;
       gap: 15px;
-      &__text {
-        font-size: 12px;
-      }
+    }
+    &__text {
+      font-size: 12px;
     }
   }
 }
