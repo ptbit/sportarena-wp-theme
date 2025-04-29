@@ -83,15 +83,13 @@
 </section>
 
 <script>
-  const buttons = document.querySelectorAll('.question__btn');
+  const faqButtons = document.querySelectorAll('.question__btn');
 
-  buttons.forEach((btn) => {
+  faqButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
       const answer = btn.parentElement.nextElementSibling;
       answer.classList.toggle('active');
-      // const question = btn.parentElement.parentElement;
-      // question.classList.toggle('active');
+      btn.classList.toggle('active');
     });
   });
 </script>
