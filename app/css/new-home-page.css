@@ -3918,6 +3918,7 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
+  z-index: 1;
 }
 .bonuses__ico {
   width: 32px;
