@@ -113,6 +113,9 @@
     );
     backdrop-filter: blur(25px);
     z-index: 1;
+    span {
+      color: #e853cf;
+    }
   }
   &__ico {
     width: 32px;

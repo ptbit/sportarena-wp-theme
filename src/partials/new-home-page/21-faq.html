@@ -1,1 +1,97 @@
-<p>21-faq.html</p>
+<section class="faq">
+  <div class="faq__container">
+    <h3 class="faq__title">faq</h3>
+    <div class="faq__wrapper">
+      <div class="faq__list">
+        <div class="faq__question question">
+          <div class="question__header">
+            <p class="question__title">Can I win real money playing the flight betting game?</p>
+            <button class="question__btn"></button>
+          </div>
+          <div class="question__answer">
+            <p class="question__text">
+              The main legislation regulating gambling in India is the Public Gambling Act of 1867,
+              which prohibits running and participating in land-based gambling activities. However,
+              this does not include any provisions covering online gambling, since the law was
+              enacted before the digital era.
+              <br />
+              <br />
+              As a result, India has not enacted any federal law that absolutely prohibits or
+              restricts online gambling. The effect has been the creation of a legal “gray area”
+              where online gambling is neither prohibited nor fully legalized
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__question question">
+          <div class="question__header">
+            <p class="question__title">Can I win real money playing the flight betting game?</p>
+            <button class="question__btn"></button>
+          </div>
+          <div class="question__answer">
+            <p class="question__text">
+              The main legislation regulating gambling in India is the Public Gambling Act of 1867,
+              which prohibits running and participating in land-based gambling activities. However,
+              this does not include any provisions covering online gambling, since the law was
+              enacted before the digital era.
+              <br />
+              <br />
+              As a result, India has not enacted any federal law that absolutely prohibits or
+              restricts online gambling. The effect has been the creation of a legal “gray area”
+              where online gambling is neither prohibited nor fully legalized
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__details details">
+        <p class="details__title">Best Practices in Risk Management</p>
+        <p class="details__text">
+          Set a Budget: Before starting to play, determine a fixed amount you’re willing to spend.
+          Only use money that you can afford to lose without affecting your essential expenses.
+          <br />
+          <br />
+          Set Limits: Operators offer responsible gambling tools that allow patrons to set daily or
+          weekly spending limits or restrict the amount of time spent playing. This helps control
+          your gaming activity.
+          <br />
+          <br />
+          Know Your Time to Quit: Set win/loss limits in their clear amount. For example, you can
+          determine in advance when to cash out on a certain amount in profit or exactly how much is
+          lost.
+          <br />
+          <br />
+          Avoid Chasing Losses: Understand that losing is a natural part of the game. Trying to
+          recover losses by increasing bets can lead to greater financial risks.
+          <br />
+          <br />
+          Responsible Gambling Support: Online casino operators must provide tools allowing players
+          to practice responsible betting. These are:
+          <br />
+          <br />
+          Session Time Tracking: Keeps count of the time spent playing. Deposit and Wagering Limit:
+          Putting a limit on a certain amount that can be deposited or wagered within a given time.
+          Self-Exclusion Options: The ability for players to take a temporary or permanent break
+          from gaming. Assistance and Awareness: The Responsible Gambling Council (RGC), a globally
+          recognized organization, provides guidance to players on how to establish safe gambling
+          practices. It also helps identify early signs of problem gambling, such as spending beyond
+          limits or prioritizing gambling
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.question__btn');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const answer = btn.parentElement.nextElementSibling;
+      // console.log(answer);
+      answer.classList.toggle('active');
+      const question = btn.parentElement.parentElement;
+      question.classList.toggle('active');
+    });
+  });
+</script>
