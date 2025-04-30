@@ -600,11 +600,12 @@
   width: 370px;
   height: 523px;
   background: url("../img/new-home-page/game/iPhone.png") no-repeat 0 0/cover;
-  padding: 56px 33px 0;
+  padding: 63px 18px 0;
+  overflow: hidden;
 }
 .game__phone img {
-  width: 306px;
-  height: 448px;
+  width: 100%;
+  height: auto;
 }
 .game__phone::before {
   content: "";

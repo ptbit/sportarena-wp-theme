@@ -52,10 +52,11 @@
     width: 370px;
     height: 523px;
     background: url('../img/new-home-page/game/iPhone.png') no-repeat 0 0 / cover;
-    padding: 56px 33px 0;
+    padding: 63px 18px 0;
+    overflow: hidden;
     img {
-      width: 306px;
-      height: 448px;
+      width: 100%;
+      height: auto;
     }
     &::before {
       content: '';
@@ -99,7 +100,11 @@
         left: 0;
         height: 1px;
         width: 100%;
-        background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+        background: linear-gradient(
+          90deg,
+          rgba(227, 44, 196, 0.8) 1.04%,
+          rgba(227, 44, 196, 0) 100%
+        );
       }
     }
   }
@@ -265,7 +270,7 @@
 
 @media (max-width: 375px) {
   .game {
-    &__container{
+    &__container {
       padding-left: 10px;
       padding-right: 10px;
     }
