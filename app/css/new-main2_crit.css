@@ -1019,4 +1019,12 @@ body._lock {
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 375px) {
+  .header__button a {
+    width: 100%;
+  }
+  .header .menu__icon {
+    margin-left: 10px;
+  }
+}
 /*# sourceMappingURL=new-main2_crit.css.map */

@@ -28,14 +28,22 @@
       align-items: center;
       height: 408px;
       border-radius: 12px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.084) 0%,
+        rgba(217, 217, 217, 0.042) 100%
+      );
     }
 
     &__image {
       object-fit: contain;
       border-radius: 10px;
       border: 1px solid #d3d3d33b;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0.04) 100%
+      );
       box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
       backdrop-filter: blur(25px);
     }
@@ -97,7 +105,7 @@
       &::before {
         content: '';
         width: 40px;
-        background: url('../img/new-home-page/funds2/vector.svg') no-repeat 0 50% / cover;
+        background: url('../img/new-home-page/funds2/vector.svg') no-repeat 0 50% / contain;
         min-width: 40px;
         min-height: 30px;
       }
@@ -119,13 +127,11 @@
     &__container {
       padding: 40px 15px 80px;
     }
-    &__item {
+    .item {
       flex-direction: column-reverse;
       &:nth-child(even) {
         flex-direction: column-reverse;
       }
-    }
-    .item {
       &__logo {
         width: 100%;
         margin: 0 auto;
@@ -133,9 +139,6 @@
       &__details {
         width: 100%;
         margin: 0 auto;
-      }
-      &--reverse {
-        flex-direction: column-reverse;
       }
     }
   }
@@ -178,6 +181,17 @@
       }
       &__text {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .funds2 {
+    .item {
+      &__wrapper {
+        padding: 25px 15px;
+        height: auto;
       }
     }
   }

@@ -168,7 +168,12 @@
 
       border-radius: 4px;
       border: 1px solid rgba(255, 255, 255, 0);
-      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #e5053d;
       box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
 
       @include breakpoint($tablet-bp) {
@@ -352,7 +357,12 @@
             &:hover {
               border-radius: 4px;
               // border: 1px solid rgba(255, 255, 255, 0);
-              background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+              background: radial-gradient(
+                  100% 100% at 50% 0%,
+                  rgba(255, 255, 255, 0.3) 0%,
+                  rgba(255, 255, 255, 0) 100%
+                ),
+                #b4012e;
               box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.4);
               @media screen and (max-width: 1024px) {
                 background: transparent;
@@ -408,7 +418,11 @@
             margin-top: 30px;
             height: 3px;
             border-radius: 2px;
-            background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%),
+            background: radial-gradient(
+                100% 100% at 50% 0%,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
               linear-gradient(180deg, $pink 0%, #e9305e 100%);
           }
         }
@@ -710,5 +724,17 @@
     width: 34px;
     height: 34px;
     margin-left: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    &__button {
+      a {
+        width: 100%;
+      }
+    }
+    .menu__icon {
+      margin-left: 10px;
+    }
   }
 }

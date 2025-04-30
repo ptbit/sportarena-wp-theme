@@ -61,7 +61,12 @@
     align-items: center;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0);
-    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #e5053d;
     box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
     color: #fff;
     text-align: center;
@@ -125,7 +130,11 @@
     width: 320px;
     padding: 20px;
     border: 1px solid rgba(153, 153, 153, 0.2);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    );
     backdrop-filter: blur(25px);
     border-radius: 10px;
     position: absolute;
@@ -456,6 +465,21 @@
     &__iphone {
       width: 150px;
       height: 230px;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero {
+    &__ipad {
+      width: 220px;
+    }
+    &__iphone {
+      width: 138px;
+      height: 210px;
+      margin-left: -60px;
+    }
+    &__marker{
+      padding: 8px;
     }
   }
 }

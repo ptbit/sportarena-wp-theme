@@ -15,10 +15,9 @@
 
   .item {
     &__logo {
-      width: 50%;
+      width: 100%;
       max-width: 558px;
       position: relative;
-      width: 50%;
     }
     &__wrapper {
       padding: 40px;
@@ -28,14 +27,22 @@
       align-items: center;
       height: 408px;
       border-radius: 12px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.084) 0%,
+        rgba(217, 217, 217, 0.042) 100%
+      );
     }
 
     &__image {
       object-fit: contain;
       border-radius: 10px;
       border: 1px solid #d3d3d33b;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0.04) 100%
+      );
       box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
       backdrop-filter: blur(25px);
     }
@@ -67,7 +74,7 @@
       line-height: 150%;
     }
     &__details {
-      width: 50%;
+      width: 100%;
       max-width: 558px;
     }
     &__title {
@@ -121,9 +128,6 @@
         }
       }
     }
-    // &--reverse {
-    //   flex-direction: row-reverse;
-    // }
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -141,7 +145,7 @@
     &__container {
       padding: 40px 15px 80px;
     }
-    &__item {
+    .item {
       flex-direction: column-reverse;
       &:nth-child(even) {
         flex-direction: column-reverse;
@@ -200,6 +204,17 @@
       }
       &__text {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .registration {
+    .item {
+      &__wrapper {
+        padding: 25px 15px;
+        height: auto;
       }
     }
   }

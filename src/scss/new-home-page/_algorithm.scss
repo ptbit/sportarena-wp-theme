@@ -431,5 +431,16 @@
     }
   }
 }
-
-// .algorithm
+@media (max-width: 375px) {
+  .algorithm {
+    &__item {
+      width: 295px;
+    }
+    &__line {
+      &::before {
+        background-size: contain;
+        margin: auto 0;
+      }
+    }
+  }
+}

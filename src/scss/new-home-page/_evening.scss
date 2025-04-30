@@ -225,3 +225,15 @@
     }
   }
 }
+@media (max-width: 375px) {
+  .evening {
+    &__container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__title{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

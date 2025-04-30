@@ -262,3 +262,15 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .game {
+    &__container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__item--3 {
+      width: 285px;
+    }
+  }
+}

@@ -2,34 +2,65 @@
   <div class="benefits__container">
     <h2 class="benefits__title">Benefits of playing Aviator games online</h2>
     <p class="benefits__sub-title">
-      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+      The airplane crash game has many advantages that give it a unique place among the competition
+      and attract Indian players.
     </p>
     <div class="swiper cardsSwiper">
       <div class="swiper-wrapper benefits__cards">
         <div class="swiper-slide benefits__card card">
           <p class="card__title">HIGH RTP</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-1.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-1.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">BEGINNER- FRIENDLY</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-2.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-2.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">SOCIAL COMPONENTS</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-3.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-3.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">MOBILE-READY</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-4.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-4.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">PROVABLY FAIR</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-5.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-5.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -43,8 +74,8 @@
 
   function startSwiper() {
     const swiper = new Swiper('.cardsSwiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 15,
+      slidesPerView: 1.05,
+      spaceBetween: 10,
       loop: true,
       grabCursor: true,
       centeredSlides: true,
@@ -57,43 +88,8 @@
         clickable: true,
       },
       breakpoints: {
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 5,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-        1030: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: {
-            delay: 3000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: {
-            delay: 3000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2.5,
+        375: {
+          slidesPerView: 1.5,
           spaceBetween: 15,
           loop: true,
           grabCursor: true,
@@ -121,6 +117,57 @@
             el: '.swiper-pagination',
             clickable: true,
           },
+        },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+
+        1030: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 18,
+          grabCursor: true,
         },
       },
     });

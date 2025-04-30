@@ -265,34 +265,65 @@
   <div class="benefits__container">
     <h2 class="benefits__title">Benefits of playing Aviator games online</h2>
     <p class="benefits__sub-title">
-      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+      The airplane crash game has many advantages that give it a unique place among the competition
+      and attract Indian players.
     </p>
     <div class="swiper cardsSwiper">
       <div class="swiper-wrapper benefits__cards">
         <div class="swiper-slide benefits__card card">
           <p class="card__title">HIGH RTP</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-1.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-1.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">BEGINNER- FRIENDLY</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-2.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-2.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">SOCIAL COMPONENTS</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-3.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-3.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">MOBILE-READY</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-4.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-4.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
         <div class="swiper-slide benefits__card card">
           <p class="card__title">PROVABLY FAIR</p>
-          <img class="card__ico" src="../img/new-home-page/benefits/icon-5.png" alt="benefit card icon" />
-          <p class="card__text">The game offers an RTP of 97%, which is competitive among other slots.</p>
+          <img
+            class="card__ico"
+            src="../img/new-home-page/benefits/icon-5.png"
+            alt="benefit card icon"
+          />
+          <p class="card__text">
+            The game offers an RTP of 97%, which is competitive among other slots.
+          </p>
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -306,8 +337,8 @@
 
   function startSwiper() {
     const swiper = new Swiper('.cardsSwiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 15,
+      slidesPerView: 1.05,
+      spaceBetween: 10,
       loop: true,
       grabCursor: true,
       centeredSlides: true,
@@ -320,43 +351,8 @@
         clickable: true,
       },
       breakpoints: {
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 5,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-        1030: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: {
-            delay: 3000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: {
-            delay: 3000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2.5,
+        375: {
+          slidesPerView: 1.5,
           spaceBetween: 15,
           loop: true,
           grabCursor: true,
@@ -385,6 +381,57 @@
             clickable: true,
           },
         },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+
+        1030: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 5,
+          spaceBetween: 18,
+          grabCursor: true,
+        },
       },
     });
   }
@@ -399,10 +446,18 @@
           <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
         </div>
         <div class="swiper-slide evening__phone">
-          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner-1.png" alt="" />
+          <img
+            class="evening__phone-img"
+            src="/img/new-home-page/evening/phone-inner-1.png"
+            alt=""
+          />
         </div>
         <div class="swiper-slide evening__phone">
-          <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner-2.png" alt="" />
+          <img
+            class="evening__phone-img"
+            src="/img/new-home-page/evening/phone-inner-2.png"
+            alt=""
+          />
         </div>
         <div class="swiper-slide evening__phone">
           <img class="evening__phone-img" src="/img/new-home-page/evening/phone-inner.png" alt="" />
@@ -418,7 +473,8 @@
     </div>
     <h2 class="evening__title">In the evening</h2>
     <p class="evening__sub-title">
-      The airplane crash game has many advantages that give it a unique place among the competition and attract Indian players.
+      The airplane crash game has many advantages that give it a unique place among the competition
+      and attract Indian players.
     </p>
   </div>
 </section>
@@ -428,8 +484,8 @@
 
   function startSwiper() {
     const swiper = new Swiper('.phonesSwiper', {
-      slidesPerView: 1.8,
-      spaceBetween: 20,
+      slidesPerView: 1.5,
+      spaceBetween: 10,
       initialSlide: 0,
       loop: true,
       centeredSlides: true,
@@ -442,6 +498,21 @@
         clickable: true,
       },
       breakpoints: {
+        375: {
+          slidesPerView: 1.8,
+          spaceBetween: 15,
+          initialSlide: 0,
+          loop: true,
+          centeredSlides: true,
+          grabCursor: true,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
         700: {
           slidesPerView: 3,
           spaceBetween: 20,
@@ -480,8 +551,8 @@
       <div class="games__text">
         <h2 class="games__title">Appreciation letter</h2>
         <p class="games__description">
-          Leading Indian gaming influencers share their real-life experiences with the Aviator game. Learn how they approach the gameplay,
-          manage risks and celebrate their wins.
+          Leading Indian gaming influencers share their real-life experiences with the Aviator game.
+          Learn how they approach the gameplay, manage risks and celebrate their wins.
         </p>
       </div>
       <div class="games__buttons">
@@ -498,7 +569,11 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -521,14 +596,19 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
 
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -551,14 +631,19 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
 
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -581,14 +666,19 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
 
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -611,14 +701,19 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
 
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -641,14 +736,19 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
 
         <div class="swiper-slide game-item">
           <div class="game-item__marker">
-            <img class="game-item__marker-ico" src="../img/new-home-page/games/play-ico.svg" alt="play marker icon" />
+            <img
+              class="game-item__marker-ico"
+              src="../img/new-home-page/games/play-ico.svg"
+              alt="play marker icon"
+            />
             <p class="game-item__marker-text">play now</p>
           </div>
           <div class="game-item__avatar">
@@ -671,8 +771,9 @@
             </div>
           </div>
           <p class="game-item__sub-title">
-            This round was a calculated risk. I usually aim low, but this time I trusted my intuition and went for 8x. I don’t often
-            recommend this approach, but it worked for me here!»
+            This round was a calculated risk. I usually aim low, but this time I trusted my
+            intuition and went for 8x. I don’t often recommend this approach, but it worked for me
+            here!»
           </p>
         </div>
       </div>
@@ -690,7 +791,7 @@
   function initSwiper() {
     const swiper = new Swiper('.gamesSwiper', {
       loop: true,
-      slidesPerView: 1.2,
+      slidesPerView: 1.05,
       spaceBetween: 15,
       centeredSlides: true,
       grabCursor: true,
@@ -711,6 +812,28 @@
       },
 
       breakpoints: {
+        375: {
+          loop: true,
+          slidesPerView: 1.2,
+          spaceBetween: 15,
+          centeredSlides: true,
+          grabCursor: true,
+          initialSlide: 0,
+
+          navigation: {
+            nextEl: '.games__button--next',
+            prevEl: '.games__button--prew',
+          },
+
+          autoplay: {
+            delay: 3000,
+          },
+
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
         550: {
           loop: true,
           slidesPerView: 2,
@@ -781,15 +904,167 @@
   <div class="wins__container">
     <div class="wins__left">
       <h2 class="wins__title">Aviator Top Bets and Big Wins</h2>
-      <p class="wins__sub-title">Examples of notable bets and wins from the past month based on available</p>
+      <p class="wins__sub-title">
+        Examples of notable bets and wins from the past month based on available
+      </p>
       <div class="wins__table-wrapper">
         <div class="wins__buttons">
-          <button class="wins__button wins__button--active">month</button>
-          <button class="wins__button">year</button>
+          <button class="wins__button wins__button--active monthBtn">month</button>
+          <button class="wins__button yearBtn">year</button>
         </div>
-        <div class="wins__table">
-        <img src="../img/new-home-page/wins/table.png" alt="table" />
-
+        <div class="wins__table active monthTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Agent</th>
+                <th>Bet USD</th>
+                <th>Cashed out</th>
+                <th>Win USD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  <span>@WasimGame…</span>
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  <span>@WasimGame…</span>
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wins__table yearTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Agent</th>
+                <th>Bet USD</th>
+                <th>Cashed out</th>
+                <th>Win USD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava-2.png" alt="winner avatar" />
+                  <span>@WasimGame…</span>
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava-2.png" alt="winner avatar" />
+                  <span>@WasimGame…</span>
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava-2.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava-2.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="../img/new-home-page/wins/ava-2.png" alt="winner avatar" />
+                  @WasimGame…
+                </td>
+                <td>1.00</td>
+                <td>10000.00x</td>
+                <td>10,000.00</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -800,9 +1075,10 @@
       </div>
       <h2 class="wins__title">What about?</h2>
       <p class="wins__sub-title">
-        In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
-        more than 32 million players every month. Aviator is a popular example of the crash game genre, which has emerged in recent years
-        and attracted a significant following. The Aviator
+        In 2019, this social multiplayer casino game was launched as a passion project by a
+        lesser-known studio, Spribe. Nowadays, it gets more than 32 million players every month.
+        Aviator is a popular example of the crash game genre, which has emerged in recent years and
+        attracted a significant following. The Aviator
       </p>
       <a class="hero__play-btn" href="#">
         Play online
@@ -815,11 +1091,26 @@
 <script>
   const buttons = document.querySelectorAll('.wins__button');
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      buttons.forEach((btn) => btn.classList.remove('wins__button--active'));
-      button.classList.add('wins__button--active');
-    });
+  const monthBtn = document.querySelector('.monthBtn');
+  const yearBtn = document.querySelector('.yearBtn');
+  const monthTable = document.querySelector('.monthTable');
+  const yearTable = document.querySelector('.yearTable');
+
+  monthBtn.addEventListener('click', () => {
+    if (!monthBtn.classList.contains('wins__button--active')) {
+      monthBtn.classList.toggle('wins__button--active');
+      yearBtn.classList.toggle('wins__button--active');
+      monthTable.classList.add('active');
+      yearTable.classList.remove('active');
+    }
+  });
+  yearBtn.addEventListener('click', () => {
+    if (!yearBtn.classList.contains('wins__button--active')) {
+      monthBtn.classList.toggle('wins__button--active');
+      yearBtn.classList.toggle('wins__button--active');
+      monthTable.classList.remove('active');
+      yearTable.classList.add('active');
+    }
   });
 </script>
 
@@ -828,14 +1119,17 @@
   <div class="features__container">
     <h2 class="features__title">Aviator Game Features</h2>
     <p class="features__sub-title">
-      The Aviator Crash game has many unique features that attract players. Due to these features, Sprib’s game remains one of the most
-      popular choices even five
+      The Aviator Crash game has many unique features that attract players. Due to these features,
+      Sprib’s game remains one of the most popular choices even five
     </p>
     <div class="swiper featuresSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide features-item">
           <p class="features-item__title">DOUBLE BET</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-1.png" alt="game feature image" />
           </div>
@@ -843,7 +1137,10 @@
 
         <div class="swiper-slide features-item">
           <p class="features-item__title">IN-GAME CHAT</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-2.png" alt="game feature image" />
           </div>
@@ -851,7 +1148,10 @@
 
         <div class="swiper-slide features-item">
           <p class="features-item__title">IN-GAME CHAT</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-3.png" alt="game feature image" />
           </div>
@@ -859,7 +1159,10 @@
 
         <div class="swiper-slide features-item">
           <p class="features-item__title">IN-GAME CHAT</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-4.png" alt="game feature image" />
           </div>
@@ -867,7 +1170,10 @@
 
         <div class="swiper-slide features-item">
           <p class="features-item__title">IN-GAME CHAT</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-5.png" alt="game feature image" />
           </div>
@@ -875,7 +1181,10 @@
 
         <div class="swiper-slide features-item">
           <p class="features-item__title">IN-GAME CHAT</p>
-          <p class="features-item__sub-title">The gambler can adjust each wager’s value and cash it out independently of the other bet.</p>
+          <p class="features-item__sub-title">
+            The gambler can adjust each wager’s value and cash it out independently of the other
+            bet.
+          </p>
           <div class="features-item__img">
             <img src="../img/new-home-page/features/item-6.png" alt="game feature image" />
           </div>
@@ -889,13 +1198,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  let swiper = null;
+  let featuresSwiper = null;
 
-  function initOrDestroySwiper() {
+  function initOrDestroySwiperFeaturesSwiper() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 799 && !swiper) {
-      swiper = new Swiper('.featuresSwiper', {
+    if (screenWidth <= 799 && !featuresSwiper) {
+      featuresSwiper = new Swiper('.featuresSwiper', {
         loop: true,
         slidesPerView: 1.2,
         grabCursor: true,
@@ -910,15 +1219,15 @@
           clickable: true,
         },
       });
-    } else if (screenWidth > 799 && swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
+    } else if (screenWidth > 799 && featuresSwiper) {
+      featuresSwiper.destroy(true, true);
+      featuresSwiper = null;
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
+    initOrDestroySwiperFeaturesSwiper();
+    window.addEventListener('resize', initOrDestroySwiperFeaturesSwiper);
   });
 </script>
 
@@ -928,23 +1237,27 @@
     <div class="algorithm__text">
       <h2 class="algorithm__title">Aviator Fairness: Provably Fair Algorithms</h2>
       <p class="algorithm__sub-title">
-        It is a method of generating and securing random round results. It employs multiple layers of heavy-duty cryptography. The algorithm
-        uses both server-generated data and client-side inputs. Players can independently verify the fairness of each round by following
-        these
+        It is a method of generating and securing random round results. It employs multiple layers
+        of heavy-duty cryptography. The algorithm uses both server-generated data and client-side
+        inputs. Players can independently verify the fairness of each round by following these
       </p>
       <div class="algorithm__lines">
         <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click on the fairness verification icon
+          Open game history: In the game interface, locate the section with round history or click
+          on the fairness verification icon
         </p>
         <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click on the fairness verification icon
+          Open game history: In the game interface, locate the section with round history or click
+          on the fairness verification icon
         </p>
         <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click on the fairness verification icon
+          Open game history: In the game interface, locate the section with round history or click
+          on the fairness verification icon
         </p>
       </div>
       <p class="algorithm__sub-title">
-        Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare the resulting hash with the one in the
+        Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+        the resulting hash with the one in the
       </p>
       <a class="algorithm__link" href="#">Show more</a>
     </div>
@@ -965,8 +1278,8 @@
     <div class="features2__header">
       <h2 class="features2__title">Aviator Game Features</h2>
       <p class="features2__sub-title">
-        The Aviator Crash game has many unique features that attract players. Due to these features, Spribe’s game remains one of the most
-        popular choices even five
+        The Aviator Crash game has many unique features that attract players. Due to these features,
+        Spribe’s game remains one of the most popular choices even five
       </p>
     </div>
     <div class="swiper features2Swiper">
@@ -977,8 +1290,9 @@
           </div>
           <p class="features2-item__title">Learning the game’s interface</p>
           <p class="features2-item__sub-title">
-            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
-            from the casino to proceed. Confirm the transaction and receive money.
+            When you’re ready to conclude your session, head to the casino’s Cashier section to
+            withdraw your winnings. Use instructions from the casino to proceed. Confirm the
+            transaction and receive money.
           </p>
         </div>
         <div class="swiper-slide features2-item">
@@ -987,8 +1301,9 @@
           </div>
           <p class="features2-item__title">Placing bets</p>
           <p class="features2-item__sub-title">
-            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
-            from the casino to proceed. Confirm the transaction and receive money.
+            When you’re ready to conclude your session, head to the casino’s Cashier section to
+            withdraw your winnings. Use instructions from the casino to proceed. Confirm the
+            transaction and receive money.
           </p>
         </div>
         <div class="swiper-slide features2-item">
@@ -997,8 +1312,9 @@
           </div>
           <p class="features2-item__title">Waiting for the next round</p>
           <p class="features2-item__sub-title">
-            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
-            from the casino to proceed. Confirm the transaction and receive money.
+            When you’re ready to conclude your session, head to the casino’s Cashier section to
+            withdraw your winnings. Use instructions from the casino to proceed. Confirm the
+            transaction and receive money.
           </p>
         </div>
         <div class="swiper-slide features2-item">
@@ -1007,8 +1323,9 @@
           </div>
           <p class="features2-item__title">Learning the game’s interface</p>
           <p class="features2-item__sub-title">
-            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
-            from the casino to proceed. Confirm the transaction and receive money.
+            When you’re ready to conclude your session, head to the casino’s Cashier section to
+            withdraw your winnings. Use instructions from the casino to proceed. Confirm the
+            transaction and receive money.
           </p>
         </div>
         <div class="swiper-slide features2-item">
@@ -1017,8 +1334,9 @@
           </div>
           <p class="features2-item__title">Learning the game’s interface</p>
           <p class="features2-item__sub-title">
-            When you’re ready to conclude your session, head to the casino’s Cashier section to withdraw your winnings. Use instructions
-            from the casino to proceed. Confirm the transaction and receive money.
+            When you’re ready to conclude your session, head to the casino’s Cashier section to
+            withdraw your winnings. Use instructions from the casino to proceed. Confirm the
+            transaction and receive money.
           </p>
         </div>
       </div>
@@ -1032,7 +1350,7 @@
 <script>
   let swiperFeatures2 = null;
 
-  function initOrDestroySwiper() {
+  function initOrDestroySwiperFeatures2() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 1050 && !swiperFeatures2) {
@@ -1090,8 +1408,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
+    initOrDestroySwiperFeatures2();
+    window.addEventListener('resize', initOrDestroySwiperFeatures2);
   });
 </script>
 
