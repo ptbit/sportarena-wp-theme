@@ -406,14 +406,6 @@
     bottom: -100px;
   }
 }
-@media screen and (max-width: 560px) {
-  .hero {
-    padding-top: 80px;
-  }
-  .hero__container {
-    padding-top: 20px;
-  }
-}
 @media screen and (max-width: 675px) {
   .hero__info {
     margin-top: 110px;
@@ -435,6 +427,7 @@
     margin-left: 20px;
     margin-bottom: 35px;
     margin-top: 25px;
+    padding: 11px;
   }
   .hero__iphone {
     width: 185px;
@@ -489,6 +482,17 @@
     bottom: -145px;
   }
 }
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 80px;
+  }
+  .hero__container {
+    padding-top: 20px;
+  }
+  .hero__ipad {
+    padding: 10px;
+  }
+}
 @media screen and (max-width: 555px) {
   .hero__ipad {
     width: 310px;
@@ -501,6 +505,7 @@
 @media screen and (max-width: 480px) {
   .hero__ipad {
     margin-left: 10px;
+    padding: 8px;
     width: 240px;
   }
   .hero__iphone {
@@ -511,6 +516,7 @@
 @media screen and (max-width: 375px) {
   .hero__ipad {
     width: 220px;
+    padding: 7px;
   }
   .hero__iphone {
     width: 138px;
