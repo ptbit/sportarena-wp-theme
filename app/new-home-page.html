@@ -2432,13 +2432,23 @@
 </section>
 
 <script>
-  const faqButtons = document.querySelectorAll('.question__btn');
+  // const faqButtons = document.querySelectorAll('.question__btn');
+  const headersBlocks = document.querySelectorAll('.question__header');
 
-  faqButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const answer = btn.parentElement.nextElementSibling;
+  // faqButtons.forEach((btn) => {
+  //   btn.addEventListener('click', () => {
+  //     console.log(btn.parentElement)
+  //     const answer = btn.parentElement.nextElementSibling;
+  //     answer.classList.toggle('active');
+  //     btn.classList.toggle('active');
+  //   });
+  // });
+  headersBlocks.forEach((headerBlock) => {
+    headerBlock.addEventListener('click', () => {
+      const faqButton = headerBlock.querySelector('.question__btn');
+      const answer = headerBlock.nextElementSibling;
       answer.classList.toggle('active');
-      btn.classList.toggle('active');
+      faqButton.classList.toggle('active');
     });
   });
 </script>
