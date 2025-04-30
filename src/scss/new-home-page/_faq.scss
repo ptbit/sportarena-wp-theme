@@ -138,11 +138,14 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       height: 0;
       overflow: hidden;
-      transition: height 3s;
+      transition: all 1s;
       opacity: 0;
+      max-height: 0;
+      min-height: 0;
     }
     &__answer.active {
-      height: auto;
+      height: fit-content;
+      min-height: 100px;
       opacity: 1;
     }
     &__text {
@@ -193,18 +196,18 @@
   }
 }
 @media (max-width: 1050px) {
-  .faq{
-    &__wrapper{
+  .faq {
+    &__wrapper {
       flex-direction: column;
     }
-    &__details{
+    &__details {
       max-width: none;
     }
   }
 }
 @media (max-width: 490px) {
   .faq {
-    &__container{
+    &__container {
       padding: 20px 0;
     }
     &__title {
@@ -212,11 +215,11 @@
       margin-bottom: 20px;
       padding: 0 14px;
     }
-    &__list{
+    &__list {
       padding: 0 14px;
     }
     .question {
-      &__header{
+      &__header {
         padding: 8px;
       }
       &__title {
