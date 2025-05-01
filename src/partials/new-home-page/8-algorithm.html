@@ -2,30 +2,51 @@
   <div class="algorithm__container">
     <div class="algorithm__text">
       <h2 class="algorithm__title">Aviator Fairness: Provably Fair Algorithms</h2>
-      <p class="algorithm__sub-title">
-        It is a method of generating and securing random round results. It employs multiple layers
-        of heavy-duty cryptography. The algorithm uses both server-generated data and client-side
-        inputs. Players can independently verify the fairness of each round by following these
-      </p>
-      <div class="algorithm__lines">
-        <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click
-          on the fairness verification icon
+      <div class="algorithm__content">
+        <p class="algorithm__sub-title">
+          It is a method of generating and securing random round results. It employs multiple layers
+          of heavy-duty cryptography. The algorithm uses both server-generated data and client-side
+          inputs. Players can independently verify the fairness of each round by following these
         </p>
-        <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click
-          on the fairness verification icon
+        <div class="algorithm__lines">
+          <p class="algorithm__line">
+            Open game history: In the game interface, locate the section with round history or click
+            on the fairness verification icon
+          </p>
+          <p class="algorithm__line">
+            Open game history: In the game interface, locate the section with round history or click
+            on the fairness verification icon
+          </p>
+          <p class="algorithm__line">
+            Open game history: In the game interface, locate the section with round history or click
+            on the fairness verification icon
+          </p>
+        </div>
+        <p class="algorithm__sub-title">
+          Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+          the resulting hash with the one in the
         </p>
-        <p class="algorithm__line">
-          Open game history: In the game interface, locate the section with round history or click
-          on the fairness verification icon
+        <p class="algorithm__sub-title">
+          Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+          the resulting hash with the one in the
         </p>
+        <p class="algorithm__sub-title">
+          Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+          the resulting hash with the one in the
+        </p>
+        <p class="algorithm__sub-title">
+          Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+          the resulting hash with the one in the
+        </p>
+        <p class="algorithm__sub-title">
+          Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
+          the resulting hash with the one in the
+        </p>
+        <!-- <button class="algorithm__link">Show more</button> -->
+        <button type="button" class="showMoreBtn algorithm__showMoreBtn" aria-label="show-more">
+          Show more
+        </button>
       </div>
-      <p class="algorithm__sub-title">
-        Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
-        the resulting hash with the one in the
-      </p>
-      <a class="algorithm__link" href="#">Show more</a>
     </div>
     <div class="algorithm__item algorithm__item--1">
       <img src="img/new-home-page/algorithm/item-1.png" alt="algorithm image" />
@@ -37,3 +58,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // const noTextBlock = document.querySelector('.legality__card');
+    const textBlock = document.querySelector('.algorithm__text');
+    const textWrapper = document.querySelector('.algorithm__content');
+    const btn = document.querySelector('.algorithm__link');
+
+    const maxHeightDesktop = 500;
+
+    if (textBlock.scrollHeight > maxHeightDesktop) {
+      console.log('if');
+      btn.classList.add('visible');
+      textWrapper.classList.add('short');
+    }
+
+    btn.addEventListener('click', function () {
+      textWrapper.classList.toggle('short');
+      const expanded = textBlock.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+      btn.classList.toggle('less');
+    });
+  });
+</script>
