@@ -14,6 +14,13 @@
         gambling is neither prohibited nor fully legalized under federal law. For players who may
         question the legality of the Aviator game, playing the online version of Aviator does not
         violate any existing federal laws in India.
+        <br />
+        <br />
+        As a result, India has not enacted any federal law that absolutely prohibits or restricts
+        online gambling. The effect has been the creation of a legal “gray area” where online
+        gambling is neither prohibited nor fully legalized under federal law. For players who may
+        question the legality of the Aviator game, playing the online version of Aviator does not
+        violate any existing federal laws in India.
       </p>
       <button type="button" class="showMoreBtn legality__showMoreBtn" aria-label="show-more">
         Show more
@@ -29,10 +36,33 @@
     <div class="legality__note">
       <img class="legality__ico" src="img/new-home-page/legality/pin.svg" alt="pin icon" />
       <p class="legality__text">
-        <span>Remember the Core Rule:</span> Gambling should be a fun and controlled activity. Always prioritize
-        your financial stability, and if gambling starts affecting your well-being, seek
-        professional
+        <span>Remember the Core Rule:</span> Gambling should be a fun and controlled activity.
+        Always prioritize your financial stability, and if gambling starts affecting your
+        well-being, seek professional
       </p>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const leftBlock = document.querySelector('.legality__card');
+    const rightBlock = document.querySelector('.legality__info');
+    const textWrapper = document.querySelector('.legality__sub-title');
+    const btn = document.querySelector('.legality__showMoreBtn');
+
+    const maxHeightDesktop = leftBlock.offsetHeight;
+
+    if (rightBlock.scrollHeight > maxHeightDesktop) {
+      btn.classList.add('visible');
+      textWrapper.classList.add('short');
+    }
+
+    btn.addEventListener('click', function () {
+      textWrapper.classList.toggle('short');
+      const expanded = rightBlock.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+      btn.classList.toggle('less');
+    });
+  });
+</script>
