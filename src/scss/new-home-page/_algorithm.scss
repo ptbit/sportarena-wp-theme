@@ -165,23 +165,59 @@
       background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
     }
   }
-  &__link {
-    margin-top: 24px;
+  // &__link {
+  //   margin-top: 24px;
+  //   color: #e5053d;
+  //   font-family: $font-popins-bold;
+  //   font-size: 20px;
+  //   letter-spacing: 0.4px;
+  //   text-transform: uppercase;
+  //   position: relative;
+  //   transition: all $transition;
+  //   display: none;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   &.visible {
+  //     display: block;
+  //   }
+  //   &::after {
+  //     content: '';
+  //     display: inline-block;
+  //     width: 18px;
+  //     height: 13px;
+  //     background-color: #e5053d;
+  //     -webkit-mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+  //     -webkit-mask-size: contain;
+  //     mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+  //     mask-size: contain;
+  //     margin: 0 0 0 8px;
+  //     transition: all $transition;
+  //   }
+  //   &:hover {
+  //     color: #b4012e;
+  //     &::after {
+  //       background-color: #b4012e;
+  //     }
+  //   }
+  // }
+  &__showMoreBtn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     color: #e5053d;
+    text-align: center;
     font-family: $font-popins-bold;
     font-size: 20px;
     letter-spacing: 0.4px;
     text-transform: uppercase;
     position: relative;
     transition: all $transition;
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    &.visible {
-      display: block;
-    }
+    background-color: transparent;
+
     &::after {
       content: '';
       display: inline-block;
@@ -199,6 +235,16 @@
       color: #b4012e;
       &::after {
         background-color: #b4012e;
+      }
+    }
+    &.visible {
+      display: block;
+    }
+    &.less {
+      position: relative;
+      margin-top: 10px;
+      &::after {
+        transform: rotate(180deg);
       }
     }
   }
