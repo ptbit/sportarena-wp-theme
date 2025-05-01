@@ -205,6 +205,7 @@
   &__showMoreBtn {
     display: none;
     position: absolute;
+    width: fit-content;
     bottom: 0;
     left: 0;
     right: 0;
@@ -214,7 +215,7 @@
     font-size: 20px;
     letter-spacing: 0.4px;
     text-transform: uppercase;
-    position: relative;
+    // position: relative;
     transition: all $transition;
     background-color: transparent;
 
