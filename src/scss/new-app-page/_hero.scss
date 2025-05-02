@@ -1,0 +1,263 @@
+.hero {
+  background: #130d2c url('../img/new-page/hero-bg-desk.png') no-repeat 50% 0 / cover;
+  padding-top: 134px;
+  padding-bottom: 120px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 377px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  &__info {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &__back-btn {
+    margin-bottom: 40px;
+    position: relative;
+    color: #e5053d;
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    transition: color $transition;
+    &::before {
+      content: '';
+      display: block;
+      height: 18px;
+      width: 27px;
+      background-color: #e5053d;
+      -webkit-mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+      -webkit-mask-size: contain;
+      mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+      mask-size: contain;
+      margin: 0 0 0 8px;
+      transition: background-color $transition;
+    }
+    &:hover {
+      color: #b4012e;
+      &::before {
+        background-color: #b4012e;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 584px;
+  }
+  &__sub-title {
+    margin-bottom: 26px;
+    max-width: 552px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__app {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid rgba(157, 155, 155, 0.3);
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: lightgray 0% 0% / 100px 100px repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      backdrop-filter: blur(25px);
+    }
+    &::after {
+      content: '';
+      width: 143px;
+      height: 144px;
+      position: absolute;
+      bottom: -21px;
+      right: -21px;
+      border-radius: 12px;
+      background-color: #ff267e;
+      filter: blur(60px);
+    }
+  }
+  .app {
+    &__header {
+      margin-bottom: 38px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      &::after {
+        content: '';
+        width: 143px;
+        height: 144px;
+        position: absolute;
+        top: -61px;
+        left: -61px;
+        border-radius: 12px;
+        background-color: #ff267e;
+        filter: blur(60px);
+      }
+    }
+    &__ico {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+      height: 120px;
+      padding: 20px 16px;
+      background-color: white;
+      border-radius: 12px;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      margin-top: 22px;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 4px;
+    }
+    &__ver {
+      color: #fff;
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &__qr {
+      width: 80px;
+      height: 80px;
+      margin-top: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .qr {
+      &__code {
+      }
+    }
+    &__mid {
+      margin-bottom: 58px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    &__download-btn {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      padding: 23px 30px;
+      justify-content: space-between;
+      color: #fff;
+      align-items: center;
+      text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+      font-family: $font-popins-bold;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      transition: background-color $transition;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #e5053d;
+      box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+      &::after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/new-app-page/hero/download.svg') no-repeat 0 0 / cover;
+      }
+      &:hover {
+        background: radial-gradient(
+            100% 100% at 50% 0%,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #b4012e;
+      }
+    }
+  }
+
+  .stat {
+    &__item {
+      padding: 16px;
+      width: 100%;
+      position: relative;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    &__title {
+      color: #fff;
+      text-align: center;
+      font-family: $font-popins-med;
+      font-size: 24px;
+      line-height: 150%;
+    }
+    &__text {
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      font-family: $font-popins-reg;
+      font-size: 12px;
+      line-height: 150%;
+    }
+    &__link {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      right: 0;
+      height: 34px;
+      line-height: 34px;
+      border-radius: 8px;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #e5053d;
+      box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+      color: #fff;
+      text-align: center;
+      font-family: $font-popins-bold;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      text-transform: uppercase;
+      transition: background-color $transition;
+
+      &:hover {
+        background: radial-gradient(
+            100% 100% at 50% 0%,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #b4012e;
+      }
+    }
+  }
+}

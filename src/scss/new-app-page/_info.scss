@@ -1,0 +1,98 @@
+.info {
+  background: #130d2c;
+  color: white;
+  &__container {
+    padding-bottom: 30px;
+  }
+  &__title {
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__text {
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__swiper {
+  }
+
+  .swiper {
+    padding-top: 0;
+    padding-bottom: 20px;
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    &-slide {
+      max-width: 288px;
+      height: 96px;
+      padding: 20px 24px;
+      border-radius: 10px;
+      border: 1px solid rgba(225, 32, 193, 0.4);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+      backdrop-filter: blur(25px);
+    }
+
+    &-button-prev {
+      display: none;
+    }
+    &-button-next {
+      display: none;
+    }
+  }
+
+  .slide {
+    &__header {
+      margin-bottom: 8px;
+    }
+    &__ico {
+      margin-right: 4px;
+      width: 24px;
+      height: 24px;
+    }
+    &__title {
+      color: rgba(255, 255, 255, 0.6);
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &__text {
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .info {
+    .swiper {
+      &-wrapper {
+        flex-wrap: initial;
+        gap: 0;
+        padding-bottom: 20px;
+      }
+      &-slide {
+        width: auto;
+        max-width: none;
+        height: auto;
+        width: 288px;
+      }
+    }
+    .swiper-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

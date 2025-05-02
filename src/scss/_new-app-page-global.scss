@@ -1,0 +1,26 @@
+.pageTitle {
+  font-family: $font-popins-semb;
+  font-size: 54px;
+  line-height: 114%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionTitle {
+  font-family: $font-popins-semb;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionText {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: $font-popins-reg;
+  font-size: 16px;
+  line-height: 150%;
+}
