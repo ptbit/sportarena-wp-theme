@@ -1568,6 +1568,278 @@
     padding: 10px 10px 10px 0;
   }
 }
+.play {
+  position: relative;
+  background: url("../img/new-app-page/play/bg.jpg") no-repeat 50% 50%/cover;
+}
+.play__container {
+  padding: 75px 15px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  gap: 100px;
+}
+.play__info {
+  width: 100%;
+  max-width: 552px;
+  position: relative;
+}
+.play__card {
+  position: relative;
+  width: 100%;
+  height: 408px;
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  padding: 54px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.084)), to(rgba(217, 217, 217, 0.042)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 12px;
+}
+.play__card-bg {
+  width: 450px;
+  height: 271px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 8px 50px 30px;
+  background: url("../img/new-app-page/play/macbook.png") no-repeat 50% 50%/contain;
+}
+.play__inner {
+  max-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.play__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.play__sub-title {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow: hidden;
+}
+.play__sub-title.short {
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  line-clamp: 8;
+  -webkit-line-clamp: 8;
+}
+.play__showMoreBtn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #e5053d;
+  text-align: center;
+  font-family: "Popins-bold", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+.play__showMoreBtn::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 13px;
+  background-color: #e5053d;
+  -webkit-mask: url("../img/new-page/header-menu-arrow.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  -webkit-mask: url("../img/new-page/header-menu-arrow.svg") no-repeat center;
+  mask: url("../img/new-page/header-menu-arrow.svg") no-repeat center;
+  mask-size: contain;
+  margin: 0 0 0 8px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.play__showMoreBtn:hover {
+  color: #b4012e;
+}
+.play__showMoreBtn:hover::after {
+  background-color: #b4012e;
+}
+.play__showMoreBtn.visible {
+  display: block;
+}
+.play__showMoreBtn.less {
+  position: relative;
+  margin-top: 10px;
+}
+.play__showMoreBtn.less::after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.play__note {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  max-width: 850px;
+  border-radius: 12px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  padding: 16px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.084)), to(rgba(217, 217, 217, 0.042)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.084) 0%, rgba(217, 217, 217, 0.042) 100%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  z-index: 1;
+}
+.play__note span {
+  color: #e853cf;
+}
+.play__ico {
+  width: 32px;
+  height: 32px;
+}
+.play__text {
+  color: #fff;
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: 1300px) {
+  .play__container {
+    gap: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .play__title {
+    font-size: 32px;
+  }
+  .play__sub-title {
+    font-size: 14px;
+  }
+  .play__text {
+    font-size: 14px;
+  }
+  .play__showMoreBtn {
+    font-size: 14px;
+    letter-spacing: 0.28px;
+  }
+}
+@media (max-width: 900px) {
+  .play__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  .play__info {
+    width: 100%;
+  }
+  .play__card {
+    width: 100%;
+    height: 340px;
+    max-width: 550px;
+  }
+  .play__note {
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .play__card {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .play__card-bg {
+    width: 310px;
+    height: 187px;
+    padding: 6px 33px 17px;
+  }
+}
+@media (max-width: 490px) {
+  .play__container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .play__title {
+    font-size: 24px;
+  }
+  .play__sub-title {
+    font-size: 12px;
+  }
+  .play__note {
+    padding: 13px 18px;
+    gap: 15px;
+  }
+  .play__text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .play__card {
+    padding: 45px 20px;
+  }
+  .play__note {
+    padding: 10px;
+  }
+  .play__ico {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 380px) {
+  .play__card {
+    padding: 45px 5px;
+  }
+  .play__card-bg {
+    width: 280px;
+    padding: 15px 33px 28px;
+  }
+}
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;
