@@ -1,0 +1,134 @@
+<section class="features3">
+  <div class="features3__container">
+    <h2 class="sectionTitle features3__title">Key Features of Aviator App</h2>
+    <p class="sectionText features3__sub-title">
+      Get to know the main features of the best Aviator betting game app in India, offering smooth
+      performance, efficient use of your device’s resources, and a user-friendly experience that
+      everyone can enjoy. In addition, the Aviator app is free to download.
+    </p>
+    <div class="swiper features3Swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-1.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Smooth Gameplay. The app functions excellently on smaller screens, especially if your
+            device has a higher refresh rate, like 90Hz or 120Hz.
+          </p>
+        </div>
+
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-2.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Low Data Consumption. The app requires minimal data usage during gameplay. This makes it
+            a cost-effective option for players in India.
+          </p>
+        </div>
+
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-3.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Free to Play. You can play for free when you download the mobile version on your device.
+            The gameplay in demo mode is identical to what you’ll find when playing with real
+          </p>
+        </div>
+
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-4.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Compatibility with All Devices. The app is optimized for both low-end and high-end
+            devices, ensuring it runs well on various types of smartphones.
+          </p>
+        </div>
+
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-5.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Multi-Language. Supports multiple languages, allowing international users to access the
+            app in their preferred language, making it more accessible globally.
+          </p>
+        </div>
+
+        <div class="swiper-slide features3-item">
+          <div class="features3-item__ico">
+            <img
+              class="features3-item__img"
+              src="img/new-app-page/features3/item-ico-6.png"
+              alt=""
+            />
+          </div>
+          <p class="sectionText features3-item__text">
+            Data Security and Privacy. Prioritizes the security of user data through encrypted
+            communication and secure payment gateways, ensuring high standards
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiperHowToPlay = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 799 && !swiperHowToPlay) {
+      swiperHowToPlay = new Swiper('.features3Swiper', {
+        loop: true,
+        slidesPerView: 1.05,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 5000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 799 && swiperHowToPlay) {
+      swiperHowToPlay.destroy(true, true);
+      swiperHowToPlay = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>

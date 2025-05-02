@@ -1,27 +1,7 @@
 .how-to-play {
   position: relative;
   background: linear-gradient(to bottom, #130d2c, #100c23);
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   width: 521px;
-  //   height: 347px;
-  //   left: 0;
-  //   top: 0;
-  //   opacity: 0.6;
-  //   background: url('../img/new-home-page/how-to-play/lines.svg') no-repeat 0 0 / cover;
-  // }
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 521px;
-  //   height: 347px;
-  //   right: 0;
-  //   top: 0;
-  //   opacity: 0.6;
-  //   background: url('../img/new-home-page/how-to-play/lines.svg') no-repeat 0 0 / cover;
-  //   transform: scaleX(-1);
-  // }
+
   &__container {
     padding: 50px 15px 70px;
   }
