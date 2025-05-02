@@ -95,9 +95,59 @@
     font-family: $font-popins-reg;
     font-size: 16px;
     line-height: 150%;
+    max-height: fit-content;
+    overflow: hidden;
+    &.short {
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      line-clamp: 4;
+      -webkit-line-clamp: 4;
+    }
   }
 
+  // &__showMoreBtn {
+  //   color: #e5053d;
+  //   text-align: center;
+  //   font-family: $font-popins-bold;
+  //   font-size: 20px;
+  //   letter-spacing: 0.4px;
+  //   text-transform: uppercase;
+  //   position: relative;
+  //   transition: all $transition;
+  //   background-color: transparent;
+  //   display: none;
+  //   z-index: 2;
+
+  //   &::after {
+  //     content: '';
+  //     display: inline-block;
+  //     width: 18px;
+  //     height: 13px;
+  //     background-color: #e5053d;
+  //     -webkit-mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+  //     -webkit-mask-size: contain;
+  //     mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+  //     mask-size: contain;
+  //     margin: 0 0 0 8px;
+  //     transition: all $transition;
+  //   }
+  //   &:hover {
+  //     color: #b4012e;
+  //     &::after {
+  //       background-color: #b4012e;
+  //     }
+  //   }
+  // }
   &__showMoreBtn {
+    display: none;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
     color: #e5053d;
     text-align: center;
     font-family: $font-popins-bold;
@@ -107,9 +157,7 @@
     position: relative;
     transition: all $transition;
     background-color: transparent;
-    display: none;
     z-index: 2;
-
     &::after {
       content: '';
       display: inline-block;
@@ -127,6 +175,17 @@
       color: #b4012e;
       &::after {
         background-color: #b4012e;
+      }
+    }
+    &.visible {
+      display: block;
+      margin: 0 auto 20px;
+    }
+    &.less {
+      position: relative;
+      margin-top: 10px;
+      &::after {
+        transform: rotate(180deg);
       }
     }
   }
@@ -167,12 +226,15 @@
       align-items: center;
     }
     &__showMoreBtn {
-      display: block;
       font-size: 14px;
       letter-spacing: 0.28px;
+      &.visible {
+        display: block;
+        margin: 0 auto;
+      }
     }
     &__link {
-      margin: 0;
+      margin: 0 auto;
       font-size: 12px;
       width: 134px;
       height: 34px;

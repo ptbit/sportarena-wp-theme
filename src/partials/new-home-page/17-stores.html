@@ -1,31 +1,84 @@
 <section class="stores">
   <div class="stores__container">
-    <div class="stores__store">
+    <div class="stores__store stores__store--1">
       <img class="stores__ico" src="img/new-home-page/stores/apple.png" alt="store image" />
       <h3 class="stores__title">Aviator Game for iOS</h3>
-      <p class="stores__sub-title">
-        Mobile users in India can enjoy the game on the go by downloading and installing the app. The crash game is designed to be
-        mobile-friendly. It runs without issues on all modern smartphones and tablets powered by iOS or Android. Fitting the smaller display
-        size, the interface layout shifts slightly. You can find information
+      <p class="stores__sub-title stores__sub-title--1">
+        Mobile users in India can enjoy the game on the go by downloading and installing the app.
+        The crash game is designed to be mobile-friendly. It runs without issues on all modern
+        smartphones and tablets powered by iOS or Android. Fitting the smaller display size, the
+        interface layout shifts slightly. You can find information Mobile users in India can enjoy
+        the game on the go by downloading and installing the app. The crash game is designed to be
+        mobile-friendly. It runs without issues on all modern smartphones and tablets powered by iOS
+        or Android. Fitting the smaller display size, the interface layout shifts slightly. You can
+        find information
       </p>
       <div class="stores__buttons">
-        <button type="button" class="showMoreBtn stores__showMoreBtn" aria-label="show-more">Show more</button>
+        <button type="button" class="stores__showMoreBtn stores__SMB1" aria-label="show-more">
+          Show more
+        </button>
         <a href="#" class="stores__link">play online</a>
       </div>
     </div>
 
-    <div class="stores__store">
+    <div class="stores__store stores__store--2">
       <img class="stores__ico" src="img/new-home-page/stores/android.png" alt="store image" />
       <h3 class="stores__title">Aviator Game for Android</h3>
-      <p class="stores__sub-title">
-        Mobile users in India can enjoy the game on the go by downloading and installing the app. The crash game is designed to be
-        mobile-friendly. It runs without issues on all modern smartphones and tablets powered by iOS or Android. Fitting the smaller display
-        size, the interface layout shifts slightly. You can find information
+      <p class="stores__sub-title stores__sub-title--2">
+        Mobile users in India can enjoy the game on the go by downloading and installing the app.
+        The crash game is designed to be mobile-friendly. It runs without issues on all modern
+        smartphones and tablets powered by iOS or
       </p>
       <div class="stores__buttons">
-        <button type="button" class="showMoreBtn stores__showMoreBtn" aria-label="show-more">Show more</button>
+        <button type="button" class="stores__showMoreBtn stores__SMB2" aria-label="show-more">
+          Show more
+        </button>
         <a href="#" class="stores__link">play online</a>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    //1
+    const textBlock = document.querySelector('.stores__store--1');
+    const textWrapper = document.querySelector('.stores__sub-title--1');
+    const btn = document.querySelector('.stores__SMB1');
+
+    const maxHeightDesktop = 85;
+    console.log(textBlock.scrollHeight, maxHeightDesktop);
+
+    if (textBlock.scrollHeight > maxHeightDesktop) {
+      console.log('if');
+      btn.classList.add('visible');
+      textWrapper.classList.add('short');
+    }
+
+    btn.addEventListener('click', function () {
+      textWrapper.classList.toggle('short');
+      const expanded = textBlock.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+      btn.classList.toggle('less');
+    });
+    //2
+    const textBlock2 = document.querySelector('.stores__store--2');
+    const textWrapper2 = document.querySelector('.stores__sub-title--2');
+    const btn2 = document.querySelector('.stores__SMB2');
+
+    const maxHeightDesktop2 = 85;
+    console.log(textWrapper2.scrollHeight, maxHeightDesktop2);
+    if (textWrapper2.scrollHeight > maxHeightDesktop2) {
+      console.log('if2');
+      btn2.classList.add('visible');
+      textWrapper2.classList.add('short');
+    }
+
+    btn2.addEventListener('click', function () {
+      textWrapper2.classList.toggle('short');
+      const expanded2 = textBlock2.classList.toggle('expanded');
+      btn2.textContent = expanded2 ? 'Show less' : 'Show more';
+      btn2.classList.toggle('less');
+    });
+  });
+</script>

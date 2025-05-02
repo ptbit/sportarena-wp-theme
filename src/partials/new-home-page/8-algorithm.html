@@ -42,11 +42,10 @@
           Check the hash: Using any online SHA-512 hash calculator, mix the listed seeds and compare
           the resulting hash with the one in the
         </p>
-        <!-- <button class="algorithm__link">Show more</button> -->
-        <button type="button" class="showMoreBtn algorithm__showMoreBtn" aria-label="show-more">
-          Show more
-        </button>
       </div>
+      <button type="button" class="showMoreBtn algorithm__showMoreBtn" aria-label="show-more">
+        Show more
+      </button>
     </div>
     <div class="algorithm__item algorithm__item--1">
       <img src="img/new-home-page/algorithm/item-1.png" alt="algorithm image" />
@@ -61,7 +60,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // const noTextBlock = document.querySelector('.legality__card');
     const textBlock = document.querySelector('.algorithm__text');
     const textWrapper = document.querySelector('.algorithm__content');
     const btn = document.querySelector('.algorithm__showMoreBtn');
@@ -69,7 +67,6 @@
     const maxHeightDesktop = 500;
 
     if (textBlock.scrollHeight > maxHeightDesktop) {
-      console.log('if');
       btn.classList.add('visible');
       textWrapper.classList.add('short');
     }
