@@ -1,5 +1,5 @@
 .info {
-  background: #130d2c;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
   color: white;
   &__container {
     padding-bottom: 30px;
@@ -29,6 +29,7 @@
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
     }
     &-slide {
@@ -37,7 +38,11 @@
       padding: 20px 24px;
       border-radius: 10px;
       border: 1px solid rgba(225, 32, 193, 0.4);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(217, 217, 217, 0.04) 100%
+      );
       box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
       backdrop-filter: blur(25px);
     }
@@ -79,6 +84,7 @@
     .swiper {
       &-wrapper {
         flex-wrap: initial;
+        justify-content: start;
         gap: 0;
         padding-bottom: 20px;
       }
@@ -93,6 +99,15 @@
       background-color: #e5053d;
       width: 12px;
       height: 12px;
+      bottom: -60px;
     }
   }
 }
+
+// .swiper {
+//   padding-top: 0;
+//   padding-bottom: 20px;
+//   &-wrapper {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;

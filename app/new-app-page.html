@@ -323,11 +323,343 @@
 </script>
 
         <!--  -->
+        <section class="info">
+  <div class="info__container">
+    <div class="info__swiper swiper appInfoSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/license.svg" alt="slide icon" />
+            <span class="slide__title">License:</span>
+          </div>
+          <p class="slide__text">Curacao</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/year.svg" alt="slide icon" />
+            <span class="slide__title">Year of Launch:</span>
+          </div>
+          <p class="slide__text">2018</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Company</span>
+          </div>
+          <p class="slide__text">Umbrella Development B.V.</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/language.svg" alt="slide icon" />
+            <span class="slide__title">Min Deposit:</span>
+          </div>
+          <p class="slide__text">100 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Withdrawal Limit:</span>
+          </div>
+          <p class="slide__text">Min 1000 / Max 250,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let infoSwiper = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 620 && !infoSwiper) {
+      infoSwiper = new Swiper('.appInfoSwiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 620 && infoSwiper) {
+      infoSwiper.destroy(true, true);
+      infoSwiper = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>
 
         <!--  -->
+        <section class="casinos">
+  <div class="casinos__container">
+    <div class="casinos__header">
+      <div class="casinos__text">
+        <h2 class="casinos__title">Similar Casino Apps to Play Aviator Game on Smartphone</h2>
+        <p class="casinos__description">
+          As an Indian player, you can also access the game on your mobile device by downloading the
+          app of an online casino that offers Aviator. Ensure that
+        </p>
+      </div>
+      <div class="casinos__buttons">
+        <button class="casinos__button casinos__button--prew">
+          <img src="img/new-page/up-btn-desk.svg" alt="" />
+        </button>
+        <button class="casinos__button casinos__button--next">
+          <img src="img/new-page/up-btn-desk.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div class="swiper casinosSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+          <a class="casino__play-btn" href="#">Play online</a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function initSwiper() {
+    const swiper = new Swiper('.casinosSwiper', {
+      loop: true,
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+      centeredSlides: true,
+      grabCursor: true,
+      initialSlide: 0,
+
+      navigation: {
+        nextEl: '.casinos__button--next',
+        prevEl: '.casinos__button--prew',
+      },
+
+      autoplay: {
+        delay: 3000,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        550: {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 15,
+          centeredSlides: true,
+          grabCursor: true,
+          initialSlide: 0,
+
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+
+          autoplay: {
+            delay: 3000,
+          },
+
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+          autoplay: false,
+        },
+        1025: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 3.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+          autoplay: false,
+        },
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initSwiper());
+</script>
 
         <!--  -->
-
       </main>
       <footer class="footer">
   <div class="footer__container">

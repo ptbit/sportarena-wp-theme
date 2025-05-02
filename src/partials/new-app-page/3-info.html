@@ -1,11 +1,6 @@
 <section class="info">
   <div class="info__container">
-    <h1 class="info__title">Favbet Aviator Info</h1>
-    <p class="info__text">
-      In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
-      more than 32 million players every month. Aviator is a popular
-    </p>
-    <div class="info__swiper swiper">
+    <div class="info__swiper swiper appInfoSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide">
           <div class="slide__header">
@@ -54,6 +49,38 @@
           </div>
           <p class="slide__text">200% up to 24,000 INR</p>
         </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -63,13 +90,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  let swiper = null;
+  let infoSwiper = null;
 
   function initOrDestroySwiper() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 620 && !swiper) {
-      swiper = new Swiper('.swiper', {
+    if (screenWidth <= 620 && !infoSwiper) {
+      infoSwiper = new Swiper('.appInfoSwiper', {
         loop: true,
         slidesPerView: 1.2,
         grabCursor: true,
@@ -84,9 +111,9 @@
           clickable: true,
         },
       });
-    } else if (screenWidth > 620 && swiper) {
-      swiper.destroy(true, true); 
-      swiper = null;
+    } else if (screenWidth > 620 && infoSwiper) {
+      infoSwiper.destroy(true, true);
+      infoSwiper = null;
     }
   }
 

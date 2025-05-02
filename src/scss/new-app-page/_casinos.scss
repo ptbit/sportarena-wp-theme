@@ -1,0 +1,301 @@
+.casinos {
+  color: $pink;
+  background-color: #100c23;
+  &__container {
+    padding: 70px 15px;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 20px;
+    max-width: 675px;
+    width: fit-content;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: var(--1, linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__description {
+    max-width: 611px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__header {
+    margin-bottom: 38px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    flex: 1;
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  &__button {
+    width: 54px;
+    height: 54px;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #e5053d;
+    box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+    border-radius: 12px;
+    transition: all $transition;
+    img {
+      width: 19px;
+      height: 26px;
+    }
+    &--prew {
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+    &--next {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    &:hover {
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+    }
+    &:disabled,
+    button[disabled] {
+      cursor: no-drop;
+      opacity: 0.5;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+    }
+  }
+
+  .casino {
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__info {
+    }
+    &__title {
+      color: #fff;
+      font-family: $font-popins-med;
+      font-size: 24px;
+      line-height: 150%;
+    }
+    &__sub-title {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &__logo {
+      min-width: 98px;
+      height: 98px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: linear-gradient(180deg, #ff267e 0%, #af1554 100%);
+    }
+    &__bonus {
+      padding: 19px 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0f0c22;
+      box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &__play-btn {
+      position: relative;
+      display: flex;
+      padding: 16px 31px;
+      width: fit-content;
+      margin: 0 auto;
+      gap: 10px;
+      color: #fff;
+      text-shadow: 0px 1.366px 0.683px rgba(0, 0, 0, 0.25);
+      font-family: $font-popins-bold;
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0);
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #e5053d;
+      box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.48);
+      transition: background-color $transition;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 12px;
+        width: 17px;
+        background-color: white;
+        -webkit-mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+        -webkit-mask-size: contain;
+        mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+        mask-size: contain;
+        margin: 0 0 0 8px;
+        transform: rotate(180deg);
+      }
+      &:hover {
+        background: radial-gradient(
+            100% 100% at 50% 0%,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #b4012e;
+      }
+    }
+  }
+  .swiper {
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 54px;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+    }
+    &-pagination {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .casinos {
+    &__container {
+      padding: 40px 0;
+    }
+    &__header {
+      margin-bottom: 24px;
+      padding: 0 14px;
+    }
+    &__title {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+    &__description {
+      font-size: 12px;
+    }
+    .casino {
+      &__play-btn {
+        font-size: 12px;
+      }
+    }
+
+    .swiper {
+      padding: 0 0 40px;
+    }
+    .swiper-slide {
+      min-width: none;
+      border-radius: 12px;
+      border: 1px solid rgba(225, 32, 193, 0.4);
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .swiper-pagination-bullet {
+      width: 0;
+      height: 0;
+      bottom: 0;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .casinos {
+    .swiper {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .casinos {
+    &__title {
+      width: 100%;
+      text-align: center;
+    }
+    &__description {
+      text-align: center;
+    }
+    &__buttons {
+      display: none;
+    }
+    .casino {
+      gap: 0;
+      padding: 20px;
+      &__header {
+        margin-bottom: 40px;
+        gap: 5px;
+        align-items: center;
+      }
+      &__title {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      &__logo {
+        width: 68px;
+        height: 68px;
+        min-width: auto;
+      }
+      &__bonus {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &__play-btn {
+        width: 100%;
+        border-radius: 2px 2px 12px 12px;
+        justify-content: space-between;
+      }
+    }
+    .swiper-pagination {
+      display: block;
+    }
+    .swiper-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+      transition: opacity $transition;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
