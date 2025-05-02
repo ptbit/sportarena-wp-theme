@@ -24,3 +24,51 @@
   font-size: 16px;
   line-height: 150%;
 }
+
+@media screen and (max-width: 1350px) {
+}
+@media (max-width: 1279px) {
+  .pageTitle {
+    font-size: 49px;
+  }
+  .sectionTitle {
+    font-size: 36px;
+  }
+  .sectionText {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .pageTitle {
+    font-size: 43px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+  .sectionText {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .pageTitle {
+    font-size: 37px;
+  }
+  .sectionTitle {
+    font-size: 28px;
+  }
+  .sectionText {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pageTitle {
+    font-size: 32px;
+  }
+  .sectionTitle {
+    font-size: 24px;
+  }
+  .sectionText {
+    font-size: 12px;
+  }
+}

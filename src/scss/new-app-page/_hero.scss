@@ -22,10 +22,12 @@
     width: 100%;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   &__back-btn {
-    margin-bottom: 40px;
-    position: relative;
+    position: absolute;
     color: #e5053d;
     font-family: $font-popins-bold;
     font-size: 20px;
@@ -61,7 +63,6 @@
     max-width: 584px;
   }
   &__sub-title {
-    margin-bottom: 26px;
     max-width: 552px;
     color: rgba(255, 255, 255, 0.8);
   }
@@ -257,6 +258,141 @@
             rgba(255, 255, 255, 0) 100%
           ),
           #b4012e;
+      }
+    }
+  }
+}
+@media (max-width: 1330px) {
+  .hero {
+    &__container {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .hero {
+    &__app {
+      padding: 20px;
+    }
+  }
+}
+@media (max-width: 970px) {
+  .hero {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__back-btn {
+      top: 134px;
+    }
+    &__app {
+      margin-top: 40px;
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    &__container {
+      padding-top: 20px;
+    }
+    &__back-btn {
+      top: 80px;
+    }
+    &__app {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__back-btn {
+      font-size: 14px;
+      gap: 8px;
+      &::before {
+        width: 21px;
+        height: 14px;
+      }
+    }
+    &__app {
+      margin-top: 10px;
+    }
+    .app {
+      &__ico {
+        width: 80px;
+        height: 80px;
+        padding: 13px 10px;
+      }
+      &__title {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      &__ver {
+        font-size: 12px;
+      }
+      &__header {
+        margin-bottom: 20px;
+      }
+      &__mid {
+        flex-wrap: wrap;
+        margin-bottom: 46px;
+      }
+      &__qr {
+        width: 40px;
+        height: 40px;
+        margin-top: 0;
+        padding: 8px;
+      }
+      &__download-btn {
+        padding: 16px 20px;
+        font-size: 14px;
+      }
+    }
+    .stat {
+      &__item {
+        width: 48%;
+        &:nth-child(1) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 1;
+        }
+        &:nth-child(3) {
+          order: 1;
+        }
+        &:nth-child(4) {
+          order: 2;
+        }
+      }
+      &__link {
+        font-size: 14px;
+        padding: 9px 17px;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        line-height: normal;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .hero {
+    &__container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__app {
+      padding: 10px;
+    }
+    .app {
+      &__title {
+        margin-top: 0px;
+        font-size: 16px;
       }
     }
   }
