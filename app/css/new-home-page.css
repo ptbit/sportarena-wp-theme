@@ -2349,7 +2349,7 @@
   min-width: 40px;
   width: 40px;
   height: 40px;
-  background: url("../img/new-home-page/algorithm/icon.svg") no-repeat 0 0/cover;
+  background: url("../img/new-home-page/algorithm/icon.svg") no-repeat 0 0/contain;
 }
 .algorithm__line::after {
   content: "";
