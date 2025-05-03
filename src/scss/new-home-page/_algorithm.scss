@@ -252,23 +252,24 @@
     justify-content: center;
     align-items: center;
     // z-index: 1;
-    border: 1px solid #716c6cab;
     border-radius: 12px;
     img {
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
     &::after {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: 12px;
-      background-color: linear-gradient(
+      background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.08) 0%,
         rgba(217, 217, 217, 0.04) 100%
       );
       backdrop-filter: blur(25px);
+      border: 1px solid #716c6cab;
+      z-index: 1;
     }
     &--1 {
     }
