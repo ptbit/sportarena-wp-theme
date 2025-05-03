@@ -751,9 +751,6 @@
   .game__table {
     width: 100%;
   }
-  .game__table-info {
-    width: 50%;
-  }
   .game__item--1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -808,10 +805,8 @@
   }
   .game__table-info {
     font-size: 12px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding-right: 33px;
+    width: 22%;
+    padding-right: 15px;
   }
   .game__table-text {
     font-size: 12px;

@@ -214,9 +214,9 @@
     &__table {
       width: 100%;
     }
-    &__table-info {
-      width: 50%;
-    }
+    // &__table-info {
+    //   width: 50%;
+    // }
   }
 }
 @media (max-width: 590px) {
@@ -260,8 +260,8 @@
     }
     &__table-info {
       font-size: 12px;
-      width: fit-content;
-      padding-right: 33px;
+      width: 22%;
+      padding-right: 15px;
     }
     &__table-text {
       font-size: 12px;
