@@ -94,6 +94,7 @@
   &__table {
     tbody {
       position: relative;
+      display: block;
       &::before {
         content: '';
         position: absolute;
@@ -119,6 +120,7 @@
   }
   &__table-row {
     position: relative;
+    display: block;
 
     &::after {
       content: '';
@@ -136,8 +138,12 @@
     font-family: $font-popins-reg;
     font-size: 16px;
     line-height: 150%;
+    display: inline-block;
+    width: 30%;
   }
   &__table-text {
+    display: inline-block;
+    width: 68%;
     color: #fff;
     font-family: $font-popins-reg;
     font-size: 16px;

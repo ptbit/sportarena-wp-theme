@@ -640,6 +640,7 @@
 }
 .game__table tbody {
   position: relative;
+  display: block;
 }
 .game__table tbody::before {
   content: "";
@@ -661,6 +662,7 @@
 }
 .game__table-row {
   position: relative;
+  display: block;
 }
 .game__table-row::after {
   content: "";
@@ -678,8 +680,12 @@
   font-family: "Popins-regular", sans-serif;
   font-size: 16px;
   line-height: 150%;
+  display: inline-block;
+  width: 30%;
 }
 .game__table-text {
+  display: inline-block;
+  width: 68%;
   color: #fff;
   font-family: "Popins-regular", sans-serif;
   font-size: 16px;
