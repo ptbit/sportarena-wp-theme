@@ -1,0 +1,163 @@
+.tables {
+  position: relative;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+
+  &__container {
+    padding: 50px 15px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .table {
+    width: 100%;
+    padding: 40px 40px 50px 50px;
+    border: 1px solid rgba(157, 155, 155, 0.3);
+    border-radius: 12px;
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__sub-title {
+      margin-bottom: 40px;
+    }
+    table {
+      thead {
+        tr {
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: -webkit-gradient(
+              linear,
+              left top,
+              right top,
+              color-stop(1.04%, rgba(227, 44, 196, 0.8)),
+              to(rgba(227, 44, 196, 0))
+            );
+            background: linear-gradient(
+              90deg,
+              rgba(227, 44, 196, 0.8) 1.04%,
+              rgba(227, 44, 196, 0) 100%
+            );
+          }
+          th {
+            padding: 20px 30px 20px 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: $font-inter-semb;
+            font-size: 14px;
+            text-align: left;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 20px 30px 20px 0;
+            color: #fff;
+            font-family: $font-inter-semb;
+            font-size: 14px;
+          }
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: -webkit-gradient(
+              linear,
+              left top,
+              right top,
+              color-stop(1.04%, rgba(227, 44, 196, 0.8)),
+              to(rgba(227, 44, 196, 0))
+            );
+            background: linear-gradient(
+              90deg,
+              rgba(227, 44, 196, 0.8) 1.04%,
+              rgba(227, 44, 196, 0) 100%
+            );
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .tables {
+    &__container {
+      gap: 20px;
+    }
+    .table {
+      padding: 20px;
+      &__sub-title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .tables {
+    .table {
+      padding: 20px;
+      table {
+        thead {
+          tr {
+            th {
+              padding: 10px 0;
+              &:nth-child(1) {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              padding: 10px 0;
+              &:nth-child(1) {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .tables {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .tables {
+    &__container{
+      padding: 40px 10px;
+    }
+    .table {
+      padding: 15px;
+      table {
+        thead {
+          tr {
+            th {
+              font-size: 12px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
