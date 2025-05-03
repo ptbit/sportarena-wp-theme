@@ -330,8 +330,12 @@
       font-size: 14px;
     }
     &__item {
+      &--1 {
+        align-self: end;
+      }
       &--2 {
         top: 0;
+        align-self: start;
       }
     }
   }
