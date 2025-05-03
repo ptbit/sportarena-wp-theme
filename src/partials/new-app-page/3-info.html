@@ -92,7 +92,7 @@
 <script>
   let infoSwiper = null;
 
-  function initOrDestroySwiper() {
+  function initOrDestroyInfoSwiper() {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 620 && !infoSwiper) {
@@ -118,7 +118,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
+    initOrDestroyInfoSwiper();
+    window.addEventListener('resize', initOrDestroyInfoSwiper);
   });
 </script>

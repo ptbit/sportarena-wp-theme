@@ -100,13 +100,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  let swiperHowToPlay = null;
+  let swiperFeatures3 = null;
 
-  function initOrDestroySwiper() {
+  function initOrDestroyFeatures3Swiper() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 799 && !swiperHowToPlay) {
-      swiperHowToPlay = new Swiper('.features3Swiper', {
+    if (screenWidth <= 799 && !swiperFeatures3) {
+      swiperFeatures3 = new Swiper('.features3Swiper', {
         loop: true,
         slidesPerView: 1.05,
         grabCursor: true,
@@ -121,14 +121,14 @@
           clickable: true,
         },
       });
-    } else if (screenWidth > 799 && swiperHowToPlay) {
-      swiperHowToPlay.destroy(true, true);
-      swiperHowToPlay = null;
+    } else if (screenWidth > 799 && swiperFeatures3) {
+      swiperFeatures3.destroy(true, true);
+      swiperFeatures3 = null;
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
+    initOrDestroyFeatures3Swiper();
+    window.addEventListener('resize', initOrDestroyFeatures3Swiper);
   });
 </script>

@@ -103,12 +103,17 @@
       padding-left: 0;
       padding-right: 0;
     }
+    &__title, &__sub-title{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     &__cards {
       flex-wrap: nowrap;
       box-sizing: content-box;
       display: flex;
       max-width: none;
       width: fit-content;
+      margin-bottom: 35px;
     }
     .card {
       &__block {

@@ -1,0 +1,146 @@
+<section class="data">
+  <div class="data__container">
+    <h2 class="sectionTitle data__title">Data safety</h2>
+    <p class="sectionText data__sub-title">
+      Safety begins with a clear understanding of how developers handle your data—how it’s collected
+      and shared. You should always read
+    </p>
+    <div class="swiper dataSwiper">
+      <div class="swiper-wrapper data__cards">
+        <div class="swiper-slide data__card card">
+          <img class="card__ico" src="img/new-app-page/data/icon-1.png" alt="benefit card icon" />
+          <p class="card__text">
+            No data shared with third parties. This app doesn’t share user data with other companies
+            or organizations.
+          </p>
+        </div>
+        <div class="swiper-slide data__card card">
+          <img class="card__ico" src="img/new-app-page/data/icon-2.png" alt="benefit card icon" />
+          <p class="card__text">
+            This app may collect these data types: Device or other IDs, App info and performance,
+            Approximate location, Interactions
+          </p>
+        </div>
+        <div class="swiper-slide data__card card">
+          <img class="card__ico" src="img/new-app-page/data/icon-3.png" alt="benefit card icon" />
+          <p class="card__text">
+            Data is encrypted in transit. Your data is transferred over a secure connection
+          </p>
+        </div>
+        <div class="swiper-slide data__card card">
+          <img class="card__ico" src="img/new-app-page/data/icon-4.png" alt="benefit card icon" />
+          <p class="card__text">
+            You can request that data be deleted. The developer provides a way for you to request
+            that your data be deleted
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', startDataSwiper);
+
+  function startDataSwiper() {
+    const dataSwiper = new Swiper('.dataSwiper', {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 4000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        420: {
+          slidesPerView: 1.1,
+          spaceBetween: 25,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        550: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        670: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        840: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        1150: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 4,
+          spaceBetween: 18,
+          grabCursor: true,
+        },
+      },
+    });
+  }
+</script>
