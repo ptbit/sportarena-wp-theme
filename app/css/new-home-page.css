@@ -309,6 +309,10 @@
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
+    margin-bottom: 50px;
+  }
+  .hero__info::before {
+    bottom: -25px;
   }
   .hero__devices {
     width: 80%;
@@ -2462,9 +2466,6 @@
   .algorithm__container::before {
     right: 0;
     opacity: 0.3;
-  }
-  .algorithm__container::after {
-    display: none;
   }
   .algorithm__title {
     font-size: 32px;

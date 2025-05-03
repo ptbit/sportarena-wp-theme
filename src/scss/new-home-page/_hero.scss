@@ -260,6 +260,10 @@
     &__info {
       width: 100%;
       transform: scale(1);
+      margin-bottom: 50px;
+      &::before {
+        bottom: -25px;
+      }
     }
     &__devices {
       width: 80%;
