@@ -43,6 +43,9 @@
     }
     &-slide {
     }
+    &-pagination {
+      display: none;
+    }
     &-pagination-bullet {
       background-color: #e5053d;
       width: 12px;
@@ -143,13 +146,13 @@
       padding-right: 0;
     }
     &__cards {
-      // display: block;
       flex-wrap: nowrap;
-      // justify-content: space-between;
-      // row-gap: 30px;
     }
     .swiper {
       margin-bottom: 20px;
+      &-pagination {
+        display: block;
+      }
     }
     &__note {
       margin-left: 10px;

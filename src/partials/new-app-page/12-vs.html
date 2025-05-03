@@ -1,0 +1,158 @@
+<section class="vs">
+  <div class="vs__container">
+    <h2 class="sectionTitle vs__title">Mobile vs Desktop: Key Benefits of the Aviator App</h2>
+    <p class="sectionText vs__sub-title">
+      Our comparison table contains the main differences and benefits between the Android APK, the
+      iOS app, the desktop (Windows and macOS) software, and the website version. We’ve created this
+      table to present the pros and cons of all the app versions, allowing you to choose the one
+      that suits you best.
+    </p>
+    <div class="swiper vsSwiper">
+      <div class="swiper-wrapper vs__cards">
+        <div class="swiper-slide vs__card card">
+          <div class="card__block"><p class="card__text">Interface</p></div>
+          <div class="card__block"><p class="card__text">Software Download</p></div>
+          <div class="card__block"><p class="card__text">System Requirements</p></div>
+          <div class="card__block"><p class="card__text">Notifications</p></div>
+        </div>
+        <div class="swiper-slide vs__card card">
+          <div class="card__block">
+            <p class="card__text">
+              The Android display is optimized for devices that have smaller screens. Its tabs are
+              placed where you can locate them easily.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The Android display is optimized for devices that have smaller screens. Its tabs are
+              placed where you can locate them easily.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The Android display is optimized for devices that have smaller screens. Its tabs are
+              placed where you can locate them easily.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The Android display is optimized for devices that have smaller screens. Its tabs are
+              placed where you can locate them easily.
+            </p>
+          </div>
+          <div class="card__title"><p class="sectionText">Android APK</p></div>
+        </div>
+        <div class="swiper-slide vs__card card">
+          <div class="card__block">
+            <p class="card__text">
+              The iOS interface has better touch controls, which is a notable feature of iOS
+              devices.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The iOS interface has better touch controls, which is a notable feature of iOS
+              devices.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The iOS interface has better touch controls, which is a notable feature of iOS
+              devices.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The iOS interface has better touch controls, which is a notable feature of iOS
+              devices.
+            </p>
+          </div>
+          <div class="card__title">
+            <p class="sectionText">iOS app</p>
+          </div>
+        </div>
+        <div class="swiper-slide vs__card card">
+          <div class="card__block">
+            <p class="card__text">
+              The PC version's display is better optimized for large screens, and the controls are
+              compatible with a computer mouse and keyboard.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The PC version's display is better optimized for large screens, and the controls are
+              compatible with a computer mouse and keyboard.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The PC version's display is better optimized for large screens, and the controls are
+              compatible with a computer mouse and keyboard.
+            </p>
+          </div>
+          <div class="card__block">
+            <p class="card__text">
+              The PC version's display is better optimized for large screens, and the controls are
+              compatible with a computer mouse and keyboard.
+            </p>
+          </div>
+          <div class="card__title"><p class="sectionText">Desktop (Windows / macOS)</p></div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiperHowToPlay = null;
+
+  function initOrDestroySwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 850 && !swiperHowToPlay) {
+      swiperHowToPlay = new Swiper('.vsSwiper', {
+        // loop: true,
+        slidesPerView: 1.5,
+        grabCursor: true,
+        spaceBetween: 20,
+        centeredSlides: true,
+        initialSlide: 0,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          550: {
+            // loop: true,
+            slidesPerView: 2.5,
+            grabCursor: true,
+            spaceBetween: 10,
+            centeredSlides: true,
+            initialSlide: 0,
+            // autoplay: {
+            //   delay: 5000,
+            // },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          },
+        },
+      });
+    } else if (screenWidth > 850 && swiperHowToPlay) {
+      swiperHowToPlay.destroy(true, true);
+      swiperHowToPlay = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroySwiper();
+    window.addEventListener('resize', initOrDestroySwiper);
+  });
+</script>

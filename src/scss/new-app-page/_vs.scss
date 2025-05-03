@@ -1,0 +1,139 @@
+.vs {
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  &__container {
+    padding: 140px 15px 70px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__sub-title {
+    margin-bottom: 40px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    padding: 42px 30px 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0f0c22;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  }
+  &__card {
+    &:first-child {
+      .card__text {
+        color: white;
+      }
+    }
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    &__block {
+      height: 150px;
+      padding: 22px 10px;
+      &:nth-child(odd) {
+        background-color: #0f0c22;
+      }
+      &:nth-child(even) {
+        background-color: #151031;
+      }
+    }
+    &__text {
+      color: rgba(255, 255, 255, 0.6);
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &__title {
+      height: 40px;
+      padding: 0 20px;
+
+      position: absolute;
+      top: -42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      p {
+        position: relative;
+        z-index: 2;
+        color: white;
+      }
+      &::after {
+        content: '';
+        inset: 0;
+        position: absolute;
+        border-radius: 10px;
+        border: 1px solid rgba(157, 155, 155, 0.3);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(217, 217, 217, 0.04) 100%
+        );
+        backdrop-filter: blur(25px);
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .vs {
+    .card {
+      &__block {
+        height: 200px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .vs {
+    .card {
+      &__block {
+        height: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .vs {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__cards {
+      flex-wrap: nowrap;
+      box-sizing: content-box;
+      display: flex;
+      max-width: none;
+      width: fit-content;
+    }
+    .card {
+      &__block {
+        height: 150px;
+        width: auto;
+        padding: 20px 0;
+      }
+      &:first-child {
+        color: #fff;
+      }
+    }
+    .swiper {
+      margin-bottom: 20px;
+      &-pagination {
+        display: block;
+      }
+      &-pagination-bullet {
+        background-color: #e5053d;
+        width: 12px;
+        height: 12px;
+        transition: opacity $transition;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

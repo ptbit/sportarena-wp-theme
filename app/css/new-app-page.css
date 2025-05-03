@@ -735,7 +735,6 @@
 .info {
   background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
   background: linear-gradient(to bottom, #130d2c, #100c23);
-  color: white;
 }
 .info__container {
   padding-bottom: 30px;
@@ -2172,6 +2171,9 @@
 .bonuses .swiper-wrapper {
   width: 100%;
 }
+.bonuses .swiper-pagination {
+  display: none;
+}
 .bonuses .swiper-pagination-bullet {
   background-color: #e5053d;
   width: 12px;
@@ -2267,6 +2269,9 @@
   .bonuses .swiper {
     margin-bottom: 20px;
   }
+  .bonuses .swiper-pagination {
+    display: block;
+  }
   .bonuses__note {
     margin-left: 10px;
     margin-right: 10px;
@@ -2320,6 +2325,153 @@
   }
   .bonuses__text {
     font-size: 12px;
+  }
+}
+.vs {
+  background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+}
+.vs__container {
+  padding: 140px 15px 70px;
+}
+.vs__title {
+  margin-bottom: 20px;
+}
+.vs__sub-title {
+  margin-bottom: 40px;
+}
+.vs__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 42px 30px 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0c22;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+}
+.vs__card:first-child .card__text {
+  color: white;
+}
+.vs .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 25%;
+}
+.vs .card__block {
+  height: 150px;
+  padding: 22px 10px;
+}
+.vs .card__block:nth-child(odd) {
+  background-color: #0f0c22;
+}
+.vs .card__block:nth-child(even) {
+  background-color: #151031;
+}
+.vs .card__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.vs .card__title {
+  height: 40px;
+  padding: 0 20px;
+  position: absolute;
+  top: -42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.vs .card__title p {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.vs .card__title::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  border-radius: 10px;
+  border: 1px solid rgba(157, 155, 155, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(217, 217, 217, 0.04)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+}
+
+@media (max-width: 1050px) {
+  .vs .card__block {
+    height: 200px;
+  }
+}
+@media (max-width: 900px) {
+  .vs .card__block {
+    height: 250px;
+  }
+}
+@media (max-width: 850px) {
+  .vs__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .vs__cards {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .vs .card__block {
+    height: 150px;
+    width: auto;
+    padding: 20px 0;
+  }
+  .vs .card:first-child {
+    color: #fff;
+  }
+  .vs .swiper {
+    margin-bottom: 20px;
+  }
+  .vs .swiper-pagination {
+    display: block;
+  }
+  .vs .swiper-pagination-bullet {
+    background-color: #e5053d;
+    width: 12px;
+    height: 12px;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .vs .swiper-pagination-bullet:hover {
+    opacity: 0.5;
   }
 }
 .footer {
