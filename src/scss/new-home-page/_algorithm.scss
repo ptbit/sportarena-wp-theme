@@ -35,7 +35,7 @@
       bottom: 0;
       width: 774px;
       height: 100%;
-      background: url('../img/new-home-page/algorithm/vector.svg') no-repeat 0 0 / cover;
+      background: url('../img/new-home-page/algorithm/vector.svg') no-repeat 10% 0 / cover;
       opacity: 0.8;
     }
   }
@@ -301,11 +301,13 @@
     &__container {
       row-gap: 15px;
       &::before {
-        right: 0;
-        opacity: 0.3;
+        right: 100px;
+        opacity: 0.6;
       }
       &::after {
         // display: none;
+        right: -40px;
+        transform: translateX(20%);
       }
     }
     &__title {
@@ -367,6 +369,9 @@
         'text'
         'image2';
       &::before {
+        display: none;
+      }
+      &::after {
         display: none;
       }
     }
