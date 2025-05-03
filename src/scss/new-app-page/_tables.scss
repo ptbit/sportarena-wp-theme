@@ -13,11 +13,24 @@
     padding: 40px 40px 50px 50px;
     border: 1px solid rgba(157, 155, 155, 0.3);
     border-radius: 12px;
+    position: relative;
+    height: fit-content;
+    overflow: hidden;
     &__title {
       margin-bottom: 20px;
     }
     &__sub-title {
       margin-bottom: 40px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 584px;
+      height: 582px;
+      background: url('../img/new-app-page/tables/bg.png') no-repeat 50% 50% / cover;
     }
     table {
       thead {
@@ -137,7 +150,7 @@
 }
 @media (max-width: 450px) {
   .tables {
-    &__container{
+    &__container {
       padding: 40px 10px;
     }
     .table {
