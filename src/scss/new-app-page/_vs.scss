@@ -103,7 +103,8 @@
       padding-left: 0;
       padding-right: 0;
     }
-    &__title, &__sub-title{
+    &__title,
+    &__sub-title {
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -116,10 +117,13 @@
       margin-bottom: 35px;
     }
     .card {
+      &__text {
+        font-size: 14px;
+      }
       &__block {
         height: 150px;
         width: auto;
-        padding: 20px 0;
+        padding: 20px 5px;
       }
       &:first-child {
         color: #fff;
@@ -138,6 +142,19 @@
         &:hover {
           opacity: 0.5;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .vs {
+    .card {
+      &__text {
+        font-size: 12px;
+      }
+      &__block {
+        // height: 180px;
       }
     }
   }

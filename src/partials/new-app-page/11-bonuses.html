@@ -80,13 +80,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  let swiperBonuses = null;
+  let swiperAppBonuses = null;
 
-  function initOrDestroySwiper() {
+  function initOrDestroyBonusesAppSwiper() {
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 850 && !swiperBonuses) {
-      swiperBonuses = new Swiper('.bonusesAppSwiper', {
+    if (screenWidth <= 850 && !swiperAppBonuses) {
+      swiperAppBonuses = new Swiper('.bonusesAppSwiper', {
         loop: true,
         slidesPerView: 1.1,
         grabCursor: true,
@@ -118,14 +118,14 @@
           },
         },
       });
-    } else if (screenWidth > 850 && swiperBonuses) {
-      swiperBonuses.destroy(true, true);
-      swiperBonuses = null;
+    } else if (screenWidth > 850 && swiperAppBonuses) {
+      swiperAppBonuses.destroy(true, true);
+      swiperAppBonuses = null;
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
+    initOrDestroyBonusesAppSwiper();
+    window.addEventListener('resize', initOrDestroyBonusesAppSwiper);
   });
 </script>
