@@ -3,7 +3,7 @@
   background: linear-gradient(to bottom, #130d2c, #100c23);
 
   &__container {
-    padding: 50px 15px 70px;
+    padding: 109px 15px 70px;
   }
 
   &__title {
@@ -22,7 +22,7 @@
   .swiper {
   }
   .features3Swiper {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
   }
   .swiper-wrapper {
     display: flex;
@@ -84,6 +84,9 @@
 
 @media (max-width: 1050px) {
   .features3 {
+    &__container {
+      padding-top: 60px;
+    }
     .features3-item {
       width: 47%;
     }

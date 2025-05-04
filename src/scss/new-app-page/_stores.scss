@@ -205,6 +205,9 @@
 
 @media (max-width: 500px) {
   .stores {
+    &__container {
+      padding: 40px 0;
+    }
     .store {
       padding: 18px 18px 20px 20px;
       &__title {

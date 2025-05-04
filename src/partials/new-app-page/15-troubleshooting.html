@@ -1,0 +1,158 @@
+<section class="troubleshooting">
+  <div class="troubleshooting__container">
+    <h2 class="sectionTitle troubleshooting__title">Troubleshooting Instruction</h2>
+    <p class="sectionText troubleshooting__sub-title">
+      The Aviator Crash game has many unique features that attract players. Due to these features,
+      Spribe's game remains one of the most popular choices even five
+    </p>
+    <div class="swiper troubleshootingSwiper">
+      <div class="swiper-wrapper troubleshooting__cards">
+        <div class="swiper-slide troubleshooting__card card">
+          <div class="card__image">
+            <img
+              class="card__ico"
+              src="img/new-app-page/troubleshooting/img-1.png"
+              alt="troubleshooting card icon"
+            />
+          </div>
+          <p class="card__title">Server or connection error</p>
+          <p class="card__text">
+            This could happen when your internet connection or the Aviator application server is
+            faulty or overcrowded. To fix it, check your internet/Wi-Fi connection or try accessing
+            again later. You can also turn on flight mode, wait for a few seconds,
+          </p>
+        </div>
+        <div class="swiper-slide troubleshooting__card card">
+          <div class="card__image">
+            <img
+              class="card__ico"
+              src="img/new-app-page/troubleshooting/img-2.png"
+              alt="troubleshooting card icon"
+            />
+          </div>
+          <p class="card__title">First Deposit Bonus</p>
+          <p class="card__text">
+            Granted after a new bettor’s first deposit. The bonus money is calculated as a certain
+            percentage of the deposited sum – between 100% to 250%. Sometimes it’s complemented with
+            a bundle of free bets
+          </p>
+        </div>
+        <div class="swiper-slide troubleshooting__card card">
+          <div class="card__image">
+            <img
+              class="card__ico"
+              src="img/new-app-page/troubleshooting/img-3.png"
+              alt="troubleshooting card icon"
+            />
+          </div>
+          <p class="card__title">Welcome Bonus</p>
+          <p class="card__text">
+            This term is generally interchangeable with the first deposit bonus. However, a welcome
+            bonus can also refer to a bonus package covering several initial deposits from a new
+            user. The match percentage
+          </p>
+        </div>
+        <div class="swiper-slide troubleshooting__card card">
+          <div class="card__image">
+            <img
+              class="card__ico"
+              src="img/new-app-page/troubleshooting/img-4.png"
+              alt="troubleshooting card icon"
+            />
+          </div>
+          <p class="card__title">Cashback troubleshooting</p>
+          <p class="card__text">
+            This type of bonus program reimburses a portion of the player’s losses. If the net
+            losses exceed a certain threshold, the user can earn back from 1-5% to 15-20% as bonus
+            funds.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', startTroubleshootingSwiper);
+
+  function startTroubleshootingSwiper() {
+    const troubleshootingSwiper = new Swiper('.troubleshootingSwiper', {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        670: {
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          loop: true,
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          loop: true,
+          grabCursor: true,
+          initialSlide: 0,
+          autoplay: {
+            delay: 3000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        1030: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 4,
+          spaceBetween: 10,
+          grabCursor: true,
+        },
+        1325: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 4,
+          spaceBetween: 30,
+          grabCursor: true,
+        },
+      },
+    });
+  }
+</script>

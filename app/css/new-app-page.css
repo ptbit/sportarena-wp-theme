@@ -1533,6 +1533,9 @@
   }
 }
 @media (max-width: 500px) {
+  .stores__container {
+    padding: 40px 0;
+  }
   .stores .store {
     padding: 18px 18px 20px 20px;
   }
@@ -1839,13 +1842,213 @@
     padding: 15px 33px 28px;
   }
 }
+.benefits2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  position: relative;
+}
+.benefits2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 521px;
+  height: 338px;
+  opacity: 0.6;
+  background: url("../img/new-home-page/benefits2/lights.svg") no-repeat 0 0/cover;
+}
+.benefits2::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 521px;
+  height: 338px;
+  opacity: 0.6;
+  background: url("../img/new-home-page/benefits2/lights.svg") no-repeat 0 0/cover;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.benefits2__container {
+  padding: 50px 15px 25px;
+}
+.benefits2__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 40px;
+  line-height: 130%;
+  background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.benefits2__sub-title {
+  margin: 0 auto 55px;
+  max-width: 555px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: "Popins-regular", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+.benefits2__card {
+  position: relative;
+  overflow: hidden;
+}
+.benefits2__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.08)), to(rgba(217, 217, 217, 0.04)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+  -webkit-box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+}
+.benefits2__card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  background: url("../img/new-home-page/benefits2/corner.svg") no-repeat 0 0/cover;
+}
+.benefits2 .swiper {
+  padding-bottom: 40px;
+}
+.benefits2 .swiper-wrapper {
+  width: 100%;
+}
+.benefits2 .swiper-pagination-bullet {
+  background-color: #e5053d;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.benefits2 .swiper-pagination-bullet:hover {
+  opacity: 0.5;
+}
+.benefits2 .swiper .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 34px 30px 39px;
+  border: 1px solid #E82052;
+  border-radius: 12px;
+  height: auto;
+}
+.benefits2 .swiper .card__ico {
+  position: relative;
+  margin-bottom: 32px;
+  width: 110px;
+  height: 110px;
+}
+.benefits2 .swiper .card__title {
+  position: relative;
+  margin-bottom: 14px;
+  color: #fff;
+  text-align: center;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 22px;
+  line-height: 130%;
+}
+.benefits2 .swiper .card__text {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: "Popins-regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 1160px) {
+  .benefits2 .swiper .card {
+    padding: 30px 15px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .benefits2__container {
+    padding: 30px 0;
+  }
+  .benefits2__title, .benefits2__sub-title {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .benefits2::after {
+    display: none;
+  }
+  .benefits2__title {
+    margin-bottom: 17px;
+    font-size: 32px;
+  }
+  .benefits2__sub-title {
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+  .benefits2 .card {
+    height: 270px;
+    padding: 25px;
+  }
+  .benefits2 .card__ico {
+    width: 110px;
+    height: 110px;
+  }
+  .benefits2 .card__title {
+    font-size: 20px;
+  }
+  .benefits2 .card__text {
+    font-size: 13px;
+  }
+}
+@media (max-width: 490px) {
+  .benefits2__title {
+    margin-bottom: 14px;
+    font-size: 24px;
+  }
+  .benefits2__sub-title {
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+  .benefits2 .card {
+    padding: 25px;
+  }
+  .benefits2 .card__ico {
+    width: 110px;
+    height: 110px;
+  }
+  .benefits2 .card__title {
+    font-size: 18px;
+  }
+  .benefits2 .card__text {
+    font-size: 12px;
+  }
+}
 .features3 {
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
   background: linear-gradient(to bottom, #130d2c, #100c23);
 }
 .features3__container {
-  padding: 50px 15px 70px;
+  padding: 109px 15px 70px;
 }
 .features3__title {
   width: -webkit-fit-content;
@@ -1861,9 +2064,6 @@
   margin: 0 auto 40px;
   text-align: center;
   padding: 0 15px;
-}
-.features3 .features3Swiper {
-  margin-bottom: 40px;
 }
 .features3 .swiper-wrapper {
   display: -webkit-box;
@@ -1934,6 +2134,9 @@
 }
 
 @media (max-width: 1050px) {
+  .features3__container {
+    padding-top: 60px;
+  }
   .features3 .features3-item {
     width: 47%;
   }
@@ -1988,7 +2191,7 @@
   background: linear-gradient(to bottom, #130d2c, #100c23);
 }
 .tables__container {
-  padding: 50px 15px 70px;
+  padding: 0px 15px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2102,7 +2305,7 @@
 }
 @media (max-width: 450px) {
   .tables__container {
-    padding: 40px 10px;
+    padding: 0px 10px 40px;
   }
   .tables .table {
     padding: 15px;
@@ -2433,8 +2636,7 @@
 }
 @media (max-width: 850px) {
   .vs__container {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 40px 0;
   }
   .vs__title, .vs__sub-title {
     padding-left: 15px;
@@ -2974,6 +3176,131 @@
   }
   .optimization .item__image.phone {
     width: 140px;
+  }
+}
+.troubleshooting {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+}
+.troubleshooting__container {
+  padding: 70px 15px;
+}
+.troubleshooting__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.troubleshooting__sub-title {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+.troubleshooting .swiper {
+  padding-bottom: 40px;
+}
+.troubleshooting .swiper-wrapper {
+  width: 100%;
+}
+.troubleshooting .swiper-pagination-bullet {
+  background-color: #e5053d;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.troubleshooting .swiper-pagination-bullet:hover {
+  opacity: 0.5;
+}
+.troubleshooting .swiper .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  border-radius: 12px;
+  height: auto;
+}
+.troubleshooting .swiper .card__image {
+  width: 100%;
+  margin-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0f0c22;
+  height: 200px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+}
+.troubleshooting .swiper .card__title {
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 22px;
+  line-height: 130%;
+}
+.troubleshooting .swiper .card__text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media (max-width: 1050px) {
+  .troubleshooting .swiper .card {
+    padding: 15px 10px;
+  }
+  .troubleshooting .swiper .card__ico {
+    margin-bottom: 15px;
+  }
+  .troubleshooting .swiper .card__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .troubleshooting .swiper .card__text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .troubleshooting__container {
+    padding: 40px 0;
+  }
+  .troubleshooting__title {
+    padding: 0 15px;
+  }
+  .troubleshooting__sub-title {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 490px) {
+  .troubleshooting__container {
+    padding-bottom: 10px;
+  }
+  .troubleshooting .swiper .card__ico {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+  }
+  .troubleshooting .swiper .card__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .troubleshooting .swiper .card__text {
+    font-size: 12px;
   }
 }
 .footer {
