@@ -1,0 +1,19 @@
+@import 'vars';
+@import 'mixins';
+@import 'new-app-page-global';
+
+// подключения компонентов страницы
+@import 'new-strategies-page/_1-hero';
+
+// @import 'new-page1/_info';
+// @import 'new-page1/_how-get';
+// @import 'new-page1/_casinos';
+
+// @import 'new-page1/_carousel';
+
+// @import "page2/_news";
+// @import "general-block/_faq.scss";
+// @import "general-block/_author.scss";
+// @import "general-block/_subscribe.scss";
+
+@import 'general-block/_new-footer.scss';

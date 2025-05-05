@@ -1,0 +1,325 @@
+.hero {
+  background: #130d2c url('../img/new-page/hero-bg-desk.png') no-repeat 50% 0 / cover;
+  padding-top: 135px;
+  // padding-bottom: 120px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 377px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 584px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__back-btn {
+    z-index: 2;
+    position: absolute;
+    color: #e5053d;
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    transition: color $transition;
+    &::before {
+      content: '';
+      display: block;
+      height: 18px;
+      width: 27px;
+      background-color: #e5053d;
+      -webkit-mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+      -webkit-mask-size: contain;
+      mask: url('../img/new-app-page/hero/triple-arrow.svg') no-repeat center;
+      mask-size: contain;
+      margin: 0 0 0 8px;
+      transition: background-color $transition;
+    }
+    &:hover {
+      color: #b4012e;
+      &::before {
+        background-color: #b4012e;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 584px;
+  }
+  &__sub-title {
+    max-width: 552px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__note {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 850px;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    padding: 16px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    );
+    backdrop-filter: blur(25px);
+    z-index: 1;
+    span {
+      color: #e853cf;
+    }
+  }
+  &__ico {
+    width: 32px;
+    height: 32px;
+  }
+  &__text {
+    color: #fff;
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__plane {
+  }
+  .plane {
+    position: relative;
+    width: 100%;
+    min-height: 511px;
+    background: url('../img/new-strategies-page/hero/union.png') no-repeat 0 0 / contain;
+
+    &__x {
+      color: white;
+      background: none;
+      -webkit-text-fill-color: white;
+      border-radius: 10px;
+      border: 1px solid rgba(157, 155, 155, 0.3);
+      background: lightgray 0% 0% / 100px 100px repeat,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+      box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+      backdrop-filter: blur(25px);
+      padding: 0 20px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      position: absolute;
+      z-index: 2;
+      transform: rotate(-15deg);
+      &--1 {
+        left: 55px;
+        top: 95px;
+      }
+      &--2 {
+        top: 0;
+        left: 50%;
+      }
+      &--3 {
+        transform: rotate(15deg);
+        right: 23px;
+        top: 116px;
+      }
+      &--4 {
+        bottom: 40px;
+        right: 180px;
+      }
+    }
+  }
+}
+@media (max-width: 1330px) {
+  .hero {
+    &__container {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 1220px) {
+  .hero {
+    .plane {
+      min-height: 480px;
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .hero {
+    .plane {
+      min-height: 440px;
+      &__x {
+        height: auto;
+        padding: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    .plane {
+      min-height: 410px;
+      &__x {
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .hero {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__back-btn {
+      top: 0px;
+    }
+    .plane {
+      background-position-x: 50%;
+      max-width: 662px;
+      margin: 20px auto 0;
+    }
+    &__info {
+      margin: 0 auto 30px;
+    }
+    &__note {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+    // &__back-btn {
+    //   top: 80px;
+    // }
+    .plane {
+      &__x {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__back-btn {
+      font-size: 14px;
+      gap: 8px;
+      &::before {
+        width: 21px;
+        height: 14px;
+      }
+    }
+    &__info {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  .hero {
+    &__note {
+      padding: 13px 18px;
+      gap: 15px;
+    }
+    &__text {
+      font-size: 12px;
+    }
+    .plane {
+      min-height: 390px;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .hero {
+    &__note {
+      padding: 10px;
+    }
+    &__ico {
+      width: 28px;
+      height: 28px;
+    }
+    .plane {
+      min-height: 350px;
+      &__x {
+        &--1 {
+          left: 25px;
+        }
+        &--2 {
+          left: 40%;
+        }
+        &--3 {
+          right: 13px;
+          top: 80px;
+        }
+        &--4 {
+          right: 20%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .hero {
+    .sectionTitle {
+      font-size: 23px;
+    }
+    .plane {
+      min-height: 310px;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .hero {
+    .sectionTitle {
+      font-size: 22px;
+    }
+    .plane {
+      min-height: 280px;
+      &__x {
+        padding: 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .hero {
+    &__container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .plane {
+      margin-top: 0;
+      min-height: 255px;
+    }
+  }
+}
