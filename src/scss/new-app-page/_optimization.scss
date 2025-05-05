@@ -85,10 +85,11 @@
         height: 271px;
         background: url('../img/new-app-page/optimization/item-mac.png') no-repeat 0 0 / contain;
         padding: 7px 46px 32px;
+        transform-origin: left;
       }
       &.ipad {
         position: absolute;
-        left: 155px;
+        left: 30%;
         bottom: 65px;
         width: 297px;
         height: 228px;
@@ -98,11 +99,12 @@
       &.iphone {
         position: absolute;
         bottom: 48px;
-        left: 384px;
+        right: 33px;
         width: 140px;
         height: 286px;
         background: url('../img/new-app-page/optimization/item-iphone.png') no-repeat 0 0 / cover;
         padding: 24px 5px 20px;
+        transform-origin: right;
       }
       &.mac,
       &.ipad,
@@ -223,6 +225,38 @@
     }
   }
 }
+@media screen and (max-width: 1130px) {
+  .optimization {
+    .item {
+      &__image {
+        &.iphone {
+          right: 10px;
+        }
+        &.mac,
+        &.ipad,
+        &.iphone {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .optimization {
+    .item {
+      &__image {
+        &.mac,
+        &.ipad,
+        &.iphone {
+          transform: scale(0.8);
+        }
+        &.phone{
+          left: 15px;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) {
   .optimization {
     &__container {
@@ -310,6 +344,10 @@
       &__wrapper {
         height: auto;
         min-height: 270px;
+        &.left-img {
+          padding: 0;
+          height: 300px;
+        }
         &.phone {
           padding-right: 30px;
           &::before {
@@ -324,8 +362,30 @@
         }
       }
       &__image {
+        &.mac,
+        &.ipad,
+        &.iphone {
+          transform: scale(0.7);
+        }
+        &.mac {
+          top: 10px;
+        }
+        &.ipad {
+          left: 20%;
+          bottom: 15px;
+        }
+        &.iphone {
+          bottom: 0;
+        }
         &.phone {
-          width: 150px;
+          width: 146px;
+          height: 233px;
+          bottom: 0;
+          top: auto;
+          padding-top: 35px;
+        }
+        &.icon{
+          right: 40px;
         }
       }
     }
@@ -338,6 +398,11 @@
         padding: 25px 15px;
         height: auto;
       }
+      &__image {
+        &.ipad {
+          left: 10%;
+        }
+      }
     }
   }
 }
@@ -345,6 +410,7 @@
 @media screen and (max-width: 350px) {
   .optimization {
     .item {
+
       &__wrapper {
         min-height: 250px;
         &.phone {
@@ -361,8 +427,11 @@
         }
       }
       &__image {
-        &.phone {
-          width: 140px;
+        &.ipad {
+          left: 7%;
+        }
+        &.icon{
+          right: 20px;
         }
       }
     }
