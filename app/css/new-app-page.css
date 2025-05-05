@@ -3031,18 +3031,58 @@
   background: url("../img/new-app-page/optimization/bg_vector.png") no-repeat 50% 50%/contain;
   width: 397px;
 }
-.optimization .item__image.left {
+.optimization .item__image.mac {
   position: absolute;
-  left: 0;
+  top: 50px;
+  left: -85px;
+  width: 450px;
+  height: 271px;
+  background: url("../img/new-app-page/optimization/item-mac.png") no-repeat 0 0/contain;
+  padding: 7px 46px 32px;
+}
+.optimization .item__image.ipad {
+  position: absolute;
+  left: 155px;
+  bottom: 65px;
+  width: 297px;
+  height: 228px;
+  background: url("../img/new-app-page/optimization/item-ipad.png") no-repeat 0 0/cover;
+  padding: 10px;
+}
+.optimization .item__image.iphone {
+  position: absolute;
+  bottom: 48px;
+  left: 384px;
+  width: 140px;
+  height: 286px;
+  background: url("../img/new-app-page/optimization/item-iphone.png") no-repeat 0 0/cover;
+  padding: 24px 5px 20px;
+}
+.optimization .item__image.mac img, .optimization .item__image.ipad img, .optimization .item__image.iphone img, .optimization .item__image.phone img {
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 .optimization .item__image.icon {
   margin-bottom: 20px;
-  position: relative;
+  position: absolute;
+  right: 57px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 2;
 }
 .optimization .item__image.phone {
-  position: relative;
+  width: 236px;
+  height: 376px;
+  position: absolute;
+  top: 31px;
+  left: 61px;
+  background: url("../img/new-app-page/optimization/item-phone.png") no-repeat 0 0/cover;
   z-index: 2;
+  padding: 40px 10px 0px;
 }
 .optimization .item__description {
   z-index: 3;
