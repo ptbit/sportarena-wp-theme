@@ -1,0 +1,126 @@
+.the-most {
+  position: relative;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+
+  &__container {
+    padding: 0 15px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__column {
+  }
+  .column {
+    &__top {
+      position: relative;
+      padding-top: 70px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('../img/new-strategies-page/the-most/bg.png') no-repeat 0 0 / contain;
+      }
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+    }
+    &__bottom {
+      margin-top: 70px;
+    }
+  }
+  .bottom {
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    border-radius: 12px;
+    background: lightgray 0% 0% / 100px 100px repeat,
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(217, 217, 217, 0.04) 100%);
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(25px);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background: #393737 0% 0%/100px 100px repeat;
+      filter: blur(10px);
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url('../img/new-strategies-page/the-most/corner.png') no-repeat 0 0 / cover;
+    }
+
+    &__title {
+      margin-bottom: 12px;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 22px;
+      line-height: 130%;
+    }
+    &__text {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &__img {
+      margin-top: 30px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #0f0c22;
+      box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+      padding: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 1250px) {
+  .the-most {
+    &__container {
+      gap: 20px;
+    }
+  }
+}
+@media screen and (max-width: 970px) {
+  .the-most {
+    &__container {
+      flex-direction: column;
+    }
+    .column {
+      max-width: 662px;
+      margin: 0 auto;
+      &__bottom {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .the-most {
+    .column {
+      &__top {
+        padding-top: 40px;
+      }
+    }
+    .bottom {
+      &::after {
+        width: 43px;
+        height: 43px;
+      }
+    }
+  }
+}
