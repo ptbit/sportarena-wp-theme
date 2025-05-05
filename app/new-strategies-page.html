@@ -202,9 +202,9 @@
         <section class="the-most">
   <div class="the-most__container">
     <div class="the-most__column column">
-      <div class="column__top top">
-        <h3 class="sectionTitle top__title">The Most Popular Aviator strategies</h3>
-        <p class="sectionText top__text">
+      <div class="column__top column__top--1">
+        <h3 class="sectionTitle column__title">The Most Popular Aviator strategies</h3>
+        <p class="sectionText column__text column__text--1">
           First of all, it should be noted that there is no strategy to win at Aviator game with
           100% success. In any version of the Aviator game tactics, losing is possible. And yet,
           with judicious use of any of these strategies, you can expect success. Let’s take a closer
@@ -214,7 +214,18 @@
           To maintain transparency and uphold trust, the title uses Provably Fair technology. This
           advanced cryptographic method allows gamers to independently verify the fairness of each
           round’s outcome when they play for real money.
+          <br />
+          <br />
+          To maintain transparency and uphold trust, the title uses Provably Fair technology. This
+          advanced cryptographic method allows gamers to independently verify the fairness of each
+          round’s outcome when they play for real money.
+          <br />
+          <br />
+          To maintain transparency and uphold trust, the title uses Provably Fair technology. This
+          advanced cryptographic method allows gamers to independently verify the fairness of each
+          round’s outcome when they play for real money.
         </p>
+        <button type="button" class="SMB the-most__smb--1" aria-label="show-more">Show more</button>
       </div>
       <div class="column__bottom bottom">
         <p class="bottom__title">DOUBLE UP STRATEGY</p>
@@ -231,18 +242,30 @@
       </div>
     </div>
     <div class="the-most__column column">
-      <div class="column__top top">
-        <h3 class="sectionTitle top__title">Aviator Game Algorithm Prediction</h3>
-        <p class="sectionText top__text">
+      <div class="column__top column__top--2">
+        <h3 class="sectionTitle column__title">Aviator Game Algorithm Prediction</h3>
+        <p class="sectionText column__text column__text--2">
           At the heart of the game is a sophisticated big-win algorithm based on a random number
           generator (RNG). This system generates unpredictable outcomes, ensuring each round’s
           results are entirely independent of the previous ones.
           <br />
           <br />
           The RNG introduces an element of chance and excitement, as players can never predict when
-          the plane will crash or how long it will fly. They achieve this by using the client and
-          server seeds that the
+          the plane will crash or how long it will fly.
+          <br />
+          <br />
+          The RNG introduces an element of chance and excitement, as players can never predict when
+          the plane will crash or how long it will fly.
+          <br />
+          <br />
+          The RNG introduces an element of chance and excitement, as players can never predict when
+          the plane will crash or how long it will fly.
+          <br />
+          <br />
+          The RNG introduces an element of chance and excitement, as players can never predict when
+          the plane will crash or how long it will fly.
         </p>
+        <button type="button" class="SMB the-most__smb--2" aria-label="show-more">Show more</button>
       </div>
       <div class="column__bottom bottom">
         <p class="bottom__title">HIGH RISK</p>
@@ -260,6 +283,45 @@
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const textBlock = document.querySelector('.column__top--1');
+    const textWrapper = document.querySelector('.column__text--1');
+    const btn = document.querySelector('.the-most__smb--1');
+
+    const maxHeightDesktop = 370;
+
+    if (textBlock.scrollHeight > maxHeightDesktop) {
+      btn.classList.add('visible');
+      textWrapper.classList.add('short');
+    }
+
+    btn.addEventListener('click', function () {
+      textWrapper.classList.toggle('short');
+      const expanded = textBlock.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Show more';
+      btn.classList.toggle('less');
+    });
+
+    //2
+    const textBlock2 = document.querySelector('.column__top--2');
+    const textWrapper2 = document.querySelector('.column__text--2');
+    const btn2 = document.querySelector('.the-most__smb--2');
+    console.log(textBlock2.scrollHeight);
+    if (textBlock2.scrollHeight > maxHeightDesktop) {
+      btn2.classList.add('visible');
+      textWrapper2.classList.add('short');
+    }
+
+    btn2.addEventListener('click', function () {
+      textWrapper2.classList.toggle('short');
+      const expanded2 = textBlock2.classList.toggle('expanded');
+      btn2.textContent = expanded2 ? 'Show less' : 'Show more';
+      btn2.classList.toggle('less');
+    });
+  });
+</script>
 
       </main>
       <footer class="footer">

@@ -1,7 +1,9 @@
 .the-most {
   position: relative;
   background: linear-gradient(to bottom, #130d2c, #100c23);
-
+  .SMB {
+    z-index: 2;
+  }
   &__container {
     padding: 0 15px 70px;
     display: flex;
@@ -13,6 +15,7 @@
   }
   .column {
     &__top {
+      min-height: 390px;
       position: relative;
       padding-top: 70px;
 
@@ -27,6 +30,18 @@
       margin-bottom: 20px;
     }
     &__text {
+      max-height: fit-content;
+      overflow: hidden;
+      &.short {
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        line-clamp: 8;
+        -webkit-line-clamp: 8;
+      }
     }
     &__bottom {
       margin-top: 70px;
@@ -102,6 +117,9 @@
     .column {
       max-width: 662px;
       margin: 0 auto;
+      &__top {
+        min-height: auto;
+      }
       &__bottom {
         margin-top: 40px;
       }
