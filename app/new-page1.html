@@ -219,8 +219,9 @@
   <div class="info__container">
     <h1 class="info__title">Favbet Aviator Info</h1>
     <p class="info__text">
-      In 2019, this social multiplayer casino game was launched as a passion project by a lesser-known studio, Spribe. Nowadays, it gets
-      more than 32 million players every month. Aviator is a popular
+      In 2019, this social multiplayer casino game was launched as a passion project by a
+      lesser-known studio, Spribe. Nowadays, it gets more than 32 million players every month.
+      Aviator is a popular
     </p>
     <div class="info__swiper swiper">
       <div class="swiper-wrapper">
@@ -293,16 +294,14 @@
         spaceBetween: 15,
         centeredSlides: true,
         initialSlide: 0,
-        autoplay: {
-          delay: 3000,
-        },
+        autoplay: false,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
       });
     } else if (screenWidth > 620 && swiper) {
-      swiper.destroy(true, true); 
+      swiper.destroy(true, true);
       swiper = null;
     }
   }
@@ -608,9 +607,7 @@
         prevEl: '.casinos__button--prew',
       },
 
-      autoplay: {
-        delay: 3000,
-      },
+      autoplay: false,
 
       pagination: {
         el: '.swiper-pagination',
@@ -632,9 +629,7 @@
             prevEl: '.casinos__button--prew',
           },
 
-          autoplay: {
-            delay: 3000,
-          },
+          autoplay: false,
 
           pagination: {
             el: '.swiper-pagination',
