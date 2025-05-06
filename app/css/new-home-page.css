@@ -915,6 +915,10 @@
   height: 12px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .benefits .swiper-pagination-bullet:hover {
   opacity: 0.5;

@@ -80,6 +80,7 @@
       width: 12px;
       height: 12px;
       transition: opacity $transition;
+      user-select: none;
       &:hover {
         opacity: 0.5;
       }
