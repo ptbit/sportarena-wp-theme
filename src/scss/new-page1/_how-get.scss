@@ -82,6 +82,20 @@
     font-family: $font-popins-reg;
     font-size: 16px;
     line-height: 150%;
+    &--1 {
+      max-height: fit-content;
+      overflow: hidden;
+      &.short {
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        line-clamp: 10;
+        -webkit-line-clamp: 10;
+      }
+    }
   }
   // &__link {
   //   color: #e5053d;

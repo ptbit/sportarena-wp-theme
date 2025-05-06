@@ -528,6 +528,21 @@
   font-size: 16px;
   line-height: 150%;
 }
+.item__sub-text--1 {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow: hidden;
+}
+.item__sub-text--1.short {
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  line-clamp: 10;
+  -webkit-line-clamp: 10;
+}
 .item__content--1 {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;

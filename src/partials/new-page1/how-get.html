@@ -14,7 +14,7 @@
       <div class="item__details item__details--1">
         <div class="item__content item__content--1">
           <h2 class="item__title">How to get a bonus</h2>
-          <p class="item__sub-text">
+          <p class="item__sub-text item__sub-text--1">
             Casino 4Rabet offers players bonuses, which can be immediately used in the betting game
             Aviator.
             <br />
@@ -101,11 +101,13 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     //1
-    const textBlock = document.querySelector('.item__details--1');
-    const textWrapper = document.querySelector('.item__content--1');
+    // const textBlock = document.querySelector('.item__details--1');
+    // const textWrapper = document.querySelector('.item__content--1');
+    const textBlock = document.querySelector('.item__content--1');
+    const textWrapper = document.querySelector('.item__sub-text--1');
     const btn = document.querySelector('.smb1');
 
-    const maxHeightDesktop = 300;
+    const maxHeightDesktop = 200;
     if (textBlock.scrollHeight > maxHeightDesktop) {
       btn.classList.add('visible');
       textWrapper.classList.add('short');
