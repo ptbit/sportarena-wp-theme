@@ -219,6 +219,102 @@
 </section>
 
         <!--  -->
+        <section class="info">
+  <div class="info__container">
+    <h1 class="info__title">Favbet Aviator Info</h1>
+    <p class="info__text">
+      In 2019, this social multiplayer casino game was launched as a passion project by a
+      lesser-known studio, Spribe. Nowadays, it gets more than 32 million players every month.
+      Aviator is a popular
+    </p>
+    <div class="info__swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/license.svg" alt="slide icon" />
+            <span class="slide__title">License:</span>
+          </div>
+          <p class="slide__text">Curacao</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/year.svg" alt="slide icon" />
+            <span class="slide__title">Year of Launch:</span>
+          </div>
+          <p class="slide__text">2018</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Company</span>
+          </div>
+          <p class="slide__text">Umbrella Development B.V.</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/language.svg" alt="slide icon" />
+            <span class="slide__title">Min Deposit:</span>
+          </div>
+          <p class="slide__text">100 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Withdrawal Limit:</span>
+          </div>
+          <p class="slide__text">Min 1000 / Max 250,000 INR</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="slide__header">
+            <img class="slide__ico" src="img/new-page/slide-ico/company.svg" alt="slide icon" />
+            <span class="slide__title">Bonuses:</span>
+          </div>
+          <p class="slide__text">200% up to 24,000 INR</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  let swiper = null;
+
+  function initOrDestroyInfoSwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 620 && !swiper) {
+      swiper = new Swiper('.swiper', {
+        loop: true,
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 15,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if (screenWidth > 620 && swiper) {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initOrDestroyInfoSwiper();
+    window.addEventListener('resize', initOrDestroyInfoSwiper);
+  });
+</script>
 
         <!--  -->
         <section class="how-get">
@@ -275,7 +371,7 @@
       <div class="item__details item__details--2">
         <div class="item__content item__content--2">
           <h2 class="item__title">Test image 1</h2>
-          <p class="item__sub-text">
+          <p class="item__sub-text item__sub-text--2">
             Casino 4Rabet offers players bonuses, which can be immediately used in the betting game
             Aviator.
             <br />
@@ -304,7 +400,7 @@
       <div class="item__details item__details--3">
         <div class="item__content item__content--3">
           <h2 class="item__title">Test image 2</h2>
-          <p class="item__sub-text">
+          <p class="item__sub-text item__sub-text--3">
             To install the 4Rabet app, players will need to have a mobile device with certain
             technical characteristics: Android version 5.0 or higher space for the application of 30
             megabytes To download the application, the player needs to perform a few steps: go to
@@ -330,7 +426,7 @@
     const textWrapper = document.querySelector('.item__sub-text--1');
     const btn = document.querySelector('.smb1');
 
-    const maxHeightDesktop = 300;
+    const maxHeightDesktop = 200;
     if (textBlock.scrollHeight > maxHeightDesktop) {
       btn.classList.add('visible');
       textWrapper.classList.add('short');
@@ -343,8 +439,10 @@
       btn.classList.toggle('less');
     });
     // //2
-    const textBlock2 = document.querySelector('.item__details--2');
-    const textWrapper2 = document.querySelector('.item__content--2');
+    // const textBlock2 = document.querySelector('.item__details--2');
+    // const textWrapper2 = document.querySelector('.item__content--2');
+    const textBlock2 = document.querySelector('.item__content--2');
+    const textWrapper2 = document.querySelector('.item__sub-text--2');
     const btn2 = document.querySelector('.smb2');
 
     const maxHeightDesktop2 = 300;
@@ -360,8 +458,10 @@
       btn2.classList.toggle('less');
     });
     //3
-    const textBlock3 = document.querySelector('.item__details--3');
-    const textWrapper3 = document.querySelector('.item__content--3');
+    // const textBlock3 = document.querySelector('.item__details--3');
+    // const textWrapper3 = document.querySelector('.item__content--3');
+    const textBlock3 = document.querySelector('.item__content--3');
+    const textWrapper3 = document.querySelector('.item__sub-text--3');
     const btn3 = document.querySelector('.smb3');
 
     const maxHeightDesktop3 = 300;
@@ -380,6 +480,199 @@
 </script>
 
         <!--  -->
+        <section class="casinos">
+  <div class="casinos__container">
+    <div class="casinos__header">
+      <div class="casinos__text">
+        <h2 class="casinos__title">Other casinos you might like</h2>
+        <p class="casinos__description">
+          We recommend checking out these similar casino brands that also feature the Aviator game.
+        </p>
+      </div>
+      <div class="casinos__buttons">
+        <button class="casinos__button casinos__button--prew">
+          <img src="img/new-page/up-btn-desk.svg" alt="" />
+        </button>
+        <button class="casinos__button casinos__button--next">
+          <img src="img/new-page/up-btn-desk.svg" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div class="casinosSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+        <div class="swiper-slide casino">
+          <div class="casino__header">
+            <div class="casino__info">
+              <p class="casino__title">Favbet</p>
+              <p class="casino__sub-title">Indian-Focused Sports Betting</p>
+            </div>
+            <div class="casino__logo"></div>
+          </div>
+          <div class="casino__bonus">Welcome Bonus: Welcome Pack 700% up to 90000 INR</div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function initCasinosSwiper() {
+    const casinoSwiper = new Swiper('.casinosSwiper', {
+      loop: true,
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      centeredSlides: true,
+      grabCursor: true,
+      initialSlide: 0,
+
+      navigation: {
+        nextEl: '.casinos__button--next',
+        prevEl: '.casinos__button--prew',
+      },
+
+      autoplay: false,
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletElement: 'button',
+      },
+
+      breakpoints: {
+        550: {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 15,
+          centeredSlides: true,
+          grabCursor: true,
+          initialSlide: 0,
+
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+
+          autoplay: false,
+
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        },
+        750: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+          autoplay: false,
+        },
+        1025: {
+          loop: false,
+          centeredSlides: false,
+          slidesPerView: 3.5,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.casinos__button--next',
+            prevEl: '.casinos__button--prew',
+          },
+          autoplay: false,
+        },
+      },
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initCasinosSwiper());
+</script>
 
         <!-- <button type="button" class="footer__btn-top _hidden" aria-label="button-top">
           <span></span>

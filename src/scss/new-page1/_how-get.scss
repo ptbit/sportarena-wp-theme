@@ -96,6 +96,34 @@
         -webkit-line-clamp: 10;
       }
     }
+    &--2 {
+      max-height: fit-content;
+      overflow: hidden;
+      &.short {
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        line-clamp: 8;
+        -webkit-line-clamp: 8;
+      }
+    }
+    &--3 {
+      max-height: fit-content;
+      overflow: hidden;
+      &.short {
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        line-clamp: 8;
+        -webkit-line-clamp: 8;
+      }
+    }
   }
   // &__link {
   //   color: #e5053d;
@@ -127,50 +155,23 @@
   //     }
   //   }
   // }
-  &__content {
-    &--1 {
-      max-height: fit-content;
-      overflow: hidden;
-      &.short {
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-        line-clamp: 10;
-        -webkit-line-clamp: 10;
-      }
-    }
-    &--2 {
-      max-height: fit-content;
-      overflow: hidden;
-      &.short {
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-        line-clamp: 8;
-        -webkit-line-clamp: 8;
-      }
-    }
-    &--3 {
-      max-height: fit-content;
-      overflow: hidden;
-      &.short {
-        text-overflow: ellipsis;
-        display: -moz-box;
-        -moz-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-        line-clamp: 8;
-        -webkit-line-clamp: 8;
-      }
-    }
-  }
+  // &__content {
+  //   &--1 {
+  //     max-height: fit-content;
+  //     overflow: hidden;
+  //     &.short {
+  //       text-overflow: ellipsis;
+  //       display: -moz-box;
+  //       -moz-box-orient: vertical;
+  //       display: -webkit-box;
+  //       -webkit-box-orient: vertical;
+  //       box-orient: vertical;
+  //       line-clamp: 10;
+  //       -webkit-line-clamp: 10;
+  //     }
+  //   }
+    
+  // }
   &__link {
     display: none;
     position: relative;
