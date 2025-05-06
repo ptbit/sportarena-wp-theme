@@ -1,0 +1,80 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  margin-bottom: -35px;
+  flex: 1 1 auto;
+  position: relative;
+  &__btn-top {
+    position: sticky;
+    bottom: 40px;
+    left: 100%;
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    transition: all $transition;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #e5053d;
+    box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+    border-radius: 12px;
+    z-index: 99;
+    &:hover {
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+    }
+    span {
+      display: inline-block;
+      width: 24px;
+      height: 34px;
+      margin-left: 2px;
+      background-color: #fff;
+      -webkit-mask: url('../img/new-page/play-btn.svg') no-repeat center;
+      -webkit-mask-size: contain;
+      mask: url('../img/new-page/play-btn.svg') no-repeat center;
+      mask-size: contain;
+      transform: rotate(-90deg);
+    }
+    &._hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    // overflow: hidden;
+  }
+}
+@media screen and (max-width: 560px) {
+  .main {
+    margin-bottom: -17px;
+
+    &__btn-top {
+      width: 36px;
+      height: 34px;
+      span {
+        width: 14px;
+        height: 10px;
+        -webkit-mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+        mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

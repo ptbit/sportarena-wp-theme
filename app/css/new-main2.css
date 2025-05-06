@@ -429,6 +429,14 @@
     height: 12px;
   }
 }
+@media screen and (max-width: 560px) {
+  .info__title {
+    font-size: 32px;
+  }
+  .info__text {
+    font-size: 12px;
+  }
+}
 .how-get {
   background-color: #100c23;
 }
@@ -711,7 +719,7 @@
   background-color: #130d2c;
 }
 .casinos__container {
-  padding: 100px 15px;
+  padding: 100px 15px 60px;
   position: relative;
 }
 .casinos__title {
@@ -848,7 +856,17 @@
   font-size: 14px;
   line-height: 150%;
 }
-.casinos .swiper::after {
+.casinos .casinosSwiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+.casinos .casinosSwiper::after {
   content: "";
   position: absolute;
   right: 0;
@@ -859,7 +877,7 @@
   background: -webkit-gradient(linear, left top, right top, from(rgba(19, 13, 44, 0)), to(#130d2c));
   background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
 }
-.casinos .swiper-pagination {
+.casinos .casinosSwiper-pagination {
   display: none;
 }
 
@@ -879,7 +897,7 @@
   .casinos__description {
     font-size: 12px;
   }
-  .casinos .swiper {
+  .casinos .casinosSwiper {
     padding: 0 0 40px;
   }
   .casinos .swiper-slide {
@@ -908,7 +926,7 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .casinos .swiper::after {
+  .casinos .casinosSwiper::after {
     display: none;
   }
 }
@@ -1121,6 +1139,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .footer__btn-top {
+  display: none !important;
   position: fixed;
   bottom: 40px;
   right: 20px;

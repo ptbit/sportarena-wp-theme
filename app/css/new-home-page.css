@@ -2371,7 +2371,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   right: 0;
   color: #e5053d;
@@ -5659,6 +5659,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .footer__btn-top {
+  display: none !important;
   position: fixed;
   bottom: 40px;
   right: 20px;

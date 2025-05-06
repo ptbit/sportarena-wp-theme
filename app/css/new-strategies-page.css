@@ -795,6 +795,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .footer__btn-top {
+  display: none !important;
   position: fixed;
   bottom: 40px;
   right: 20px;

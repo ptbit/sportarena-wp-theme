@@ -2,7 +2,7 @@
   color: $pink;
   background-color: #130d2c;
   &__container {
-    padding: 100px 15px;
+    padding: 100px 15px 60px;
     position: relative;
   }
   &__title {
@@ -39,7 +39,12 @@
   &__button {
     width: 54px;
     height: 54px;
-    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #e5053d;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #e5053d;
     box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
     border-radius: 12px;
     transition: all $transition;
@@ -58,13 +63,23 @@
       }
     }
     &:hover {
-      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
     }
     &:disabled,
     button[disabled] {
       cursor: no-drop;
       opacity: 0.5;
-      background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
     }
   }
 
@@ -115,7 +130,15 @@
       line-height: 150%;
     }
   }
-  .swiper {
+  .casinosSwiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
     &::after {
       content: '';
       position: absolute;
@@ -149,7 +172,7 @@
     &__description {
       font-size: 12px;
     }
-    .swiper {
+    .casinosSwiper {
       padding: 0 0 40px;
     }
     .swiper-slide {
@@ -172,7 +195,7 @@
 }
 @media screen and (max-width: 750px) {
   .casinos {
-    .swiper {
+    .casinosSwiper {
       &::after {
         display: none;
       }
