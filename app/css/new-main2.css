@@ -223,6 +223,11 @@
   font-size: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.bonus__btn:hover {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #b4012e;
 }
 @media screen and (max-width: 1080px) {
   .right__header {
