@@ -1,6 +1,7 @@
 .benefits {
   background: linear-gradient(to bottom, #130d2c, #100c23);
   position: relative;
+  overflow: hidden;
   &::before {
     content: '';
     position: absolute;

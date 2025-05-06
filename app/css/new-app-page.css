@@ -1215,6 +1215,7 @@
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
   background: linear-gradient(to bottom, #130d2c, #100c23);
+  overflow: hidden;
 }
 .features::before {
   content: "";
@@ -1915,6 +1916,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#130d2c), to(#100c23));
   background: linear-gradient(to bottom, #130d2c, #100c23);
   position: relative;
+  overflow: hidden;
 }
 .benefits2::before {
   content: "";

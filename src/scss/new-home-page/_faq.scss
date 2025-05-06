@@ -1,7 +1,7 @@
 .faq {
   background: linear-gradient(to bottom, #130d2c, #100c23);
   position: relative;
-
+  overflow: hidden;
   &__container {
     padding: 50px 15px 70px;
   }

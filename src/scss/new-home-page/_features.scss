@@ -1,6 +1,7 @@
 .features {
   position: relative;
   background: linear-gradient(to bottom, #130d2c, #100c23);
+  overflow: hidden;
   &::before {
     content: '';
     position: absolute;
