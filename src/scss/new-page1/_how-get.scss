@@ -20,12 +20,9 @@
     max-width: 558px;
     position: relative;
     width: 50%;
-    // border-radius: 10px;
-
-    // overflow: hidden;
+    height: fit-content;
   }
   &__image {
-    // height: 408px;
     width: 558px;
     object-fit: contain;
     border-radius: 10px;
