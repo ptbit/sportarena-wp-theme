@@ -149,7 +149,7 @@
       z-index: 1;
       background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
     }
-    &-pagination {
+    .swiper-pagination {
       display: none;
     }
   }
@@ -213,8 +213,10 @@
     &__buttons {
       display: none;
     }
-    .swiper-pagination {
-      display: block;
+    .casinosSwiper {
+      .swiper-pagination {
+        display: block;
+      }
     }
     .swiper-pagination-bullet {
       background-color: #e5053d;

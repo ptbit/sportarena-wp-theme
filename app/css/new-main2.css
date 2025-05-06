@@ -877,7 +877,7 @@
   background: -webkit-gradient(linear, left top, right top, from(rgba(19, 13, 44, 0)), to(#130d2c));
   background: linear-gradient(90deg, rgba(19, 13, 44, 0) 0%, #130d2c 100%);
 }
-.casinos .casinosSwiper-pagination {
+.casinos .casinosSwiper .swiper-pagination {
   display: none;
 }
 
@@ -940,7 +940,7 @@
   .casinos__buttons {
     display: none;
   }
-  .casinos .swiper-pagination {
+  .casinos .casinosSwiper .swiper-pagination {
     display: block;
   }
   .casinos .swiper-pagination-bullet {
