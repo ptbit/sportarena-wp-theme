@@ -94,6 +94,7 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     &__title {
       position: relative;
