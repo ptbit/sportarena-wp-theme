@@ -1,5 +1,6 @@
 .menu__icon {
   display: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   @include breakpoint($tablet-bp) {
     display: block;
