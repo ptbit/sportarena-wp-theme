@@ -110,19 +110,29 @@
 
     table {
       width: 100%;
+      display: flex;
+      flex-direction: column;
       thead {
         padding-left: 40px;
         tr {
+          display: flex;
+          justify-content: space-between;
           th {
             padding: 15px 5px 15px 0;
             color: rgba(255, 255, 255, 0.5);
             font-family: $font-inter-semb;
             font-size: 14px;
             text-align: start;
+            width: fit-content;
+            &:first-child {
+              width: 30%;
+            }
           }
         }
       }
       tbody {
+        display: flex;
+        flex-direction: column;
         position: relative;
         &::before {
           content: '';
@@ -152,6 +162,9 @@
               rgba(227, 44, 196, 0) 100%
             );
           }
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           td {
             padding: 20px 5px 20px 0;
             color: #fff;
