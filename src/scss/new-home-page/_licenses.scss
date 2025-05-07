@@ -59,10 +59,16 @@
 
   &__table {
     table {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       thead {
         tr {
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
           th {
+            width: 100%;
             padding: 20px 5px 20px 0;
             color: rgba(255, 255, 255, 0.5);
             font-family: $font-inter-semb;
@@ -72,6 +78,8 @@
         }
       }
       tbody {
+        display: flex;
+        flex-direction: column;
         position: relative;
         &::before {
           content: '';
@@ -87,6 +95,8 @@
           );
         }
         tr {
+          display: flex;
+          gap: 10px;
           position: relative;
           &::after {
             content: '';
@@ -102,6 +112,7 @@
             );
           }
           td {
+            width: 100%;
             padding: 20px 5px 20px 0;
             color: #fff;
             font-size: 14px;

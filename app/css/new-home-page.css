@@ -4694,9 +4694,26 @@
   line-height: 150%;
 }
 .licenses__table table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
+.licenses__table table thead tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
 .licenses__table table thead tr th {
+  width: 100%;
   padding: 20px 5px 20px 0;
   color: rgba(255, 255, 255, 0.5);
   font-family: "Popins-semibold", sans-serif;
@@ -4704,6 +4721,13 @@
   text-align: start;
 }
 .licenses__table table tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
 .licenses__table table tbody::before {
@@ -4717,6 +4741,10 @@
   background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
 }
 .licenses__table table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
   position: relative;
 }
 .licenses__table table tbody tr::after {
@@ -4730,6 +4758,7 @@
   background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
 }
 .licenses__table table tbody tr td {
+  width: 100%;
   padding: 20px 5px 20px 0;
   color: #fff;
   font-size: 14px;
