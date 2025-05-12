@@ -62,7 +62,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination bonuses__swiper-pagination"></div>
     </div>
     <div class="bonuses__note">
       <img class="bonuses__ico" src="img/new-home-page/bonuses/pin.svg" alt="pin icon" />
@@ -76,52 +76,3 @@
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiperAppBonuses = null;
-
-  function initOrDestroyBonusesAppSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 850 && !swiperAppBonuses) {
-      swiperAppBonuses = new Swiper('.bonusesAppSwiper', {
-        loop: true,
-        slidesPerView: 1.1,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          550: {
-            loop: true,
-            slidesPerView: 2.5,
-            grabCursor: true,
-            spaceBetween: 15,
-            centeredSlides: true,
-            initialSlide: 0,
-            autoplay: false,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-        },
-      });
-    } else if (screenWidth > 850 && swiperAppBonuses) {
-      swiperAppBonuses.destroy(true, true);
-      swiperAppBonuses = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroyBonusesAppSwiper();
-    window.addEventListener('resize', initOrDestroyBonusesAppSwiper);
-  });
-</script>

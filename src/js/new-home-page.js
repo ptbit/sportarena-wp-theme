@@ -1,4 +1,3 @@
-console.log('first');
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { burger } from './functions/burger';

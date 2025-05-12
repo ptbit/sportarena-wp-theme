@@ -10708,9 +10708,9 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!*********************************!*\
-  !*** ./src/js/new-home-page.js ***!
-  \*********************************/
+/*!********************************!*\
+  !*** ./src/js/new-app-page.js ***!
+  \********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
@@ -10744,24 +10744,21 @@ const btnUp = {
 document.addEventListener('DOMContentLoaded', () => {
   btnUp.addEventListener();
   footerMenu();
-  startBenefitsSwiper();
   startEveningSwiper();
-  initGamesSwiper();
-  winsButtons();
+  initOrDestroyInfoSwiper();
+  window.addEventListener('resize', initOrDestroyInfoSwiper);
+  initCasinosSwiper();
   initOrDestroySwiperFeaturesSwiper();
   window.addEventListener('resize', initOrDestroySwiperFeaturesSwiper);
-  algorithmSMB();
-  initOrDestroySwiperFeatures2();
-  window.addEventListener('resize', initOrDestroySwiperFeatures2);
-  initOrDestroySwiperHowToPlay();
-  window.addEventListener('resize', initOrDestroySwiperHowToPlay);
-  registrationSMB();
-  initPaymentsSwiper();
-  startBonusesSwiper();
-  storesShowMoreButtons();
   startSwiperBenefits2();
-  legalitySMB();
-  faqButtons();
+  initOrDestroyFeatures3Swiper();
+  window.addEventListener('resize', initOrDestroyFeatures3Swiper);
+  initOrDestroyBonusesAppSwiper();
+  window.addEventListener('resize', initOrDestroyBonusesAppSwiper);
+  initOrDestroyVSSwiper();
+  window.addEventListener('resize', initOrDestroyVSSwiper);
+  startDataSwiper();
+  startTroubleshootingSwiper();
 });
 function footerMenu() {
   const meneItems = document.querySelectorAll('.footer__menu-title');
@@ -10773,71 +10770,6 @@ function footerMenu() {
         item.classList.toggle('footer__menu-link--active');
       });
     });
-  });
-}
-function startBenefitsSwiper() {
-  const benefitsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.cardsSwiper', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
-    slidesPerView: 1.05,
-    spaceBetween: 10,
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    initialSlide: 0,
-    autoplay: false,
-    pagination: {
-      el: '.benefits__swiper-pagination',
-      clickable: true,
-      bulletElement: 'button'
-    },
-    breakpoints: {
-      375: {
-        slidesPerView: 1.5,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 0
-      },
-      550: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 0
-      },
-      670: {
-        slidesPerView: 2.5,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 0
-      },
-      750: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        initialSlide: 0
-      },
-      1030: {
-        slidesPerView: 4,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: false,
-        initialSlide: 0
-      },
-      1325: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 5,
-        spaceBetween: 18,
-        grabCursor: true
-      }
-    }
   });
 }
 function startEveningSwiper() {
@@ -10894,43 +10826,49 @@ function startEveningSwiper() {
     }
   });
 }
-function initGamesSwiper() {
-  const gamesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.gamesSwiper', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+function initOrDestroyInfoSwiper() {
+  const screenWidth = window.innerWidth;
+  let infoSwiper = null;
+  if (screenWidth <= 620 && !infoSwiper) {
+    infoSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.appInfoSwiper', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      loop: true,
+      slidesPerView: 1.2,
+      grabCursor: true,
+      spaceBetween: 15,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: false,
+      pagination: {
+        el: '.info__swiper-pagination',
+        clickable: true
+      }
+    });
+  } else if (screenWidth > 620 && infoSwiper) {
+    infoSwiper.destroy(true, true);
+    infoSwiper = null;
+  }
+}
+function initCasinosSwiper() {
+  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.casinosSwiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
     loop: true,
-    slidesPerView: 1.05,
+    slidesPerView: 1.1,
     spaceBetween: 15,
     centeredSlides: true,
     grabCursor: true,
     initialSlide: 0,
     navigation: {
-      nextEl: '.games__button--next',
-      prevEl: '.games__button--prew'
+      nextEl: '.casinos__button--next',
+      prevEl: '.casinos__button--prew'
     },
     autoplay: false,
     pagination: {
-      el: '.games__swiper-pagination',
+      el: '.casinos__swiper-pagination',
       clickable: true,
       bulletElement: 'button'
     },
     breakpoints: {
-      375: {
-        loop: true,
-        slidesPerView: 1.2,
-        spaceBetween: 15,
-        centeredSlides: true,
-        grabCursor: true,
-        initialSlide: 0,
-        navigation: {
-          nextEl: '.games__button--next',
-          prevEl: '.games__button--prew'
-        },
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
-      },
       550: {
         loop: true,
         slidesPerView: 2,
@@ -10939,12 +10877,12 @@ function initGamesSwiper() {
         grabCursor: true,
         initialSlide: 0,
         navigation: {
-          nextEl: '.games__button--next',
-          prevEl: '.games__button--prew'
+          nextEl: '.casinos__button--next',
+          prevEl: '.casinos__button--prew'
         },
         autoplay: false,
         pagination: {
-          el: '.games__swiper-pagination',
+          el: '.casinos__swiper-pagination',
           clickable: true
         }
       },
@@ -10955,58 +10893,23 @@ function initGamesSwiper() {
         spaceBetween: 20,
         grabCursor: true,
         navigation: {
-          nextEl: '.games__button--next',
-          prevEl: '.games__button--prew'
+          nextEl: '.casinos__button--next',
+          prevEl: '.casinos__button--prew'
         },
         autoplay: false
       },
       1025: {
         loop: false,
         centeredSlides: false,
-        slidesPerView: 3,
+        slidesPerView: 3.5,
         spaceBetween: 20,
         grabCursor: true,
         navigation: {
-          nextEl: '.games__button--next',
-          prevEl: '.games__button--prew'
-        },
-        autoplay: false
-      },
-      1200: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 3.75,
-        spaceBetween: 20,
-        grabCursor: true,
-        navigation: {
-          nextEl: '.games__button--next',
-          prevEl: '.games__button--prew'
+          nextEl: '.casinos__button--next',
+          prevEl: '.casinos__button--prew'
         },
         autoplay: false
       }
-    }
-  });
-}
-function winsButtons() {
-  const buttons = document.querySelectorAll('.wins__button');
-  const monthBtn = document.querySelector('.monthBtn');
-  const yearBtn = document.querySelector('.yearBtn');
-  const monthTable = document.querySelector('.monthTable');
-  const yearTable = document.querySelector('.yearTable');
-  monthBtn.addEventListener('click', () => {
-    if (!monthBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.add('active');
-      yearTable.classList.remove('active');
-    }
-  });
-  yearBtn.addEventListener('click', () => {
-    if (!yearBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.remove('active');
-      yearTable.classList.add('active');
     }
   });
 }
@@ -11032,305 +10935,6 @@ function initOrDestroySwiperFeaturesSwiper() {
     featuresSwiper.destroy(true, true);
     featuresSwiper = null;
   }
-}
-function algorithmSMB() {
-  const textBlock = document.querySelector('.algorithm__text');
-  const textWrapper = document.querySelector('.algorithm__content');
-  const btn = document.querySelector('.algorithm__showMoreBtn');
-  const maxHeightDesktop = 500;
-  if (textBlock.scrollHeight > maxHeightDesktop) {
-    btn.classList.add('visible');
-    textWrapper.classList.add('short');
-  }
-  btn.addEventListener('click', function () {
-    textWrapper.classList.toggle('short');
-    const expanded = textBlock.classList.toggle('expanded');
-    btn.textContent = expanded ? 'Show less' : 'Show more';
-    btn.classList.toggle('less');
-  });
-}
-function initOrDestroySwiperFeatures2() {
-  const screenWidth = window.innerWidth;
-  let swiperFeatures2 = null;
-  if (screenWidth <= 1050 && !swiperFeatures2) {
-    swiperFeatures2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.features2Swiper', {
-      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
-      loop: true,
-      slidesPerView: 1.2,
-      grabCursor: true,
-      spaceBetween: 15,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.features2__swiper-pagination',
-        clickable: true
-      },
-      breakpoints: {
-        720: {
-          loop: true,
-          slidesPerView: 2.2,
-          grabCursor: true,
-          spaceBetween: 15,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.features2__swiper-pagination',
-            clickable: true
-          }
-        },
-        950: {
-          loop: true,
-          slidesPerView: 3.1,
-          grabCursor: true,
-          spaceBetween: 15,
-          centeredSlides: true,
-          initialSlide: 0,
-          pagination: {
-            el: '.features2__swiper-pagination',
-            clickable: true
-          }
-        }
-      }
-    });
-  } else if (screenWidth > 1050 && swiperFeatures2) {
-    swiperFeatures2.destroy(true, true);
-    swiperFeatures2 = null;
-  }
-}
-function initOrDestroySwiperHowToPlay() {
-  const screenWidth = window.innerWidth;
-  let swiperHowToPlay = null;
-  if (screenWidth <= 799 && !swiperHowToPlay) {
-    swiperHowToPlay = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.howToPlaySwiper', {
-      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
-      loop: true,
-      slidesPerView: 1.2,
-      grabCursor: true,
-      spaceBetween: 15,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.how-to-play__swiper-pagination',
-        clickable: true
-      }
-    });
-  } else if (screenWidth > 799 && swiperHowToPlay) {
-    swiperHowToPlay.destroy(true, true);
-    swiperHowToPlay = null;
-  }
-}
-function registrationSMB() {
-  //1
-  const textBlock = document.querySelector('.item__details--1');
-  const textWrapper = document.querySelector('.item__content--1');
-  const btn = document.querySelector('.reg__smb1');
-  const maxHeightDesktop = 500;
-  if (textBlock.scrollHeight > maxHeightDesktop) {
-    btn.classList.add('visible');
-    textWrapper.classList.add('short');
-  }
-  btn.addEventListener('click', function () {
-    textWrapper.classList.toggle('short');
-    const expanded = textBlock.classList.toggle('expanded');
-    btn.textContent = expanded ? 'Show less' : 'Show more';
-    btn.classList.toggle('less');
-  });
-  //2
-  const textBlock2 = document.querySelector('.item__details--2');
-  const textWrapper2 = document.querySelector('.item__content--2');
-  const btn2 = document.querySelector('.reg__smb2');
-  const maxHeightDesktop2 = 500;
-  if (textBlock2.scrollHeight > maxHeightDesktop2) {
-    btn2.classList.add('visible');
-    textWrapper2.classList.add('short');
-  }
-  btn2.addEventListener('click', function () {
-    textWrapper2.classList.toggle('short');
-    const expanded2 = textBlock2.classList.toggle('expanded');
-    btn2.textContent = expanded2 ? 'Show less' : 'Show more';
-    btn2.classList.toggle('less');
-  });
-}
-function initPaymentsSwiper() {
-  const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.paymentsSwiper', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
-    loop: true,
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    centeredSlides: true,
-    grabCursor: true,
-    initialSlide: 0,
-    navigation: {
-      nextEl: '.payments__button--next',
-      prevEl: '.payments__button--prev'
-    },
-    autoplay: false,
-    pagination: {
-      el: '.payments__swiper-pagination',
-      clickable: true,
-      bulletElement: 'button'
-    },
-    breakpoints: {
-      550: {
-        loop: true,
-        slidesPerView: 2,
-        spaceBetween: 15,
-        centeredSlides: true,
-        grabCursor: true,
-        initialSlide: 0,
-        navigation: {
-          nextEl: '.payments__button--next',
-          prevEl: '.payments__button--prev'
-        },
-        autoplay: false,
-        pagination: {
-          el: '.payments__swiper-pagination',
-          clickable: true
-        }
-      },
-      750: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 2.5,
-        spaceBetween: 20,
-        grabCursor: true,
-        navigation: {
-          nextEl: '.payments__button--next',
-          prevEl: '.payments__button--prev'
-        },
-        autoplay: false
-      },
-      1025: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 3,
-        spaceBetween: 20,
-        grabCursor: true,
-        navigation: {
-          nextEl: '.payments__button--next',
-          prevEl: '.payments__button--prev'
-        },
-        autoplay: false
-      },
-      1200: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 3.75,
-        spaceBetween: 20,
-        grabCursor: true,
-        navigation: {
-          nextEl: '.payments__button--next',
-          prevEl: '.payments__button--prev'
-        },
-        autoplay: false
-      }
-    }
-  });
-}
-function startBonusesSwiper() {
-  const bonusesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.bonusesSwiper', {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
-    slidesPerView: 1.2,
-    spaceBetween: 15,
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    initialSlide: 0,
-    autoplay: false,
-    pagination: {
-      el: '.bonuses__swiper-pagination',
-      clickable: true,
-      bulletElement: 'button'
-    },
-    breakpoints: {
-      1325: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 4,
-        spaceBetween: 30,
-        grabCursor: true
-      },
-      1030: {
-        loop: false,
-        centeredSlides: false,
-        slidesPerView: 4,
-        spaceBetween: 10,
-        grabCursor: true
-      },
-      750: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-        loop: true,
-        grabCursor: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.bonuses__swiper-pagination',
-          clickable: true
-        }
-      },
-      670: {
-        slidesPerView: 2.5,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.bonuses__swiper-pagination',
-          clickable: true
-        }
-      },
-      550: {
-        slidesPerView: 2,
-        spaceBetween: 15,
-        loop: true,
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.bonuses__swiper-pagination',
-          clickable: true
-        }
-      }
-    }
-  });
-}
-function storesShowMoreButtons() {
-  const storesTB1 = document.querySelector('.stores__store--1');
-  const storesTW1 = document.querySelector('.stores__sub-title--1');
-  const storesBtn1 = document.querySelector('.stores__SMB1');
-  const storesMaxHeightDesk1 = 85;
-  if (storesTB1.scrollHeight > storesMaxHeightDesk1) {
-    storesBtn1.classList.add('visible');
-    storesTW1.classList.add('short');
-  }
-  storesBtn1.addEventListener('click', function () {
-    storesTW1.classList.toggle('short');
-    const storesExpanded1 = storesTB1.classList.toggle('expanded');
-    storesBtn1.textContent = storesExpanded1 ? 'Show less' : 'Show more';
-    storesBtn1.classList.toggle('less');
-  });
-  //2
-  const storesTB2 = document.querySelector('.stores__store--2');
-  const storesTW2 = document.querySelector('.stores__sub-title--2');
-  const storesBtn2 = document.querySelector('.stores__SMB2');
-  const storesMaxHeightDesk2 = 85;
-  if (storesTW2.scrollHeight > storesMaxHeightDesk2) {
-    storesBtn2.classList.add('visible');
-    storesTW2.classList.add('short');
-  }
-  storesBtn2.addEventListener('click', function () {
-    storesTW2.classList.toggle('short');
-    const storesExpanded2 = storesTB2.classList.toggle('expanded');
-    storesBtn2.textContent = storesExpanded2 ? 'Show less' : 'Show more';
-    storesBtn2.classList.toggle('less');
-  });
 }
 function startSwiperBenefits2() {
   const benefits2Swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.benefits2Swiper', {
@@ -11421,36 +11025,263 @@ function startSwiperBenefits2() {
     }
   });
 }
-function legalitySMB() {
-  const legality__leftBlock = document.querySelector('.legality__card');
-  const legality__rightBlock = document.querySelector('.legality__info');
-  const legality__textWrapper = document.querySelector('.legality__sub-title');
-  const legality__btn = document.querySelector('.legality__showMoreBtn');
-  const legality__maxHeightDesktop = legality__leftBlock.offsetHeight;
-  if (legality__rightBlock.scrollHeight > legality__maxHeightDesktop) {
-    legality__btn.classList.add('visible');
-    legality__textWrapper.classList.add('short');
+function initOrDestroyFeatures3Swiper() {
+  let swiperFeatures3 = null;
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 799 && !swiperFeatures3) {
+    swiperFeatures3 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.features3Swiper', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      loop: true,
+      slidesPerView: 1.05,
+      grabCursor: true,
+      spaceBetween: 15,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: false,
+      pagination: {
+        el: '.features3__swiper-pagination',
+        clickable: true
+      }
+    });
+  } else if (screenWidth > 799 && swiperFeatures3) {
+    swiperFeatures3.destroy(true, true);
+    swiperFeatures3 = null;
   }
-  legality__btn.addEventListener('click', function () {
-    legality__textWrapper.classList.toggle('short');
-    const legality__expanded = legality__rightBlock.classList.toggle('expanded');
-    legality__btn.textContent = legality__expanded ? 'Show less' : 'Show more';
-    legality__btn.classList.toggle('less');
+}
+function initOrDestroyBonusesAppSwiper() {
+  const screenWidth = window.innerWidth;
+  let swiperAppBonuses = null;
+  if (screenWidth <= 850 && !swiperAppBonuses) {
+    swiperAppBonuses = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.bonusesAppSwiper', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      loop: true,
+      slidesPerView: 1.1,
+      grabCursor: true,
+      spaceBetween: 15,
+      centeredSlides: true,
+      initialSlide: 0,
+      autoplay: false,
+      pagination: {
+        el: '.bonuses__swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        550: {
+          loop: true,
+          slidesPerView: 2.5,
+          grabCursor: true,
+          spaceBetween: 15,
+          centeredSlides: true,
+          initialSlide: 0,
+          autoplay: false,
+          pagination: {
+            el: '.bonuses__swiper-pagination',
+            clickable: true
+          }
+        }
+      }
+    });
+  } else if (screenWidth > 850 && swiperAppBonuses) {
+    swiperAppBonuses.destroy(true, true);
+    swiperAppBonuses = null;
+  }
+}
+function initOrDestroyVSSwiper() {
+  const screenWidth = window.innerWidth;
+  let swiperVS = null;
+  if (screenWidth <= 850 && !swiperVS) {
+    swiperVS = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.vsSwiper', {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      slidesPerView: 1.5,
+      grabCursor: true,
+      spaceBetween: 0,
+      centeredSlides: true,
+      initialSlide: 0,
+      pagination: {
+        el: '.vs__swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        550: {
+          slidesPerView: 2.5,
+          grabCursor: true,
+          spaceBetween: 0,
+          centeredSlides: true,
+          initialSlide: 0,
+          pagination: {
+            el: '.vs__swiper-pagination',
+            clickable: true
+          }
+        }
+      }
+    });
+  } else if (screenWidth > 850 && swiperVS) {
+    swiperVS.destroy(true, true);
+    swiperVS = null;
+  }
+}
+function startDataSwiper() {
+  const dataSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.dataSwiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    slidesPerView: 1.1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 0,
+    autoplay: false,
+    pagination: {
+      el: '.data__swiper-pagination',
+      clickable: true,
+      bulletElement: 'button'
+    },
+    breakpoints: {
+      420: {
+        slidesPerView: 1.1,
+        spaceBetween: 25,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.data__swiper-pagination',
+          clickable: true
+        }
+      },
+      550: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.data__swiper-pagination',
+          clickable: true
+        }
+      },
+      670: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.data__swiper-pagination',
+          clickable: true
+        }
+      },
+      840: {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.data__swiper-pagination',
+          clickable: true
+        }
+      },
+      1150: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.data__swiper-pagination',
+          clickable: true
+        }
+      },
+      1325: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 4,
+        spaceBetween: 18,
+        grabCursor: true
+      }
+    }
   });
 }
-function faqButtons() {
-  const headersBlocks = document.querySelectorAll('.question__header');
-  headersBlocks.forEach(headerBlock => {
-    headerBlock.addEventListener('click', () => {
-      const faqButton = headerBlock.querySelector('.question__btn');
-      const answer = headerBlock.nextElementSibling;
-      answer.classList.toggle('active');
-      faqButton.classList.toggle('active');
-    });
+function startTroubleshootingSwiper() {
+  const troubleshootingSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.troubleshootingSwiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 0,
+    autoplay: false,
+    pagination: {
+      el: '.troubleshooting__swiper-pagination',
+      clickable: true,
+      bulletElement: 'button'
+    },
+    breakpoints: {
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.troubleshooting__swiper-pagination',
+          clickable: true
+        }
+      },
+      670: {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.troubleshooting__swiper-pagination',
+          clickable: true
+        }
+      },
+      750: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.troubleshooting__swiper-pagination',
+          clickable: true
+        }
+      },
+      1030: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        grabCursor: true
+      },
+      1325: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        grabCursor: true
+      }
+    }
   });
 }
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=new-home-page.map
+//# sourceMappingURL=new-app-page.map

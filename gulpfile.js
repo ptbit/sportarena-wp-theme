@@ -62,6 +62,8 @@ const paths = {
     './src/js/short7.js',
     './src/js/new-page.js',
     './src/js/new-home-page.js',
+    './src/js/new-app-page.js',
+    './src/js/new-strategies-page.js',
   ],
   srcMainJs: `${srcFolder}/js/script-page2.js`,
   buildJsFolder: `${buildFolder}/js`,

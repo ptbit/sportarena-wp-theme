@@ -99,54 +99,7 @@
           <div class="card__title"><p class="sectionText">Desktop (Windows / macOS)</p></div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination vs__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiperHowToPlay = null;
-
-  function initOrDestroySwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 850 && !swiperHowToPlay) {
-      swiperHowToPlay = new Swiper('.vsSwiper', {
-        // loop: true,
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 0,
-        centeredSlides: true,
-        initialSlide: 0,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          550: {
-            // loop: true,
-            slidesPerView: 2.5,
-            grabCursor: true,
-            spaceBetween: 0,
-            centeredSlides: true,
-            initialSlide: 0,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-        },
-      });
-    } else if (screenWidth > 850 && swiperHowToPlay) {
-      swiperHowToPlay.destroy(true, true);
-      swiperHowToPlay = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
-  });
-</script>

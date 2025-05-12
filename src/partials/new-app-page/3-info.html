@@ -82,41 +82,7 @@
           <p class="slide__text">200% up to 24,000 INR</p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination info__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let infoSwiper = null;
-
-  function initOrDestroyInfoSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 620 && !infoSwiper) {
-      infoSwiper = new Swiper('.appInfoSwiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 620 && infoSwiper) {
-      infoSwiper.destroy(true, true);
-      infoSwiper = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroyInfoSwiper();
-    window.addEventListener('resize', initOrDestroyInfoSwiper);
-  });
-</script>
