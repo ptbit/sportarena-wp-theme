@@ -19,8 +19,7 @@
     as="style"
     onload="this.onload=null;this.rel='stylesheet'"
   />
-  <script defer src="js/script-page2.js"></script>
-  <!-- <script defer src="js/script-page18.js"></script> -->
+  <script defer src="js/new-home-page.js"></script>
 </head>
 
   <body class="body">
@@ -214,10 +213,6 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('touchstart', function () {}, true);
-</script>
-
         <!--  -->
         <section class="game">
   <div class="game__container">
@@ -345,86 +340,15 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination benefits__swiper-pagination"></div>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const swiper = new Swiper('.cardsSwiper', {
-      slidesPerView: 1.05,
-      spaceBetween: 10,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        375: {
-          slidesPerView: 1.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        550: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        670: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-        },
-
-        1030: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: false,
-          initialSlide: 0,
-        },
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 5,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="evening">
   <div class="evening__swiper">
-    <div class="swiper phonesSwiper">
+    <div class="swiper phonesSwiper eveningSwiper">
       <div class="swiper-wrapper evening__phones">
         <div class="swiper-slide evening__phone">
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
@@ -453,7 +377,7 @@
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination evening__swiper-pagination"></div>
     </div>
     <h2 class="evening__title">In the evening</h2>
     <p class="evening__sub-title">
@@ -462,66 +386,6 @@
     </p>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const swiper = new Swiper('.phonesSwiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
-      initialSlide: 0,
-      loop: true,
-      centeredSlides: true,
-      grabCursor: true,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        375: {
-          slidesPerView: 1.8,
-          spaceBetween: 15,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        700: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          autoplay: false,
-        },
-        1260: {
-          slidesPerView: 5,
-          spaceBetween: 30,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="games">
@@ -756,122 +620,10 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-
-      <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
+      <div class="swiper-pagination games__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  function initSwiper() {
-    const swiper = new Swiper('.gamesSwiper', {
-      loop: true,
-      slidesPerView: 1.05,
-      spaceBetween: 15,
-      centeredSlides: true,
-      grabCursor: true,
-      initialSlide: 0,
-
-      navigation: {
-        nextEl: '.games__button--next',
-        prevEl: '.games__button--prew',
-      },
-
-      autoplay: false,
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-
-      breakpoints: {
-        375: {
-          loop: true,
-          slidesPerView: 1.2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.games__button--next',
-            prevEl: '.games__button--prew',
-          },
-
-          autoplay: false,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        550: {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.games__button--next',
-            prevEl: '.games__button--prew',
-          },
-
-          autoplay: false,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.games__button--next',
-            prevEl: '.games__button--prew',
-          },
-          autoplay: false,
-        },
-        1025: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.games__button--next',
-            prevEl: '.games__button--prew',
-          },
-          autoplay: false,
-        },
-        1200: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3.75,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.games__button--next',
-            prevEl: '.games__button--prew',
-          },
-          autoplay: false,
-        },
-      },
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initSwiper());
-</script>
 
         <!--  -->
         <section class="wins">
@@ -1062,32 +814,6 @@
   </div>
 </section>
 
-<script>
-  const buttons = document.querySelectorAll('.wins__button');
-
-  const monthBtn = document.querySelector('.monthBtn');
-  const yearBtn = document.querySelector('.yearBtn');
-  const monthTable = document.querySelector('.monthTable');
-  const yearTable = document.querySelector('.yearTable');
-
-  monthBtn.addEventListener('click', () => {
-    if (!monthBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.add('active');
-      yearTable.classList.remove('active');
-    }
-  });
-  yearBtn.addEventListener('click', () => {
-    if (!yearBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.remove('active');
-      yearTable.classList.add('active');
-    }
-  });
-</script>
-
         <!--  -->
         <section class="features">
   <div class="features__container">
@@ -1164,44 +890,10 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination features__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let featuresSwiper = null;
-
-  function initOrDestroySwiperFeaturesSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 799 && !featuresSwiper) {
-      featuresSwiper = new Swiper('.featuresSwiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay:  false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 799 && featuresSwiper) {
-      featuresSwiper.destroy(true, true);
-      featuresSwiper = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiperFeaturesSwiper();
-    window.addEventListener('resize', initOrDestroySwiperFeaturesSwiper);
-  });
-</script>
 
         <!--  -->
         <section class="algorithm">
@@ -1263,28 +955,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const textBlock = document.querySelector('.algorithm__text');
-    const textWrapper = document.querySelector('.algorithm__content');
-    const btn = document.querySelector('.algorithm__showMoreBtn');
-
-    const maxHeightDesktop = 500;
-
-    if (textBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = textBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-  });
-</script>
 
         <!--  -->
         <section class="features2">
@@ -1354,71 +1024,10 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination features2__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiperFeatures2 = null;
-
-  function initOrDestroySwiperFeatures2() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 1050 && !swiperFeatures2) {
-      swiperFeatures2 = new Swiper('.features2Swiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          720: {
-            loop: true,
-            slidesPerView: 2.2,
-            grabCursor: true,
-            spaceBetween: 15,
-            centeredSlides: true,
-            initialSlide: 0,
-            autoplay: false,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-          950: {
-            loop: true,
-            slidesPerView: 3.1,
-            grabCursor: true,
-            spaceBetween: 15,
-            centeredSlides: true,
-            initialSlide: 0,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-        },
-      });
-    } else if (screenWidth > 1050 && swiperFeatures2) {
-      swiperFeatures2.destroy(true, true);
-      swiperFeatures2 = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiperFeatures2();
-    window.addEventListener('resize', initOrDestroySwiperFeatures2);
-  });
-</script>
 
         <!--  -->
         <section class="what-is">
@@ -1527,44 +1136,10 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination how-to-play__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiperHowToPlay = null;
-
-  function initOrDestroySwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 799 && !swiperHowToPlay) {
-      swiperHowToPlay = new Swiper('.howToPlaySwiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 799 && swiperHowToPlay) {
-      swiperHowToPlay.destroy(true, true);
-      swiperHowToPlay = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiper();
-    window.addEventListener('resize', initOrDestroySwiper);
-  });
-</script>
 
         <!--  -->
         <section class="registration">
@@ -1616,7 +1191,6 @@
             to receive confirmation SMS or code. In case you need to change some of your data, like
             email or phone
           </p>
-          <!-- <a class="item__link" href="#">Show more</a> -->
         </div>
         <button type="button" class="item__showMoreBtn reg__smb1" aria-label="show-more">
           Show more
@@ -1668,7 +1242,6 @@
             the user clicks it and enters their email address, they receive a link for resetting the
             password.
           </p>
-          <!-- <a class="item__link" href="#">Show more</a> -->
         </div>
         <button type="button" class="item__showMoreBtn reg__smb2" aria-label="show-more">
           Show more
@@ -1677,45 +1250,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    //1
-    const textBlock = document.querySelector('.item__details--1');
-    const textWrapper = document.querySelector('.item__content--1');
-    const btn = document.querySelector('.reg__smb1');
-
-    const maxHeightDesktop = 500;
-    if (textBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = textBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-    //2
-    const textBlock2 = document.querySelector('.item__details--2');
-    const textWrapper2 = document.querySelector('.item__content--2');
-    const btn2 = document.querySelector('.reg__smb2');
-
-    const maxHeightDesktop2 = 500;
-    if (textBlock2.scrollHeight > maxHeightDesktop2) {
-      btn2.classList.add('visible');
-      textWrapper2.classList.add('short');
-    }
-
-    btn2.addEventListener('click', function () {
-      textWrapper2.classList.toggle('short');
-      const expanded2 = textBlock2.classList.toggle('expanded');
-      btn2.textContent = expanded2 ? 'Show less' : 'Show more';
-      btn2.classList.toggle('less');
-    });
-  });
-</script>
 
         <!--  -->
         <section class="funds">
@@ -1891,99 +1425,10 @@
         </div>
       </div>
 
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination payments__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  function initSwiper() {
-    const swiper = new Swiper('.paymentsSwiper', {
-      loop: true,
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      centeredSlides: true,
-      grabCursor: true,
-      initialSlide: 0,
-
-      navigation: {
-        nextEl: '.payments__button--next',
-        prevEl: '.payments__button--prev',
-      },
-
-      autoplay: false,
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-
-      breakpoints: {
-        550: {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-
-          autoplay: false,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-        1025: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-        1200: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3.75,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.payments__button--next',
-            prevEl: '.payments__button--prev',
-          },
-          autoplay: false,
-        },
-      },
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initSwiper());
-</script>
 
         <!--  -->
         <section class="bonuses">
@@ -2032,7 +1477,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination bonuses__swiper-pagination"></div>
     </div>
     <div class="bonuses__note">
       <img class="bonuses__ico" src="img/new-home-page/bonuses/pin.svg" alt="pin icon" />
@@ -2043,83 +1488,6 @@
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const bonusesSwiper = new Swiper('.bonusesSwiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 30,
-          grabCursor: true,
-        },
-        1030: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 10,
-          grabCursor: true,
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        550: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="stores">
@@ -2162,46 +1530,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    //1
-    const textBlock = document.querySelector('.stores__store--1');
-    const textWrapper = document.querySelector('.stores__sub-title--1');
-    const btn = document.querySelector('.stores__SMB1');
-
-    const maxHeightDesktop = 85;
-
-    if (textBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = textBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-    //2
-    const textBlock2 = document.querySelector('.stores__store--2');
-    const textWrapper2 = document.querySelector('.stores__sub-title--2');
-    const btn2 = document.querySelector('.stores__SMB2');
-
-    const maxHeightDesktop2 = 85;
-    if (textWrapper2.scrollHeight > maxHeightDesktop2) {
-      btn2.classList.add('visible');
-      textWrapper2.classList.add('short');
-    }
-
-    btn2.addEventListener('click', function () {
-      textWrapper2.classList.toggle('short');
-      const expanded2 = textBlock2.classList.toggle('expanded');
-      btn2.textContent = expanded2 ? 'Show less' : 'Show more';
-      btn2.classList.toggle('less');
-    });
-  });
-</script>
 
         <!--  -->
         <section class="licenses">
@@ -2345,104 +1673,10 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination benefits2__swiper-pagination"></div>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const benefits2Swiper = new Swiper('.benefits2Swiper', {
-      slidesPerView: 1.05,
-      spaceBetween: 10,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        420: {
-          slidesPerView: 1.1,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        550: {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        840: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1150: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="legality">
@@ -2490,29 +1724,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const leftBlock = document.querySelector('.legality__card');
-    const rightBlock = document.querySelector('.legality__info');
-    const textWrapper = document.querySelector('.legality__sub-title');
-    const btn = document.querySelector('.legality__showMoreBtn');
-
-    const maxHeightDesktop = leftBlock.offsetHeight;
-
-    if (rightBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = rightBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-  });
-</script>
 
         <!--  -->
         <section class="faq">
@@ -2598,19 +1809,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  const headersBlocks = document.querySelectorAll('.question__header');
-
-  headersBlocks.forEach((headerBlock) => {
-    headerBlock.addEventListener('click', () => {
-      const faqButton = headerBlock.querySelector('.question__btn');
-      const answer = headerBlock.nextElementSibling;
-      answer.classList.toggle('active');
-      faqButton.classList.toggle('active');
-    });
-  });
-</script>
 
         <button type="button" class="main__btn-top _hidden" aria-label="button-top">
           <span></span>
@@ -2705,39 +1903,4 @@
 
     </div>
   </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const btnUp = {
-      el: document.querySelector('.main__btn-top'),
-      show() {
-        // удалим у кнопки класс btn-up_hide
-        this.el.classList.remove('_hidden');
-      },
-      hide() {
-        // добавим к кнопке класс btn-up_hide
-        this.el.classList.add('_hidden');
-      },
-      addEventListener() {
-        // при прокрутке содержимого страницы
-        window.addEventListener('scroll', () => {
-          // определяем величину прокрутки
-          const scrollY = window.scrollY || document.documentElement.scrollTop;
-          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
-          scrollY > 400 ? this.show() : this.hide();
-        });
-        // при нажатии на кнопку .btn-up
-        document.querySelector('.main__btn-top').onclick = () => {
-          // переместим в начало страницы
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          });
-        };
-      },
-    };
-
-    btnUp.addEventListener();
-  </script>
 </html>

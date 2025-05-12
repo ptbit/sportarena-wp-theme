@@ -2271,7 +2271,6 @@
   box-orient: vertical;
   line-clamp: 8;
   -webkit-line-clamp: 8;
-  min-height: 450px;
 }
 .algorithm__text {
   -ms-grid-row: 1;

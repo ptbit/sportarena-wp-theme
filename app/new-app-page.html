@@ -220,7 +220,7 @@
         <!--  -->
         <section class="evening">
   <div class="evening__swiper">
-    <div class="swiper phonesSwiper">
+    <div class="swiper phonesSwiper eveningSwiper">
       <div class="swiper-wrapper evening__phones">
         <div class="swiper-slide evening__phone">
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
@@ -249,7 +249,7 @@
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination evening__swiper-pagination"></div>
     </div>
     <h2 class="evening__title">In the evening</h2>
     <p class="evening__sub-title">
@@ -258,66 +258,6 @@
     </p>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const swiper = new Swiper('.phonesSwiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
-      initialSlide: 0,
-      loop: true,
-      centeredSlides: true,
-      grabCursor: true,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        375: {
-          slidesPerView: 1.8,
-          spaceBetween: 15,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        700: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          autoplay: false,
-        },
-        1260: {
-          slidesPerView: 5,
-          spaceBetween: 30,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="info">
@@ -727,44 +667,10 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination features__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let featuresSwiper = null;
-
-  function initOrDestroySwiperFeaturesSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 799 && !featuresSwiper) {
-      featuresSwiper = new Swiper('.featuresSwiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay:  false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 799 && featuresSwiper) {
-      featuresSwiper.destroy(true, true);
-      featuresSwiper = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiperFeaturesSwiper();
-    window.addEventListener('resize', initOrDestroySwiperFeaturesSwiper);
-  });
-</script>
 
         <!--  -->
         <section class="stores">
@@ -923,104 +829,10 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination benefits2__swiper-pagination"></div>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const benefits2Swiper = new Swiper('.benefits2Swiper', {
-      slidesPerView: 1.05,
-      spaceBetween: 10,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        420: {
-          slidesPerView: 1.1,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        550: {
-          slidesPerView: 1.2,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        840: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1150: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-      },
-    });
-  }
-</script>
 
         <!--  -->
         <section class="play">

@@ -57,25 +57,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const textBlock = document.querySelector('.algorithm__text');
-    const textWrapper = document.querySelector('.algorithm__content');
-    const btn = document.querySelector('.algorithm__showMoreBtn');
-
-    const maxHeightDesktop = 500;
-
-    if (textBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = textBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-  });
-</script>

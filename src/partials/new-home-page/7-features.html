@@ -73,41 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination features__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let featuresSwiper = null;
-
-  function initOrDestroySwiperFeaturesSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 799 && !featuresSwiper) {
-      featuresSwiper = new Swiper('.featuresSwiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay:  false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 799 && featuresSwiper) {
-      featuresSwiper.destroy(true, true);
-      featuresSwiper = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiperFeaturesSwiper();
-    window.addEventListener('resize', initOrDestroySwiperFeaturesSwiper);
-  });
-</script>

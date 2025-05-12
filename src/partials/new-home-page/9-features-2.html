@@ -65,68 +65,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination features2__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiperFeatures2 = null;
-
-  function initOrDestroySwiperFeatures2() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 1050 && !swiperFeatures2) {
-      swiperFeatures2 = new Swiper('.features2Swiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          720: {
-            loop: true,
-            slidesPerView: 2.2,
-            grabCursor: true,
-            spaceBetween: 15,
-            centeredSlides: true,
-            initialSlide: 0,
-            autoplay: false,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-          950: {
-            loop: true,
-            slidesPerView: 3.1,
-            grabCursor: true,
-            spaceBetween: 15,
-            centeredSlides: true,
-            initialSlide: 0,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          },
-        },
-      });
-    } else if (screenWidth > 1050 && swiperFeatures2) {
-      swiperFeatures2.destroy(true, true);
-      swiperFeatures2 = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroySwiperFeatures2();
-    window.addEventListener('resize', initOrDestroySwiperFeatures2);
-  });
-</script>

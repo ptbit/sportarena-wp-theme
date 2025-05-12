@@ -43,26 +43,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const leftBlock = document.querySelector('.legality__card');
-    const rightBlock = document.querySelector('.legality__info');
-    const textWrapper = document.querySelector('.legality__sub-title');
-    const btn = document.querySelector('.legality__showMoreBtn');
-
-    const maxHeightDesktop = leftBlock.offsetHeight;
-
-    if (rightBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = rightBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-  });
-</script>

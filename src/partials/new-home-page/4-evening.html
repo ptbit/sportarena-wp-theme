@@ -1,6 +1,6 @@
 <section class="evening">
   <div class="evening__swiper">
-    <div class="swiper phonesSwiper">
+    <div class="swiper phonesSwiper eveningSwiper">
       <div class="swiper-wrapper evening__phones">
         <div class="swiper-slide evening__phone">
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
@@ -29,7 +29,7 @@
           <img class="evening__phone-img" src="img/new-home-page/evening/phone-inner.png" alt="" />
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination evening__swiper-pagination"></div>
     </div>
     <h2 class="evening__title">In the evening</h2>
     <p class="evening__sub-title">
@@ -38,63 +38,3 @@
     </p>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const swiper = new Swiper('.phonesSwiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 10,
-      initialSlide: 0,
-      loop: true,
-      centeredSlides: true,
-      grabCursor: true,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        375: {
-          slidesPerView: 1.8,
-          spaceBetween: 15,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        700: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          autoplay: false,
-        },
-        1260: {
-          slidesPerView: 5,
-          spaceBetween: 30,
-          initialSlide: 0,
-          loop: true,
-          centeredSlides: true,
-          grabCursor: true,
-          autoplay: false,
-        },
-      },
-    });
-  }
-</script>

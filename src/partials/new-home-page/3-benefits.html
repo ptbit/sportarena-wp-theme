@@ -63,78 +63,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination benefits__swiper-pagination"></div>
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const swiper = new Swiper('.cardsSwiper', {
-      slidesPerView: 1.05,
-      spaceBetween: 10,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        375: {
-          slidesPerView: 1.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        550: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        670: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-        },
-
-        1030: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: false,
-          initialSlide: 0,
-        },
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 5,
-          spaceBetween: 18,
-          grabCursor: true,
-        },
-      },
-    });
-  }
-</script>

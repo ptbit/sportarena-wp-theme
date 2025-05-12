@@ -44,7 +44,7 @@
           </p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination bonuses__swiper-pagination"></div>
     </div>
     <div class="bonuses__note">
       <img class="bonuses__ico" src="img/new-home-page/bonuses/pin.svg" alt="pin icon" />
@@ -55,80 +55,3 @@
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', startSwiper);
-
-  function startSwiper() {
-    const bonusesSwiper = new Swiper('.bonusesSwiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      initialSlide: 0,
-      autoplay: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-      breakpoints: {
-        1325: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 30,
-          grabCursor: true,
-        },
-        1030: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 4,
-          spaceBetween: 10,
-          grabCursor: true,
-        },
-        750: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-          loop: true,
-          grabCursor: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        670: {
-          slidesPerView: 2.5,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        550: {
-          slidesPerView: 2,
-          spaceBetween: 15,
-          loop: true,
-          grabCursor: true,
-          centeredSlides: true,
-          initialSlide: 0,
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-      },
-    });
-  }
-</script>

@@ -185,29 +185,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  const buttons = document.querySelectorAll('.wins__button');
-
-  const monthBtn = document.querySelector('.monthBtn');
-  const yearBtn = document.querySelector('.yearBtn');
-  const monthTable = document.querySelector('.monthTable');
-  const yearTable = document.querySelector('.yearTable');
-
-  monthBtn.addEventListener('click', () => {
-    if (!monthBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.add('active');
-      yearTable.classList.remove('active');
-    }
-  });
-  yearBtn.addEventListener('click', () => {
-    if (!yearBtn.classList.contains('wins__button--active')) {
-      monthBtn.classList.toggle('wins__button--active');
-      yearBtn.classList.toggle('wins__button--active');
-      monthTable.classList.remove('active');
-      yearTable.classList.add('active');
-    }
-  });
-</script>
