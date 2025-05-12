@@ -19,12 +19,7 @@
     as="style"
     onload="this.onload=null;this.rel='stylesheet'"
   />
-  <script defer src="js/script-page2.js"></script>
-  <!-- <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-  <!-- <script defer src="js/script-page18.js"></script> -->
-  <script>
-    
-  </script>
+  <script defer src="js/new-page.js"></script>
 </head>
 
   <body class="body">
@@ -176,20 +171,19 @@
         <section class="hero">
   <div class="hero__container">
     <div class="hero__left">
-      <a class="hero__back-btn back-btn" href="#">
-        <!-- <img class="back-btn__arrow" src="img/new-page/play-btn.svg" alt="go back button" /> -->
-        go back
-      </a>
+      <a class="hero__back-btn back-btn" href="#"> go back </a>
       <h1 class="hero__title">Play Aviator at Favbet</h1>
       <p class="hero__text">
-        Before starting gambling on 4Rabet Aviator, which is based on a random number generator, you need to know some information. Learn
-        what promotions are offered here and what you need to do to obtain them. Find out how to sign up at this website and what banking
-        options and currencies are available.
+        Before starting gambling on 4Rabet Aviator, which is based on a random number generator, you
+        need to know some information. Learn what promotions are offered here and what you need to
+        do to obtain them. Find out how to sign up at this website and what banking options and
+        currencies are available.
       </p>
       <p class="hero__sub-text">
-        *Website is owned by Group of Companies, having its registered office at 4, Nicosia, Cyprus. The Group includes a company
-        incorporated under the laws of Cyprus with a company registration and having its registered office at Nicosia, Cyprus a company
-        incorporated under the laws. Company: Umbrella Development B.V.
+        *Website is owned by Group of Companies, having its registered office at 4, Nicosia, Cyprus.
+        The Group includes a company incorporated under the laws of Cyprus with a company
+        registration and having its registered office at Nicosia, Cyprus a company incorporated
+        under the laws. Company: Umbrella Development B.V.
       </p>
     </div>
     <div class="hero__right right">
@@ -211,7 +205,11 @@
         <p class="bonus__text">Welcome Bonus: Welcome Pack 700% up to 90000 INR</p>
         <a class="bonus__btn" href="#">
           Get your bonus and play
-          <img class="bonus__btn__arrow" src="img/new-page/play-btn.svg" alt="Get your bonus and play" />
+          <img
+            class="bonus__btn__arrow"
+            src="img/new-page/play-btn.svg"
+            alt="Get your bonus and play"
+          />
         </a>
       </div>
     </div>
@@ -277,44 +275,10 @@
           <p class="slide__text">200% up to 24,000 INR</p>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination info__swiper-pagination"></div>
     </div>
   </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  let swiper = null;
-
-  function initOrDestroyInfoSwiper() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 620 && !swiper) {
-      swiper = new Swiper('.swiper', {
-        loop: true,
-        slidesPerView: 1.2,
-        grabCursor: true,
-        spaceBetween: 15,
-        centeredSlides: true,
-        initialSlide: 0,
-        autoplay: false,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    } else if (screenWidth > 620 && swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    initOrDestroyInfoSwiper();
-    window.addEventListener('resize', initOrDestroyInfoSwiper);
-  });
-</script>
 
         <!--  -->
         <section class="how-get">
@@ -430,68 +394,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    //1
-    // const textBlock = document.querySelector('.item__details--1');
-    // const textWrapper = document.querySelector('.item__content--1');
-    const textBlock = document.querySelector('.item__content--1');
-    const textWrapper = document.querySelector('.item__sub-text--1');
-    const btn = document.querySelector('.smb1');
-
-    const maxHeightDesktop = 200;
-    if (textBlock.scrollHeight > maxHeightDesktop) {
-      btn.classList.add('visible');
-      textWrapper.classList.add('short');
-    }
-
-    btn.addEventListener('click', function () {
-      textWrapper.classList.toggle('short');
-      const expanded = textBlock.classList.toggle('expanded');
-      btn.textContent = expanded ? 'Show less' : 'Show more';
-      btn.classList.toggle('less');
-    });
-    // //2
-    // const textBlock2 = document.querySelector('.item__details--2');
-    // const textWrapper2 = document.querySelector('.item__content--2');
-    const textBlock2 = document.querySelector('.item__content--2');
-    const textWrapper2 = document.querySelector('.item__sub-text--2');
-    const btn2 = document.querySelector('.smb2');
-
-    const maxHeightDesktop2 = 300;
-    if (textBlock2.scrollHeight > maxHeightDesktop2) {
-      btn2.classList.add('visible');
-      textWrapper2.classList.add('short');
-    }
-
-    btn2.addEventListener('click', function () {
-      textWrapper2.classList.toggle('short');
-      const expanded2 = textBlock2.classList.toggle('expanded');
-      btn2.textContent = expanded2 ? 'Show less' : 'Show more';
-      btn2.classList.toggle('less');
-    });
-    //3
-    // const textBlock3 = document.querySelector('.item__details--3');
-    // const textWrapper3 = document.querySelector('.item__content--3');
-    const textBlock3 = document.querySelector('.item__content--3');
-    const textWrapper3 = document.querySelector('.item__sub-text--3');
-    const btn3 = document.querySelector('.smb3');
-
-    const maxHeightDesktop3 = 300;
-    if (textBlock3.scrollHeight > maxHeightDesktop3) {
-      btn3.classList.add('visible');
-      textWrapper3.classList.add('short');
-    }
-
-    btn3.addEventListener('click', function () {
-      textWrapper3.classList.toggle('short');
-      const expanded3 = textBlock3.classList.toggle('expanded');
-      btn3.textContent = expanded3 ? 'Show less' : 'Show more';
-      btn3.classList.toggle('less');
-    });
-  });
-</script>
 
         <!--  -->
         <section class="casinos">
@@ -611,86 +513,11 @@
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  function initCasinosSwiper() {
-    const casinoSwiper = new Swiper('.casinosSwiper', {
-      loop: true,
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      centeredSlides: true,
-      grabCursor: true,
-      initialSlide: 0,
-
-      navigation: {
-        nextEl: '.casinos__button--next',
-        prevEl: '.casinos__button--prew',
-      },
-
-      autoplay: false,
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-
-      breakpoints: {
-        550: {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-
-          autoplay: false,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1025: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-          autoplay: false,
-        },
-      },
-    });
-  }
+<!-- <script>
+  
 
   document.addEventListener('DOMContentLoaded', initCasinosSwiper());
-</script>
+</script> -->
 
         <button type="button" class="main__btn-top _hidden" aria-label="button-top">
           <span></span>
@@ -785,38 +612,4 @@
 
     </div>
   </body>
-
-  <script>
-    const btnUp = {
-      el: document.querySelector('.main__btn-top'),
-      show() {
-        // удалим у кнопки класс btn-up_hide
-        this.el.classList.remove('_hidden');
-      },
-      hide() {
-        // добавим к кнопке класс btn-up_hide
-        this.el.classList.add('_hidden');
-      },
-      addEventListener() {
-        // при прокрутке содержимого страницы
-        window.addEventListener('scroll', () => {
-          // определяем величину прокрутки
-          const scrollY = window.scrollY || document.documentElement.scrollTop;
-          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
-          scrollY > 400 ? this.show() : this.hide();
-        });
-        // при нажатии на кнопку .btn-up
-        document.querySelector('.main__btn-top').onclick = () => {
-          // переместим в начало страницы
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          });
-        };
-      },
-    };
-
-    btnUp.addEventListener();
-  </script>
 </html>

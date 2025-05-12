@@ -115,83 +115,8 @@
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-  function initCasinosSwiper() {
-    const casinoSwiper = new Swiper('.casinosSwiper', {
-      loop: true,
-      slidesPerView: 1.2,
-      spaceBetween: 15,
-      centeredSlides: true,
-      grabCursor: true,
-      initialSlide: 0,
-
-      navigation: {
-        nextEl: '.casinos__button--next',
-        prevEl: '.casinos__button--prew',
-      },
-
-      autoplay: false,
-
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletElement: 'button',
-      },
-
-      breakpoints: {
-        550: {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 15,
-          centeredSlides: true,
-          grabCursor: true,
-          initialSlide: 0,
-
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-
-          autoplay: false,
-
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        750: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-          autoplay: false,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        },
-        1025: {
-          loop: false,
-          centeredSlides: false,
-          slidesPerView: 3.5,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.casinos__button--next',
-            prevEl: '.casinos__button--prew',
-          },
-          autoplay: false,
-        },
-      },
-    });
-  }
+<!-- <script>
+  
 
   document.addEventListener('DOMContentLoaded', initCasinosSwiper());
-</script>
+</script> -->
