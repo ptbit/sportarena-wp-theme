@@ -33,9 +33,12 @@
       background: url('../img/new-app-page/tables/bg.png') no-repeat 50% 50% / cover;
     }
     table {
+      width: 100%;
       thead {
         tr {
           position: relative;
+          display: flex;
+          align-items: center;
           &::after {
             content: '';
             position: absolute;
@@ -62,17 +65,28 @@
             font-family: $font-inter-semb;
             font-size: 14px;
             text-align: left;
+            &:first-child {
+              width: 30%;
+            }
           }
         }
       }
       tbody {
         tr {
+          position: relative;
+          display: flex;
+          align-items: center;
+
           td {
             padding: 20px 30px 20px 0;
             color: #fff;
             font-family: $font-inter-semb;
             font-size: 14px;
+            &:first-child {
+              width: 30%;
+            }
           }
+
           position: relative;
           &::after {
             content: '';
