@@ -2564,6 +2564,9 @@
   }
 }
 @media (max-width: 850px) {
+  .bonuses {
+    margin-bottom: 100px;
+  }
   .bonuses__container {
     padding-left: 0;
     padding-right: 0;
@@ -2593,8 +2596,17 @@
   .bonuses__sub-title {
     padding: 0 15px;
   }
+  .bonuses .swiper {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 650px) {
+  .bonuses {
+    margin-bottom: 0;
+  }
+  .bonuses .swiper {
+    margin-bottom: 20px;
+  }
   .bonuses__note {
     width: 95%;
     position: relative;
@@ -2647,13 +2659,14 @@
   margin-bottom: 40px;
 }
 .vs__cards {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 42px 30px 20px;
+  padding: 22px 30px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 12px;

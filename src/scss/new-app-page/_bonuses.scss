@@ -141,6 +141,7 @@
 
 @media (max-width: 850px) {
   .bonuses {
+    margin-bottom: 100px;
     &__container {
       padding-left: 0;
       padding-right: 0;
@@ -171,10 +172,17 @@
     &__sub-title {
       padding: 0 15px;
     }
+    .swiper {
+      margin-bottom: 40px;
+    }
   }
 }
 @media (max-width: 650px) {
   .bonuses {
+    margin-bottom: 0;
+    .swiper {
+      margin-bottom: 20px;
+    }
     &__note {
       width: 95%;
       position: relative;
