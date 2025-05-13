@@ -10744,7 +10744,7 @@ const btnUp = {
 document.addEventListener('DOMContentLoaded', () => {
   btnUp.addEventListener();
   footerMenu();
-  startEveningSwiper();
+  startEveningSwiper2();
   initOrDestroyInfoSwiper();
   window.addEventListener('resize', initOrDestroyInfoSwiper);
   initCasinosSwiper();
@@ -10772,8 +10772,8 @@ function footerMenu() {
     });
   });
 }
-function startEveningSwiper() {
-  const eveningSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.eveningSwiper', {
+function startEveningSwiper2() {
+  const eveningSwiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.eveningSwiper2', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     slidesPerView: 1.5,
     spaceBetween: 10,
@@ -10783,7 +10783,7 @@ function startEveningSwiper() {
     grabCursor: true,
     autoplay: false,
     pagination: {
-      el: '.evening__swiper-pagination',
+      el: '.evening2__swiper-pagination',
       clickable: true,
       bulletElement: 'button'
     },
@@ -10797,7 +10797,7 @@ function startEveningSwiper() {
         grabCursor: true,
         autoplay: false,
         pagination: {
-          el: '.evening__swiper-pagination',
+          el: '.evening2__swiper-pagination',
           clickable: true
         }
       },
@@ -10809,19 +10809,18 @@ function startEveningSwiper() {
         centeredSlides: true,
         grabCursor: true,
         pagination: {
-          el: '.evening__swiper-pagination',
+          el: '.evening2__swiper-pagination',
           clickable: true
         },
         autoplay: false
       },
       1260: {
         slidesPerView: 5,
-        spaceBetween: 30,
-        initialSlide: 0,
+        spaceBetween: 20,
+        initialSlide: 2,
         loop: true,
         centeredSlides: true,
-        grabCursor: true,
-        autoplay: false
+        grabCursor: true
       }
     }
   });
@@ -11096,7 +11095,7 @@ function initOrDestroyVSSwiper() {
       grabCursor: true,
       spaceBetween: 0,
       centeredSlides: true,
-      initialSlide: 0,
+      initialSlide: 1,
       pagination: {
         el: '.vs__swiper-pagination',
         clickable: true
@@ -11104,9 +11103,10 @@ function initOrDestroyVSSwiper() {
       breakpoints: {
         550: {
           slidesPerView: 2.5,
+          slidesOffsetAfter: 30,
           grabCursor: true,
           spaceBetween: 0,
-          centeredSlides: true,
+          centeredSlides: false,
           initialSlide: 0,
           pagination: {
             el: '.vs__swiper-pagination',
