@@ -76,7 +76,7 @@ function theMostShowMoreButtons() {
 document.addEventListener('DOMContentLoaded', () => {
   btnUp.addEventListener();
   footerMenu();
-  // theMostShowMoreButtons();
+  theMostShowMoreButtons();
 
   showHideBlock('.BH1', '.BB1', '.BC1');
   showHideBlock('.BH2', '.BB2', '.BC2');

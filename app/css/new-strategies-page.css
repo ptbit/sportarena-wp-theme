@@ -1042,6 +1042,12 @@
   .block .table__row--title, .block .table__row--value {
     font-size: 13px;
   }
+  .block .row__circle {
+    font-size: 26px;
+  }
+  .block .row__text {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .block__right {
@@ -1161,6 +1167,25 @@
   .block__p.short.TW2 {
     line-clamp: 2;
     -webkit-line-clamp: 2;
+  }
+  .block .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+  .block .row__circle {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+  .block .row__text {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 350px) {

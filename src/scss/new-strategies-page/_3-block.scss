@@ -411,6 +411,14 @@
         }
       }
     }
+    .row {
+      &__circle {
+        font-size: 26px;
+      }
+      &__text {
+        font-size: 15px;
+      }
+    }
   }
 }
 @media screen and (max-width: 1000px) {
@@ -544,6 +552,20 @@
       &.short.TW2 {
         line-clamp: 2;
         -webkit-line-clamp: 2;
+      }
+    }
+    .row {
+      flex-direction: column;
+      gap: 8px;
+      padding: 10px;
+      align-items: start;
+      &__circle {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+      }
+      &__text {
+        font-size: 12px;
       }
     }
   }
