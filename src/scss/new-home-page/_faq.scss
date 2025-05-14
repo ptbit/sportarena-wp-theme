@@ -68,9 +68,6 @@
     border-radius: 12px;
     border: 1px solid rgba(225, 32, 193, 0.4);
   }
-  // &__question.active {
-  //   border: 1px solid yellow;
-  // }
   .question {
     position: relative;
     transition: all $transition;
@@ -107,8 +104,6 @@
     }
     &__btn {
       position: relative;
-      // width: 54px;
-      // height: 54px;
       padding: 17.5px;
       width: fit-content;
       display: flex;

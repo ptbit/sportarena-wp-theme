@@ -2334,7 +2334,7 @@
 .tables .table table thead tr th {
   padding: 20px 30px 20px 0;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 14px;
   text-align: left;
 }
@@ -2354,7 +2354,7 @@
 .tables .table table tbody tr td {
   padding: 20px 30px 20px 0;
   color: #fff;
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 14px;
 }
 .tables .table table tbody tr td:first-child {
@@ -3598,7 +3598,7 @@
   margin-bottom: 10px;
 }
 .footer__menu-link {
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 16px;
   line-height: 29px;
   color: #ffffff;

@@ -1748,7 +1748,7 @@
 .wins__table table thead tr th {
   padding: 15px 5px 15px 0;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 14px;
   text-align: start;
   width: -webkit-fit-content;
@@ -1804,7 +1804,7 @@
   padding: 20px 5px 20px 0;
   color: #fff;
   font-size: 14px;
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   vertical-align: middle;
 }
 .wins__table table tbody tr td img {
@@ -4715,7 +4715,7 @@
   width: 100%;
   padding: 20px 5px 20px 0;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 14px;
   text-align: start;
 }
@@ -4761,7 +4761,7 @@
   padding: 20px 5px 20px 0;
   color: #fff;
   font-size: 14px;
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
 }
 
 @media (max-width: 1300px) {
@@ -5628,7 +5628,7 @@
   margin-bottom: 10px;
 }
 .footer__menu-link {
-  font-family: "Popins-semibold", sans-serif;
+  font-family: "Inter-semibold", sans-serif;
   font-size: 16px;
   line-height: 29px;
   color: #ffffff;

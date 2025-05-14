@@ -1,0 +1,570 @@
+.block {
+  position: relative;
+  background-color: #130d2c;
+  &--1 {
+    padding-top: 70px;
+  }
+  &--2 {
+    padding-top: 20px;
+  }
+  &__container {
+    padding: 0 15px;
+  }
+  &__header {
+    position: relative;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: all $transition;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.084) 0%,
+        rgba(217, 217, 217, 0.042) 100%
+      );
+      backdrop-filter: blur(25px);
+      border-radius: 12px;
+    }
+    &:hover {
+      .block__btn {
+        background: url('../img/new-home-page/faq/arrow-bg-hover.png') no-repeat 50% 50% / contain;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    color: #fff;
+    font-family: $font-popins-semb;
+    font-size: 18px;
+    line-height: 130%;
+    padding-left: 22px;
+    padding-right: 10px;
+  }
+  &__btn {
+    position: relative;
+    padding: 17.5px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all $transition;
+    background: url('../img/new-home-page/faq/arrow-bg.png') no-repeat 50% 50% / contain;
+    &::after {
+      content: '';
+      width: 19px;
+      height: 19px;
+      transition: all $transition;
+      background: url('../img/new-home-page/faq/arrow.svg') no-repeat 50% 50% / contain;
+    }
+    &:hover {
+      background: url('../img/new-home-page/faq/arrow-bg-hover.png') no-repeat 50% 50% / contain;
+    }
+  }
+  &__btn.active {
+    background: url('../img/new-home-page/faq/arrow-bg-active.png') no-repeat 50% 50% / contain;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    margin-top: 40px;
+    display: flex;
+    gap: 120px;
+    justify-content: space-between;
+    transition: all $transition;
+
+    &.hide {
+      height: 0px;
+      overflow: hidden;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+  }
+
+  &__right {
+    position: relative;
+    padding: 40px;
+    padding-bottom: 100px;
+    width: 50%;
+    height: fit-content;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0f0c22;
+    box-shadow: 0px 2px 4px 0px rgba(255, 255, 255, 0.13) inset;
+  }
+  &__title {
+    margin-bottom: 14px;
+    font-family: $font-popins-semb;
+    font-size: 24px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__description {
+    margin-bottom: 50px;
+  }
+  &__inputs {
+    display: flex;
+    gap: 14px;
+  }
+  &__input {
+    position: relative;
+    padding: 18px 0 13px 20px;
+    border-radius: 8px;
+    border: 1px solid #e32cc4;
+    &:hover {
+      border-radius: 8px;
+      border: 1px solid #e5053d;
+      background: rgba(255, 255, 255, 0.04);
+    }
+  }
+  .input {
+    &__title {
+      padding-left: 3px;
+      padding-right: 3px;
+      position: absolute;
+      top: -7px;
+      left: 10px;
+      right: 0;
+      width: fit-content;
+      color: #fff;
+      font-family: $font-popins-med;
+      font-size: 14px;
+      background-color: #130d2c;
+      letter-spacing: -0.5px;
+    }
+    &__value {
+      background-color: transparent;
+      color: #a5a9b2;
+      font-family: $font-popins-med;
+      font-size: 18px;
+      width: 100%;
+      &:focus {
+        color: $white;
+      }
+      &:target {
+        color: yellow;
+      }
+    }
+    &--error {
+      &::before {
+        content: '';
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url('../img/new-strategies-page/block/error.svg') no-repeat 0 0 / cover;
+      }
+      &::after {
+        content: 'Error text';
+        position: absolute;
+        bottom: -18px;
+        left: 20px;
+        color: #e06060;
+        font-family: $font-popins-med;
+        font-size: 14px;
+      }
+    }
+  }
+  &__button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 4px;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(229, 5, 61, 0.3) 0%,
+        rgba(229, 5, 61, 0) 100%
+      ),
+      #130d2c;
+    color: #fff;
+    text-shadow: 0px 1.366px 0.683px rgba(0, 0, 0, 0.25);
+    font-family: $font-popins-bold;
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    transition: all $transition;
+    &:hover {
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+      box-shadow: 0px 2.732px 5.465px 0px rgba(255, 98, 65, 0.4);
+    }
+  }
+  &__table {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .table {
+    &__head {
+      display: flex;
+      padding: 14px 40px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    &__row {
+      display: flex;
+      padding: 20px 40px 15px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+      &--title {
+        color: #fff;
+        font-family: $font-inter-semb;
+        font-size: 14px;
+        font-weight: 700;
+        width: 25%;
+      }
+      &--value {
+        width: 25%;
+        color: #a5a9b2;
+        font-family: $font-popins-med;
+        font-size: 14px;
+      }
+    }
+  }
+  &__showMoreBtn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #e5053d;
+    text-align: center;
+    font-family: $font-popins-bold;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all $transition;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 13px;
+      background-color: #e5053d;
+      -webkit-mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+      -webkit-mask-size: contain;
+      mask: url('../img/new-page/header-menu-arrow.svg') no-repeat center;
+      mask-size: contain;
+      margin: 0 0 0 8px;
+      transition: all $transition;
+    }
+    &:hover {
+      color: #b4012e;
+      &::after {
+        background-color: #b4012e;
+      }
+    }
+    &.visible {
+      display: block;
+    }
+    &.less {
+      position: relative;
+      margin-top: 10px;
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__text-wrapper {
+    position: relative;
+    // color: rgba(255, 255, 255, 0.8);
+    // font-family: $font-popins-reg;
+    // font-size: 16px;
+    // line-height: 150%;
+  }
+  &__p {
+    max-height: fit-content;
+    overflow: hidden;
+    &.short {
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      line-clamp: 12;
+      -webkit-line-clamp: 12;
+    }
+    &.short.TW2 {
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+    }
+  }
+  &__rows {
+  }
+  &__row {
+  }
+  .row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+    padding: 16px 0;
+    &:first-child {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(227, 44, 196, 0.8) 1.04%,
+          rgba(227, 44, 196, 0) 100%
+        );
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba(227, 44, 196, 0.8) 1.04%, rgba(227, 44, 196, 0) 100%);
+    }
+    &__left {
+      display: flex;
+    }
+    &__circle {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 30px;
+      line-height: 130%;
+      background: url('../img/new-strategies-page/block/ellipse.png') no-repeat 0 0 / cover;
+    }
+    &__text {
+      color: #fff;
+      font-family: $font-popins-reg;
+      font-size: 16px;
+      line-height: 150%;
+      &--pink {
+        color: #ff6567;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .block {
+    &__content {
+      gap: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .block {
+    &__text {
+      font-size: 17px;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    &__input {
+      padding: 15px 0 10px 20px;
+    }
+    .input {
+      &__title {
+        font-size: 12px;
+      }
+      &__value {
+        font-size: 17px;
+      }
+    }
+    .table {
+      &__row {
+        padding: 17px 40px 14px;
+        &--title,
+        &--value {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .block {
+    &__right {
+      padding: 20px 14px;
+      padding-bottom: 100px;
+    }
+    .table {
+      &__head {
+        padding: 14px;
+      }
+      &__row {
+        padding: 14px;
+      }
+    }
+    &__showMoreBtn {
+      font-size: 14px;
+      letter-spacing: 0.28px;
+      &::after {
+        width: 13px;
+        height: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 940px) {
+  .block {
+    &__content {
+      flex-direction: column;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+    }
+    &__btn {
+      padding: 10px;
+      &::after {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .block {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__header {
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+    &__left {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    &__text {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+    &__title {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    &__input {
+      padding: 15px 0 10px 20px;
+    }
+    &__btn {
+      padding: 8px;
+      &::after {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__content {
+      margin-top: 20px;
+    }
+    &__description {
+      margin-bottom: 35px;
+    }
+    &__input {
+      padding: 10px 12px;
+    }
+    &__right {
+      padding-bottom: 70px;
+    }
+    &__inputs {
+      gap: 9px;
+    }
+    .input {
+      &__title {
+        font-size: 10px;
+      }
+      &__value {
+        font-size: 16px;
+      }
+      &--error {
+        &::before {
+          width: 20px;
+          height: 20px;
+          right: 10px;
+        }
+        &::after {
+          font-size: 12px;
+          bottom: -16px;
+          left: 10px;
+        }
+      }
+    }
+    .table {
+      &__head {
+        padding: 8px 14px 7px;
+      }
+      &__row {
+        padding: 11px 14px;
+        &--title,
+        &--value {
+          font-size: 12px;
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+      }
+    }
+    &__p {
+      &.short {
+        line-clamp: 7;
+        -webkit-line-clamp: 7;
+      }
+      &.short.TW2 {
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .block {
+    &__inputs {
+      gap: 7px;
+    }
+    &__right {
+      padding: 15px 10px;
+      padding-bottom: 80px;
+    }
+    .input {
+      &__title {
+        font-size: 9px;
+        padding-left: 1px;
+        padding-right: 1px;
+        left: 5px;
+        top: -6px;
+      }
+    }
+  }
+}
