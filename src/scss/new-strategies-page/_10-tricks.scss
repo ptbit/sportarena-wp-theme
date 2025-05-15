@@ -1,0 +1,186 @@
+.tricks {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    aspect-ratio: 11/9;
+    filter: blur(10px);
+    background: url(../img/new-strategies-page/tricks/bg.png) no-repeat 0 0 / cover;
+  }
+  &__container {
+    padding: 50px 15px;
+  }
+
+  &__title {
+    width: fit-content;
+    margin-bottom: 20px;
+  }
+  &__sub-title {
+    margin-bottom: 40px;
+    max-width: 680px;
+  }
+  &__cards {
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    border-radius: 12px;
+    height: auto;
+  }
+  .swiper {
+    padding-bottom: 40px;
+    &-wrapper {
+      width: 100%;
+    }
+    &-slide {
+    }
+    &-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+      transition: opacity $transition;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .card {
+      position: relative;
+      &__tip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 8px 14px;
+        text-transform: capitalize;
+        border-radius: 12px 1px;
+        background: #e120c1;
+        color: #fff;
+        font-family: $font-popins-semb;
+        font-size: 20px;
+      }
+      &__ico {
+        width: 112px;
+        height: 112px;
+        margin-bottom: 20px;
+      }
+      &__title {
+        margin-bottom: 12px;
+        color: #fff;
+        font-family: $font-popins-semb;
+        font-size: 22px;
+        line-height: 130%;
+      }
+
+      &__text {
+        color: rgba(255, 255, 255, 0.8);
+        font-family: $font-popins-reg;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.2;
+        background: #393737 0% 0% / 100px 100px repeat;
+        filter: blur(10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .tricks {
+    &__title {
+      font-size: 32px;
+    }
+    &__sub-title {
+      font-size: 14px;
+    }
+    .swiper {
+      .card {
+        padding: 15px 10px;
+        &__ico {
+          margin-bottom: 15px;
+        }
+        &__title {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        &__text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .tricks {
+    &__container {
+      padding: 40px 0;
+    }
+    &__title {
+      padding: 0 15px;
+    }
+    &__sub-title {
+      padding: 0 15px;
+    }
+    .swiper {
+      .card {
+        &__tip {
+          padding: 6px 10px;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .tricks {
+    &::after {
+      aspect-ratio: 412/508;
+      background: url(../img/new-strategies-page/tricks/bg-tab.png) no-repeat 0 0 / cover;
+    }
+  }
+}
+@media (max-width: 490px) {
+  .tricks {
+    &__container {
+      padding-bottom: 10px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__sub-title {
+      font-size: 12px;
+    }
+    .swiper {
+      .card {
+        &__ico {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 14px;
+        }
+        &__title {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        &__text {
+          font-size: 12px;
+        }
+        &__tip {
+          padding: 4px 8px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

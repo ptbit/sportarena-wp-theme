@@ -1398,6 +1398,178 @@
     top: -6px;
   }
 }
+.tricks {
+  position: relative;
+}
+.tricks::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  aspect-ratio: 11/9;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  background: url(../img/new-strategies-page/tricks/bg.png) no-repeat 0 0/cover;
+}
+.tricks__container {
+  padding: 50px 15px;
+}
+.tricks__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.tricks__sub-title {
+  margin-bottom: 40px;
+  max-width: 680px;
+}
+.tricks__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 10px;
+  border: 1px solid rgba(225, 32, 193, 0.4);
+  border-radius: 12px;
+  height: auto;
+}
+.tricks .swiper {
+  padding-bottom: 40px;
+}
+.tricks .swiper-wrapper {
+  width: 100%;
+}
+.tricks .swiper-pagination-bullet {
+  background-color: #e5053d;
+  width: 12px;
+  height: 12px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.tricks .swiper-pagination-bullet:hover {
+  opacity: 0.5;
+}
+.tricks .swiper .card {
+  position: relative;
+}
+.tricks .swiper .card__tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 8px 14px;
+  text-transform: capitalize;
+  border-radius: 12px 1px;
+  background: #e120c1;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 20px;
+}
+.tricks .swiper .card__ico {
+  width: 112px;
+  height: 112px;
+  margin-bottom: 20px;
+}
+.tricks .swiper .card__title {
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: "Popins-semibold", sans-serif;
+  font-size: 22px;
+  line-height: 130%;
+}
+.tricks .swiper .card__text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Popins-regular", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+.tricks .swiper .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background: #393737 0% 0%/100px 100px repeat;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+@media (max-width: 1050px) {
+  .tricks__title {
+    font-size: 32px;
+  }
+  .tricks__sub-title {
+    font-size: 14px;
+  }
+  .tricks .swiper .card {
+    padding: 15px 10px;
+  }
+  .tricks .swiper .card__ico {
+    margin-bottom: 15px;
+  }
+  .tricks .swiper .card__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .tricks .swiper .card__text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .tricks__container {
+    padding: 40px 0;
+  }
+  .tricks__title {
+    padding: 0 15px;
+  }
+  .tricks__sub-title {
+    padding: 0 15px;
+  }
+  .tricks .swiper .card__tip {
+    padding: 6px 10px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 600px) {
+  .tricks::after {
+    aspect-ratio: 412/508;
+    background: url(../img/new-strategies-page/tricks/bg-tab.png) no-repeat 0 0/cover;
+  }
+}
+@media (max-width: 490px) {
+  .tricks__container {
+    padding-bottom: 10px;
+  }
+  .tricks__title {
+    font-size: 24px;
+  }
+  .tricks__sub-title {
+    font-size: 12px;
+  }
+  .tricks .swiper .card__ico {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 14px;
+  }
+  .tricks .swiper .card__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .tricks .swiper .card__text {
+    font-size: 12px;
+  }
+  .tricks .swiper .card__tip {
+    padding: 4px 8px;
+    font-size: 18px;
+  }
+}
 .footer {
   padding: 50px 0 45px 0;
   background: #100C23;

@@ -10787,21 +10787,30 @@ function theMostShowMoreButtons() {
 document.addEventListener('DOMContentLoaded', () => {
   btnUp.addEventListener();
   footerMenu();
-  theMostShowMoreButtons();
-  showHideBlock('.BH1', '.BB1', '.BC1');
-  addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
-  showHideBlock('.BH2', '.BB2', '.BC2');
-  addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
-  showHideBlock('.BH3', '.BB3', '.BC3');
-  addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
-  showHideBlock('.BH4', '.BB4', '.BC4');
-  addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
-  showHideBlock('.BH5', '.BB5', '.BC5');
-  addShowMoreButtonToBlock('.TB5', '.TW5', '.BTN5');
-  showHideBlock('.BH6', '.BB6', '.BC6');
-  addShowMoreButtonToBlock('.TB6', '.TW6', '.BTN6');
-  showHideBlock('.BH7', '.BB7', '.BC7');
-  addShowMoreButtonToBlock('.TB7', '.TW7', '.BTN7');
+  // theMostShowMoreButtons();
+
+  // showHideBlock('.BH1', '.BB1', '.BC1');
+  // addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
+
+  // showHideBlock('.BH2', '.BB2', '.BC2');
+  // addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
+
+  // showHideBlock('.BH3', '.BB3', '.BC3');
+  // addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
+
+  // showHideBlock('.BH4', '.BB4', '.BC4');
+  // addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
+
+  // showHideBlock('.BH5', '.BB5', '.BC5');
+  // addShowMoreButtonToBlock('.TB5', '.TW5', '.BTN5');
+
+  // showHideBlock('.BH6', '.BB6', '.BC6');
+  // addShowMoreButtonToBlock('.TB6', '.TW6', '.BTN6');
+
+  // showHideBlock('.BH7', '.BB7', '.BC7');
+  // addShowMoreButtonToBlock('.TB7', '.TW7', '.BTN7');
+
+  startTricksSwiper();
 });
 function showHideBlock(blockActivatorClass, blockBtnClass, blockContentClass) {
   const block2Header = document.querySelector(blockActivatorClass);
@@ -10838,7 +10847,77 @@ function addShowMoreButtonToBlock(textBlockClass, textWrapperClass, btnClass) {
     showMoreButton.classList.toggle('less');
   });
 }
-``;
+function startTricksSwiper() {
+  const tricksSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.tricksSwiper', {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 0,
+    autoplay: false,
+    pagination: {
+      el: '.tricks__swiper-pagination',
+      clickable: true,
+      bulletElement: 'button'
+    },
+    breakpoints: {
+      1325: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        grabCursor: true
+      },
+      1030: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        grabCursor: true
+      },
+      750: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        grabCursor: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.tricks__swiper-pagination',
+          clickable: true
+        }
+      },
+      670: {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.tricks__swiper-pagination',
+          clickable: true
+        }
+      },
+      550: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 0,
+        autoplay: false,
+        pagination: {
+          el: '.tricks__swiper-pagination',
+          clickable: true
+        }
+      }
+    }
+  });
+}
 })();
 
 /******/ })()
