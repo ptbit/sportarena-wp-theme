@@ -10794,6 +10794,8 @@ document.addEventListener('DOMContentLoaded', () => {
   addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
   addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
   addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
+  showHideBlock('.BH4', '.BB4', '.BC4');
+  addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
 });
 function showHideBlock(blockActivatorClass, blockBtnClass, blockContentClass) {
   const block2Header = document.querySelector(blockActivatorClass);
@@ -10827,6 +10829,7 @@ function addShowMoreButtonToBlock(textBlockClass, textWrapperClass, btnClass) {
     showMoreButton.classList.toggle('less');
   });
 }
+``;
 })();
 
 /******/ })()
