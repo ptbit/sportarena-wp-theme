@@ -10790,13 +10790,16 @@ document.addEventListener('DOMContentLoaded', () => {
   theMostShowMoreButtons();
   showHideBlock('.BH1', '.BB1', '.BC1');
   showHideBlock('.BH2', '.BB2', '.BC2');
+  showHideBlock('.BH3', '.BB3', '.BC3');
   addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
   addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
+  addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
 });
 function showHideBlock(blockActivatorClass, blockBtnClass, blockContentClass) {
   const block2Header = document.querySelector(blockActivatorClass);
   const block2Btn = document.querySelector(blockBtnClass);
   const block2Content = document.querySelector(blockContentClass);
+  console.log(block2Header);
   block2Header.addEventListener('click', () => {
     block2Btn.classList.toggle('active');
     block2Content.classList.toggle('hide');
@@ -10808,6 +10811,9 @@ function addShowMoreButtonToBlock(textBlockClass, textWrapperClass, btnClass) {
   const showMoreButton = document.querySelector(btnClass);
   let blockMaxHeight = window.innerWidth < 480 ? 150 : 430;
   if (textBlockClass === '.TB2') {
+    blockMaxHeight = 140;
+  }
+  if (textBlockClass === '.TB3') {
     blockMaxHeight = 140;
   }
   if (textBlock.scrollHeight > blockMaxHeight) {
