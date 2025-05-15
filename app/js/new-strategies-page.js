@@ -10789,13 +10789,19 @@ document.addEventListener('DOMContentLoaded', () => {
   footerMenu();
   theMostShowMoreButtons();
   showHideBlock('.BH1', '.BB1', '.BC1');
-  showHideBlock('.BH2', '.BB2', '.BC2');
-  showHideBlock('.BH3', '.BB3', '.BC3');
   addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
+  showHideBlock('.BH2', '.BB2', '.BC2');
   addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
+  showHideBlock('.BH3', '.BB3', '.BC3');
   addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
   showHideBlock('.BH4', '.BB4', '.BC4');
   addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
+  showHideBlock('.BH5', '.BB5', '.BC5');
+  addShowMoreButtonToBlock('.TB5', '.TW5', '.BTN5');
+  showHideBlock('.BH6', '.BB6', '.BC6');
+  addShowMoreButtonToBlock('.TB6', '.TW6', '.BTN6');
+  showHideBlock('.BH7', '.BB7', '.BC7');
+  addShowMoreButtonToBlock('.TB7', '.TW7', '.BTN7');
 });
 function showHideBlock(blockActivatorClass, blockBtnClass, blockContentClass) {
   const block2Header = document.querySelector(blockActivatorClass);
@@ -10816,6 +10822,9 @@ function addShowMoreButtonToBlock(textBlockClass, textWrapperClass, btnClass) {
     blockMaxHeight = 140;
   }
   if (textBlockClass === '.TB3') {
+    blockMaxHeight = 140;
+  }
+  if (textBlockClass === '.TB5') {
     blockMaxHeight = 140;
   }
   if (textBlock.scrollHeight > blockMaxHeight) {

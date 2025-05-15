@@ -957,6 +957,10 @@
   line-clamp: 4;
   -webkit-line-clamp: 4;
 }
+.block__p.short.TW5 {
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+}
 .block .row {
   display: -webkit-box;
   display: -ms-flexbox;

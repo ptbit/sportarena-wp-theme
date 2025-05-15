@@ -1,0 +1,101 @@
+<section class="block block--5">
+  <div class="block__container">
+    <div class="block__header BH5">
+      <p class="block__text">Fibonacci System</p>
+      <button class="block__btn BB5"></button>
+    </div>
+
+    <div class="block__content BC5 hide">
+      <div class="block__left">
+        <p class="sectionText">
+          Here’s a clearer illustration of how it works: Start by deciding on a starting amount,
+          like ₹100. Then follow this progression:
+        </p>
+
+        <table class="row__l-table">
+          <thead>
+            <tr>
+              <th>Bet, ₹</th>
+              <th>Odd</th>
+              <th>Game outcome</th>
+              <th>Bankroll, ₹</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,000</td>
+              <td>2.0</td>
+              <td><span class="row__l-table--loss">Loss</span></td>
+              <td>9,000</td>
+            </tr>
+            <tr>
+              <td>1,000</td>
+              <td>2.0</td>
+              <td><span class="row__l-table--loss">Loss</span></td>
+              <td>9,000</td>
+            </tr>
+            <tr>
+              <td>1,000</td>
+              <td>2.0</td>
+              <td><span class="row__l-table--win">Win</span></td>
+              <td>9,000</td>
+            </tr>
+            <tr>
+              <td>1,000</td>
+              <td>2.0</td>
+              <td><span class="row__l-table--win">Win</span></td>
+              <td>9,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="block__text-wrapper TB5">
+          <p class="sectionText block__p TW5">Very small text block, whit out show more button</p>
+          <button type="button" class="block__showMoreBtn BTN5" aria-label="show-more">
+            Show more
+          </button>
+        </div>
+      </div>
+      <div class="block__right">
+        <h4 class="block__title">Labouchère System Calculator</h4>
+        <p class="sectionText block__description">
+          Enter the data for make the calculations with the <br />
+          Labouchère System
+        </p>
+        <div class="block__inputs">
+          <!-- <div class="block__input input input--error"> -->
+          <div class="block__input input">
+            <span class="input__title">Bet</span>
+            <input class="input__value" type="text" value="0" />
+          </div>
+
+          <div class="block__input input">
+            <span class="input__title">Multiplier</span>
+            <input class="input__value" type="text" value="0" />
+          </div>
+          <div class="block__input input">
+            <span class="input__title">Bankroll</span>
+            <input class="input__value" type="text" value="0" />
+          </div>
+        </div>
+
+        <button class="block__button">Simulate</button>
+        <div class="block__table table">
+          <div class="table__head">
+            <p class="table__row--title">Round</p>
+            <p class="table__row--title">Bet Amount</p>
+            <p class="table__row--title">Round Result</p>
+            <p class="table__row--title">Bankroll</p>
+          </div>
+          <div class="table__body">
+            <div class="table__row">
+              <p class="table__row--value">0</p>
+              <p class="table__row--value">0</p>
+              <p class="table__row--value">0</p>
+              <p class="table__row--value">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
