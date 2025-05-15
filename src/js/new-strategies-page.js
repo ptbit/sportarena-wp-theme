@@ -76,37 +76,37 @@ function theMostShowMoreButtons() {
 document.addEventListener('DOMContentLoaded', () => {
   btnUp.addEventListener();
   footerMenu();
-  // theMostShowMoreButtons();
+  theMostShowMoreButtons();
 
-  // showHideBlock('.BH1', '.BB1', '.BC1');
-  // addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
+  showHideBlock('.BH1', '.BB1', '.BC1');
+  addShowMoreButtonToBlock('.TB1', '.TW1', '.BTN1');
 
-  // showHideBlock('.BH2', '.BB2', '.BC2');
-  // addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
+  showHideBlock('.BH2', '.BB2', '.BC2');
+  addShowMoreButtonToBlock('.TB2', '.TW2', '.BTN2');
 
-  // showHideBlock('.BH3', '.BB3', '.BC3');
-  // addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
+  showHideBlock('.BH3', '.BB3', '.BC3');
+  addShowMoreButtonToBlock('.TB3', '.TW3', '.BTN3');
 
-  // showHideBlock('.BH4', '.BB4', '.BC4');
-  // addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
+  showHideBlock('.BH4', '.BB4', '.BC4');
+  addShowMoreButtonToBlock('.TB4', '.TW4', '.BTN4');
 
-  // showHideBlock('.BH5', '.BB5', '.BC5');
-  // addShowMoreButtonToBlock('.TB5', '.TW5', '.BTN5');
+  showHideBlock('.BH5', '.BB5', '.BC5');
+  addShowMoreButtonToBlock('.TB5', '.TW5', '.BTN5');
 
-  // showHideBlock('.BH6', '.BB6', '.BC6');
-  // addShowMoreButtonToBlock('.TB6', '.TW6', '.BTN6');
+  showHideBlock('.BH6', '.BB6', '.BC6');
+  addShowMoreButtonToBlock('.TB6', '.TW6', '.BTN6');
 
-  // showHideBlock('.BH7', '.BB7', '.BC7');
-  // addShowMoreButtonToBlock('.TB7', '.TW7', '.BTN7');
+  showHideBlock('.BH7', '.BB7', '.BC7');
+  addShowMoreButtonToBlock('.TB7', '.TW7', '.BTN7');
 
   startTricksSwiper();
+  initAdvSwiper();
 });
 
 function showHideBlock(blockActivatorClass, blockBtnClass, blockContentClass) {
   const block2Header = document.querySelector(blockActivatorClass);
   const block2Btn = document.querySelector(blockBtnClass);
   const block2Content = document.querySelector(blockContentClass);
-  console.log(block2Header);
   block2Header.addEventListener('click', () => {
     block2Btn.classList.toggle('active');
     block2Content.classList.toggle('hide');
@@ -208,6 +208,90 @@ function startTricksSwiper() {
           el: '.tricks__swiper-pagination',
           clickable: true,
         },
+      },
+    },
+  });
+}
+
+function initAdvSwiper() {
+  const swiper = new Swiper('.advSwiper', {
+    modules: [Navigation, Pagination],
+    loop: true,
+    slidesPerView: 1.2,
+    spaceBetween: 15,
+    centeredSlides: true,
+    grabCursor: true,
+    initialSlide: 0,
+
+    navigation: {
+      nextEl: '.adv__button--next',
+      prevEl: '.adv__button--prev',
+    },
+
+    autoplay: false,
+
+    pagination: {
+      el: '.adv__swiper-pagination',
+      clickable: true,
+      bulletElement: 'button',
+    },
+
+    breakpoints: {
+      550: {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 15,
+        centeredSlides: true,
+        grabCursor: true,
+        initialSlide: 0,
+
+        navigation: {
+          nextEl: '.adv__button--next',
+          prevEl: '.adv__button--prev',
+        },
+
+        autoplay: false,
+
+        pagination: {
+          el: '.adv__swiper-pagination',
+          clickable: true,
+        },
+      },
+      750: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+          nextEl: '.adv__button--next',
+          prevEl: '.adv__button--prev',
+        },
+        autoplay: false,
+      },
+      1025: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+          nextEl: '.adv__button--next',
+          prevEl: '.adv__button--prev',
+        },
+        autoplay: false,
+      },
+      1200: {
+        loop: false,
+        centeredSlides: false,
+        slidesPerView: 3.75,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+          nextEl: '.adv__button--next',
+          prevEl: '.adv__button--prev',
+        },
+        autoplay: false,
       },
     },
   });

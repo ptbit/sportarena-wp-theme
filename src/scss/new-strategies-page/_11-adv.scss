@@ -1,0 +1,346 @@
+.adv {
+  color: $pink;
+  background: linear-gradient(to bottom, #130d2c, #100c23);
+  &__container {
+    padding: 60px 15px;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 20px;
+    width: fit-content;
+    font-family: $font-popins-semb;
+    font-size: 40px;
+    line-height: 130%;
+    background: linear-gradient(254deg, #fff 48.55%, #e6466e 72.99%, #e548ca 97%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__description {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 700px;
+  }
+  &__header {
+    margin-bottom: 38px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // &__text {
+  //   flex: 1;
+  // }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+  &__button {
+    width: 54px;
+    height: 54px;
+    background: radial-gradient(
+        100% 100% at 50% 0%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #e5053d;
+    box-shadow: 0px 4px 8px -2px rgba(255, 98, 65, 0.48);
+    border-radius: 12px;
+    transition: all $transition;
+    img {
+      width: 19px;
+      height: 26px;
+    }
+    &--prev {
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+    &--next {
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    &:hover {
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+    }
+    &:disabled,
+    button[disabled] {
+      cursor: no-drop;
+      opacity: 0.5;
+      background: radial-gradient(
+          100% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #b4012e;
+    }
+  }
+
+  .swiper-slide {
+  }
+  .game-item {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    padding: 30px 20px 24px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0);
+    &__tip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 8px 14px;
+      text-transform: capitalize;
+      border-radius: 12px 1px;
+      background: #e120c1;
+      color: #fff;
+      font-family: $font-popins-semb;
+      font-size: 20px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background: #605d5d 0% 0%/100px 100px repeat;
+      filter: blur(10px);
+    }
+
+    &__avatar {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px;
+    }
+    &__title {
+      margin-bottom: 16px;
+      text-align: center;
+      color: #fff;
+      font-family: $font-popins-med;
+      font-size: 24px;
+      line-height: 150%;
+    }
+    &__sub-title {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-family: $font-popins-reg;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper {
+    margin-bottom: 40px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 54px;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(16, 12, 34, 0) 0%, #100c22 100%);
+    }
+  }
+  &__note {
+    margin: 0 auto;
+    max-width: 940px;
+    border-radius: 12px;
+    border: 1px solid rgba(225, 32, 193, 0.4);
+    padding: 16px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    );
+    backdrop-filter: blur(25px);
+    z-index: 1;
+  }
+  &__ico {
+    width: 32px;
+    height: 32px;
+  }
+  &__text {
+    color: #fff;
+    font-family: $font-popins-reg;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .adv {
+    &__container {
+      padding: 40px 0;
+    }
+    &__header {
+      margin-bottom: 24px;
+      padding: 0 14px;
+    }
+    &__title {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+    &__description {
+      font-size: 12px;
+    }
+    .swiper {
+      padding: 0 0 40px;
+      margin-bottom: 0;
+    }
+    .swiper-pagination-bullet {
+      width: 0;
+      height: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .adv {
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .adv {
+    &__note {
+      margin-left: 14px;
+      margin-right: 14px;
+      // width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .adv {
+    &__title {
+      font-size: 32px;
+    }
+    &__description {
+      font-size: 14px;
+    }
+    .game-item {
+      &__title {
+        font-size: 15px;
+      }
+
+      &__sub-title {
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .adv {
+    .swiper {
+      &::after {
+        display: none;
+      }
+      .game-item {
+        &__tip {
+          padding: 6px 10px;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .adv {
+    &__note {
+      position: relative;
+      transform: none;
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .adv {
+    &__header {
+      margin-bottom: 24px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__description {
+      font-size: 12px;
+    }
+    .swiper {
+      margin-bottom: 10px;
+    }
+    .game-item {
+      &__title {
+        font-size: 14px;
+      }
+
+      &__sub-title {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .adv {
+    &__header {
+      margin-bottom: 40px;
+    }
+    &__title {
+      width: fit-content;
+      text-align: center;
+      margin: 0 auto 14px;
+    }
+    &__description {
+      text-align: center;
+    }
+    &__buttons {
+      display: none;
+    }
+    .swiper-pagination {
+      display: block;
+    }
+    .swiper-pagination-bullet {
+      background-color: #e5053d;
+      width: 12px;
+      height: 12px;
+      box-shadow: 0px 2.73239px 5.46479px rgba(255, 98, 65, 0.48);
+      border-radius: 8px;
+      transition: opacity $transition;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .adv {
+    .swiper {
+      .game-item {
+        &__tip {
+          padding: 4px 8px;
+          font-size: 18px;
+        }
+      }
+    }
+    &__note {
+      padding: 13px 18px;
+      gap: 15px;
+    }
+    &__text {
+      font-size: 12px;
+    }
+  }
+}
